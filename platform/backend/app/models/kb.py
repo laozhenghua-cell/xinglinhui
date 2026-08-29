@@ -180,3 +180,19 @@ class KBDulong(_KBCommon, Base):
     n: Mapped[int] = mapped_column(Integer, nullable=False)
     disease: Mapped[Optional[str]] = mapped_column(Text)
     guide: Mapped[Optional[str]] = mapped_column(Text)
+
+
+class KbClassic(Base):
+    """经典典籍条文(原文+白话+出处)。"""
+    __tablename__ = "kb_classics"
+
+    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    book: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
+    chapter: Mapped[str] = mapped_column(String(200), nullable=False)
+    article: Mapped[str] = mapped_column(String(100), default="")
+    original: Mapped[str] = mapped_column(Text, nullable=False)
+    plain: Mapped[str] = mapped_column(Text, default="")
+    source: Mapped[str] = mapped_column(String(300), default="")
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+    )

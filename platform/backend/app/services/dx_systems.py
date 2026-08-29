@@ -35,8 +35,11 @@ def _bigrams(text: str, cap: int = 40) -> list[str]:
     return out
 
 
+STOP_BIGRAMS = {"大便", "小便", "腹部", "口渴", "腹痛"}
+
+
 def _score_indicators(indicators: list[str], tokens: list[str]) -> tuple[int, list[str]]:
-    """指标词命中计分:完整词 2 分,bigram 命中 1 分(去重)。"""
+    """指标词命中计分:完整词 2 分,bigram 命中 1 分(去重;共用前缀词排除)。"""
     score = 0
     hits: list[str] = []
     for ind in indicators:
@@ -45,6 +48,8 @@ def _score_indicators(indicators: list[str], tokens: list[str]) -> tuple[int, li
             hits.append(ind)
             continue
         for g in _bigrams(ind):
+            if g in STOP_BIGRAMS:
+                continue
             if g in tokens and ind not in hits:
                 score += 1
                 hits.append(ind)
@@ -76,6 +81,8 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
     positive_labels = [str(x or "").strip() for x in user_labels if str(x or "").strip() and not str(x or "").strip().startswith(("不", "无", "未"))]
     tokens.update(_bigrams("、".join(positive_labels), cap=60))
 
+    PAIRS = [("表", "里"), ("寒", "热"), ("虚", "实"), ("阴", "阳")]
+
     out: dict[str, Any] = {}
     for system in ("bagang", "liujing", "weiqiyingxue"):
         items = []
@@ -91,10 +98,22 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
         items.sort(key=lambda x: -x["score"])
         max_score = max((i["score"] for i in items), default=1)
         top = [i for i in items if i["score"] > 0][:3]
+        summary = top[0]["name"] if top else "信息不足"
+        components: list[str] = []
+        if system == "bagang":
+            by_key = {i["key"]: i for i in items}
+            for a, b in PAIRS:
+                sa = by_key[a]["score"]
+                sb = by_key[b]["score"]
+                if sa == 0 and sb == 0:
+                    continue
+                components.append(by_key[a]["name"] if sa >= sb else by_key[b]["name"])
+            summary = "·".join(components) if components else "信息不足"
         out[system] = {
             "name": {"bagang": "八纲辨证", "liujing": "六经辨证", "weiqiyingxue": "卫气营血辨证"}[system],
             "top": top,
-            "summary": top[0]["name"] if top else "信息不足",
+            "summary": summary,
+            "components": components,
             "confidence": round(top[0]["score"] / max(2, max_score), 2) if top else 0,
         }
     return out

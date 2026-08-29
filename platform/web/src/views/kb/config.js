@@ -8,7 +8,8 @@ export const KB_TYPES = [
   { key: 'cases', label: '医案', icon: '📋', color: '#F56C6C' },
   { key: 'tips', label: '要诀', icon: '📜', color: '#20A39E' },
   { key: 'terms', label: '术语', icon: '📖', color: '#8E6C4F' },
-  { key: 'dulong', label: '引药', icon: '🐉', color: '#C0392B' }
+  { key: 'dulong', label: '引药', icon: '🐉', color: '#C0392B' },
+  { key: 'classics', label: '典籍', icon: '📜', color: '#7A5A2E' }
 ]
 
 export const TYPE_MAP = Object.fromEntries(KB_TYPES.map((t) => [t.key, t]))
@@ -31,7 +32,8 @@ export const NAME_FIELD = {
   cases: 'title',
   tips: 'category',
   terms: 'term',
-  dulong: 'disease'
+  dulong: 'disease',
+  classics: 'article'
 }
 
 export function displayName(type, item) {
@@ -76,7 +78,8 @@ export const TYPE_FIELDS = {
   ],
   tips: [['category', '类别'], ['content', '内容', 'truncate'], ['source', '出处']],
   terms: [['definition', '释义'], ['source', '出处']],
-  dulong: [['section', '章节'], ['n', '序号'], ['guide', '引药']]
+  dulong: [['section', '章节'], ['n', '序号'], ['guide', '引药']],
+  classics: [['book', '典籍'], ['article', '条文'], ['original', '原文', 'truncate'], ['plain', '白话', 'truncate']]
 }
 
 // 列表页“主名称列”标题（tips 的 name 即截断 content）

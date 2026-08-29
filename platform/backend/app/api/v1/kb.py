@@ -21,6 +21,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.database import get_db
 from app.models.kb import (
     KBCase,
+    KbClassic,
     KBDisease,
     KBDulong,
     KBFormula,
@@ -42,6 +43,7 @@ TYPE_REGISTRY = {
     "tips": KBTip,
     "terms": KBTerm,
     "dulong": KBDulong,
+    "classics": KbClassic,
 }
 
 # type → 展示主字段(用于 search 结果标签)
@@ -54,6 +56,7 @@ TYPE_LABEL_FIELD = {
     "tips": "content",
     "terms": "term",
     "dulong": "disease",
+    "classics": "article",
 }
 
 # type → 可检索字段:(字段名, 是否 JSONB)
@@ -80,6 +83,7 @@ SEARCH_FIELDS = {
     "tips": [("content", False), ("source", False)],
     "terms": [("term", False), ("definition", False)],
     "dulong": [("disease", False), ("guide", False)],
+    "classics": [("original", False), ("plain", False), ("article", False), ("book", False)],
 }
 
 
@@ -304,6 +308,39 @@ def _match_names(src_names: list[str], cand_names: list[str]) -> list[str]:
     # 去重、截断
     return list(dict.fromkeys(matched))[:5]
 
+
+async def _seed_classics_if_empty(db: AsyncSession) -> None:
+    """典籍表为空时导入种子条文(幂等)。"""
+    from pathlib import Path as _P
+    import json as _j
+
+    cnt = (await db.execute(select(func.count()).select_from(KbClassic))).scalar() or 0
+    if cnt:
+        return
+    p = _P(__file__).resolve().parent.parent.parent / "data" / "classics_seed.json"
+    data = _j.loads(p.read_text(encoding="utf-8"))
+    for c in data["classics"]:
+        db.add(KbClassic(**{k: c.get(k, "") for k in ("book", "chapter", "article", "original", "plain", "source")}))
+    await db.commit()
+
+
+@router.get("/classics")
+async def kb_classics(
+    q: Optional[str] = Query(None, description="检索词(原文/白话/条文号)"),
+    book: Optional[str] = Query(None, description="典籍名"),
+    limit: int = Query(50, ge=1, le=200),
+    db: AsyncSession = Depends(get_db),
+):
+    """经典典籍条文检索。"""
+    await _seed_classics_if_empty(db)
+    stmt = select(KbClassic)
+    if book:
+        stmt = stmt.where(KbClassic.book == book)
+    if q:
+        like = f"%{_escape_like(q)}%"
+        stmt = stmt.where(or_(KbClassic.original.ilike(like, escape="\\"), KbClassic.plain.ilike(like, escape="\\"), KbClassic.article.ilike(like, escape="\\")))
+    rows = (await db.execute(stmt.order_by(KbClassic.created_at).limit(limit))).scalars().all()
+    return {"total": len(rows), "items": [_serialize(r) for r in rows]}
 
 @router.get("/{type}")
 async def kb_list(

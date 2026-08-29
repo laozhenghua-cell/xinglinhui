@@ -30,6 +30,7 @@ from app.models.kb import (
     KBTip,
     KBTerm,
     KBDulong,
+    KbClassic,
 )
 from app.models.dx import DxRecord
 from app.models.learn import LearnProgress, LearnNote, LearnFavorite, QuizAttempt

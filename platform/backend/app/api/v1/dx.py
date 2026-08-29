@@ -827,3 +827,46 @@ async def dx_quick(q: str = Query(..., min_length=1), db: AsyncSession = Depends
         if len(out) >= 12:
             break
     return out[:12]
+
+
+@router.get("/eval")
+async def dx_eval():
+    """辨证引擎评测:对标注样本运行多体系引擎,输出各体系准确率与逐样本明细。"""
+    from pathlib import Path as _P
+
+    from app.services.dx_systems import analyze_systems
+
+    p = _P(__file__).resolve().parent.parent.parent / "data" / "eval_samples.json"
+    data = json.loads(p.read_text(encoding="utf-8"))
+    samples = data["samples"]
+    per_system: dict[str, dict] = {}
+    detail = []
+    for sm in samples:
+        result = analyze_systems(sm["labels"])
+        row = {"id": sm["id"], "desc": sm["desc"]}
+        for sys_key in ("bagang", "liujing", "weiqiyingxue"):
+            got = result[sys_key]["summary"]
+            exp = sm["expected"].get(sys_key)
+            row[sys_key] = {"got": got, "expected": exp}
+            if exp:
+                st = per_system.setdefault(sys_key, {"total": 0, "correct": 0})
+                st["total"] += 1
+                if sys_key == "bagang" and isinstance(exp, list):
+                    comps = result[sys_key].get("components", [])
+                    if all(x in comps for x in exp):
+                        st["correct"] += 1
+                elif got == exp:
+                    st["correct"] += 1
+        detail.append(row)
+    acc = {}
+    for k, v in per_system.items():
+        acc[k] = {"total": v["total"], "correct": v["correct"], "accuracy": round(v["correct"] / v["total"], 4) if v["total"] else None}
+    total_correct = sum(v["correct"] for v in per_system.values())
+    total_n = sum(v["total"] for v in per_system.values())
+    return {
+        "meta": data["meta"],
+        "samples": len(samples),
+        "accuracy": acc,
+        "overall": round(total_correct / total_n, 4) if total_n else None,
+        "detail": detail,
+    }
