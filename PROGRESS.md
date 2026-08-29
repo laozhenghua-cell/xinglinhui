@@ -1,4 +1,10 @@
 # 合并项目进度台账(最终版)
+## ✅ P1 补完:CI/CD 上线 + 平台仓库公开(2026-08-29)
+- [x] 杏林汇平台推送到 https://github.com/laozhenghua-cell/xinglinhui(干净快照:历史中的密钥污染已清除)
+- [x] 安全处理:发现历史含服务器密码与 AI 密钥(deploy 脚本/ulcer 快照/两个 .env)→ 全部脱敏(环境变量化),完整历史保留在本地 keep-full-history 分支,公开仓库只含脱敏后的单提交快照
+- [x] GitHub Actions CI 已在首次推送自动运行并通过(后端测试+前端构建,36s)
+- [x] Deploy 工作流 secrets 配置完成(SERVER_HOST/SERVER_USER/DEPLOY_KEY),部署密钥公钥已装服务器,密钥登录实测 OK
+- [x] 从此支持:推代码自动测试;手动触发 Deploy 一键部署生产
 ## ✅ P1 地基完成:世界级方案第一阶段(2026-08-28)
 - [x] ①AI 模型网关:多模型路由/熔断/重试/成本计量/JSON校验;dx/learn/surgery 全接入;实测成本 3 毫厘/次
 - [x] ②可观测性:request-id 结构化日志 + /metrics(Prometheus 文本,HTTP 与 AI 网关指标,零依赖)
