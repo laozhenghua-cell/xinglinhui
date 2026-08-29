@@ -15,9 +15,9 @@ const routes = [
         meta: { title: '新建就诊', module: 'clinic', public: true } },
       { path: 'clinic/:id', name: 'ClinicDetail', component: () => import('@/views/clinic/ClinicDetail.vue'),
         meta: { title: '就诊详情', module: 'clinic', public: true } },
-      // ---- 智能辨证 ----
+      // ---- 症状辨证(选择症状 → 典籍规则引擎六体系辨证) ----
       { path: 'dx', name: 'DxCenter', component: () => import('@/views/dx/DxCenter.vue'),
-        meta: { title: '智能辨证', module: 'dx', public: true } },
+        meta: { title: '症状辨证', module: 'dx', public: true } },
       // ---- 知识总库 ----
       {
         path: 'kb',

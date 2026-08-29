@@ -3,7 +3,7 @@
     <div class="dx-body">
       <!-- 输入区 -->
       <el-card class="dx-input-card" shadow="never">
-        <template #header><b>四诊录入</b><span class="hint">症状可多选,也可自由输入;AI 综合报告默认开启</span></template>
+        <template #header><b>四诊录入</b><span class="hint">症状可多选,也可自由输入;点选或输入后点击【开始辨证】</span></template>
 
         <el-form label-position="top">
           <el-form-item label="专科范围">
@@ -21,13 +21,10 @@
           </el-form-item>
 
           <el-form-item>
-            <el-upload :show-file-list="false" :before-upload="onPhoto" accept="image/*" :disabled="photoLoading">
-              <el-button :loading="photoLoading" plain>{{ photoLoading ? '辨病中…' : '📷 拍照辨病(上传患处照片)' }}</el-button>
-            </el-upload>
-            <el-switch v-model="form.use_ai" active-text="AI 综合辨证报告" style="margin-left:16px" />
-            <el-button type="primary" :loading="loading" style="margin-left:24px" @click="run">
+            <el-button type="primary" :loading="loading" @click="run">
               {{ loading ? '辨证中…' : '开始辨证' }}
             </el-button>
+            <span class="hint">结果由中医典籍规则引擎生成(八纲/六经/卫气营血/脏腑/三焦/经络)</span>
           </el-form-item>
         </el-form>
       </el-card>
@@ -44,12 +41,7 @@
             </span>
           </template>
 
-          <div class="med-disclaimer">⚠️ 本结果由中医典籍知识库与 AI 辅助生成,仅供学习参考,不构成医疗建议;急危重症请立即线下就医。</div>
-
-          <div v-if="visionResult" class="vision-block">
-            <h4>📷 拍照辨病(Qwen-VL)</h4>
-            <div v-for="(v, k) in visionSummary" :key="k" class="stage-line"><b>{{ k }}:</b>{{ v }}</div>
-          </div>
+          <div class="med-disclaimer">⚠️ 本结果由中医典籍知识库规则引擎生成,仅供学习参考,不构成医疗建议;急危重症请立即线下就医。</div>
 
           <el-row :gutter="16">
             <el-col :xs="24" :sm="12">
@@ -221,18 +213,6 @@
             </el-col>
           </el-row>
 
-          <el-collapse v-if="result.ai" style="margin-top:18px">
-            <el-collapse-item title="🤖 AI 综合辨证报告(DeepSeek)" name="ai">
-              <el-descriptions :column="1" border>
-                <el-descriptions-item label="证型分析">{{ result.ai.syndrome_analysis }}</el-descriptions-item>
-                <el-descriptions-item label="病种建议">{{ result.ai.disease_suggestion }}</el-descriptions-item>
-                <el-descriptions-item label="方剂建议">{{ result.ai.formula_suggestion }}</el-descriptions-item>
-                <el-descriptions-item label="注意事项">{{ result.ai.precautions }}</el-descriptions-item>
-                <el-descriptions-item label="置信度">{{ result.ai.confidence }}</el-descriptions-item>
-              </el-descriptions>
-            </el-collapse-item>
-          </el-collapse>
-          <div v-else-if="aiRequested" class="empty" style="margin-top:12px">AI 报告暂不可用(服务繁忙或限流),已按知识库规则匹配,可稍后重试</div>
         </el-card>
       </div>
 
@@ -265,42 +245,12 @@ const SYS_SHORT = { bagang: '八纲', liujing: '六经', weiqiyingxue: '卫气�
 const BAGANG_PAIRS = [['表', '里'], ['寒', '热'], ['虚', '实'], ['阴', '阳']]
 const commonSymptoms = ['发热', '咳嗽', '红肿热痛', '疮顶脓头', '便血', '肛门坠胀', '腹泻', '便秘', '呕吐', '纳差', '口渴', '舌红', '脉数', '脉浮', '瘙痒', '疼痛拒按', '神疲乏力', '夜啼']
 
-const form = reactive({ module: '', symptoms: [], tongue: '', pulse: '', local: '', systemic: '', detail: '', use_ai: true })
+const form = reactive({ module: '', symptoms: [], tongue: '', pulse: '', local: '', systemic: '', detail: '' })
 const customSym = ref('')
-const photoLoading = ref(false)
-const visionResult = ref(null)
-
-async function onPhoto(file) {
-  photoLoading.value = true
-  try {
-    const fd = new FormData()
-    fd.append('image', file)
-    fd.append('module', form.module || 'surgery')
-    fd.append('symptoms', [...form.symptoms, form.tongue, form.pulse].filter(Boolean).join(';'))
-    const res = await fetch('/api/v1/dx/vision', { method: 'POST', body: fd })
-    if (!res.ok) throw new Error((await res.json()).detail || '失败')
-    const d = await res.json()
-    visionResult.value = d.result || {}
-  } catch (e) {
-    ElMessage.error(e.message || '拍照辨病失败')
-  } finally {
-    photoLoading.value = false
-  }
-  return false
-}
-const visionSummary = computed(() => {
-  const r = visionResult.value || {}
-  const out = {}
-  for (const k of Object.keys(r)) {
-    if (typeof r[k] === 'string' && r[k]) out[k] = r[k].slice(0, 200)
-  }
-  return out
-})
 const loading = ref(false)
 const result = ref(null)
 const records = ref([])
 const showAllPairs = ref(false)
-const aiRequested = ref(false)
 
 function bagangPairs(sys) {
   const byKey = {}
@@ -349,7 +299,6 @@ async function run() {
   }
   loading.value = true
   try {
-    aiRequested.value = !!form.use_ai
     const res = await dxAnalyze({ ...form })
     result.value = res
     showAllPairs.value = false
@@ -370,7 +319,6 @@ async function loadRecords() {
 function loadRecord(r) {
   dxRecord(r.id).then(res => {
     result.value = res.result
-    aiRequested.value = !!res.result?.ai
     showAllPairs.value = false
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }).catch(() => {})
@@ -414,8 +362,6 @@ function fmtTime(t) {
 .stage-title { font-size: 12px; color: var(--xl-teal); font-weight: 600; margin-bottom: 4px; }
 .stage-line { font-size: 12.5px; color: #4A5A52; margin: 3px 0; }
 .stage-line b { color: var(--xl-ink); }
-.vision-block { background: #EFF5FB; border: 1px solid #CFDFEF; border-radius: 10px; padding: 10px 14px; margin-bottom: 12px; }
-.vision-block h4 { margin: 0 0 6px; color: #2F6DA0; }
 .jj { font-size: 12.5px; color: #6B5C42; margin: 2px 0; padding-left: 10px; }
 .sys-block { background: #F7FAF9; border: 1px solid #DCEBE4; border-radius: 10px; padding: 12px 14px; margin-top: 16px; }
 .sys-block h4 { margin: 0 0 8px; color: var(--xl-deep); }

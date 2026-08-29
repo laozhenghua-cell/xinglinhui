@@ -455,7 +455,7 @@ class AnalyzeIn(BaseModel):
     systemic: str = ""
     detail: str = ""
     module: Optional[str] = None  # 空=不限;anorectal/surgery/pediatrics/alchemy
-    use_ai: bool = True
+    use_ai: bool = False  # 默认走规则引擎辨证(选择症状);显式开启才生成 AI 报告
 
 
 def _serialize(obj) -> dict:

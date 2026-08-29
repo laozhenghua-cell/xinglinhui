@@ -85,7 +85,7 @@ const advice = computed(() => {
 <template>
   <div class="page">
     <div class="h-title" style="font-size: 26px">辨证论治</div>
-    <el-button type="primary" size="small" style="margin-top:10px" @click="router.push('/dx?module=pediatrics')">🤖 AI 智能辨证(跨专科)</el-button>
+    <el-button type="primary" size="small" style="margin-top:10px" @click="router.push('/dx?module=pediatrics')">🧭 症状辨证(跨专科)</el-button>
     <p style="color: var(--ink-soft); font-size: 13.5px; margin-top: 6px">
       依程氏诊法四步采集证据，按八症六字立法处方。每一步均附原著依据。
     </p>

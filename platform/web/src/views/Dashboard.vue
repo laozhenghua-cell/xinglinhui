@@ -22,7 +22,7 @@
       <h3>快捷入口</h3>
       <div class="quick-grid">
         <div class="quick" @click="router.push('/clinic/new')"><span class="q-ico">🩺</span><b>门诊接诊</b><i>四诊录入 → AI 辨证 → 处方</i></div>
-        <div class="quick" @click="router.push('/dx')"><span class="q-ico">🔮</span><b>智能辨证</b><i>跨专科证型病种方剂推荐</i></div>
+        <div class="quick" @click="router.push('/dx')"><span class="q-ico">🔮</span><b>症状辨证</b><i>跨专科证型病种方剂推荐</i></div>
         <div class="quick" @click="router.push('/kb')"><span class="q-ico">📚</span><b>知识总库</b><i>3,500+ 方药病证案诀</i></div>
         <div class="quick" @click="router.push('/learn')"><span class="q-ico">🎓</span><b>学苑</b><i>学习路径 · 自测 · AI 助教</i></div>
       </div>

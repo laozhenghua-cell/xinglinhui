@@ -19,7 +19,7 @@
           <el-icon><FirstAidKit /></el-icon><template #title>门诊诊疗</template>
         </el-menu-item>
         <el-menu-item index="/dx">
-          <el-icon><MagicStick /></el-icon><template #title>智能辨证</template>
+          <el-icon><MagicStick /></el-icon><template #title>症状辨证</template>
         </el-menu-item>
         <el-menu-item index="/kb">
           <el-icon><Collection /></el-icon><template #title>知识总库</template>
@@ -48,7 +48,7 @@
           <el-button size="small" type="primary" @click="router.push('/clinic/new')">
             <el-icon><Plus /></el-icon>&nbsp;新建就诊
           </el-button>
-          <el-button size="small" plain @click="router.push('/dx')">智能辨证</el-button>
+          <el-button size="small" plain @click="router.push('/dx')">症状辨证</el-button>
         </div>
       </header>
       <main class="shell-body">
