@@ -844,7 +844,7 @@ async def dx_eval():
     for sm in samples:
         result = analyze_systems(sm["labels"])
         row = {"id": sm["id"], "desc": sm["desc"]}
-        for sys_key in ("bagang", "liujing", "weiqiyingxue"):
+        for sys_key in ("bagang", "liujing", "weiqiyingxue", "zangfu"):
             got = result[sys_key]["summary"]
             exp = sm["expected"].get(sys_key)
             row[sys_key] = {"got": got, "expected": exp}

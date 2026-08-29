@@ -310,17 +310,17 @@ def _match_names(src_names: list[str], cand_names: list[str]) -> list[str]:
 
 
 async def _seed_classics(db: AsyncSession) -> int:
-    """按 (book, article) 幂等合并导入种子条文(已存在的跳过)。"""
+    """按 (book, article, original) 幂等合并导入种子条文(已存在的跳过)。"""
     from pathlib import Path as _P
     import json as _j
 
     p = _P(__file__).resolve().parent.parent.parent / "data" / "classics_seed.json"
     data = _j.loads(p.read_text(encoding="utf-8"))
-    rows = (await db.execute(select(KbClassic.book, KbClassic.article))).all()
-    existing = {(b, a) for b, a in rows}
+    rows = (await db.execute(select(KbClassic.book, KbClassic.article, KbClassic.original))).all()
+    existing = {(b, a, o) for b, a, o in rows}
     added = 0
     for c in data["classics"]:
-        key = (c.get("book", ""), c.get("article", ""))
+        key = (c.get("book", ""), c.get("article", ""), c.get("original", ""))
         if key in existing:
             continue
         db.add(KbClassic(**{k: c.get(k, "") for k in ("book", "chapter", "article", "original", "plain", "source")}))
