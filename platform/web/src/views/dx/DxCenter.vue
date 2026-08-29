@@ -130,6 +130,23 @@
             </el-row>
           </div>
 
+          <div v-if="result.systems" class="sys-block">
+            <h4>🧭 辨证体系对照(八纲 · 六经 · 卫气营血)</h4>
+            <el-row :gutter="10">
+              <el-col v-for="(sys, sk) in result.systems" :key="sk" :span="8">
+                <div class="sys-card">
+                  <div class="sys-head">{{ sys.name }}<span class="sys-conf">{{ Math.round((sys.confidence || 0) * 100) }}%</span></div>
+                  <div class="sys-main">{{ sys.summary }}</div>
+                  <div v-for="t in sys.top" :key="t.key" class="sys-item">
+                    <b>{{ t.name }}</b>({{ t.score }} 分)
+                    <div class="sys-hits"><el-tag v-for="h in t.hits" :key="h" size="small" type="info" style="margin:0 2px 2px 0">{{ h }}</el-tag></div>
+                    <div class="sys-exp">{{ t.explain }}</div>
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+
           <h4 style="margin-top:18px">关联内容</h4>
           <el-row :gutter="10">
             <el-col :span="8">
@@ -317,4 +334,13 @@ function fmtTime(t) {
 .vision-block { background: #EFF5FB; border: 1px solid #CFDFEF; border-radius: 10px; padding: 10px 14px; margin-bottom: 12px; }
 .vision-block h4 { margin: 0 0 6px; color: #2F6DA0; }
 .jj { font-size: 12.5px; color: #6B5C42; margin: 2px 0; padding-left: 10px; }
+.sys-block { background: #F7FAF9; border: 1px solid #DCEBE4; border-radius: 10px; padding: 12px 14px; margin-top: 16px; }
+.sys-block h4 { margin: 0 0 8px; color: var(--xl-deep); }
+.sys-card { background: #fff; border: 1px solid var(--xl-line); border-radius: 8px; padding: 10px 12px; height: 100%; }
+.sys-head { font-weight: 700; color: var(--xl-ink); display: flex; justify-content: space-between; }
+.sys-conf { color: var(--xl-teal); font-size: 12px; }
+.sys-main { font-family: "Songti SC", serif; font-size: 15px; color: var(--xl-cinnabar); margin: 4px 0 6px; }
+.sys-item { font-size: 12.5px; margin: 6px 0; border-top: 1px dashed #eee; padding-top: 4px; }
+.sys-hits { margin: 2px 0; }
+.sys-exp { color: #8A94A0; font-size: 11.5px; }
 </style>

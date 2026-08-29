@@ -523,6 +523,11 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
     if module == "anorectal":
         anorectal_result = await _anorectal_structured_dx(user_labels, db)
 
+    # 0.7 多辨证体系对照(八纲/六经/卫气营血,所有专科通用)
+    from app.services.dx_systems import analyze_systems
+
+    systems_result = analyze_systems(user_labels)
+
     # 1. 证型匹配
     synd_stmt = select(KBSyndrome)
     if module:
@@ -695,6 +700,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "formulas": formulas,
         "related": related,
         "ai": ai,
+        "systems": systems_result,
     }
 
     if peds_result:
