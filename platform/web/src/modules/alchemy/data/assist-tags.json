@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "name": "方剂分期/阴阳标签",
+    "principle": "仅收录原书明文表述者，不臆断：未载明分期或阴阳者不打标签、不过滤",
+    "stage": {
+      "stage_early": "初起未溃",
+      "stage_pus": "成脓未溃",
+      "stage_ulcerated": "已溃流脓",
+      "stage_chronic": "溃后久不敛"
+    },
+    "syndrome": { "yin": "阴证方", "yang": "阳证方" }
+  },
+  "tags": {
+    "F03": { "syndrome": ["yin"], "note": "原书：中九丸主治『阴症……』，『一切阳证不相宜』" },
+    "F31": { "syndrome": ["yin"], "note": "原书：金液丹主『阴症阴毒』" },
+    "F32": { "stage": ["stage_ulcerated", "stage_chronic"], "note": "原书：脓尽之后，再以太乙丹收口" },
+    "F27": { "stage": ["stage_early", "stage_pus"], "note": "原书：一点雪『专治未溃肿疡，促其消散』" },
+    "F17": { "stage": ["stage_pus"], "note": "原书：七珍丹主『欲散不散，欲溃不溃者』" },
+    "F20": { "stage": ["stage_ulcerated", "stage_chronic"], "note": "原书：五福滚脓丹主『一切疮疡脓水不尽，口小里大者』" },
+    "F33": { "stage": ["stage_ulcerated", "stage_chronic"], "note": "原书：『未破头者，不得用六合丹』（已破头者方可用）" },
+    "F34": { "stage": ["stage_pus"], "note": "原书：阳春白雪丹用于『已化脓而未穿破头者』点头破脓；『已破头者，不得用白雪丹』" }
+  }
+}

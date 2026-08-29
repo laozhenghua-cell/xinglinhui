@@ -1,0 +1,382 @@
+{
+  "paths": [
+    {
+      "id": "peds-basic",
+      "title": "儿科入门 · 程氏八症六字",
+      "module": "pediatrics",
+      "desc": "依《程氏家传儿科秘要》:先明八症,再学六字(平肝、补脾、泻心),每症配主方,附医案印证。",
+      "items": [
+        {
+          "type": "syndromes",
+          "module": "pediatrics",
+          "name": "风热",
+          "note": "外感风邪,平肝泻心;第一方主之"
+        },
+        {
+          "type": "formulas",
+          "module": "pediatrics",
+          "name": "第一方（专治小儿风热）",
+          "note": "羌防薄蝉,散表定惊"
+        },
+        {
+          "type": "syndromes",
+          "module": "pediatrics",
+          "name": "急惊风",
+          "note": "肝风心火相搏,急则治标"
+        },
+        {
+          "type": "syndromes",
+          "module": "pediatrics",
+          "name": "慢惊风",
+          "note": "由急惊转来,虚实夹杂"
+        },
+        {
+          "type": "syndromes",
+          "module": "pediatrics",
+          "name": "慢脾风",
+          "note": "脾虚至极,第四方平肝补脾重剂"
+        },
+        {
+          "type": "syndromes",
+          "module": "pediatrics",
+          "name": "脾虚",
+          "note": "脾常不足,补脾为要"
+        },
+        {
+          "type": "syndromes",
+          "module": "pediatrics",
+          "name": "疳症",
+          "note": "积久成疳,各经各有加法"
+        },
+        {
+          "type": "syndromes",
+          "module": "pediatrics",
+          "name": "燥火",
+          "note": "燥火总剂,润燥泻火"
+        },
+        {
+          "type": "syndromes",
+          "module": "pediatrics",
+          "name": "咳嗽",
+          "note": "第八方专治小儿咳嗽"
+        },
+        {
+          "type": "cases",
+          "module": "pediatrics",
+          "name": "脐风案·灯火十三灼即退",
+          "note": "医案印证:三朝内望黄色,灯火攻肝风"
+        },
+        {
+          "type": "tips",
+          "module": "pediatrics",
+          "name": "危候警示",
+          "note": "学辨证更要知危候,谨防误治"
+        }
+      ]
+    },
+    {
+      "id": "surg-basic",
+      "title": "疮疡入门 · 消托补三法",
+      "module": "surgery",
+      "desc": "从疔、痈、疽三大类入手,掌握消、托、补三法与火毒炽盛证,配名医经验与医案。",
+      "items": [
+        {
+          "type": "diseases",
+          "module": "surgery",
+          "name": "印堂疔",
+          "note": "颜面疔疮,严禁挤压防走黄"
+        },
+        {
+          "type": "diseases",
+          "module": "surgery",
+          "name": "颈痈",
+          "note": "对口疮,鉴别结喉痈"
+        },
+        {
+          "type": "diseases",
+          "module": "surgery",
+          "name": "发背",
+          "note": "有头疽重症"
+        },
+        {
+          "type": "diseases",
+          "module": "surgery",
+          "name": "脱疽",
+          "note": "坏疽,中西医对照"
+        },
+        {
+          "type": "syndromes",
+          "module": "surgery",
+          "name": "火毒炽盛",
+          "note": "阳证初起总纲"
+        },
+        {
+          "type": "formulas",
+          "module": "surgery",
+          "name": "五味消毒饮",
+          "note": "疔疮痈疡火毒炽盛首方"
+        },
+        {
+          "type": "formulas",
+          "module": "surgery",
+          "name": "仙方活命饮",
+          "note": "疮疡圣药,消肿溃坚"
+        },
+        {
+          "type": "formulas",
+          "module": "surgery",
+          "name": "透脓散",
+          "note": "托法代表,促脓外出"
+        },
+        {
+          "type": "formulas",
+          "module": "surgery",
+          "name": "八珍汤",
+          "note": "补法收功,溃后补益"
+        },
+        {
+          "type": "tips",
+          "module": "surgery",
+          "name": "名家经验",
+          "note": "表实热三字入手,重用夏枯草不留瘢"
+        },
+        {
+          "type": "cases",
+          "module": "surgery",
+          "name": "偏对口疮(脑后发)",
+          "note": "三诊进退示范:消→托→补"
+        }
+      ]
+    },
+    {
+      "id": "anorectal-basic",
+      "title": "肛肠入门 · 辨痔瘘裂脱",
+      "module": "anorectal",
+      "desc": "认识肛肠四病与常见证型,掌握凉血止血、清热利湿两大法门及代表方。",
+      "items": [
+        {
+          "type": "diseases",
+          "module": "anorectal",
+          "name": "痔",
+          "note": "辨内痔外痔混合痔"
+        },
+        {
+          "type": "diseases",
+          "module": "anorectal",
+          "name": "肛周脓肿",
+          "note": "辨虚实与走窜"
+        },
+        {
+          "type": "syndromes",
+          "module": "anorectal",
+          "name": "实热内蕴,血热肠燥",
+          "note": "凉血止血,润肠通便"
+        },
+        {
+          "type": "syndromes",
+          "module": "anorectal",
+          "name": "湿热下注,气滞血瘀",
+          "note": "清热利湿,活血化瘀"
+        },
+        {
+          "type": "formulas",
+          "module": "anorectal",
+          "name": "凉血地黄汤",
+          "note": "血热肠燥出血"
+        },
+        {
+          "type": "formulas",
+          "module": "anorectal",
+          "name": "地榆散加味",
+          "note": "便血常用"
+        },
+        {
+          "type": "formulas",
+          "module": "anorectal",
+          "name": "丹栀逍遥散",
+          "note": "肝郁化热"
+        },
+        {
+          "type": "tips",
+          "module": "anorectal",
+          "name": "预防调护",
+          "note": "饮食起居与坐浴"
+        },
+        {
+          "type": "cases",
+          "module": "anorectal",
+          "name": "痔",
+          "note": "医案印证辨证思路"
+        }
+      ]
+    },
+    {
+      "id": "alchemy-basic",
+      "title": "丹药入门 · 炼丹术与安全",
+      "module": "alchemy",
+      "desc": "先明术语与历史,再学三大汞类丹药,最后务必掌握毒龙丹用法禁忌——安全第一。",
+      "items": [
+        {
+          "type": "terms",
+          "module": "alchemy",
+          "name": "飞",
+          "note": "干馏升华;水飞另义"
+        },
+        {
+          "type": "terms",
+          "module": "alchemy",
+          "name": "升",
+          "note": "升法:药物经火升华上凝"
+        },
+        {
+          "type": "terms",
+          "module": "alchemy",
+          "name": "伏",
+          "note": "降法:升华下凝"
+        },
+        {
+          "type": "formulas",
+          "module": "alchemy",
+          "name": "轻粉",
+          "note": "氯化汞类,升法"
+        },
+        {
+          "type": "formulas",
+          "module": "alchemy",
+          "name": "红升丹",
+          "note": "氧化汞类,外科拔毒去腐"
+        },
+        {
+          "type": "formulas",
+          "module": "alchemy",
+          "name": "白降丹",
+          "note": "氯化高汞,腐蚀力强"
+        },
+        {
+          "type": "dulong",
+          "module": "alchemy",
+          "name": "感冒发热者",
+          "note": "毒龙丹按症引药示例"
+        },
+        {
+          "type": "tips",
+          "module": "alchemy",
+          "name": "毒龙丹总述",
+          "note": "剧毒药品管理,严禁自行配制服用"
+        }
+      ]
+    },
+    {
+      "id": "fusion-fire",
+      "title": "跨科专题 · 清热解毒法四科应用",
+      "module": "all",
+      "desc": "融合专题:同一治则,疮疡用五味消毒、儿科用导赤泻心、肛肠用凉血地黄、丹药用红升丹外拔——体会异病同治。",
+      "items": [
+        {
+          "type": "formulas",
+          "module": "surgery",
+          "name": "五味消毒饮",
+          "note": "疮疡火毒首方"
+        },
+        {
+          "type": "syndromes",
+          "module": "surgery",
+          "name": "火毒炽盛",
+          "note": "阳证初起"
+        },
+        {
+          "type": "formulas",
+          "module": "pediatrics",
+          "name": "导赤散",
+          "note": "泻心火,同是清法而轻灵"
+        },
+        {
+          "type": "syndromes",
+          "module": "pediatrics",
+          "name": "风热",
+          "note": "平肝泻心"
+        },
+        {
+          "type": "formulas",
+          "module": "anorectal",
+          "name": "凉血地黄汤",
+          "note": "血热肠燥,清而兼润"
+        },
+        {
+          "type": "syndromes",
+          "module": "anorectal",
+          "name": "实热内蕴,血热肠燥",
+          "note": "下焦血热"
+        },
+        {
+          "type": "formulas",
+          "module": "alchemy",
+          "name": "红升丹",
+          "note": "外用拔毒,注意汞毒"
+        },
+        {
+          "type": "tips",
+          "module": "surgery",
+          "name": "名家经验",
+          "note": "表实热入手"
+        }
+      ]
+    },
+    {
+      "id": "fusion-external",
+      "title": "跨科专题 · 外治法贯通四科",
+      "module": "all",
+      "desc": "融合专题:疮疡敷药掺药、肛肠坐浴熏洗、儿科灯火推拿、丹药腐蚀生肌——外治之理即内治之理。",
+      "items": [
+        {
+          "type": "formulas",
+          "module": "surgery",
+          "name": "金黄散",
+          "note": "围敷留顶"
+        },
+        {
+          "type": "tips",
+          "module": "surgery",
+          "name": "名家经验",
+          "note": "未成脓围敷、成脓千手膏、溃后红升丹捻条"
+        },
+        {
+          "type": "formulas",
+          "module": "anorectal",
+          "name": "消肿止痛洗剂",
+          "note": "熏洗坐浴"
+        },
+        {
+          "type": "tips",
+          "module": "anorectal",
+          "name": "预防调护",
+          "note": "坐浴方与术后护理"
+        },
+        {
+          "type": "tips",
+          "module": "pediatrics",
+          "name": "推拿代药",
+          "note": "小儿外治特色"
+        },
+        {
+          "type": "cases",
+          "module": "pediatrics",
+          "name": "脐风案·灯火十三灼即退",
+          "note": "灯火灸外治实例"
+        },
+        {
+          "type": "formulas",
+          "module": "alchemy",
+          "name": "白降丹",
+          "note": "腐蚀恶肉,外治猛药"
+        },
+        {
+          "type": "dulong",
+          "module": "alchemy",
+          "name": "无名肿毒者",
+          "note": "引药入外科"
+        }
+      ]
+    }
+  ]
+}

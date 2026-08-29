@@ -1,0 +1,2809 @@
+{
+ "findings": [
+  {
+   "key": "w_fu",
+   "label": "纹浮（浮露于表）",
+   "step": "shouwen",
+   "group": "浮沉（表里）",
+   "hint": "浮为风、为病在表"
+  },
+  {
+   "key": "w_chen",
+   "label": "纹沉（隐于肉里）",
+   "step": "shouwen",
+   "group": "浮沉（表里）",
+   "hint": "沉为里"
+  },
+  {
+   "key": "w_yinxian",
+   "label": "纹或隐或现、或有或无",
+   "step": "shouwen",
+   "group": "浮沉（表里）",
+   "hint": "慢脾风候，五脏气息已乱"
+  },
+  {
+   "key": "w_zi",
+   "label": "纹紫",
+   "step": "shouwen",
+   "group": "颜色（风热寒虚）",
+   "hint": "紫为热"
+  },
+  {
+   "key": "w_qing",
+   "label": "纹青",
+   "step": "shouwen",
+   "group": "颜色（风热寒虚）",
+   "hint": "青为风"
+  },
+  {
+   "key": "w_danhong",
+   "label": "纹淡红",
+   "step": "shouwen",
+   "group": "颜色（风热寒虚）",
+   "hint": "淡红为寒"
+  },
+  {
+   "key": "w_danzhi",
+   "label": "纹淡滞",
+   "step": "shouwen",
+   "group": "颜色（风热寒虚）",
+   "hint": "淡滞为虚"
+  },
+  {
+   "key": "w_mohu",
+   "label": "纹模糊不现",
+   "step": "shouwen",
+   "group": "颜色（风热寒虚）",
+   "hint": "模糊不现为虚湿"
+  },
+  {
+   "key": "w_cudazi",
+   "label": "纹粗大而紫",
+   "step": "shouwen",
+   "group": "颜色（风热寒虚）",
+   "hint": "热盛浮现"
+  },
+  {
+   "key": "w_yijie",
+   "label": "纹见一截一截模糊",
+   "step": "shouwen",
+   "group": "颜色（风热寒虚）",
+   "hint": "伏热（阳症似阴）"
+  },
+  {
+   "key": "w_changya",
+   "label": "开长丫（人字纹）",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "为食、为积"
+  },
+  {
+   "key": "w_duanya",
+   "label": "开短丫",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "为惊"
+  },
+  {
+   "key": "w_gongfanwai",
+   "label": "弓反外形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "痰热；慢惊见之者重"
+  },
+  {
+   "key": "w_gongfanli",
+   "label": "弓反内形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "感冒寒邪"
+  },
+  {
+   "key": "w_shuizi",
+   "label": "水字形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "惊风、食积"
+  },
+  {
+   "key": "w_yugu",
+   "label": "鱼骨形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "水湿"
+  },
+  {
+   "key": "w_liuzhu",
+   "label": "流珠形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "饮食所伤、内热"
+  },
+  {
+   "key": "w_huanzhu",
+   "label": "环珠形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "脾虚停食"
+  },
+  {
+   "key": "w_changzhu",
+   "label": "长珠形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "脾伤积滞"
+  },
+  {
+   "key": "w_laishe",
+   "label": "来蛇形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "脾胃湿热"
+  },
+  {
+   "key": "w_qushe",
+   "label": "去蛇形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "脾虚食积"
+  },
+  {
+   "key": "w_qiang",
+   "label": "枪形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "风热"
+  },
+  {
+   "key": "w_zhen",
+   "label": "针形（透命关）",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "心肝热极生风"
+  },
+  {
+   "key": "w_shezhi",
+   "label": "透关射指形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "惊风、痰热聚胸膈"
+  },
+  {
+   "key": "w_shejia",
+   "label": "透关射甲形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "肝木克脾土败证"
+  },
+  {
+   "key": "w_luanwen",
+   "label": "乱纹（参差离乱）",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "虚积；慢惊右手离乱"
+  },
+  {
+   "key": "w_daxiaoz",
+   "label": "大小字形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "肝病、惊风"
+  },
+  {
+   "key": "w_lianzhu",
+   "label": "连珠形",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "危候"
+  },
+  {
+   "key": "w_sandamaosheng",
+   "label": "纹散大生毛",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "虚湿"
+  },
+  {
+   "key": "w_sanwutiao",
+   "label": "纹三五条不等",
+   "step": "shouwen",
+   "group": "纹形（十八图式）",
+   "hint": "热积（急惊夹惊）"
+  },
+  {
+   "key": "w_fengguan",
+   "label": "纹在风关",
+   "step": "shouwen",
+   "group": "关位与左右",
+   "hint": "病初起，症轻"
+  },
+  {
+   "key": "w_qiguan",
+   "label": "纹至气关",
+   "step": "shouwen",
+   "group": "关位与左右",
+   "hint": "病进"
+  },
+  {
+   "key": "w_mingguan",
+   "label": "纹出命关",
+   "step": "shouwen",
+   "group": "关位与左右",
+   "hint": "病甚；慢脾久病见之为危候"
+  },
+  {
+   "key": "w_zuofu",
+   "label": "左手纹浮于右手",
+   "step": "shouwen",
+   "group": "关位与左右",
+   "hint": "肝经风热（左手主肝）"
+  },
+  {
+   "key": "w_youfu",
+   "label": "右手纹浮于左手",
+   "step": "shouwen",
+   "group": "关位与左右",
+   "hint": "肺经（右手主肺），咳嗽必见"
+  },
+  {
+   "key": "m_fu",
+   "label": "脉浮",
+   "step": "mai",
+   "group": "脉象",
+   "hint": "浮为风、为表"
+  },
+  {
+   "key": "m_chen",
+   "label": "脉沉",
+   "step": "mai",
+   "group": "脉象",
+   "hint": "沉为里"
+  },
+  {
+   "key": "m_shu",
+   "label": "脉数（一息八九至以上）",
+   "step": "mai",
+   "group": "脉象",
+   "hint": "数为热"
+  },
+  {
+   "key": "m_chi",
+   "label": "脉迟",
+   "step": "mai",
+   "group": "脉象",
+   "hint": "迟为寒"
+  },
+  {
+   "key": "m_hua",
+   "label": "脉滑",
+   "step": "mai",
+   "group": "脉象",
+   "hint": "滑为痰"
+  },
+  {
+   "key": "m_xian",
+   "label": "脉弦",
+   "step": "mai",
+   "group": "脉象",
+   "hint": "弦主肝、疟"
+  },
+  {
+   "key": "m_jin",
+   "label": "脉紧",
+   "step": "mai",
+   "group": "脉象",
+   "hint": "紧为寒"
+  },
+  {
+   "key": "m_ru",
+   "label": "脉濡",
+   "step": "mai",
+   "group": "脉象",
+   "hint": "濡主脾虚湿"
+  },
+  {
+   "key": "m_youli",
+   "label": "脉有力",
+   "step": "mai",
+   "group": "虚实与左右",
+   "hint": "有力为实"
+  },
+  {
+   "key": "m_wuli",
+   "label": "脉无力",
+   "step": "mai",
+   "group": "虚实与左右",
+   "hint": "无力为虚"
+  },
+  {
+   "key": "m_sanluan",
+   "label": "脉浮泛无力、脉息离乱、十余至重按则无（散脉）",
+   "step": "mai",
+   "group": "虚实与左右",
+   "hint": "慢脾风散脉，难望有生"
+  },
+  {
+   "key": "m_weixu",
+   "label": "脉微而不乱、重按迟而有力",
+   "step": "mai",
+   "group": "虚实与左右",
+   "hint": "元气尚藏，有望"
+  },
+  {
+   "key": "m_zuoshen",
+   "label": "左手脉甚于右手",
+   "step": "mai",
+   "group": "虚实与左右",
+   "hint": "肝木乘土；燥火为重"
+  },
+  {
+   "key": "m_youshen",
+   "label": "右手脉甚于左手",
+   "step": "mai",
+   "group": "虚实与左右",
+   "hint": "燥火为轻"
+  },
+  {
+   "key": "m_buqi",
+   "label": "脉迟数大小参差不齐",
+   "step": "mai",
+   "group": "虚实与左右",
+   "hint": "内有积滞"
+  },
+  {
+   "key": "g_shenre",
+   "label": "身热",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": ""
+  },
+  {
+   "key": "g_zhuangre",
+   "label": "壮热（日夜俱热）",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": ""
+  },
+  {
+   "key": "g_yerre",
+   "label": "夜间热增",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": "火伏于内"
+  },
+  {
+   "key": "g_riqingyezhong",
+   "label": "日轻夜重",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": "虚热内热"
+  },
+  {
+   "key": "g_chaore",
+   "label": "潮热（定时而作）",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": "虚热"
+  },
+  {
+   "key": "g_hanre",
+   "label": "寒热往来",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": "热在少阳"
+  },
+  {
+   "key": "g_xianleng",
+   "label": "先冷后热（定时发作）",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": "疟疾"
+  },
+  {
+   "key": "g_mianhong",
+   "label": "面目红赤",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": ""
+  },
+  {
+   "key": "g_mianhuangbai",
+   "label": "面色黄白",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": ""
+  },
+  {
+   "key": "g_mianhuangshou",
+   "label": "面黄肌瘦",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": ""
+  },
+  {
+   "key": "g_mianqing",
+   "label": "面青",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": ""
+  },
+  {
+   "key": "g_mianhei",
+   "label": "面黑",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": ""
+  },
+  {
+   "key": "g_shenjuan",
+   "label": "神倦无精神、倦怠依人",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": ""
+  },
+  {
+   "key": "g_bimuwanghun",
+   "label": "闭目亡魂",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": "风闭五脏（慢脾危候）"
+  },
+  {
+   "key": "g_shenhunmubi",
+   "label": "神昏目闭、形如醉人、唤之则醒",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": "伏热内闭"
+  },
+  {
+   "key": "g_zhanyu",
+   "label": "时发谵语",
+   "step": "wai",
+   "group": "神色与热象",
+   "hint": "心伏火"
+  },
+  {
+   "key": "g_chunshenhong",
+   "label": "唇深红而亮",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "风热"
+  },
+  {
+   "key": "g_chunjiaoan",
+   "label": "唇红而焦暗",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "实热"
+  },
+  {
+   "key": "g_chundanbai",
+   "label": "唇淡白",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "脾胃虚寒"
+  },
+  {
+   "key": "g_chundanhuang",
+   "label": "唇黄淡暗",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "湿热"
+  },
+  {
+   "key": "g_chunkubai",
+   "label": "唇枯白如朽骨",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "脾绝死症"
+  },
+  {
+   "key": "g_bisai",
+   "label": "鼻塞、流涕水",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "风热在肺"
+  },
+  {
+   "key": "g_bigan",
+   "label": "鼻干、鼻燥",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "燥热伤津"
+  },
+  {
+   "key": "g_bikongkaizhang",
+   "label": "鼻孔开张、有出气无入气",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "肺绝难治"
+  },
+  {
+   "key": "g_biheimei",
+   "label": "鼻生黑煤（洗而忽然）",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "难治（识症趋避）"
+  },
+  {
+   "key": "g_yanqinglei",
+   "label": "眼有清泪",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "风、虚"
+  },
+  {
+   "key": "g_yanleijiang",
+   "label": "眼有泪浆黄结",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "风、湿、热"
+  },
+  {
+   "key": "g_yanshishi",
+   "label": "眼直视或上视",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "肝风发搐"
+  },
+  {
+   "key": "g_yanbaiqinglan",
+   "label": "眼白青蓝色",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "肝有风"
+  },
+  {
+   "key": "g_tongwuguang",
+   "label": "瞳无光彩",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "肾虚；兼发黄肾气虚"
+  },
+  {
+   "key": "g_yanbaihuang",
+   "label": "眼白黄",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "湿热"
+  },
+  {
+   "key": "g_yanshihuangjie",
+   "label": "眼屎黄结",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "内热"
+  },
+  {
+   "key": "g_yankuangxian",
+   "label": "眼眶微陷／深陷",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "脾气不升；深陷者危"
+  },
+  {
+   "key": "g_shebaitai",
+   "label": "舌白苔",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "风"
+  },
+  {
+   "key": "g_shehuanggan",
+   "label": "苔黄而干",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "热"
+  },
+  {
+   "key": "g_shehong",
+   "label": "舌红",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "心火"
+  },
+  {
+   "key": "g_shehei",
+   "label": "舌黑苔而干",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "热盛"
+  },
+  {
+   "key": "g_sheheiMei",
+   "label": "舌黑如煤",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "水克火，死候"
+  },
+  {
+   "key": "g_ebeiwen",
+   "label": "耳背有纹（乱纹）",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "防出痘疹，乱纹为凶"
+  },
+  {
+   "key": "g_faxihuang",
+   "label": "头发稀疏带黄",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "虚弱"
+  },
+  {
+   "key": "g_fasui",
+   "label": "头毛生穗（疏密长短不等）",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "有积病"
+  },
+  {
+   "key": "g_fashu",
+   "label": "发竖向上（直指向天）",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "乳母有胎（喜病）；无故如此为急死之症"
+  },
+  {
+   "key": "g_fazhi",
+   "label": "发直如竖",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "血绝，死候"
+  },
+  {
+   "key": "g_koubiganzao",
+   "label": "口鼻干燥",
+   "step": "wai",
+   "group": "头面苗窍（唇鼻眼舌耳发）",
+   "hint": "内有火故干燥（燥火）"
+  },
+  {
+   "key": "g_shouzuleng",
+   "label": "手足冷（无温）",
+   "step": "wai",
+   "group": "肢体与躯干",
+   "hint": "脾受克；常冷无温为脾气欲绝"
+  },
+  {
+   "key": "g_fajue",
+   "label": "发厥（四肢冷不知人事）",
+   "step": "wai",
+   "group": "肢体与躯干",
+   "hint": "厥为风重"
+  },
+  {
+   "key": "g_chouchi",
+   "label": "抽掣（筋络抽动）",
+   "step": "wai",
+   "group": "肢体与躯干",
+   "hint": "肝风"
+  },
+  {
+   "key": "g_woquan",
+   "label": "两手握拳",
+   "step": "wai",
+   "group": "肢体与躯干",
+   "hint": "惊"
+  },
+  {
+   "key": "g_yaoya",
+   "label": "咬牙",
+   "step": "wai",
+   "group": "肢体与躯干",
+   "hint": "肝风"
+  },
+  {
+   "key": "g_shuizhongjingti",
+   "label": "睡中惊惕、手足常惕",
+   "step": "wai",
+   "group": "肢体与躯干",
+   "hint": "心惊"
+  },
+  {
+   "key": "g_duqingjin",
+   "label": "肚大青筋",
+   "step": "wai",
+   "group": "肢体与躯干",
+   "hint": "疳积"
+  },
+  {
+   "key": "g_qizhangrugu",
+   "label": "肚皮胀薄、青筋绕露、气胀如鼓",
+   "step": "wai",
+   "group": "肢体与躯干",
+   "hint": "气郁有积"
+  },
+  {
+   "key": "g_shennang",
+   "label": "肾囊软大长垂／光亮如水",
+   "step": "wai",
+   "group": "肢体与躯干",
+   "hint": "儿弱；膀胱气弱停水"
+  },
+  {
+   "key": "g_shuizhong",
+   "label": "水肿",
+   "step": "wai",
+   "group": "肢体与躯干",
+   "hint": "脾虚受湿"
+  },
+  {
+   "key": "g_kesou",
+   "label": "咳嗽（有痰有声）",
+   "step": "wai",
+   "group": "咳喘痰涎",
+   "hint": ""
+  },
+  {
+   "key": "g_ganke",
+   "label": "干咳无痰",
+   "step": "wai",
+   "group": "咳喘痰涎",
+   "hint": "燥火烁肺"
+  },
+  {
+   "key": "g_keshengzhong",
+   "label": "咳声似重、连咳数声而痰始出",
+   "step": "wai",
+   "group": "咳喘痰涎",
+   "hint": "风痰闭肺"
+  },
+  {
+   "key": "g_tishui",
+   "label": "涕水淋漓、眼有泪浆（咳嗽）",
+   "step": "wai",
+   "group": "咳喘痰涎",
+   "hint": "风热之咳"
+  },
+  {
+   "key": "g_tanming",
+   "label": "喉中痰鸣如锯",
+   "step": "wai",
+   "group": "咳喘痰涎",
+   "hint": "风痰壅喉（急惊）"
+  },
+  {
+   "key": "g_qichuan",
+   "label": "气喘",
+   "step": "wai",
+   "group": "咳喘痰涎",
+   "hint": ""
+  },
+  {
+   "key": "g_yezhongchenqing",
+   "label": "夜间喘热惊惕、晨则平复（吼症）",
+   "step": "wai",
+   "group": "咳喘痰涎",
+   "hint": "乳痰吼症"
+  },
+  {
+   "key": "g_shiyin",
+   "label": "声音不亮、甚则失音",
+   "step": "wai",
+   "group": "咳喘痰涎",
+   "hint": "燥火伤肺"
+  },
+  {
+   "key": "g_zihan",
+   "label": "自汗（醒时无故出汗）",
+   "step": "wai",
+   "group": "汗与啼哭",
+   "hint": "脾虚腠理不固"
+  },
+  {
+   "key": "g_daohan",
+   "label": "盗汗（睡中出汗）",
+   "step": "wai",
+   "group": "汗与啼哭",
+   "hint": "气不归藏"
+  },
+  {
+   "key": "g_lengan",
+   "label": "汗出而滑、身冷气长吁",
+   "step": "wai",
+   "group": "汗与啼哭",
+   "hint": "慢脾无望之候"
+  },
+  {
+   "key": "g_tiku",
+   "label": "啼哭无声",
+   "step": "wai",
+   "group": "汗与啼哭",
+   "hint": "气绝，死候"
+  },
+  {
+   "key": "g_xikulianmu",
+   "label": "善啼、恋母",
+   "step": "wai",
+   "group": "汗与啼哭",
+   "hint": ""
+  },
+  {
+   "key": "q_xieqinghuang",
+   "label": "泻青黄色、有水有渣如浮萍",
+   "step": "wen",
+   "group": "二便",
+   "hint": "风热"
+  },
+  {
+   "key": "q_xiehuangshui",
+   "label": "泻净黄水",
+   "step": "wen",
+   "group": "二便",
+   "hint": "湿热、内热"
+  },
+  {
+   "key": "q_xiebaishui",
+   "label": "泻净白水（白屎汤）",
+   "step": "wen",
+   "group": "二便",
+   "hint": "脾胃虚寒"
+  },
+  {
+   "key": "q_xiebaihu",
+   "label": "泻白如糊状而酸臭",
+   "step": "wen",
+   "group": "二便",
+   "hint": "伤食"
+  },
+  {
+   "key": "q_xiebaimo",
+   "label": "泻白沫",
+   "step": "wen",
+   "group": "二便",
+   "hint": "气分湿热"
+  },
+  {
+   "key": "q_xiehongmo",
+   "label": "泻红沫",
+   "step": "wen",
+   "group": "二便",
+   "hint": "血分湿热"
+  },
+  {
+   "key": "q_xiehuangmo",
+   "label": "泻黄沫",
+   "step": "wen",
+   "group": "二便",
+   "hint": "脾经湿热"
+  },
+  {
+   "key": "q_xieqingxue",
+   "label": "泻清血",
+   "step": "wen",
+   "group": "二便",
+   "hint": "血分"
+  },
+  {
+   "key": "q_xieheishui",
+   "label": "频泻黑水",
+   "step": "wen",
+   "group": "二便",
+   "hint": "死候"
+  },
+  {
+   "key": "q_liji",
+   "label": "下痢（红白黄相兼）",
+   "step": "wen",
+   "group": "二便",
+   "hint": "痢症"
+  },
+  {
+   "key": "q_xiaoduanshu",
+   "label": "小便短黄",
+   "step": "wen",
+   "group": "二便",
+   "hint": "有热、有湿火"
+  },
+  {
+   "key": "q_xiaochangbai",
+   "label": "小便长白",
+   "step": "wen",
+   "group": "二便",
+   "hint": "无热"
+  },
+  {
+   "key": "q_baijiang",
+   "label": "小便落地结白浆",
+   "step": "wen",
+   "group": "二便",
+   "hint": "大湿热"
+  },
+  {
+   "key": "q_bianbi",
+   "label": "大便闭结不通",
+   "step": "wen",
+   "group": "二便",
+   "hint": "热闭"
+  },
+  {
+   "key": "q_keyinleng",
+   "label": "渴而饮冷",
+   "step": "wen",
+   "group": "渴饮与吐",
+   "hint": "内湿热"
+  },
+  {
+   "key": "q_keyinre",
+   "label": "渴而饮热",
+   "step": "wen",
+   "group": "渴饮与吐",
+   "hint": "内热、风热传里"
+  },
+  {
+   "key": "q_dake",
+   "label": "大渴引饮",
+   "step": "wen",
+   "group": "渴饮与吐",
+   "hint": "热盛伤津"
+  },
+  {
+   "key": "q_outu",
+   "label": "呕吐",
+   "step": "wen",
+   "group": "渴饮与吐",
+   "hint": ""
+  },
+  {
+   "key": "q_ouru",
+   "label": "食入即吐",
+   "step": "wen",
+   "group": "渴饮与吐",
+   "hint": "胃火内冲"
+  },
+  {
+   "key": "q_ganou",
+   "label": "干呕无物",
+   "step": "wen",
+   "group": "渴饮与吐",
+   "hint": "胃气绝，死候"
+  },
+  {
+   "key": "q_shangshi",
+   "label": "伤食（有饮食不节之因）",
+   "step": "wen",
+   "group": "饮食与兼夹",
+   "hint": ""
+  },
+  {
+   "key": "q_shibuzhibao",
+   "label": "食不知饱、愈食愈瘦",
+   "step": "wen",
+   "group": "饮食与兼夹",
+   "hint": "疳积"
+  },
+  {
+   "key": "q_shihouxie",
+   "label": "食后即泻",
+   "step": "wen",
+   "group": "饮食与兼夹",
+   "hint": "脾不运化"
+  },
+  {
+   "key": "q_buyinshi",
+   "label": "不饮食",
+   "step": "wen",
+   "group": "饮食与兼夹",
+   "hint": ""
+  },
+  {
+   "key": "q_youjou",
+   "label": "有痰",
+   "step": "wen",
+   "group": "饮食与兼夹",
+   "hint": ""
+  },
+  {
+   "key": "q_jiashu",
+   "label": "夹暑（暑月发病）",
+   "step": "wen",
+   "group": "饮食与兼夹",
+   "hint": ""
+  },
+  {
+   "key": "q_jiashi",
+   "label": "夹湿",
+   "step": "wen",
+   "group": "饮食与兼夹",
+   "hint": ""
+  },
+  {
+   "key": "q_duanru",
+   "label": "失乳（断乳后得病）",
+   "step": "wen",
+   "group": "饮食与兼夹",
+   "hint": ""
+  },
+  {
+   "key": "q_rumuyoutai",
+   "label": "乳母有胎（儿食孕乳）",
+   "step": "wen",
+   "group": "饮食与兼夹",
+   "hint": ""
+  },
+  {
+   "key": "q_shuizhongtiao",
+   "label": "夜间睡着手足跳动",
+   "step": "wen",
+   "group": "惊搐征象",
+   "hint": "有惊"
+  },
+  {
+   "key": "q_jijingbingshi",
+   "label": "有急惊病史、失治迁延",
+   "step": "wen",
+   "group": "惊搐征象",
+   "hint": "传慢惊之由"
+  },
+  {
+   "key": "q_buyu",
+   "label": "不语",
+   "step": "wen",
+   "group": "惊搐征象",
+   "hint": "脾气将绝"
+  },
+  {
+   "key": "q_tuxiebuZhi",
+   "label": "吐泻不止（吐泻兼作）",
+   "step": "wen",
+   "group": "惊搐征象",
+   "hint": "慢惊最危之候"
+  }
+ ],
+ "rules": [
+  {
+   "id": "fengre",
+   "features": [
+    {
+     "key": "w_fu",
+     "w": 3
+    },
+    {
+     "key": "w_zi",
+     "w": 3
+    },
+    {
+     "key": "w_zuofu",
+     "w": 2
+    },
+    {
+     "key": "m_fu",
+     "w": 2
+    },
+    {
+     "key": "m_shu",
+     "w": 2
+    },
+    {
+     "key": "m_zuoshen",
+     "w": 1
+    },
+    {
+     "key": "g_chunshenhong",
+     "w": 3
+    },
+    {
+     "key": "g_shenre",
+     "w": 2
+    },
+    {
+     "key": "g_bisai",
+     "w": 2
+    },
+    {
+     "key": "q_xieqinghuang",
+     "w": 3
+    },
+    {
+     "key": "g_zhuangre",
+     "w": 2
+    }
+   ]
+  },
+  {
+   "id": "jijing",
+   "features": [
+    {
+     "key": "g_shuizhongjingti",
+     "w": 3
+    },
+    {
+     "key": "g_chouchi",
+     "w": 3
+    },
+    {
+     "key": "g_yanshishi",
+     "w": 3
+    },
+    {
+     "key": "g_yaoya",
+     "w": 2
+    },
+    {
+     "key": "g_tanming",
+     "w": 3
+    },
+    {
+     "key": "w_duanya",
+     "w": 2
+    },
+    {
+     "key": "w_sanwutiao",
+     "w": 2
+    },
+    {
+     "key": "w_fu",
+     "w": 1
+    },
+    {
+     "key": "m_fu",
+     "w": 1
+    },
+    {
+     "key": "m_hua",
+     "w": 2
+    },
+    {
+     "key": "m_shu",
+     "w": 1
+    },
+    {
+     "key": "g_woquan",
+     "w": 2
+    },
+    {
+     "key": "g_chunshenhong",
+     "w": 1
+    },
+    {
+     "key": "g_shenre",
+     "w": 1
+    },
+    {
+     "key": "w_zuofu",
+     "w": 1
+    },
+    {
+     "key": "q_shuizhongtiao",
+     "w": 2
+    }
+   ]
+  },
+  {
+   "id": "manjing",
+   "features": [
+    {
+     "key": "q_jijingbingshi",
+     "w": 3
+    },
+    {
+     "key": "g_shouzuleng",
+     "w": 3
+    },
+    {
+     "key": "g_fajue",
+     "w": 2
+    },
+    {
+     "key": "q_tuxiebuZhi",
+     "w": 3
+    },
+    {
+     "key": "w_chen",
+     "w": 2
+    },
+    {
+     "key": "w_qing",
+     "w": 3
+    },
+    {
+     "key": "m_chen",
+     "w": 2
+    },
+    {
+     "key": "m_chi",
+     "w": 2
+    },
+    {
+     "key": "m_wuli",
+     "w": 1
+    },
+    {
+     "key": "m_jin",
+     "w": 1
+    },
+    {
+     "key": "g_chundanbai",
+     "w": 2
+    },
+    {
+     "key": "g_yankuangxian",
+     "w": 2
+    },
+    {
+     "key": "g_yanbaiqinglan",
+     "w": 2
+    },
+    {
+     "key": "q_xiebaishui",
+     "w": 2
+    },
+    {
+     "key": "q_xiehuangshui",
+     "w": 2
+    },
+    {
+     "key": "w_gongfanwai",
+     "w": 2
+    },
+    {
+     "key": "w_gongfanli",
+     "w": 2
+    },
+    {
+     "key": "w_changya",
+     "w": 2
+    },
+    {
+     "key": "w_luanwen",
+     "w": 2
+    },
+    {
+     "key": "q_outu",
+     "w": 2
+    },
+    {
+     "key": "g_qichuan",
+     "w": 1
+    }
+   ]
+  },
+  {
+   "id": "manpi",
+   "features": [
+    {
+     "key": "q_xiebaishui",
+     "w": 3
+    },
+    {
+     "key": "g_shouzuleng",
+     "w": 3
+    },
+    {
+     "key": "g_bimuwanghun",
+     "w": 3
+    },
+    {
+     "key": "g_chundanbai",
+     "w": 3
+    },
+    {
+     "key": "q_buyinshi",
+     "w": 2
+    },
+    {
+     "key": "q_buyu",
+     "w": 2
+    },
+    {
+     "key": "w_yinxian",
+     "w": 2
+    },
+    {
+     "key": "m_sanluan",
+     "w": 3
+    },
+    {
+     "key": "g_lengan",
+     "w": 3
+    },
+    {
+     "key": "q_outu",
+     "w": 2
+    },
+    {
+     "key": "q_tuxiebuZhi",
+     "w": 2
+    },
+    {
+     "key": "m_wuli",
+     "w": 1
+    },
+    {
+     "key": "m_weixu",
+     "w": 2
+    }
+   ]
+  },
+  {
+   "id": "pixu",
+   "features": [
+    {
+     "key": "g_mianhuangbai",
+     "w": 3
+    },
+    {
+     "key": "g_shenjuan",
+     "w": 2
+    },
+    {
+     "key": "g_chundanbai",
+     "w": 2
+    },
+    {
+     "key": "g_faxihuang",
+     "w": 2
+    },
+    {
+     "key": "g_xikulianmu",
+     "w": 1
+    },
+    {
+     "key": "g_chaore",
+     "w": 2
+    },
+    {
+     "key": "g_riqingyezhong",
+     "w": 2
+    },
+    {
+     "key": "g_daohan",
+     "w": 2
+    },
+    {
+     "key": "g_zihan",
+     "w": 2
+    },
+    {
+     "key": "w_danhong",
+     "w": 2
+    },
+    {
+     "key": "w_danzhi",
+     "w": 2
+    },
+    {
+     "key": "w_sandamaosheng",
+     "w": 2
+    },
+    {
+     "key": "w_qiguan",
+     "w": 2
+    },
+    {
+     "key": "w_mingguan",
+     "w": 2
+    },
+    {
+     "key": "w_changya",
+     "w": 1
+    },
+    {
+     "key": "w_yugu",
+     "w": 1
+    },
+    {
+     "key": "m_ru",
+     "w": 2
+    },
+    {
+     "key": "m_wuli",
+     "w": 2
+    },
+    {
+     "key": "m_zuoshen",
+     "w": 2
+    },
+    {
+     "key": "q_shangshi",
+     "w": 1
+    },
+    {
+     "key": "g_shuizhong",
+     "w": 2
+    },
+    {
+     "key": "q_duanru",
+     "w": 2
+    }
+   ]
+  },
+  {
+   "id": "ganji",
+   "features": [
+    {
+     "key": "g_mianhuangshou",
+     "w": 3
+    },
+    {
+     "key": "g_fasui",
+     "w": 3
+    },
+    {
+     "key": "g_duqingjin",
+     "w": 3
+    },
+    {
+     "key": "q_shibuzhibao",
+     "w": 2
+    },
+    {
+     "key": "q_shihouxie",
+     "w": 2
+    },
+    {
+     "key": "w_luanwen",
+     "w": 2
+    },
+    {
+     "key": "w_changya",
+     "w": 2
+    },
+    {
+     "key": "m_xian",
+     "w": 2
+    },
+    {
+     "key": "m_buqi",
+     "w": 2
+    },
+    {
+     "key": "g_qizhangrugu",
+     "w": 2
+    },
+    {
+     "key": "m_chen",
+     "w": 1
+    },
+    {
+     "key": "g_yerre",
+     "w": 1
+    },
+    {
+     "key": "q_buyinshi",
+     "w": 1
+    },
+    {
+     "key": "g_mianhuangbai",
+     "w": 1
+    }
+   ]
+  },
+  {
+   "id": "zaohuo",
+   "features": [
+    {
+     "key": "g_mianhong",
+     "w": 3
+    },
+    {
+     "key": "g_chunshenhong",
+     "w": 2
+    },
+    {
+     "key": "g_koubiganzao",
+     "w": 3
+    },
+    {
+     "key": "q_dake",
+     "w": 3
+    },
+    {
+     "key": "g_yerre",
+     "w": 3
+    },
+    {
+     "key": "g_zhanyu",
+     "w": 2
+    },
+    {
+     "key": "g_hanre",
+     "w": 2
+    },
+    {
+     "key": "g_yanshihuangjie",
+     "w": 2
+    },
+    {
+     "key": "q_xiaoduanshu",
+     "w": 2
+    },
+    {
+     "key": "q_ouru",
+     "w": 1
+    },
+    {
+     "key": "g_shenhunmubi",
+     "w": 1
+    },
+    {
+     "key": "w_cudazi",
+     "w": 3
+    },
+    {
+     "key": "w_yijie",
+     "w": 2
+    },
+    {
+     "key": "m_hua",
+     "w": 2
+    },
+    {
+     "key": "m_shu",
+     "w": 2
+    },
+    {
+     "key": "m_youli",
+     "w": 2
+    },
+    {
+     "key": "q_bianbi",
+     "w": 2
+    },
+    {
+     "key": "g_zhuangre",
+     "w": 1
+    },
+    {
+     "key": "g_ganke",
+     "w": 1
+    }
+   ]
+  },
+  {
+   "id": "kesou",
+   "features": [
+    {
+     "key": "g_kesou",
+     "w": 3
+    },
+    {
+     "key": "g_ganke",
+     "w": 2
+    },
+    {
+     "key": "w_youfu",
+     "w": 3
+    },
+    {
+     "key": "w_fu",
+     "w": 1
+    },
+    {
+     "key": "w_zi",
+     "w": 1
+    },
+    {
+     "key": "w_chen",
+     "w": 1
+    },
+    {
+     "key": "w_zi",
+     "w": 1
+    },
+    {
+     "key": "w_duanya",
+     "w": 1
+    },
+    {
+     "key": "w_changya",
+     "w": 1
+    },
+    {
+     "key": "m_fu",
+     "w": 1
+    },
+    {
+     "key": "m_hua",
+     "w": 2
+    },
+    {
+     "key": "g_keshengzhong",
+     "w": 2
+    },
+    {
+     "key": "g_tishui",
+     "w": 2
+    },
+    {
+     "key": "g_yezhongchenqing",
+     "w": 2
+    },
+    {
+     "key": "g_tanming",
+     "w": 1
+    },
+    {
+     "key": "g_qichuan",
+     "w": 1
+    },
+    {
+     "key": "g_shiyin",
+     "w": 1
+    },
+    {
+     "key": "g_bigan",
+     "w": 1
+    },
+    {
+     "key": "g_zihan",
+     "w": 1
+    }
+   ]
+  }
+ ],
+ "dangers": [
+  {
+   "key": "g_tiku",
+   "label": "啼哭无声（气绝）",
+   "level": "极危"
+  },
+  {
+   "key": "g_bikongkaizhang",
+   "label": "鼻孔开张（肺绝）",
+   "level": "极危"
+  },
+  {
+   "key": "q_ganou",
+   "label": "干呕无物（胃气绝）",
+   "level": "极危"
+  },
+  {
+   "key": "g_yankuangxian",
+   "label": "眼眶深陷（脾绝）",
+   "level": "极危"
+  },
+  {
+   "key": "g_chunkubai",
+   "label": "唇枯白如朽骨（脾绝）",
+   "level": "极危"
+  },
+  {
+   "key": "g_sheheiMei",
+   "label": "舌黑如煤（水克火）",
+   "level": "极危"
+  },
+  {
+   "key": "g_fazhi",
+   "label": "发直如竖（血绝）",
+   "level": "极危"
+  },
+  {
+   "key": "q_xieheishui",
+   "label": "频泻黑水（死候）",
+   "level": "极危"
+  },
+  {
+   "key": "g_biheimei",
+   "label": "鼻生黑煤洗而忽然（难治）",
+   "level": "极危"
+  },
+  {
+   "key": "g_lengan",
+   "label": "汗出而滑、身冷气长吁（慢脾无望）",
+   "level": "极危"
+  },
+  {
+   "key": "m_sanluan",
+   "label": "脉息离乱、十余至重按则无（散脉）",
+   "level": "极危"
+  },
+  {
+   "key": "g_bimuwanghun",
+   "label": "闭目亡魂（风闭五脏）",
+   "level": "极危"
+  },
+  {
+   "key": "q_buyu",
+   "label": "不语（脾气将绝）",
+   "level": "极危"
+  },
+  {
+   "key": "g_shouzuleng",
+   "label": "手足常冷无温（脾气欲绝）",
+   "level": "危"
+  },
+  {
+   "key": "q_tuxiebuZhi",
+   "label": "吐泻不止（吐泻兼作，土绝）",
+   "level": "极危"
+  },
+  {
+   "key": "g_qichuan",
+   "label": "气喘（须辨咳喘与胃气欲脱之喘）",
+   "level": "危"
+  }
+ ],
+ "combos": [
+  {
+   "label": "慢脾风危急组合（呕吐、泄泻白屎汤不止 + 手足常冷 + 闭目亡魂 + 唇淡白 + 不食不语）",
+   "keys": [
+    "q_outu",
+    "q_xiebaishui",
+    "g_shouzuleng",
+    "g_bimuwanghun",
+    "g_chundanbai"
+   ],
+   "min": 4
+  },
+  {
+   "label": "上喘下泻两下相碍（难治，当以止泻为先）",
+   "keys": [
+    "g_qichuan",
+    "q_tuxiebuZhi"
+   ],
+   "min": 2
+  }
+ ],
+ "jiajian": [
+  {
+   "key": "q_shangshi",
+   "label": "伤食",
+   "match": [
+    "伤食",
+    "夹食",
+    "食积"
+   ]
+  },
+  {
+   "key": "q_youjou",
+   "label": "有痰",
+   "match": [
+    "痰"
+   ]
+  },
+  {
+   "key": "q_jiashu",
+   "label": "夹暑",
+   "match": [
+    "暑"
+   ]
+  },
+  {
+   "key": "q_jiashi",
+   "label": "夹湿",
+   "match": [
+    "湿"
+   ]
+  },
+  {
+   "key": "g_qichuan",
+   "label": "气喘",
+   "match": [
+    "喘"
+   ]
+  },
+  {
+   "key": "q_tuxiebuZhi",
+   "label": "吐泻不止",
+   "match": [
+    "吐",
+    "泻",
+    "泄泻"
+   ]
+  },
+  {
+   "key": "g_yerre",
+   "label": "夜间热增",
+   "match": [
+    "热"
+   ]
+  },
+  {
+   "key": "q_outu",
+   "label": "呕吐",
+   "match": [
+    "呕",
+    "吐"
+   ]
+  },
+  {
+   "key": "g_zihan",
+   "label": "自汗",
+   "match": [
+    "汗"
+   ]
+  },
+  {
+   "key": "g_daohan",
+   "label": "盗汗",
+   "match": [
+    "汗"
+   ]
+  }
+ ],
+ "syndromes": [
+  {
+   "id": "fengre",
+   "name": "风热",
+   "altName": "",
+   "methods": [
+    "平肝",
+    "泻心"
+   ],
+   "summary": "外感风邪闭塞腠理，脏腑之热不得宣通；肝木心火相搏而成。治以平肝风、泻心火。",
+   "waihou": {
+    "original": "凡小儿风热之症，外候身热，唇色深红而亮，或鼻塞，或泻青黄色如浮萍状，或不泻。",
+    "plain": "发热；口唇深红而光亮（唇皮软薄血纹易现）；或鼻塞不通；或大便泻下青黄相间、形如浮萍的水样便；也有不泻的。"
+   },
+   "bingyin": {
+    "original": "此症由外感风邪闭塞腠理，脏腑之热不得宣通故身热。唇皮软薄血纹易现，内有风故色亮；内有热，血亦有热，故色深红。风热闭塞肺窍故鼻不通。因肝木色青，泻由脾致，脾土色黄，肝木旺克脾土，故泻青黄色；其或不泻者，是脾土未受肝克，故不泻也。",
+    "plain": "风邪郁表、热不得外透则发热；唇薄血络易显，风使色亮、热使色深红；肺窍被风热所闭则鼻塞；肝（青）乘脾（黄）则泻青黄色，脾未受克则不泻。"
+   },
+   "shouwen": {
+    "original": "手纹浮紫，左手纹常浮于右手。左手纹主肝，肝风动故纹浮，浮为风在表也；紫色为热，故纹紫也。",
+    "plain": "指纹浮露、颜色紫；左手（肝）指纹常比右手更浮——浮主表、紫主热。"
+   },
+   "maifa": {
+    "original": "脉按之必浮数，脉浮为风、数为热，左手更甚。左手是肝脉主风也，心亦在左手。此是肝风心火相合而成。",
+    "plain": "脉浮数，左手更明显（浮主风、数主热，左候肝心）。"
+   },
+   "zhifa": {
+    "original": "治尚平肝风、泻心火，症必早复。",
+    "plain": "平熄肝风、清泻心火，病可速愈。"
+   },
+   "fangyao": {
+    "name": "第一方（专治小儿风热）",
+    "usage": "净水煎服。",
+    "herbs": [
+     {
+      "name": "羌活",
+      "dose": "一钱",
+      "note": "发表、平肝风"
+     },
+     {
+      "name": "防风",
+      "dose": "一钱",
+      "note": "祛风、平肝"
+     },
+     {
+      "name": "薄荷",
+      "dose": "七分",
+      "note": "祛风"
+     },
+     {
+      "name": "蝉蜕",
+      "dose": "十只",
+      "note": "散表、定惊、去心经热"
+     },
+     {
+      "name": "木通",
+      "dose": "二钱",
+      "note": "泻心火"
+     },
+     {
+      "name": "生栀",
+      "dose": "二钱",
+      "note": "平肝火"
+     },
+     {
+      "name": "甘草",
+      "dose": "七分",
+      "note": "退热、和表"
+     },
+     {
+      "name": "川地骨",
+      "dose": "二钱",
+      "note": "退身热"
+     },
+     {
+      "name": "淡竹叶",
+      "dose": "二钱",
+      "note": "清上焦风热、凉心、去痰"
+     },
+     {
+      "name": "灯芯",
+      "dose": "一丸",
+      "note": "引"
+     },
+     {
+      "name": "生葱",
+      "dose": "一条",
+      "note": "引（原著此字模糊，依用药引法补）"
+     }
+    ],
+    "source": "下编·一、风热治法"
+   },
+   "jiajian": [
+    {
+     "cond": "风重热轻",
+     "add": "开惊风散",
+     "note": "丸散随汤药同开"
+    },
+    {
+     "cond": "热重风轻",
+     "add": "开玉露散"
+    },
+    {
+     "cond": "伤食",
+     "add": "开胃苓散"
+    },
+    {
+     "cond": "有痰",
+     "add": "开珠珀惊痰散"
+    }
+   ],
+   "wansan": [
+    {
+     "cond": "本方配用",
+     "powder": "万应丸"
+    }
+   ]
+  },
+  {
+   "id": "jijing",
+   "name": "急惊风",
+   "altName": "风热夹惊",
+   "methods": [
+    "平肝",
+    "泻心"
+   ],
+   "summary": "肝风与心火相合，平肝则风熄、泻心则惊去。",
+   "waihou": {
+    "original": "小儿急惊之症即风热夹惊。上则风热证之外候已备见，加以睡中心常跳动，手足常惕，或两手握拳，或眼直视或往上视，或咬牙，或喉中痰鸣如锯之声。",
+    "plain": "具备风热证的全部外候，再加上：睡中惊跳、手足常抽动；或两手握拳；或两目直视、上视；或咬牙；或喉中痰鸣如拉锯声。"
+   },
+   "bingyin": {
+    "original": "心有惊故跳动；手抽为搐、放痉为惊，肝主惊，有风故两手筋络抽掣；目乃肝窍，开窍于目，直视上视系肝风多动；咬牙亦肝风抽筋；风塞则痰升，此风痰也，在喉间停滞不散故有此声。此肝风心火相搏而成，肝主风、心主惊，风性善动、痰由惊来，故有上项症候。失治不险，痰消而症即愈。",
+    "plain": "心主惊、肝主风：心惊则跳动；肝风动则抽掣、直视上视、咬牙；风动痰升、痰滞喉间则痰鸣如锯。属肝风心火相搏，及时治疗并无大险，痰化则症自愈。"
+   },
+   "shouwen": {
+    "original": "手纹浮紧，兼开短丫，或三五条不等，夹惊故手纹开丫。左手纹浮于右手，解见前风热论。",
+    "plain": "指纹浮而紧，兼见短丫形（或三五条不等），左手比右手浮——丫纹主惊。"
+   },
+   "maifa": {
+    "original": "脉按之浮滑而数。脉浮滑为痰、为风。",
+    "plain": "脉浮、滑、数（浮滑主风痰）。"
+   },
+   "zhifa": {
+    "original": "治以平肝风、泻心火，去惊退热。",
+    "plain": "平肝熄风、清心定惊、退热。"
+   },
+   "fangyao": {
+    "name": "第二方（治小儿惊风初起）",
+    "usage": "加灯芯一丸、金银一件同煎，开急惊散。",
+    "herbs": [
+     {
+      "name": "钩藤",
+      "dose": "一钱",
+      "note": "去肝风、治抽掣"
+     },
+     {
+      "name": "薄荷",
+      "dose": "七分",
+      "note": "祛肝风、退惊热"
+     },
+     {
+      "name": "甘草",
+      "dose": "七分",
+      "note": "与薄荷相济"
+     },
+     {
+      "name": "柴胡",
+      "dose": "二钱",
+      "note": "平肝退热"
+     },
+     {
+      "name": "淡竹叶",
+      "dose": "二钱",
+      "note": "去上焦风热、凉心去痰"
+     },
+     {
+      "name": "地骨皮",
+      "dose": "二钱",
+      "note": "退热除惊"
+     },
+     {
+      "name": "木通",
+      "dose": "二钱",
+      "note": "退心火"
+     },
+     {
+      "name": "连翘",
+      "dose": "二钱",
+      "note": "去心惊、退热"
+     },
+     {
+      "name": "蝉蜕",
+      "dose": "十只",
+      "note": "去惊"
+     }
+    ],
+    "source": "下编·二、急惊治法"
+   },
+   "jiajian": [
+    {
+     "cond": "伤食",
+     "add": "加神曲钱半（消谷食）、山楂钱半（去肉食）、麦芽钱半（消面食），开胃苓散"
+    },
+    {
+     "cond": "有痰",
+     "add": "加杏仁钱半、胆星一钱、陈皮一钱；热痰加瓜蒌霜二钱"
+    },
+    {
+     "cond": "热重",
+     "add": "加川连一钱、羚羊角二钱"
+    },
+    {
+     "cond": "风重",
+     "add": "加全蝎一钱，钩藤用四五钱；或加僵蚕一钱、防风一钱"
+    },
+    {
+     "cond": "泄泻青黄水有渣",
+     "add": "加利水药茯苓二钱、车前二钱、泽泻二钱、防风一钱，开万灵丹；或减柴胡、地骨皮，开胃苓散；或再加白芍二钱，开万应丸"
+    }
+   ],
+   "wansan": [
+    {
+     "cond": "本方配用",
+     "powder": "急惊散"
+    }
+   ]
+  },
+  {
+   "id": "manjing",
+   "name": "慢惊风",
+   "altName": "",
+   "methods": [
+    "平肝",
+    "泻心",
+    "补脾"
+   ],
+   "summary": "急惊失治传入里，肝木克脾土；治以平肝泻心兼补脾土。",
+   "waihou": {
+    "original": "小儿慢惊之症，多由急惊失治、迁延日久传里而成，亦有起而即成此症者（此内生风也），但急惊传慢惊者居多。外候：急惊之证已具，加以手足冷，或发厥或不发厥，吐泻不止；唇色淡红而亮，或泻黄带热，或泻白屎汤带寒，眼眶微陷，眼白青蓝色。",
+    "plain": "多由急惊迁延而来。在急惊外候基础上，出现手足冷、四肢厥冷（或不厥）、吐泻不止；唇淡红而亮；大便或泻黄（带热）或泻白水（带寒）；眼眶微陷；眼白发青蓝色。"
+   },
+   "bingyin": {
+    "original": "此肝风入内克脾之故。脾主四肢，脾气受克不通四肢故手足冷；四肢冷不知人事为厥，厥为风重；胃受风则吐、脾受风则泻；唇属脾，脾虚受风故唇淡红而亮；眼眶属脾，脾气不升故陷，眼深者危；肝开窍于目，青蓝为肝风。",
+    "plain": "肝风入里克脾：脾主四肢，脾气受制则手足冷、甚则厥；胃受风则吐、脾受风则泻；脾虚则唇淡、眼眶陷（眼深陷者危）；眼白青蓝是肝风外露。"
+   },
+   "shouwen": {
+    "original": "手纹必沉而青，右手纹为参差离乱，亦有两手纹作弓反内外形或开长丫者。弓反外者重、开短丫者轻、开长丫者重。纹青风也、沉传里也、参差离乱内脏受风、血气错杂不和平也；丫形肝风克土也。",
+    "plain": "指纹沉而青；右手纹参差离乱；或见弓反内外形、开丫纹。沉主里、青主风；弓反外、开长丫者病重，开短丫者较轻。"
+   },
+   "maifa": {
+    "original": "脉必沉迟或沉紧无力。脉沉为邪在里，沉迟则为内虚寒，沉紧则为内寒。",
+    "plain": "脉沉迟或沉紧无力（沉主里、迟主虚寒、紧主寒）。"
+   },
+   "zhifa": {
+    "original": "慢惊症是肝风入里相克而成，治要平肝、补脾为主，兼镇心定惊。",
+    "plain": "平肝、补脾为主，兼镇心安神定惊。"
+   },
+   "fangyao": {
+    "name": "第三方（治急惊转慢惊）",
+    "usage": "加金银煎，开万灵散、慢惊散。",
+    "herbs": [
+     {
+      "name": "白术",
+      "dose": "二钱",
+      "note": "补脾"
+     },
+     {
+      "name": "川朴",
+      "dose": "七分",
+      "note": "平肝、泻土中之水"
+     },
+     {
+      "name": "甘草",
+      "dose": "七分",
+      "note": "和中"
+     },
+     {
+      "name": "茯神",
+      "dose": "二钱",
+      "note": "定惊"
+     },
+     {
+      "name": "茯苓",
+      "dose": "二钱",
+      "note": "补脾"
+     },
+     {
+      "name": "薄荷",
+      "dose": "七分",
+      "note": "退肝风惊热"
+     },
+     {
+      "name": "陈皮",
+      "dose": "七分",
+      "note": "行脾气"
+     }
+    ],
+    "source": "下编·三、慢惊症治"
+   },
+   "jiajian": [
+    {
+     "cond": "呕吐（寒）",
+     "add": "加藿香一钱、丁香五分、白蔻五分，随宜择用"
+    },
+    {
+     "cond": "热呕（身热）",
+     "add": "加竹茹一钱（姜汁炒）、栀子一钱（姜汁炒）、川连一钱（姜汁炒）。唯有身热泄泻者用川连，能厚肠退热，不碍补脾止泻之功"
+    },
+    {
+     "cond": "泄泻甚（黄）",
+     "add": "加诃子肉二钱（煨熟）、防党二钱（米炒）；泻白者加玉蔻霜一钱、枣仁钱半（炒）"
+    },
+    {
+     "cond": "夹身热有火",
+     "add": "加川连一钱（姜汁炒）、银胡二钱、地龙钱半"
+    },
+    {
+     "cond": "夹食",
+     "add": "加炒神曲钱半、藿香七分、砂仁七分"
+    },
+    {
+     "cond": "渴",
+     "add": "加干葛钱半；或寒者加姜汁炒，或再加北味二分"
+    },
+    {
+     "cond": "有汗",
+     "add": "加北芪二钱（米炒）、防风钱半"
+    },
+    {
+     "cond": "痰甚",
+     "add": "加天麻一钱、胆星一钱；寒痰加白附子一钱、丁香五分、白蔻七分"
+    },
+    {
+     "cond": "风盛",
+     "add": "加僵蚕一钱、全蝎一钱；白芍、钩藤倍半用"
+    },
+    {
+     "cond": "气喘",
+     "add": "加杏仁霜钱半、苏子钱半；甚加沉香（磨水约三分）冲药"
+    },
+    {
+     "cond": "夹暑（暑月而作）",
+     "add": "必加去暑之药：炒扁豆三钱；暑汗加北芪二钱；暑风加香薷一钱；暑湿加木瓜钱半、淡竹叶二钱；暑泻加冬瓜仁三钱；暑渴加干葛钱半、滑石二钱；暑邪寒热往来加柴胡二钱（黄蒿水煮干炒）"
+    }
+   ],
+   "wansan": [
+    {
+     "cond": "本方配用",
+     "powder": "万灵散、慢惊散"
+    },
+    {
+     "cond": "随宜择用",
+     "powder": "急惊散、万灵丹、胃苓散、万应丸（五色丸散）"
+    }
+   ]
+  },
+  {
+   "id": "manpi",
+   "name": "慢脾风",
+   "altName": "",
+   "methods": [
+    "大平肝木",
+    "大补脾土"
+   ],
+   "summary": "慢惊失治，风热全传入脾，比慢惊更甚；唯大补脾胃、涩肠止泻一法。",
+   "waihou": {
+    "original": "小儿慢脾风症，由脾胃气虚，惊风之病气已全传入脾。前急惊、慢惊之候已见，日延至坏，其儿不即死，今一味呕吐、泄泻白屎汤不止，手足常冷无温，闭目亡魂，唇色淡白，不饮食，不语。",
+    "plain": "继急惊、慢惊之后病情深入：不断呕吐、泻下白水不止、手足常冷、闭目失神、唇淡白、不思饮食、不能言语。"
+   },
+   "bingyin": {
+    "original": "肝气犯胃故作呕、犯脾故作泻；泻白为脾寒；手足常冷是脾气欲绝；闭目亡魂是风闭五脏；唇色淡白是脾胃虚寒；不饮食、不语是脾气将绝也。此时有惊惊无可去，有风风无可祛，脾气欲绝，治依风不应，故云无可也。唯大补脾胃、涩肠止泻一法，即用真人方亦无不可。",
+    "plain": "肝气乘虚犯胃犯脾，脾气将绝：呕、泻白、手足冷、闭目、唇淡、不食不语。此时惊无可去、风无可祛，唯有大补脾胃、涩肠止泻，如真人养脏汤之类。"
+   },
+   "shouwen": {
+    "original": "手纹斯时或隐或现、或有或无，最难凭验。五脏之气息已乱，不如常。",
+    "plain": "指纹隐现无常，难以作为凭据——五脏气机已乱。"
+   },
+   "maifa": {
+    "original": "脉息浮沉有无不等。但脉微有而不乱、重按至底迟而有力者为有望；若浮泛无力、脉息离乱、数到十余至、重按则无者，此散脉也，难望有生矣。又脉浮沉俱无，其人未死，试服药急救，药后脉微续者生，脉暴出全现者死。脉沉微有底及微续者气尚藏也，脉浮泛及暴出者元气尽泄也。",
+    "plain": "脉微而不乱、沉按迟而有力者尚有生机；脉浮泛散乱、十余至而无根者为散脉，难生。脉伏者服药后脉微续者生、脉暴出者死。"
+   },
+   "zhifa": {
+    "original": "此症汗出而清、身温暖者为有望；汗出而滑、身冷气长吁者无望。但以大重剂以挽回天命，略尽人事而已。",
+    "plain": "冷汗如油、身冷气促者预后极差；须以大剂量重剂抢救，尽力而为。"
+   },
+   "fangyao": {
+    "name": "第四方（平肝补脾重剂，专治慢脾风重症）",
+    "usage": "此为异功散加味补脾的首方。加伏龙肝煎，开至宝丹，或万应丸、慢惊散。",
+    "herbs": [
+     {
+      "name": "米党参",
+      "dose": "三钱"
+     },
+     {
+      "name": "白术",
+      "dose": "二钱",
+      "note": "土炒"
+     },
+     {
+      "name": "茯苓",
+      "dose": "二钱"
+     },
+     {
+      "name": "陈皮",
+      "dose": "一钱"
+     },
+     {
+      "name": "焦芍",
+      "dose": "三钱"
+     },
+     {
+      "name": "僵蚕",
+      "dose": "钱半",
+      "note": "姜汁炒"
+     },
+     {
+      "name": "钩藤",
+      "dose": "三钱"
+     },
+     {
+      "name": "白附子",
+      "dose": "钱半"
+     },
+     {
+      "name": "炙甘草",
+      "dose": "钱半"
+     }
+    ],
+    "source": "下编·四、慢脾风症"
+   },
+   "jiajian": [
+    {
+     "cond": "泄泻甚",
+     "add": "加玉蔻霜钱半；或再加赤石脂五分、龙骨五分、阿胶钱半（炒珠）"
+    },
+    {
+     "cond": "呕吐甚",
+     "add": "加川朴一钱（姜汁炒）、白蔻七分；或再加丁香五分、藿香一钱"
+    },
+    {
+     "cond": "寒甚",
+     "add": "加丁香五分、川附子钱半、玉桂二分、北味三分"
+    },
+    {
+     "cond": "汗甚",
+     "add": "加北芪二钱、防风一钱、桂枝一钱、白芍二钱"
+    },
+    {
+     "cond": "虚甚",
+     "add": "加北芪二钱、归身钱半（赤石脂炒）"
+    },
+    {
+     "cond": "止泻外治法",
+     "add": "胡椒、丁香、玉桂（大者三个）为末，入灰面，烧酒搓成团，做饼如碗口大者三枚，煎熟后以一枚贴脐上，两枚分贴两足肚上，以带束紧。此外治良法也"
+    },
+    {
+     "cond": "有汗外扑法",
+     "add": "麻黄根、龙骨、牡蛎共末，以绢布或纱袋装此末，向有汗处扑之，如敷粉状。良法也"
+    }
+   ],
+   "wansan": [
+    {
+     "cond": "本方配用",
+     "powder": "至宝丹"
+    },
+    {
+     "cond": "或",
+     "powder": "万应丸、慢惊散"
+    }
+   ]
+  },
+  {
+   "id": "pixu",
+   "name": "脾虚",
+   "altName": "",
+   "methods": [
+    "平肝",
+    "补脾"
+   ],
+   "summary": "脾为后天之本；脾虚之症带受肝克，治必兼平肝而后补脾。",
+   "waihou": {
+    "original": "小儿脾虚之症，外候面目暗、气弱神倦、面色黄白、头发疏黄、唇色淡白、好啼哭、恋母、不自嬉耍、无精神不能自持、身体倦怠、常欲依人以自安。",
+    "plain": "面色黄白少华、神疲气弱、发稀而黄、唇淡白、喜哭恋母、精神不振、倦怠喜依偎。"
+   },
+   "bingyin": {
+    "original": "脾属土，土色黄，脾虚故面白而黄；唇属脾，脾有寒故唇白，受湿则带黄。脾气虚、精神弱、身无挟持则不能支。有病：伤食——脾气弱不能克化水谷故饮食难下；伤湿——脾土虚湿易染；或吐（胃虚）或泻（脾虚）；或潮热、或暮热（脾虚生内热）；或盗汗（睡而出汗者，气不归藏泄于外也）、自汗（醒时无故而出汗者，是脾土虚，腠理不固不能护卫，脾管血故汗自出也）；或因肝风心火而成慢惊慢脾症（肝克脾）；或因食积、肝郁气滞而成疳症；或湿郁而成痢疾；或发冷伤暑——脾土虚则暑邪易入；或湿痰——痰由湿生，脾虚受湿故生痰；或生水肿——脾主肌肉，肌肉受湿故肿。种种病端皆由脾虚而得。",
+    "plain": "脾胃虚弱，百病丛生：饮食难化、易受湿、吐泻、潮热暮热、盗汗自汗、变生慢惊慢脾、疳积、痢疾、暑症、痰、水肿——故脾虚小儿平素最宜调理脾胃。"
+   },
+   "shouwen": {
+    "original": "手纹必沉淡而生毛，且长出至气命二关，开长丫则夹食、开短丫则夹惊，如鱼骨形则水湿、水字形、弓反内外形，其十八般手纹亦间有之。或纹沉紫为内热，沉而淡红为寒。",
+    "plain": "指纹沉而色淡、边缘生毛，甚至长至气关、命关；开长丫主夹食、开短丫主夹惊、鱼骨形主水湿，水字、弓反内外等形间或有之；沉紫主内热、沉淡红主寒。"
+   },
+   "maifa": {
+    "original": "脉息左手略大于右手，是木胜相克也（左寸心克右寸肺、左关肝克右关脾之类，脉图可考）。若纯脾虚，脉息濡而无力；兼沉滑为痰、沉紧为内寒、沉数为内热。",
+    "plain": "左手脉大于右手是肝木乘脾之象；单纯脾虚脉濡而无力；兼沉滑主痰、沉紧主寒、沉数主热。"
+   },
+   "zhifa": {
+    "original": "此症带受肝克，治之必兼平肝而后补脾。",
+    "plain": "先兼平肝，再行补脾。"
+   },
+   "fangyao": {
+    "name": "第五方（加味六神散）",
+    "usage": "净水煎服，开胃苓散，或随症引用。按：此方前人用治疳积屡试皆验，故为脾虚之主要良方。",
+    "herbs": [
+     {
+      "name": "米党参",
+      "dose": "三钱"
+     },
+     {
+      "name": "白术",
+      "dose": "二钱"
+     },
+     {
+      "name": "茯苓",
+      "dose": "二钱"
+     },
+     {
+      "name": "炙草",
+      "dose": "钱半"
+     },
+     {
+      "name": "淮山",
+      "dose": "三钱",
+      "note": "炒"
+     },
+     {
+      "name": "扁豆",
+      "dose": "三钱",
+      "note": "炒"
+     },
+     {
+      "name": "陈皮",
+      "dose": "一钱"
+     },
+     {
+      "name": "山楂",
+      "dose": "钱半"
+     },
+     {
+      "name": "神曲",
+      "dose": "钱半"
+     },
+     {
+      "name": "白芍",
+      "dose": "钱半"
+     }
+    ],
+    "source": "下编·五、脾虚论治"
+   },
+   "jiajian": [
+    {
+     "cond": "伤食",
+     "add": "神曲、山楂倍半用；伤食甚加川朴一钱"
+    },
+    {
+     "cond": "伤湿",
+     "add": "加苡仁三钱（炒）、猪苓钱半、玉竹二钱"
+    },
+    {
+     "cond": "呕吐（寒）",
+     "add": "加藿香七分；热甚者加竹茹钱半、银斛二钱（照慢惊条下用亦可）"
+    },
+    {
+     "cond": "泄泻",
+     "add": "加诃子肉二钱。泻白沫加苡仁三钱（炒）；泻黄沫加地龙钱半；泻红沫加赤小豆一撮；泻清血加阿胶二钱（炒黑）、地榆钱半（炒黑）；泻甚加龙骨五分、赤石脂五分，为末冲下。或用慢脾风贴脐法，或用封脐法（以赤石脂、五倍子共为末，口津开糊贴脐）"
+    },
+    {
+     "cond": "潮热",
+     "add": "加柴胡钱半、银胡二钱；或再加地龙一钱、青蒿二钱、淡竹叶三钱"
+    },
+    {
+     "cond": "暮热",
+     "add": "加青蒿二钱、秦艽一钱、地骨钱半、鳖甲三钱；重加胡黄连一钱"
+    },
+    {
+     "cond": "自汗盗汗",
+     "add": "加黄芪一钱、浮小麦钱半、北味三分"
+    },
+    {
+     "cond": "食积",
+     "add": "加莪术钱半、三棱钱半"
+    },
+    {
+     "cond": "痰",
+     "add": "加半夏一钱、胆星一钱"
+    },
+    {
+     "cond": "水肿",
+     "add": "上部加川朴一钱、茯苓二钱、桑白皮钱半；下部加赤小豆一撮、木瓜钱半、加皮二钱、防己钱半、草果一钱"
+    }
+   ],
+   "wansan": [
+    {
+     "cond": "本方配用",
+     "powder": "胃苓散"
+    }
+   ]
+  },
+  {
+   "id": "ganji",
+   "name": "疳症",
+   "altName": "疳积",
+   "methods": [
+    "平肝",
+    "补脾",
+    "去积"
+   ],
+   "summary": "脾虚食滞、肝火气郁二大端；治以平肝、补脾、去积。",
+   "waihou": {
+    "original": "小儿疳症虽有五疳——脾疳（面黄肌瘦、肚大筋青、食多不化、时泄屎溏屎糊，或食倍如常而不生肌肉）、肝疳（善哭、善怒、腹痛、咬指，或眼起白膜、面青筋露）、心疳（即惊疳：多烦、惊扰、头上生小疮）、肺疳（咳嗽气喘、鼻孔生疮，或以指控鼻孔、善悲泣无声、皮聚毛落）、肾疳（囟门坑陷、囟大而软、目无光彩、骨软迟行）——各各不同，但治同不必深究，总不外乎脾虚食滞、肝火气郁二大端。常见面黄肌瘦、唇暗而黄白、发毛生穗、常咬指头、肚皮胀薄、青筋绕露、胃口不开、食不知饱、食后泄泻、不长肌肉、愈食愈瘦。",
+    "plain": "五疳各有所见：脾疳面黄肚大青筋、食而不化；肝疳善哭怒、咬指、眼生白膜；心疳（惊疳）多烦惊、头生小疮；肺疳咳喘、鼻生疮、皮聚毛落；肾疳囟陷、目无光、骨软迟行。总因脾虚食滞、肝火气郁，故常见面黄肌瘦、发穗、咬指、肚胀青筋、食后即泻、愈食愈瘦。"
+   },
+   "bingyin": {
+    "original": "脾虚食入难化，因滞而成积；又肝木相克。肝主恼怒，肝气郁、脾气虚，故成疳症。食不知饱、食后泄泻、不长肌肉者：食凭胃气、运化在脾气，此是脾气虚不能化，非胃气能食；胃有湿热熏蒸故不生肌肉且泄泻也。即以胃口不开论治，当补脾气、清胃经浮火、肝经湿热及郁。",
+    "plain": "病根有二：一是脾虚不化、食滞成积；二是肝木乘克、气郁不舒。食而不化、愈食愈瘦，是脾气不运、胃有湿热之故。治疗当补脾气、清胃热、解肝郁。"
+   },
+   "shouwen": {
+    "original": "手纹浮现而长，或开长丫，或三五条不等，或纹乱，或即有即无，或散大生毛。色必青淡——纹浮现即为虚，长了有食积，三五条为热积，乱纹为虚积，即有即无为积滞，散大生毛为虚湿，色青淡为风虚。",
+    "plain": "指纹浮而长、或开长丫（食积）、三五条（热积）、乱纹（虚积）、隐现无常（积滞）、散大生毛（虚湿），色青淡（风虚）。"
+   },
+   "maifa": {
+    "original": "两手脉必沉弦——肝郁在内；或沉迟内虚寒、或沉数内湿热；或迟数大小参差不齐，是内有积滞。",
+    "plain": "脉沉弦（肝郁），或沉迟（虚寒）、沉数（湿热）、迟数大小不齐（积滞）。"
+   },
+   "zhifa": {
+    "original": "此症总属脾气虚、肝气郁而成，治以平肝、补脾、去积之法。但问某经现症则加某经之药。",
+    "plain": "平肝、补脾、消积；并随五经所见之症加用本经之药。"
+   },
+   "fangyao": {
+    "name": "第六方（治小儿疳积，各经各有加法）",
+    "usage": "净水煎。",
+    "herbs": [
+     {
+      "name": "白术",
+      "dose": "二钱",
+      "note": "补脾"
+     },
+     {
+      "name": "莪术",
+      "dose": "二钱",
+      "note": "开胃、化食积"
+     },
+     {
+      "name": "茯苓",
+      "dose": "二钱",
+      "note": "助脾去湿"
+     },
+     {
+      "name": "山楂",
+      "dose": "二钱",
+      "note": "消肉食"
+     },
+     {
+      "name": "麦芽",
+      "dose": "钱半",
+      "note": "消面食"
+     },
+     {
+      "name": "酒芍",
+      "dose": "钱半",
+      "note": "平肝"
+     },
+     {
+      "name": "川郁金",
+      "dose": "钱半",
+      "note": "开郁"
+     },
+     {
+      "name": "柴胡",
+      "dose": "钱半",
+      "note": "平肝"
+     }
+    ],
+    "source": "下编·六、疳症诠治"
+   },
+   "jiajian": [
+    {
+     "cond": "肝热",
+     "add": "加秦艽、石斛；重加芦荟、胡黄连"
+    },
+    {
+     "cond": "有骨蒸",
+     "add": "加鳖甲、地骨皮、乌梅"
+    },
+    {
+     "cond": "有虫",
+     "add": "加使君子、雷丸、榧子、芜荑、川楝子"
+    },
+    {
+     "cond": "心积",
+     "add": "加川连、枳实、雄黄、朱砂"
+    },
+    {
+     "cond": "肝积",
+     "add": "加三棱、蚊蛤（原书如此，存疑）"
+    },
+    {
+     "cond": "脾积",
+     "add": "加槟榔、川朴"
+    },
+    {
+     "cond": "肾积",
+     "add": "加远志、砂仁、人中白"
+    },
+    {
+     "cond": "肺积",
+     "add": "加紫菀、杏仁"
+    },
+    {
+     "cond": "积深",
+     "add": "不论何经均加干漆、阿魏"
+    },
+    {
+     "cond": "疳积上眼",
+     "add": "依法用汤药，开疳眼散，更参药性治眼者"
+    }
+   ],
+   "wansan": [
+    {
+     "cond": "本方配用",
+     "powder": "疳积散（或转笑散、胃苓散）"
+    }
+   ]
+  },
+  {
+   "id": "zaohuo",
+   "name": "燥火",
+   "altName": "",
+   "methods": [
+    "泻心"
+   ],
+   "summary": "心主火，火太旺而燥生；泻心即泻君火之源，各经之热由之而清。",
+   "waihou": {
+    "original": "小儿燥火之症，外候面目红赤，重则滞暗，或面枯，或唇色深红，口鼻干燥，眼屎黄结，身热如火，大渴引饮，夜间热增，时发谵语，或冷热往来大作。此阳症似阳，易识易治。",
+    "plain": "面目红赤（重则晦暗、面枯）、唇深红、口鼻干燥、眼屎黄结、高热如火、大渴引饮、夜间热甚、时有谵语、或寒热往来大作——阳证明显，易辨易治。"
+   },
+   "bingyin": {
+    "original": "面目唇色深红其热可知；火盛故色枯滞；口鼻通气出入，内有火故干燥；身热大渴亦内热熏逼津液；火伏内故夜热甚；心伏火故谵语；热极生风故寒热大作；见有斑点是热聚血分。又有变证：冷热时作时止、手足时冷时热、食入即吐、神昏目闭、形如醉人、唤之则醒、不唤不动，唯唇红舌干、或小便短赤、大便泻黄——此证寒热难决，能识者易辨，仍是热症（阳症似阴）。冷热时作、手足时冷时热者，是伏热在内不能宣通也；食入即吐者，是胃火内冲不下食故即吐；神昏目闭者，火乱神明也；形如醉人、唤之则醒、不唤勿动者，是心有惊热不能安神也；唇红者胃属唇、胃有伏热故色红；舌为心苗、心伏火故舌干；热闭心、心与小肠相表里故小便短赤；热伤于脾故大便泻而色黄。",
+    "plain": "心火炽盛、津液被灼：面红唇深、口鼻干、大渴、夜热、谵语。注意\"阳症似阴\"的变证：寒热时作、手足时冷时热、食入即吐、神昏目闭如醉人——看似阴证，实为伏热内闭，仍按热治。"
+   },
+   "shouwen": {
+    "original": "两手必粗大而紫——纹为热盛而出现，即是浮极，浮为阳、为表。或手纹隐约而滞、或纹见一截一截模糊——此即伏热（阳症似阴），沉伏为阴、为里，必参手脉。",
+    "plain": "指纹粗大色紫（热盛浮露）；伏热者指纹隐约而滞、一截一截模糊不清。"
+   },
+   "maifa": {
+    "original": "两手浮沉俱有力而滑数——滑有力、数热也。左手甚于右手为重，右手甚于左手为轻（言相克不相克也）。",
+    "plain": "脉滑数有力（浮沉皆然）；左手脉大于右手者病重（木火相生），右手大于左手者病轻。"
+   },
+   "zhifa": {
+    "original": "此方为治小儿燥火总剂，按各经加味治之。",
+    "plain": "以泻心火为主，按心、肺、肝、脾、肾各经见证加味。"
+   },
+   "fangyao": {
+    "name": "第七方（治小儿燥火总剂）",
+    "usage": "加灯芯煎，开玉露散或保婴丹。",
+    "herbs": [
+     {
+      "name": "川连",
+      "dose": "钱半",
+      "note": "心"
+     },
+     {
+      "name": "知母",
+      "dose": "三钱",
+      "note": "肺"
+     },
+     {
+      "name": "黄芩",
+      "dose": "钱半",
+      "note": "胞（膀胱）"
+     },
+     {
+      "name": "元参",
+      "dose": "三钱",
+      "note": "肾"
+     },
+     {
+      "name": "龙胆",
+      "dose": "二钱",
+      "note": "肝"
+     },
+     {
+      "name": "甘草",
+      "dose": "一钱",
+      "note": "和中"
+     },
+     {
+      "name": "木通",
+      "dose": "二钱",
+      "note": "引火下出"
+     },
+     {
+      "name": "犀角",
+      "dose": "钱半",
+      "note": "统治五经"
+     }
+    ],
+    "source": "下编·七、小儿燥火"
+   },
+   "jiajian": [
+    {
+     "cond": "谵语、舌干（心火）",
+     "add": "加生地、连翘、淡竹叶"
+    },
+    {
+     "cond": "鼻干、干咳（肺火）",
+     "add": "加桑皮、地骨皮、桔梗"
+    },
+    {
+     "cond": "眼赤、胁痛（肝火）",
+     "add": "加羚羊角、川连（倍半用）、川楝"
+    },
+    {
+     "cond": "唇焦、肚结（脾火）",
+     "add": "加大黄、枳实、朴硝"
+    },
+    {
+     "cond": "耳鸣、腰痛（肾火）",
+     "add": "加黄柏、丹皮、泽泻"
+    },
+    {
+     "cond": "有痰",
+     "add": "加贝母、花粉、瓜蒌"
+    },
+    {
+     "cond": "食入即吐",
+     "add": "加石斛、竹茹"
+    },
+    {
+     "cond": "有渴",
+     "add": "加麦冬、干葛、花粉"
+    },
+    {
+     "cond": "冷热往来",
+     "add": "加柴胡"
+    },
+    {
+     "cond": "有斑疹",
+     "add": "加生地、犀角（倍半用）、丹皮、赤芍"
+    },
+    {
+     "cond": "夹食",
+     "add": "加神曲、谷芽、山楂肉、麦芽"
+    },
+    {
+     "cond": "小便短",
+     "add": "加猪苓、生栀仁"
+    },
+    {
+     "cond": "口臭、口干（胃火）",
+     "add": "加石膏、薄荷"
+    }
+   ],
+   "wansan": [
+    {
+     "cond": "本方配用",
+     "powder": "玉露散或保婴丹"
+    }
+   ]
+  },
+  {
+   "id": "kesou",
+   "name": "咳嗽",
+   "altName": "",
+   "methods": [
+    "平肝",
+    "泻心",
+    "补脾"
+   ],
+   "summary": "咳不离肺；平肝使脾不受制、泻心使肺不受火克、理脾以生肺气。",
+   "waihou": {
+    "original": "咳嗽之症，有声无痰者谓之咳，火燥肺经也；有痰无声者谓之嗽，气动脾胃之湿也；有痰有声者谓之咳嗽，是痰与火气动而作也。外候有痰有嗽自然知之，不待审问也。有甚至气喘痰鸣似乎危殆者，但由咳而喘者，因肺受痰火而然，病虽喘亦无碍；不比肝风夹惊泻而喘、因肝木克脾气、胃气欲脱而喘者，则危候也。",
+    "plain": "有声无痰为咳（燥火伤肺）、有痰无声为嗽（脾湿）、有痰有声为咳嗽。因咳而喘者多属肺受痰火，尚非大险；若肝风夹惊、胃气欲脱之喘方为危候。"
+   },
+   "bingyin": {
+    "original": "此症有肺受风热而重者（风热之咳）；有燥火烁肺而致者（燥火之咳）；有因惊痰而咳者；有因食痰而咳者；有因乳痰而咳者（此咳俗名吼症）。凡咳嗽总因内先有痰，更遇肝木盛生心火、心火相克肺金而成咳嗽。",
+    "plain": "咳嗽分五类：风热咳、燥火咳、惊痰咳、食痰咳、乳痰咳（吼症）。总因内有痰，加肝木生心火、火克肺金而发。"
+   },
+   "shouwen": {
+    "original": "手纹右手必浮于左手——病儿若现此纹有咳无疑，右手纹主肺故也。纹浮紫为风热，沉紫为燥热，开短丫为惊痰，长丫为食痰；如系吼症则开短丫、离乱太多；喜病（胎乳致咳）则照脾虚疳积手纹而断。",
+    "plain": "右手（肺）指纹浮于左手，是咳嗽的标志；浮紫风热、沉紫燥火、开短丫惊痰、开长丫食痰；吼症则短丫而纹乱。"
+   },
+   "maifa": {
+    "original": "两手脉浮滑皆滑——浮滑为风痰，滑为燥火痰、食痰、乳痰，更看有力无力以分虚实。若咳嗽气喘而两手脉大、数至十余至者危。",
+    "plain": "脉浮滑主风痰，滑主诸痰；按有力无力分虚实；脉大数而喘者危。"
+   },
+   "zhifa": {
+    "original": "治须平肝、泻心，兼理肺虚，更兼理脾以生肺气。要在心、肝、脾、肺四经风火痰而作用。按《内经》云\"五脏六腑皆令人咳\"，然咳不离于肺；在心肝而作用者，经云隔一隔二之治法也，理脾亦隔一而言，补土生金。",
+    "plain": "平肝、泻心，兼清肺理肺、健脾化痰——即\"隔一隔二\"之法，治咳而治心肝、补脾以生肺金。"
+   },
+   "fangyao": {
+    "name": "第八方（治小儿咳嗽）",
+    "usage": "加莲叶蒂煎，开珠珀惊痰散。",
+    "herbs": [
+     {
+      "name": "前胡",
+      "dose": "一钱",
+      "note": "疏肺"
+     },
+     {
+      "name": "桔梗",
+      "dose": "钱半",
+      "note": "清肺"
+     },
+     {
+      "name": "桑白皮",
+      "dose": "二钱",
+      "note": "清肺湿热"
+     },
+     {
+      "name": "生栀",
+      "dose": "钱半",
+      "note": "泻心、平肝"
+     },
+     {
+      "name": "木通",
+      "dose": "二钱",
+      "note": "泻心火下行"
+     },
+     {
+      "name": "地骨皮",
+      "dose": "二钱",
+      "note": "清肺退火"
+     },
+     {
+      "name": "款冬花",
+      "dose": "二钱",
+      "note": "下气、清热、去痰"
+     },
+     {
+      "name": "甘草",
+      "dose": "一钱",
+      "note": "同桔梗治肺"
+     },
+     {
+      "name": "薄荷",
+      "dose": "七分",
+      "note": "祛风清热"
+     }
+    ],
+    "source": "下编·八、咳嗽症"
+   },
+   "jiajian": [
+    {
+     "cond": "夹风热",
+     "add": "加防风、淡竹叶"
+    },
+    {
+     "cond": "夹燥火",
+     "add": "加羚羊、川连、麦冬、天冬"
+    },
+    {
+     "cond": "夹惊",
+     "add": "款冬倍用，加生紫菀、淡竹叶（加重），开惊痰散"
+    },
+    {
+     "cond": "夹食",
+     "add": "加杏仁、神曲、山楂。咳重于惊者以治咳为主、以此参治；惊重于咳者以惊为主、以急惊条下同参治"
+    },
+    {
+     "cond": "风痰",
+     "add": "加胆星；热痰加川贝；寒痰加半夏曲"
+    },
+    {
+     "cond": "痰喘",
+     "add": "加苏子、莱菔子、瓜蒌、葶苈"
+    },
+    {
+     "cond": "气喘",
+     "add": "加白前、杏霜、麻黄"
+    },
+    {
+     "cond": "乳痰吼症",
+     "add": "加钩藤、生紫菀、款冬倍用"
+    },
+    {
+     "cond": "热咳",
+     "add": "加枇杷叶、白果、酒芩"
+    },
+    {
+     "cond": "日久咳（寒痰在里）",
+     "add": "慢惊条下兼看"
+    }
+   ],
+   "wansan": [
+    {
+     "cond": "本方配用",
+     "powder": "珠珀惊痰散"
+    }
+   ]
+  }
+ ]
+}

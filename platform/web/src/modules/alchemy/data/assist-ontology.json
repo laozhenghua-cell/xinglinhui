@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "name": "辨证选方问诊本体",
+    "source": "据张觉人《中国炼丹术与丹药》下篇各论主治功效原文与中医外科辨证常规整理",
+    "position": "仅供中医外科专业学术研究参考，不构成医疗建议"
+  },
+  "steps": [
+    {
+      "id": "site", "title": "病变部位", "multi": true,
+      "options": [
+        { "id": "site_head", "label": "头面部" },
+        { "id": "site_neck", "label": "颈项部（含瘰疬、痰核）" },
+        { "id": "site_back", "label": "背部（含发背、对口、背花）" },
+        { "id": "site_chest_abd", "label": "胸腹部（含乳痈、肚痈）" },
+        { "id": "site_limb_up", "label": "上肢（含手背花）" },
+        { "id": "site_limb_down", "label": "下肢（含脚背花、附骨）" },
+        { "id": "site_genital", "label": "前后阴（含下疳、鱼口、便毒、痔疮）" },
+        { "id": "site_eye", "label": "眼部" },
+        { "id": "site_diffuse", "label": "全身多处或散在" }
+      ]
+    },
+    {
+      "id": "lesion", "title": "疮疡形态", "multi": true,
+      "options": [
+        { "id": "lesion_swell", "label": "红肿高突肿块（痈样）" },
+        { "id": "lesion_flat", "label": "漫肿平塌（疽样）" },
+        { "id": "lesion_boil", "label": "根深坚硬如钉（疔样）" },
+        { "id": "lesion_scrofula", "label": "颈项成串珠状肿块（瘰疬样）" },
+        { "id": "lesion_phlegm", "label": "皮下痰核硬块" },
+        { "id": "lesion_fistula", "label": "窦道/瘘管，反复流脓水" },
+        { "id": "lesion_ulcer", "label": "疮口久不愈合" },
+        { "id": "lesion_deadbone", "label": "脓中夹腐肉或死骨" },
+        { "id": "lesion_eczema", "label": "湿疮、湿疹样糜烂渗水" },
+        { "id": "lesion_scabies", "label": "疥癣瘙痒脱屑" }
+      ]
+    },
+    {
+      "id": "stage", "title": "病程阶段", "multi": false,
+      "options": [
+        { "id": "stage_early", "label": "初起未溃" },
+        { "id": "stage_pus", "label": "成脓未溃（欲溃不溃）" },
+        { "id": "stage_ulcerated", "label": "已溃流脓" },
+        { "id": "stage_chronic", "label": "溃后久不收敛，脓水不尽" }
+      ]
+    },
+    {
+      "id": "pus", "title": "脓液性状", "multi": true,
+      "options": [
+        { "id": "pus_none", "label": "无脓" },
+        { "id": "pus_thick", "label": "脓液稠厚色黄" },
+        { "id": "pus_thin", "label": "脓液稀薄" },
+        { "id": "pus_foul", "label": "脓水清稀腥臭" },
+        { "id": "pus_black", "label": "黑腐甚多，腐肉不脱" }
+      ]
+    },
+    {
+      "id": "color", "title": "皮色", "multi": false,
+      "options": [
+        { "id": "color_red", "label": "色红" },
+        { "id": "color_dark", "label": "暗红或紫暗" },
+        { "id": "color_pale", "label": "皮色不变或苍白" }
+      ]
+    },
+    {
+      "id": "temp", "title": "肤温", "multi": false,
+      "options": [
+        { "id": "temp_hot", "label": "灼热" },
+        { "id": "temp_warm", "label": "微热" },
+        { "id": "temp_cold", "label": "不热或发凉" }
+      ]
+    },
+    {
+      "id": "pain", "title": "疼痛感觉", "multi": true,
+      "options": [
+        { "id": "pain_severe", "label": "剧烈疼痛" },
+        { "id": "pain_distend", "label": "胀痛" },
+        { "id": "pain_dull", "label": "隐痛" },
+        { "id": "pain_numb", "label": "麻木" },
+        { "id": "pain_none", "label": "不痛" }
+      ]
+    },
+    {
+      "id": "systemic", "title": "全身症状", "multi": true,
+      "options": [
+        { "id": "sys_fever", "label": "发热" },
+        { "id": "sys_chill", "label": "恶寒" },
+        { "id": "sys_night_sweat", "label": "夜间盗汗" },
+        { "id": "sys_thin", "label": "消瘦" },
+        { "id": "sys_fatigue", "label": "乏力" },
+        { "id": "sys_bone_fever", "label": "骨蒸潮热" },
+        { "id": "sys_poor_appetite", "label": "纳差" },
+        { "id": "sys_none", "label": "无明显全身症状" }
+      ]
+    },
+    {
+      "id": "tongue", "title": "舌象", "multi": false,
+      "options": [
+        { "id": "tongue_red_yellow", "label": "舌红苔黄" },
+        { "id": "tongue_pale_white", "label": "舌淡苔白" },
+        { "id": "tongue_other", "label": "其他/未查" }
+      ]
+    },
+    {
+      "id": "pulse", "title": "脉象", "multi": false,
+      "options": [
+        { "id": "pulse_rapid", "label": "脉数" },
+        { "id": "pulse_thready_rapid", "label": "脉细数" },
+        { "id": "pulse_deep_thready", "label": "脉沉细" },
+        { "id": "pulse_other", "label": "其他/未查" }
+      ]
+    },
+    {
+      "id": "internal", "title": "内科与全身病证（毒龙丹引药方向，可多选）", "multi": true,
+      "options": [
+        { "id": "in_fever_cold", "label": "感冒、发热、鼻塞、伤暑", "keys": ["感冒", "发热", "鼻塞", "暑"] },
+        { "id": "in_cough", "label": "咳嗽、气喘、诸痰证", "keys": ["咳", "嗽", "喘", "痰"] },
+        { "id": "in_headache", "label": "头痛、头晕", "keys": ["头痛", "头晕", "脑顶痛", "太阳痛"] },
+        { "id": "in_vomit", "label": "呕吐、呃逆、噎膈", "keys": ["呕吐", "干呕", "呃逆", "噎"] },
+        { "id": "in_dysentery", "label": "痢疾", "keys": ["痢"] },
+        { "id": "in_diarrhea", "label": "泄泻", "keys": ["泻"] },
+        { "id": "in_malaria", "label": "疟疾", "keys": ["疟"] },
+        { "id": "in_blood", "label": "吐血、衄血、咯血、便血、溺血", "keys": ["吐血", "衄血", "咯血", "下血", "纯血", "溺血"] },
+        { "id": "in_emission", "label": "遗精、白浊", "keys": ["遗精", "白浊"] },
+        { "id": "in_lin", "label": "淋证", "keys": ["淋"] },
+        { "id": "in_accum", "label": "食积与诸积", "keys": ["积"] },
+        { "id": "in_distemper", "label": "胀满、痞满、水肿", "keys": ["胀", "水肿", "浮肿"] },
+        { "id": "in_constipation", "label": "大便秘结", "keys": ["秘结", "燥结"] },
+        { "id": "in_insomnia", "label": "惊悸、失眠、自汗盗汗", "keys": ["惊悸", "不寐", "自汗", "盗汗", "怔忡"] },
+        { "id": "in_stroke", "label": "中风、瘫痪、口眼歪斜", "keys": ["中风", "瘫", "不遂", "口眼歪斜", "痰倒", "口噤"] },
+        { "id": "in_pain", "label": "诸痛（胁痛、腰痛、腹痛、骨节痛等）", "keys": ["痛"] },
+        { "id": "in_hernia", "label": "疝气、下元虚", "keys": ["疝", "下元"] },
+        { "id": "in_xiaoke", "label": "消渴", "keys": ["消渴"] },
+        { "id": "in_hemorrhoid", "label": "痔疮、脱肛", "keys": ["痔", "脱肛"] },
+        { "id": "in_beriberi", "label": "脚气", "keys": ["脚气"] },
+        { "id": "in_teeth", "label": "牙痛", "keys": ["牙痛"] },
+        { "id": "in_eye", "label": "眼病", "keys": ["眼", "目", "翳", "盲", "胬肉"] },
+        { "id": "in_throat", "label": "咽喉、口舌病", "keys": ["咽喉", "口舌", "喉"] },
+        { "id": "in_warm", "label": "伤寒阴证阳证、瘟疫、发斑", "keys": ["伤寒", "阳症", "阴证", "瘟疫", "斑", "谵语"] },
+        { "id": "in_gynecology", "label": "妇科病证", "keys": ["经", "崩", "带", "产后", "胎", "乳汁"] },
+        { "id": "in_pediatrics", "label": "儿科病证", "keys": ["小儿", "疳", "惊风", "夜啼", "胎黄", "吐乳"] },
+        { "id": "in_trauma", "label": "跌打、狂犬伤、破伤风", "keys": ["跌打", "狂犬", "破伤风"] }
+      ]
+    },
+    {
+      "id": "special", "title": "人群与病史（安全筛查）", "multi": true,
+      "options": [
+        { "id": "sp_pregnant", "label": "孕妇或哺乳期" },
+        { "id": "sp_child", "label": "儿童" },
+        { "id": "sp_kidney", "label": "肝肾功能不全病史" },
+        { "id": "sp_allergy", "label": "汞、砷或药物过敏史" },
+        { "id": "sp_medication", "label": "正在服用其他药物" },
+        { "id": "sp_none", "label": "以上均无" }
+      ]
+    },
+    {
+      "id": "poison", "title": "中毒警示征象（必答）", "multi": true,
+      "options": [
+        { "id": "po_metallic", "label": "口腔金属味、牙龈出血或蓝线" },
+        { "id": "po_tremor", "label": "手抖、震颤、易兴奋" },
+        { "id": "po_oliguria", "label": "少尿、血尿、浮肿" },
+        { "id": "po_rash", "label": "皮疹剥脱、皮肤溃烂加重" },
+        { "id": "po_high_fever", "label": "高热不退、神志异常、呼吸困难" },
+        { "id": "po_none", "label": "无上述任何征象" }
+      ]
+    }
+  ]
+}

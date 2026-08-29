@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend:
+    name: 后端测试(语法/导入/契约)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: platform/backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+      - name: 语法编译(全量)
+        run: |
+          python -m py_compile $(find app scripts -name '*.py' | grep -v __pycache__)
+      - name: 应用导入冒烟
+        run: |
+          OPEN_ACCESS=true SECRET_KEY=$(python -c "import secrets;print(secrets.token_hex(24))") \
+          python -c "import app.main; print('app.main OK')"
+      - name: 迁移脚本语法与数据文件存在性
+        run: |
+          test -f app/data/pediatrics-dx.json
+          test -f scripts/migrate_kb.py
+
+  frontend:
+    name: 前端构建
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: platform/web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: 安装依赖
+        run: npm ci || npm install
+      - name: 构建
+        run: npm run build
+      - name: 产物存在性
+        run: |
+          test -f dist/index.html
+          test -d dist/assets

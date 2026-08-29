@@ -1,0 +1,289 @@
+/* ===== 程氏家传儿科秘要 · 系统主题 ===== */
+:root {
+  --ink: #2b2318;
+  --ink-soft: #5a4f3e;
+  --paper: #f7f1e3;
+  --paper-light: #fbf7ec;
+  --card: #fdfaf1;
+  --vermilion: #b03a2e;
+  --vermilion-soft: #c96a52;
+  --gold: #a8842c;
+  --jade: #4a7a5f;
+  --line: #d8cdb4;
+  --danger-bg: #f9eceb;
+  --danger-line: #c0392b;
+  --shadow: 0 1px 3px rgba(43, 35, 24, 0.12), 0 4px 16px rgba(43, 35, 24, 0.06);
+  --radius: 8px;
+  --font-song: "Songti SC", "Noto Serif SC", "SimSun", "STSong", serif;
+  --font-kai: "Kaiti SC", "STKaiti", "KaiTi", "Kai", var(--font-song);
+  --font-sans: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.peds-shell {
+  background:
+    radial-gradient(1200px 500px at 50% -80px, rgba(168, 132, 44, 0.08), transparent 70%),
+    repeating-linear-gradient(0deg, rgba(43, 35, 24, 0.014) 0 1px, transparent 1px 26px),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* 容器 */
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 24px 60px;
+}
+
+/* 标题 */
+.h-title {
+  font-family: var(--font-kai);
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+.h-sec {
+  font-family: var(--font-kai);
+  font-size: 22px;
+  color: var(--vermilion);
+  border-left: 4px solid var(--vermilion);
+  padding-left: 10px;
+  margin: 28px 0 14px;
+}
+.h-sub {
+  font-family: var(--font-kai);
+  font-size: 17px;
+  color: var(--jade);
+  margin: 20px 0 10px;
+}
+
+/* 卡片 */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+/* 原文块 */
+.original {
+  font-family: var(--font-song);
+  line-height: 1.9;
+  color: var(--ink-soft);
+  background: var(--paper-light);
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin: 10px 0;
+  white-space: pre-wrap;
+}
+
+/* 白话要点 */
+.vern {
+  color: var(--jade);
+  font-size: 13.5px;
+  line-height: 1.8;
+}
+
+/* 医案/警告 */
+.warn-banner {
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-line);
+  border-left: 6px solid var(--danger-line);
+  color: #7a1f16;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 14px 0;
+}
+
+/* 标签 */
+.tag-syndrome {
+  display: inline-block;
+  background: #fff4ec;
+  color: var(--vermilion);
+  border: 1px solid #e8c9bb;
+  border-radius: 999px;
+  padding: 1px 10px;
+  font-size: 12.5px;
+  margin: 2px 4px 2px 0;
+}
+.tag-method {
+  display: inline-block;
+  background: #eef6f0;
+  color: var(--jade);
+  border: 1px solid #bfd8c8;
+  border-radius: 999px;
+  padding: 1px 10px;
+  font-size: 12.5px;
+  margin: 2px 4px 2px 0;
+}
+
+/* Element Plus 主题覆盖（仅儿科模块内生效，避免污染平台其它模块） */
+.peds-shell {
+  --el-color-primary: #b03a2e;
+  --el-color-primary-light-3: #c96a52;
+  --el-color-primary-light-5: #d99b88;
+  --el-color-primary-light-7: #e8c9bb;
+  --el-color-primary-light-8: #f0dcd3;
+  --el-color-primary-light-9: #f7ece7;
+  --el-color-primary-dark-2: #8f2e24;
+  --el-border-radius-base: 6px;
+  --el-font-family: var(--font-sans);
+}
+
+.peds-shell .el-card {
+  --el-card-border-color: var(--line);
+  background: var(--card);
+  border-radius: var(--radius);
+}
+
+/* 竖排书名饰 */
+.seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--vermilion);
+  color: #fdf6e8;
+  border-radius: 4px;
+  font-family: var(--font-kai);
+  letter-spacing: 2px;
+  padding: 4px 6px;
+  writing-mode: vertical-rl;
+}
+
+/* 表格 */
+.peds-shell .el-table {
+  --el-table-border-color: var(--line);
+  --el-table-header-bg-color: #f3ecdd;
+  --el-table-row-hover-bg-color: #f9f4e7;
+  color: var(--ink);
+}
+.peds-shell .el-table th.el-table__cell {
+  font-family: var(--font-kai);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* 打印 */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+  .page { max-width: 100%; padding: 0; }
+  .card { box-shadow: none; break-inside: avoid; }
+}
+
+/* ===== 移动端适配 ===== */
+@media (max-width: 768px) {
+  .page {
+    max-width: 100%;
+    padding: 12px 12px 56px;
+  }
+  .h-title {
+    font-size: 21px !important;
+  }
+  .h-sec {
+    font-size: 19px;
+    margin: 20px 0 10px;
+  }
+  .h-sub {
+    font-size: 15.5px;
+  }
+  .card {
+    padding: 14px 12px;
+    margin-bottom: 12px;
+  }
+  .original {
+    font-size: 13.5px !important;
+    line-height: 1.85;
+    padding: 10px;
+  }
+  .vern {
+    font-size: 12.5px !important;
+  }
+
+  /* 表格：内部横向滚动，不挤压版面 */
+  .page .el-table {
+    min-width: 560px;
+  }
+  .el-table__inner-wrapper {
+    overflow-x: auto;
+  }
+  .page .card {
+    overflow: visible;
+  }
+
+  /* 步骤条紧凑 */
+  .el-steps {
+    --el-step-description-font-size: 0;
+  }
+  .el-step__description {
+    display: none;
+  }
+  .el-step__title {
+    font-size: 12px !important;
+    line-height: 18px !important;
+  }
+  .el-step__icon {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  .el-step__line {
+    top: 11px !important;
+  }
+
+  /* 弹窗、消息贴边 */
+  .el-dialog {
+    --el-dialog-width: 94% !important;
+  }
+  .el-message {
+    max-width: 88vw;
+  }
+
+  /* 首页 */
+  .hero {
+    padding: 18px 14px !important;
+    gap: 16px !important;
+  }
+  .hero-desc {
+    font-size: 13.5px !important;
+  }
+  .sixzi-char {
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 21px !important;
+  }
+  .hero-actions .el-button {
+    margin-bottom: 8px;
+  }
+
+  /* 图谱网格单列 */
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  /* 按钮组换行 */
+  .step-actions,
+  .filters {
+    gap: 8px !important;
+  }
+  .filters .el-select {
+    width: 100% !important;
+  }
+
+  /* 打印时恢复（移动端点击打印不受影响） */
+  @media print {
+    .page { padding: 0; }
+  }
+}
+

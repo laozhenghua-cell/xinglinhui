@@ -1,0 +1,39 @@
+{
+  "parts": [
+    {
+      "part": "上篇 总论",
+      "intro": "专谈丹药的发生、发展，属参考部分。使读者知道医用丹药的来龙去脉。",
+      "chapters": [
+        { "id": "ch01", "no": "第一章", "title": "中国炼丹术的发生与发展", "file": "ch01-发生与发展.md", "bookPages": [1, 5], "pdfPages": [10, 14] },
+        { "id": "ch02", "no": "第二章", "title": "中国古代炼丹家的目的", "file": "ch02-炼丹家的目的.md", "bookPages": [5, 9], "pdfPages": [14, 18] },
+        { "id": "ch03", "no": "第三章", "title": "古代炼丹场合的内容一斑", "file": "ch03-炼丹场合一斑.md", "bookPages": [9, 12], "pdfPages": [18, 21] },
+        { "id": "ch04", "no": "第四章", "title": "古代文献中最早见的丹药记载", "file": "ch04-最早丹药记载.md", "bookPages": [12, 15], "pdfPages": [21, 24] },
+        { "id": "ch05", "no": "第五章", "title": "中国古代炼丹术的文献试探", "file": "ch05-文献试探.md", "bookPages": [15, 31], "pdfPages": [24, 40] },
+        { "id": "ch06", "no": "第六章", "title": "古代道家炼丹术与医药合流", "file": "ch06-道家与医药合流.md", "bookPages": [31, 35], "pdfPages": [40, 44] },
+        { "id": "ch07", "no": "第七章", "title": "中国炼丹术的术语", "file": "ch07-炼丹术语.md", "bookPages": [35, 46], "pdfPages": [44, 55] }
+      ]
+    },
+    {
+      "part": "下篇 各论",
+      "intro": "收集丹药中最有效、最适用的秘、验丹药方剂约三十个，是实用部分，为张觉人七十年中长期使用的有效方。",
+      "chapters": [
+        { "id": "ch08", "no": "第一章", "title": "临炉须知", "file": "ch08-临炉须知.md", "bookPages": [46, 51], "pdfPages": [55, 60] },
+        { "id": "ch09", "no": "第二章", "title": "临炉前的准备工作", "file": "ch09-临炉前准备.md", "bookPages": [51, 55], "pdfPages": [60, 64] },
+        { "id": "ch10", "no": "第三章", "title": "氯化汞类丹药", "file": "ch10-氯化汞类丹药.md", "bookPages": [55, 72], "pdfPages": [64, 81] },
+        { "id": "ch11", "no": "第四章", "title": "硫化汞类丹药", "file": "ch11-硫化汞类丹药.md", "bookPages": [72, 78], "pdfPages": [81, 87] },
+        { "id": "ch12", "no": "第五章", "title": "氧化汞类丹药", "file": "ch12-氧化汞类丹药.md", "bookPages": [78, 85], "pdfPages": [87, 94] },
+        { "id": "ch13", "no": "第六章", "title": "升丹类方剂", "file": "ch13-升丹类方剂.md", "bookPages": [85, 94], "pdfPages": [94, 103] },
+        { "id": "ch14", "no": "第七章", "title": "降丹类方剂", "file": "ch14-降丹类方剂.md", "bookPages": [94, 124], "pdfPages": [103, 133] },
+        { "id": "ch15", "no": "第八章", "title": "烧炼类丹药", "file": "ch15-烧炼类丹药.md", "bookPages": [124, 128], "pdfPages": [133, 137] }
+      ]
+    },
+    {
+      "part": "附录",
+      "chapters": [
+        { "id": "ap01", "no": "附录一", "title": "三种常用丹药", "file": "ap01-三种常用丹药.md", "bookPages": [128, 132], "pdfPages": [137, 141] },
+        { "id": "ap02", "no": "附录二", "title": "中国炼丹术记事年表", "file": "ap02-记事年表.md", "bookPages": [132, 136], "pdfPages": [141, 145] },
+        { "id": "ap03", "no": "附录三", "title": "参考文献", "file": "ap03-参考文献.md", "bookPages": [136, 137], "pdfPages": [145, 146] }
+      ]
+    }
+  ]
+}

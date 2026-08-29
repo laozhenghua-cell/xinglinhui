@@ -1,0 +1,112 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: ulcer_db_prod
+    environment:
+      POSTGRES_DB: ulcer_platform
+      POSTGRES_USER: ulcer_user
+      POSTGRES_PASSWORD: UlcerSecure2026!
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - ulcer_network
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ulcer_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: ulcer_redis_prod
+    command: redis-server --requirepass UlcerRedis2026!
+    volumes:
+      - redis_data:/data
+    networks:
+      - ulcer_network
+    restart: always
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ulcer_backend_prod
+    environment:
+      - APP_NAME=TCM Ulcer Platform
+      - APP_ENV=production
+      - DEBUG=false
+      - SECRET_KEY=prod-ulcer-secret-key-change-in-production-2026
+      - API_V1_PREFIX=/api/v1
+      - POSTGRES_SERVER=db
+      - POSTGRES_USER=ulcer_user
+      - POSTGRES_PASSWORD=UlcerSecure2026!
+      - POSTGRES_DB=ulcer_platform
+      - DATABASE_URL=postgresql+asyncpg://ulcer_user:UlcerSecure2026!@db:5432/ulcer_platform
+      - REDIS_URL=redis://:UlcerRedis2026!@redis:6379/0
+      - QWEN_API_KEY=${QWEN_API_KEY:?请在环境中提供}
+      - QWEN_API_BASE=https://dashscope.aliyuncs.com/compatible-mode/v1
+      - QWEN_VISION_MODEL=qwen-vl-max-latest
+      - UPLOAD_DIR=/app/uploads
+      - FRONTEND_URL=http://cy.llixz.cn
+      - ACCESS_TOKEN_EXPIRE_MINUTES=1440
+      - ALGORITHM=HS256
+    volumes:
+      - upload_data:/app/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - ulcer_network
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+      args:
+        - VITE_API_BASE_URL=https://cy.llixz.cn/api
+    container_name: ulcer_frontend_prod
+    networks:
+      - ulcer_network
+    restart: always
+
+  nginx:
+    image: nginx:alpine
+    container_name: ulcer_nginx_prod
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.prod.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - upload_data:/usr/share/nginx/uploads:ro
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - ulcer_network
+    restart: always
+
+volumes:
+  postgres_data:
+  redis_data:
+  upload_data:
+
+networks:
+  ulcer_network:
+    driver: bridge

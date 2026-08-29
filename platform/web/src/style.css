@@ -1,0 +1,118 @@
+/* ============================================================
+   杏林汇 · 设计系统(Xinglin Design v2)
+   中医现代风:墨绿青 / 米白纸 / 朱砂点缀
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* 品牌色板 */
+  --xl-ink: #17332E;        /* 深墨绿(侧边栏/标题) */
+  --xl-deep: #1F4E46;       /* 主色 */
+  --xl-teal: #2E7D6B;       /* 强调 */
+  --xl-mint: #E7F2EE;       /* 浅底 */
+  --xl-paper: #F7F4EE;      /* 米白纸 */
+  --xl-card: #FFFFFF;
+  --xl-cinnabar: #B03A2E;   /* 朱砂(警示/点缀) */
+  --xl-gold: #A67C2E;       /* 金(小点缀) */
+  --xl-ink-soft: #55665F;
+  --xl-line: #E6E2D8;
+  --xl-radius: 12px;
+  --xl-shadow: 0 2px 10px rgba(23, 51, 46, 0.06);
+
+  /* Element Plus 主题覆盖 */
+  --el-color-primary: #2E7D6B;
+  --el-color-primary-light-3: #5AA08F;
+  --el-color-primary-light-5: #83BCAE;
+  --el-color-primary-light-7: #B4D8CE;
+  --el-color-primary-light-8: #CDE5DE;
+  --el-color-primary-light-9: #E7F2EE;
+  --el-color-primary-dark-2: #1F4E46;
+  --el-color-success: #4E8A57;
+  --el-color-warning: #C08A2E;
+  --el-color-danger: #B03A2E;
+  --el-border-radius-base: 8px;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2A332F;
+  background-color: var(--xl-paper);
+}
+
+/* 标题衬线(中医气质) */
+h1, h2, h3, .xl-serif {
+  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif SC", serif;
+  letter-spacing: 0.02em;
+  color: var(--xl-ink);
+}
+
+/* 通用卡片 */
+.xl-card {
+  background: var(--xl-card);
+  border: 1px solid var(--xl-line);
+  border-radius: var(--xl-radius);
+  box-shadow: var(--xl-shadow);
+  padding: 18px 20px;
+}
+.xl-card h3 { margin: 0 0 10px; font-size: 16px; }
+
+/* 通用页面容器 */
+.xl-page {
+  padding: 20px 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.xl-page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.xl-page-title h2 { font-size: 20px; }
+
+/* 统计数字 */
+.xl-num { font-size: 26px; font-weight: 700; color: var(--xl-deep); font-family: "Songti SC", "STSong", serif; }
+.xl-label { color: var(--xl-ink-soft); font-size: 12.5px; }
+
+/* Element Plus 细节统一 */
+.el-card { border-radius: var(--xl-radius); border: 1px solid var(--xl-line); }
+.el-button { border-radius: 8px; }
+.el-tag { border-radius: 6px; }
+.el-table { --el-table-border-color: var(--xl-line); }
+.el-menu { border-right: none; }
+
+/* 空态 */
+.xl-empty { color: #9AA49E; text-align: center; padding: 28px 0; font-size: 13px; }
+
+/* 响应式断点 */
+@media (max-width: 900px) {
+  body { font-size: 13px; }
+  .xl-page { padding: 14px 12px; }
+  .el-row .el-col { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; margin-bottom: 10px; }
+  .quick-grid, .spec-pick { grid-template-columns: repeat(2, 1fr) !important; }
+  .dash-hero { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .el-table { font-size: 12.5px; }
+  .el-button { min-height: 34px; }
+  .el-form--inline .el-form-item { margin-right: 8px; }
+}
+@media (max-width: 480px) {
+  body { font-size: 12px; }
+  .quick-grid, .spec-pick { grid-template-columns: 1fr !important; }
+  .xl-page-title { flex-direction: column; align-items: flex-start; gap: 8px; }
+}

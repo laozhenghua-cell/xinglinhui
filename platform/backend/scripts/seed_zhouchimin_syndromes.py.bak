@@ -1,0 +1,299 @@
+"""
+周济民证型规则补充脚本
+补充7个缺失的核心证型
+"""
+import asyncio
+import sys
+from pathlib import Path
+
+# 添加项目路径
+sys.path.append(str(Path(__file__).parent.parent))
+
+from sqlalchemy import select
+from app.database import AsyncSessionLocal
+from app.models.diagnosis import SyndromeRule
+import uuid
+
+
+# 新增7个证型规则
+NEW_SYNDROMES = [
+    # 1. 痔疮 - 湿热瘀滞型
+    {
+        "id": str(uuid.uuid4()),
+        "disease_type": "痔疮",
+        "syndrome_code": "ZC_SRYS",
+        "syndrome_name": "湿热瘀滞型",
+        "treatment_principle": "清热除湿，活血化瘀",
+        "required_symptoms": {
+            "swelling_symptom": {"present": True},
+            "pain": {"present": True},
+            "stool_condition": "干结"
+        },
+        "optional_symptoms": {
+            "bitter_mouth": True,
+            "urination": "短赤",
+            "tongue_coating": ["黄腻", "白厚"],
+            "pulse_wiry": True,
+            "anal_swelling": ["中度", "重度"]
+        },
+        "tongue_pulse": "舌质红，苔黄腻，脉弦滑数",
+        "recommended_formulas": ["五神汤加味", "活血散瘀汤"],
+        "modification_rules": {
+            "便秘严重": "加大黄10g、芒硝6g增强泻下",
+            "疼痛剧烈": "加延胡索10g、川楝子10g止痛",
+            "肿胀明显": "加泽兰10g、泽泻12g消肿利湿",
+            "出血量大": "加仙鹤草15g、茜草10g止血"
+        },
+        "confidence_threshold": 0.65,
+        "priority": 85,
+        "is_active": 1,
+        "description": "血栓外痔、静脉曲张性外痔、嵌顿性内痔常见此证。特点：肿胀疼痛并重，湿热下注明显。"
+    },
+
+    # 2. 痔疮 - 气血亏损型
+    {
+        "id": str(uuid.uuid4()),
+        "disease_type": "痔疮",
+        "syndrome_code": "ZC_QXKS",
+        "syndrome_name": "气血亏损型",
+        "treatment_principle": "补气益血",
+        "required_symptoms": {
+            "bleeding": {"present": True, "color": "淡红"},
+            "fatigue": True,
+            "pale_complexion": True
+        },
+        "optional_symptoms": {
+            "poor_appetite": True,
+            "prolapse_symptom": {"present": True},
+            "pulse_weak": True,
+            "pulse_fine": True,
+            "tongue_color": "淡白",
+            "stool_condition": "干结"
+        },
+        "tongue_pulse": "舌质淡，苔薄白，脉细弱",
+        "recommended_formulas": ["八珍汤", "当归连翘汤"],
+        "modification_rules": {
+            "出血日久不止": "加阿胶12g、艾叶炭10g止血",
+            "脱垂严重": "加升麻12g、柴胡10g升提",
+            "气虚明显": "重用黄芪至30g",
+            "血虚明显": "加熟地15g、白芍12g",
+            "虚中有热": "加黄芩10g、黄连6g清解（周济民经验：虚证佐以清热）"
+        },
+        "confidence_threshold": 0.70,
+        "priority": 80,
+        "is_active": 1,
+        "description": "内痔长期出血、久病体虚者常见。周济民指出：有形之血不能速生，无形之气所当急固，治疗重在补气。"
+    },
+
+    # 3. 肛裂 - 湿热证
+    {
+        "id": str(uuid.uuid4()),
+        "disease_type": "肛裂",
+        "syndrome_code": "GL_SR",
+        "syndrome_name": "湿热证",
+        "treatment_principle": "清热利湿，润燥止痛",
+        "required_symptoms": {
+            "pain": {"present": True, "degree": "重度"},
+            "stool_condition": "干结",
+            "anal_swelling": "中度"
+        },
+        "optional_symptoms": {
+            "secretion": "脓性",
+            "bitter_mouth": True,
+            "urination": "短赤",
+            "poor_appetite": True,
+            "tongue_coating": "黄腻",
+            "pulse_rapid": True
+        },
+        "tongue_pulse": "舌质红，苔黄腻，脉滑数",
+        "recommended_formulas": ["止痛如神汤"],
+        "modification_rules": {
+            "便秘严重": "重用大黄至15g",
+            "疼痛剧烈": "加白芷10g、延胡索10g",
+            "肿胀明显": "加泽泻12g、车前子10g",
+            "分泌脓液": "加金银花20g、连翘15g"
+        },
+        "confidence_threshold": 0.65,
+        "priority": 75,
+        "is_active": 1,
+        "description": "陈旧性肛裂，裂口有感染、渗出较多者常见此证。"
+    },
+
+    # 4. 肛周脓肿 - 虚热型
+    {
+        "id": str(uuid.uuid4()),
+        "disease_type": "肛周脓肿",
+        "syndrome_code": "GZ_XR",
+        "syndrome_name": "虚热型脓肿",
+        "treatment_principle": "清虚热，散毒气",
+        "required_symptoms": {
+            "abscess": {"present": True},
+            "fever": "低热",
+            "fatigue": True
+        },
+        "optional_symptoms": {
+            "pale_complexion": True,
+            "night_sweats": True,
+            "pulse_fine": True,
+            "pulse_weak": True,
+            "tongue_color": "淡",
+            "pain": {"degree": "轻度"}
+        },
+        "tongue_pulse": "舌质淡，苔薄白，脉弦细弱",
+        "recommended_formulas": ["青蒿鳖甲汤加减"],
+        "modification_rules": {
+            "阴虚明显": "加麦冬12g、知母10g",
+            "气虚明显": "加黄芪15g、党参12g",
+            "血虚明显": "加当归12g、川芎9g",
+            "脓未成": "加红花6g、桃仁9g活血消散"
+        },
+        "confidence_threshold": 0.70,
+        "priority": 75,
+        "is_active": 1,
+        "description": "慢性发病、体质虚弱、肺痨病史者常见。周济民指出：起病缓，病程长，成脓慢，破溃迟，肿块不高。"
+    },
+
+    # 5. 直肠脱垂 - 气血两虚型
+    {
+        "id": str(uuid.uuid4()),
+        "disease_type": "直肠脱垂",
+        "syndrome_code": "ZC_QXLX",
+        "syndrome_name": "气血两虚型",
+        "treatment_principle": "补气养血，升举固脱",
+        "required_symptoms": {
+            "prolapse_symptom": {"present": True, "degree": "III度"},
+            "fatigue": True,
+            "pale_complexion": True
+        },
+        "optional_symptoms": {
+            "poor_appetite": True,
+            "insomnia": True,
+            "pulse_weak": True,
+            "pulse_fine": True,
+            "tongue_color": "淡白",
+            "bleeding": {"color": "淡红"}
+        },
+        "tongue_pulse": "舌质淡红，苔薄白，脉细弱",
+        "recommended_formulas": ["八珍汤加味", "参茸提肛散"],
+        "modification_rules": {
+            "气虚明显": "重用黄芪至30g，加升麻6g",
+            "血虚明显": "加熟地12g、阿胶12g",
+            "脱垂严重": "加鹿茸4g、补骨脂6g",
+            "便秘": "加肉苁蓉15g、麻仁12g润肠"
+        },
+        "confidence_threshold": 0.70,
+        "priority": 80,
+        "is_active": 1,
+        "description": "产后妇女、久病体虚者常见。周济民医案：产后气血亏损引起直肠脱垂。"
+    },
+
+    # 6. 直肠脱垂 - 肺虚咳喘型
+    {
+        "id": str(uuid.uuid4()),
+        "disease_type": "直肠脱垂",
+        "syndrome_code": "ZC_FXKC",
+        "syndrome_name": "肺虚咳喘型",
+        "treatment_principle": "温肺益气，定喘固脱",
+        "required_symptoms": {
+            "prolapse_symptom": {"present": True},
+            "cough": True,
+            "shortness_of_breath": True
+        },
+        "optional_symptoms": {
+            "fatigue": True,
+            "pale_complexion": True,
+            "pulse_weak": True,
+            "tongue_color": "淡",
+            "tongue_coating": "白滑"
+        },
+        "tongue_pulse": "舌淡，苔白滑，脉沉细略滑",
+        "recommended_formulas": ["定喘固脱汤"],
+        "modification_rules": {
+            "咳喘严重": "加桑白皮8g、贝母8g",
+            "气虚明显": "重用黄芪至20g",
+            "脱垂严重": "加升麻12g、肉桂6g",
+            "肺寒": "加干姜6g、细辛3g温肺"
+        },
+        "confidence_threshold": 0.75,
+        "priority": 70,
+        "is_active": 1,
+        "description": "慢性气管炎、肺气肿患者合并脱垂。周济民医案：肺与大肠相表里，肺气虚则大肠寒脱。"
+    },
+
+    # 7. 直肠脱垂 - 湿热下注型
+    {
+        "id": str(uuid.uuid4()),
+        "disease_type": "直肠脱垂",
+        "syndrome_code": "ZC_SRXZ",
+        "syndrome_name": "湿热下注型",
+        "treatment_principle": "清利湿热，升阳除湿",
+        "required_symptoms": {
+            "prolapse_symptom": {"present": True},
+            "anal_swelling": "中度",
+            "bitter_mouth": True
+        },
+        "optional_symptoms": {
+            "poor_appetite": True,
+            "urination": "短赤",
+            "pulse_rapid": True,
+            "tongue_coating": "黄腻",
+            "stool_condition": "溏泄"
+        },
+        "tongue_pulse": "舌质红，苔黄腻，脉滑数",
+        "recommended_formulas": ["升阳除湿汤"],
+        "modification_rules": {
+            "湿热重": "加黄柏10g、苍术10g",
+            "下坠明显": "加升麻3g、柴胡6g",
+            "便溏": "加茯苓12g、泽泻10g",
+            "小便不畅": "加车前子10g、木通6g"
+        },
+        "confidence_threshold": 0.65,
+        "priority": 65,
+        "is_active": 1,
+        "description": "少数直肠脱垂患者伴湿热症状。周济民指出：此型需清利湿热，不可一味补益。"
+    }
+]
+
+
+async def seed_zhou_syndromes():
+    """导入周济民证型规则"""
+    async with AsyncSessionLocal() as session:
+        try:
+            # 检查是否已存在
+            for syndrome in NEW_SYNDROMES:
+                result = await session.execute(
+                    select(SyndromeRule).where(
+                        SyndromeRule.syndrome_code == syndrome['syndrome_code']
+                    )
+                )
+                existing = result.scalar_one_or_none()
+
+                if existing:
+                    print(f"⚠️  证型已存在，跳过：{syndrome['syndrome_name']}")
+                    continue
+
+                # 创建新证型
+                new_syndrome = SyndromeRule(**syndrome)
+                session.add(new_syndrome)
+                print(f"✅ 新增证型：{syndrome['syndrome_name']} ({syndrome['syndrome_code']})")
+
+            await session.commit()
+            print("\n🎉 周济民证型规则导入完成！")
+            print(f"📊 新增证型数量：{len(NEW_SYNDROMES)}")
+
+            # 统计总数
+            result = await session.execute(select(SyndromeRule))
+            total = len(result.scalars().all())
+            print(f"📊 系统总证型数量：{total}")
+
+        except Exception as e:
+            await session.rollback()
+            print(f"❌ 导入失败：{str(e)}")
+            raise
+
+
+if __name__ == "__main__":
+    print("=" * 60)
+    print("周济民证型规则补充脚本")
+    print("=" * 60)
+    asyncio.run(seed_zhou_syndromes())

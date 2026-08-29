@@ -1,0 +1,392 @@
+{
+ "meta": {
+  "name": "辨证规则与选方规则引擎数据",
+  "position": "规则全部可解释：每条依据均标注原书方剂主治原文；仅供学术研究参考"
+ },
+ "syndromes": [
+  {
+   "id": "sy_yang",
+   "name": "阳证热毒",
+   "minHits": 2,
+   "any": [
+    "color_red",
+    "temp_hot",
+    "pus_thick",
+    "tongue_red_yellow",
+    "pulse_rapid",
+    "pain_severe",
+    "pain_distend"
+   ],
+   "explain": "红肿热痛、脓稠、舌红苔黄脉数，属阳证。原书中九丸条明言『一切阳证不相宜』，故阳证方向以拔毒、提脓、去腐为治，不宜用中九丸等阴证专方。"
+  },
+  {
+   "id": "sy_yin",
+   "name": "阴证寒凝",
+   "minHits": 2,
+   "any": [
+    "lesion_flat",
+    "color_pale",
+    "temp_cold",
+    "pus_thin",
+    "tongue_pale_white",
+    "pulse_deep_thready",
+    "pain_dull",
+    "pain_none"
+   ],
+   "explain": "漫肿平塌、不热不痛或隐痛、脓稀、舌淡脉沉细，属阴证。原书谓中九丸主治『阴症、骨关节结核、疔病、痰核、梅毒……一切阳证不相宜』，金液丹亦主『阴症阴毒』，阴证方向以温通、散结、化管为主。"
+  },
+  {
+   "id": "sy_ulcer",
+   "name": "溃后不敛",
+   "minHits": 1,
+   "any": [
+    "stage_ulcerated",
+    "stage_chronic",
+    "lesion_ulcer",
+    "pus_black"
+   ],
+   "explain": "已溃或久溃不敛、脓水不尽、黑腐不脱者，治当化腐、提脓、生肌、敛口。原书大红升丹『主治梅毒、下疳……溃疡、瘘管……及开刀后久不收口』，五福滚脓丹主『一切疮疡脓水不尽，口小里大者』。"
+  },
+  {
+   "id": "sy_consumptive",
+   "name": "气血亏虚（阴证兼虚）",
+   "minHits": 2,
+   "any": [
+    "sys_night_sweat",
+    "sys_thin",
+    "sys_fatigue",
+    "sys_bone_fever",
+    "pulse_thready_rapid",
+    "pulse_deep_thready"
+   ],
+   "explain": "盗汗、消瘦、骨蒸潮热、脉细者，多属虚损或痨证（结核类），原书中九丸主『骨关节结核』，金龟下海丹主『附骨』久溃穿溃流脓者。此类病证尤须医师系统诊治，丹药仅为历史研究参考。"
+  }
+ ],
+ "recommend": [
+  {
+   "id": "r_dulong",
+   "title": "毒龙丹 · 一药多引（按症用引药送服）",
+   "match": {
+    "any": [
+     "in_fever_cold",
+     "in_cough",
+     "in_headache",
+     "in_vomit",
+     "in_dysentery",
+     "in_diarrhea",
+     "in_malaria",
+     "in_blood",
+     "in_emission",
+     "in_lin",
+     "in_accum",
+     "in_distemper",
+     "in_constipation",
+     "in_insomnia",
+     "in_stroke",
+     "in_pain",
+     "in_hernia",
+     "in_xiaoke",
+     "in_hemorrhoid",
+     "in_beriberi",
+     "in_teeth",
+     "in_eye",
+     "in_throat",
+     "in_warm",
+     "in_gynecology",
+     "in_pediatrics",
+     "in_trauma"
+    ]
+   },
+   "formulas": [
+    "F30"
+   ],
+   "basis": "毒龙丹（马钱子制剂）『此丹治证甚多，见引药项』：每服0.9克，早晚各服一次，按症用引药送服。原书载内科168条、妇科28条、儿科30条、外科19条引药；丹头药力霸道，『病愈后就应停止使用』。下方列出与所选病证匹配的原书引药。"
+  },
+  {
+   "id": "r_fistula",
+   "title": "瘘管、漏管",
+   "match": {
+    "any": [
+     "lesion_fistula",
+     "lesion_deadbone"
+    ]
+   },
+   "formulas": [
+    "F25",
+    "F26",
+    "F23",
+    "F16",
+    "F21",
+    "F12"
+   ],
+   "basis": "化管灵药『专化瘘管』；水火金丹『专治疮疡瘘管、瘰疬结核』；八虎闹幽州『专门拔毒，取管，出骨』；七星丹『拔毒，去腐，化管，出骨，生肌，敛口』；金龟下海丹主『顽固瘘管』；大红升丹『拔毒、去腐、提脓、拔疔根、去瘘管』。"
+  },
+  {
+   "id": "r_scrofula",
+   "title": "瘰疬、痰核",
+   "match": {
+    "any": [
+     "lesion_scrofula",
+     "lesion_phlegm",
+     "site_neck"
+    ]
+   },
+   "formulas": [
+    "F16",
+    "F21",
+    "F22",
+    "F26",
+    "F03",
+    "F32"
+   ],
+   "basis": "七星丹主『瘰疬』；金龟下海丹主『瘰疬、痰核』；大乘丹主『瘰疬、痰核』；水火金丹主『瘰疬结核』；中九丸主『痰核』；龙虎太乙丹主『九子烂疡』（瘰疬俗称）。"
+  },
+  {
+   "id": "r_bone",
+   "title": "附骨、骨关节结核、多骨",
+   "match": {
+    "any": [
+     "lesion_deadbone",
+     "site_limb_down"
+    ],
+    "plus": [
+     "lesion_fistula",
+     "stage_chronic",
+     "sys_bone_fever",
+     "sys_night_sweat"
+    ]
+   },
+   "formulas": [
+    "F21",
+    "F03",
+    "F22",
+    "F16",
+    "F23",
+    "F14",
+    "F30"
+   ],
+   "basis": "金龟下海丹主『附骨』『内有腐肉管骨年深日久不愈者』；中九丸主『骨关节结核』；大乘丹主『骨关节结核』；七星丹主『附骨流痰』『出骨』；八虎闹幽州『出骨』；乾坤一炁丹『一切已溃未溃疮疡皆可应用』；毒龙丹内服：原书外科引药第19条『附骨疽者，用黄酒下』"
+  },
+  {
+   "id": "r_syphilis",
+   "title": "梅毒（杨梅、下疳、横痃、鱼口、便毒、蜡烛花）",
+   "match": {
+    "any": [
+     "site_genital"
+    ]
+   },
+   "formulas": [
+    "F12",
+    "F13",
+    "F19",
+    "F03",
+    "F32",
+    "F30"
+   ],
+   "basis": "大红升丹『主治梅毒、下疳、横痃、鱼口』；小红升丹『原书并载用于内服，可治梅毒』；五虎红升丹主『杨梅』；中九丸主『梅毒』；龙虎太乙丹主『鱼口、便毒、蜡烛花』；毒龙丹内服：原书外科引药第6、14、15条，梅毒、天泡用银花、土茯苓煎汤下；鱼口便毒用山甲、木鳖煎汤下"
+  },
+  {
+   "id": "r_boil",
+   "title": "疔疮、疔毒",
+   "match": {
+    "any": [
+     "lesion_boil"
+    ]
+   },
+   "formulas": [
+    "F12",
+    "F16",
+    "F21",
+    "F22",
+    "F28",
+    "F32",
+    "F30"
+   ],
+   "basis": "大红升丹『拔疔根』；七星丹主『疔毒、疔疮』；金龟下海丹主『疔毒』；大乘丹主『疔疮』；白降丹主『疔疮』；龙虎太乙丹主『各种疔疮及毒』；毒龙丹内服：原书外科引药第7条『疔疮、结核秽烂不堪者，用夏枯草、连翘、土茯苓煎汤下』"
+  },
+  {
+   "id": "r_back_breast",
+   "title": "发背、对口、乳痈等大疮",
+   "match": {
+    "any": [
+     "site_back",
+     "site_chest_abd"
+    ]
+   },
+   "formulas": [
+    "F16",
+    "F21",
+    "F22",
+    "F32",
+    "F12",
+    "F30"
+   ],
+   "basis": "七星丹主『对口，发背』；金龟下海丹主『痈疽、发背』；大乘丹主『发背、对口疮、乳痈』；龙虎太乙丹主『背花、背搭、对口、乳痈、肚痈』；大红升丹主『对口』；毒龙丹内服：原书外科引药第3、4条，痈疽用金银花煎汤下，发背、疔毒、流注用金银花、山茶花、栀子煎汤下"
+  },
+  {
+   "id": "r_unulcerated",
+   "title": "未溃肿疡，欲其消散或破头",
+   "match": {
+    "any": [
+     "stage_early",
+     "stage_pus"
+    ]
+   },
+   "formulas": [
+    "F27",
+    "F17",
+    "F34",
+    "F14",
+    "F12"
+   ],
+   "basis": "一点雪『专治未溃肿疡，促其消散』；七珍丹主『一切疮疡年深月久，欲散不散，欲溃不溃者』；阳春白雪丹用于『已化脓而未穿破头者』点头破脓；乾坤一炁丹『一切已溃未溃疮疡皆可应用』；大红升丹可用于成脓期提脓拔毒。"
+  },
+  {
+   "id": "r_pus_drain",
+   "title": "溃后脓水不尽、口小里大",
+   "match": {
+    "any": [
+     "stage_chronic",
+     "pus_black",
+     "lesion_ulcer"
+    ]
+   },
+   "formulas": [
+    "F20",
+    "F24",
+    "F12",
+    "F19",
+    "F16",
+    "F33",
+    "F05"
+   ],
+   "basis": "五福滚脓丹主『一切疮疡脓水不尽，口小里大者』；九龙归大海『专门拔毒，排脓』；大红升丹『提脓』；五虎红升丹主『痈疽疮疡溃后，黑腐甚多不化脓』；七星丹『生肌，敛口』；六合回春丹主『已经破头……不得收口』者（未破头不得用）；石青『疮疡久不收口』。"
+  },
+  {
+   "id": "r_healing",
+   "title": "生肌敛口收功",
+   "match": {
+    "any": [
+     "stage_chronic",
+     "lesion_ulcer"
+    ]
+   },
+   "formulas": [
+    "F12",
+    "F16",
+    "F32",
+    "F06",
+    "F05"
+   ],
+   "basis": "大红升丹『生肌、长肉、结痂』；七星丹『生肌，敛口』；龙虎太乙丹『脓尽之后，再以太乙丹收口』；银脆『生肌，敛口』；石青主『疮疡久不收口』。"
+  },
+  {
+   "id": "r_eczema_scabies",
+   "title": "湿疮、湿疹、疥癣",
+   "match": {
+    "any": [
+     "lesion_eczema",
+     "lesion_scabies"
+    ]
+   },
+   "formulas": [
+    "F12",
+    "F01",
+    "F28"
+   ],
+   "basis": "大红升丹主『疥癣、湿疮』；轻粉『杀疥癣虫』；白降丹可用于『湿疹』。"
+  },
+  {
+   "id": "r_eye",
+   "title": "外障眼病",
+   "match": {
+    "any": [
+     "site_eye"
+    ]
+   },
+   "formulas": [
+    "F29"
+   ],
+   "basis": "眼药紫金霜『对于外障眼病确有满意疗效，内障则无作用』：上层药治瞽目，中层药治翳障，下层药治火眼。"
+  },
+  {
+   "id": "r_general",
+   "title": "一切疮疡通用（阴阳两可）",
+   "match": {
+    "any": [
+     "lesion_swell",
+     "lesion_flat",
+     "stage_early",
+     "stage_pus",
+     "stage_ulcerated",
+     "stage_chronic"
+    ]
+   },
+   "formulas": [
+    "F14",
+    "F18",
+    "F32",
+    "F13"
+   ],
+   "basis": "乾坤一炁丹『凡是一切已溃未溃疮疡皆可应用』；九龙丹『一切疮疡均可应用』；龙虎太乙丹『不分阴症、阳症，皆可使用』；小红升丹『此丹对于一切疮疡皆可应用，拔毒提脓极有效验』。"
+  }
+ ],
+ "safety": {
+  "red": [
+   {
+    "id": "red_poison",
+    "any": [
+     "po_metallic",
+     "po_tremor",
+     "po_oliguria",
+     "po_rash"
+    ],
+    "message": "出现汞、砷中毒征象（口腔金属味/牙龈出血、震颤、少尿血尿、皮疹剥脱等）。丹药中毒可致死（升汞致死量约0.1–0.5g，砒霜约0.06–0.3g）。请立即停用一切丹药并急诊就医，本系统不推荐任何方剂。"
+   },
+   {
+    "id": "red_critical",
+    "any": [
+     "po_high_fever"
+    ],
+    "message": "高热不退、神志异常、呼吸困难属危急重症（如脓毒血症、中毒性脑病）。请立即急诊就医，本系统不推荐任何方剂。"
+   }
+  ],
+  "yellow": [
+   {
+    "id": "yellow_preg",
+    "any": [
+     "sp_pregnant"
+    ],
+    "message": "孕妇或哺乳期：药典规定红粉、轻粉、朱砂、雄黄孕妇禁用，白降丹孕妇及哺乳期妇女禁用。排除全部丹药方剂。"
+   },
+   {
+    "id": "yellow_child",
+    "any": [
+     "sp_child"
+    ],
+    "message": "儿童：汞砷制剂对儿童危害极大。排除全部丹药方剂，请至正规医疗机构诊治。"
+   },
+   {
+    "id": "yellow_kidney",
+    "any": [
+     "sp_kidney"
+    ],
+    "message": "肝肾功能不全：汞、砷经肝肾代谢蓄积，属绝对禁忌。排除全部丹药方剂。"
+   },
+   {
+    "id": "yellow_allergy",
+    "any": [
+     "sp_allergy"
+    ],
+    "message": "汞砷或药物过敏史：排除全部丹药方剂。"
+   },
+   {
+    "id": "yellow_med",
+    "any": [
+     "sp_medication"
+    ],
+    "message": "正在服用其他药物：丹药与其他药物相互作用风险高，须由执业医师评估。"
+   }
+  ]
+ }
+}

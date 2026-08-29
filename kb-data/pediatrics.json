@@ -1,0 +1,4604 @@
+{
+ "formulas": [
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-a49a5b0730",
+   "name": "导赤散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "生地",
+     "dose": ""
+    },
+    {
+     "name": "木通",
+     "dose": ""
+    },
+    {
+     "name": "甘草梢",
+     "dose": ""
+    },
+    {
+     "name": "淡竹叶",
+     "dose": ""
+    },
+    {
+     "name": "灯芯",
+     "dose": ""
+    }
+   ],
+   "function": "泻心火，泻心与小肠之火。心有热则小便短赤，常信用参入自己方中。",
+   "indication": "",
+   "usage": "分量轻重参用。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-056542c05e",
+   "name": "泻青丸",
+   "aliases": [
+    "原著未题方名，药味为泻肝之剂"
+   ],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "川栀",
+     "dose": ""
+    },
+    {
+     "name": "川大黄",
+     "dose": ""
+    },
+    {
+     "name": "川芎",
+     "dose": ""
+    },
+    {
+     "name": "龙胆草",
+     "dose": ""
+    },
+    {
+     "name": "归尾",
+     "dose": ""
+    },
+    {
+     "name": "羌活",
+     "dose": ""
+    },
+    {
+     "name": "防风",
+     "dose": ""
+    }
+   ],
+   "function": "泻肝火、平肝风。",
+   "indication": "",
+   "usage": "分量酌用。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-98cab70c24",
+   "name": "泻黄散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "防风",
+     "dose": ""
+    },
+    {
+     "name": "藿香",
+     "dose": ""
+    },
+    {
+     "name": "山栀",
+     "dose": ""
+    },
+    {
+     "name": "石膏",
+     "dose": ""
+    },
+    {
+     "name": "甘草",
+     "dose": ""
+    }
+   ],
+   "function": "泻脾胃伏火。",
+   "indication": "",
+   "usage": "分量酌用。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-6800bc1dd5",
+   "name": "泻白散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "桑白皮",
+     "dose": ""
+    },
+    {
+     "name": "地骨皮",
+     "dose": ""
+    },
+    {
+     "name": "甘草",
+     "dose": ""
+    },
+    {
+     "name": "粳米",
+     "dose": ""
+    }
+   ],
+   "function": "泻肺火。",
+   "indication": "",
+   "usage": "分量酌用。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-b5916a7e68",
+   "name": "六味地黄丸",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "熟地",
+     "dose": "八钱"
+    },
+    {
+     "name": "淮山",
+     "dose": "四钱"
+    },
+    {
+     "name": "白茯苓",
+     "dose": "三钱"
+    },
+    {
+     "name": "丹皮",
+     "dose": "三钱"
+    },
+    {
+     "name": "泽泻",
+     "dose": "三钱"
+    },
+    {
+     "name": "山萸肉",
+     "dose": "四钱"
+    }
+   ],
+   "function": "治肾虚诸症。",
+   "indication": "",
+   "usage": "分量歌：地八、山山四、丹泽苓用三。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-95d11ee457",
+   "name": "四君子汤",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "防党",
+     "dose": ""
+    },
+    {
+     "name": "白术",
+     "dose": ""
+    },
+    {
+     "name": "茯苓",
+     "dose": ""
+    },
+    {
+     "name": "炙草",
+     "dose": ""
+    }
+   ],
+   "function": "治脾虚诸症。气味中和，有君子之风故名。",
+   "indication": "",
+   "usage": "分量酌用。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-e678d0fedb",
+   "name": "四苓散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "白术",
+     "dose": ""
+    },
+    {
+     "name": "猪苓",
+     "dose": ""
+    },
+    {
+     "name": "赤苓",
+     "dose": ""
+    },
+    {
+     "name": "泽泻",
+     "dose": ""
+    }
+   ],
+   "function": "利水渗湿。",
+   "indication": "",
+   "usage": "分量酌用。加桂名五苓散。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-305fc97458",
+   "name": "小柴胡汤",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "柴胡",
+     "dose": ""
+    },
+    {
+     "name": "黄芩",
+     "dose": ""
+    },
+    {
+     "name": "半夏",
+     "dose": ""
+    },
+    {
+     "name": "防党",
+     "dose": ""
+    },
+    {
+     "name": "甘草",
+     "dose": ""
+    }
+   ],
+   "function": "和解少阳。",
+   "indication": "",
+   "usage": "加姜枣煎服。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-e03ff5ebad",
+   "name": "生脉散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "米党",
+     "dose": ""
+    },
+    {
+     "name": "麦冬",
+     "dose": ""
+    },
+    {
+     "name": "北味",
+     "dose": "少用"
+    }
+   ],
+   "function": "暑月宜用。益气生津。",
+   "indication": "",
+   "usage": "分量酌用。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-f8bd1a2c84",
+   "name": "保和丸",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "神曲",
+     "dose": ""
+    },
+    {
+     "name": "山楂",
+     "dose": ""
+    },
+    {
+     "name": "茯苓",
+     "dose": ""
+    },
+    {
+     "name": "半夏",
+     "dose": ""
+    },
+    {
+     "name": "陈皮",
+     "dose": ""
+    },
+    {
+     "name": "连翘",
+     "dose": ""
+    },
+    {
+     "name": "莱菔子",
+     "dose": ""
+    }
+   ],
+   "function": "消食化滞。",
+   "indication": "",
+   "usage": "或加麦芽、白术名大安丸，补消兼行。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-a45f3dc956",
+   "name": "宣风散热散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "生牵牛",
+     "dose": "五钱"
+    },
+    {
+     "name": "熟牵牛",
+     "dose": "五钱"
+    },
+    {
+     "name": "防风",
+     "dose": "四钱"
+    },
+    {
+     "name": "陈皮",
+     "dose": "四钱"
+    },
+    {
+     "name": "尖槟榔",
+     "dose": "四钱"
+    },
+    {
+     "name": "元明粉",
+     "dose": "三钱"
+    }
+   ],
+   "function": "治小儿各证之热极、大便不通。不敢大下、恐伤元气，用此稳当，胜用大黄、承气诸剂。此方丹溪常用治瘟症，予加元明粉借用治热闭甚效。",
+   "indication": "",
+   "usage": "生牵牛五钱、熟牵牛五钱，二味要头末（不要研破药尾，别取米和匀），共为细末。每服一钱至钱半而止。服时称定放碗内，入生蜜糖一二匙搅匀，冲滚水搅匀和服。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-c9f4a7f304",
+   "name": "加味冰硼散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "上梅片",
+     "dose": "三分"
+    },
+    {
+     "name": "枯硼砂",
+     "dose": "五分"
+    }
+   ],
+   "function": "治小儿口内诸症。凡口烂不能食乳，或唇烂、重舌、木舌、重龈、喉内百毒喷塞、妨碍饮食，用此扫尽津液，半日即愈，功效最速。",
+   "indication": "",
+   "usage": "上梅片三分、枯硼砂五分，共为细末。口舌内糜、结白层疼痛，用此干掺入口内，一时许即能食乳。",
+   "formula_type": "",
+   "modifications": "[{\"cond\":\"唇烂\",\"add\":\"加人中白五分、生石膏五分，共为细末外掺，用乳研开\"},{\"cond\":\"重舌、重龈、木舌\",\"add\":\"加辰砂五分、雄黄二分、朱砂二分，生蜜调擦\"},{\"cond\":\"喉内百般怪症紧急者\",\"add\":\"加朴硝五分、山豆根五分、雄黄二分、青黛二分、乌梅肉三分、牛黄五分、珍珠五分、白矾五分、人中白五分、川连五分，以红纸卷筒吹入喉内即好\"},{\"cond\":\"火热毒急症\",\"add\":\"加地猪（地虱子，亦名鼠妇）二三十只研和入吹之立效\"}]",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-39c4d92711",
+   "name": "玉屏风散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "官方验方",
+   "composition": [
+    {
+     "name": "北芪",
+     "dose": ""
+    },
+    {
+     "name": "白术",
+     "dose": ""
+    },
+    {
+     "name": "防风",
+     "dose": ""
+    }
+   ],
+   "function": "固表止汗。",
+   "indication": "",
+   "usage": "分量自定。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-6c449ef8b9",
+   "name": "小柴胡汤加减（治疟总剂）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "疟疾",
+   "composition": [
+    {
+     "name": "柴胡",
+     "dose": "二钱"
+    },
+    {
+     "name": "黄芩",
+     "dose": "钱半"
+    },
+    {
+     "name": "半夏",
+     "dose": "钱半"
+    },
+    {
+     "name": "甘草",
+     "dose": "一钱"
+    },
+    {
+     "name": "防党",
+     "dose": "二钱"
+    },
+    {
+     "name": "川朴",
+     "dose": "一钱"
+    },
+    {
+     "name": "淡竹叶",
+     "dose": "二钱"
+    },
+    {
+     "name": "猪苓",
+     "dose": "二钱"
+    },
+    {
+     "name": "草果",
+     "dose": "一钱"
+    },
+    {
+     "name": "常山",
+     "dose": "一钱"
+    }
+   ],
+   "function": "疟疾由暑伏于内，夏受秋发；邪聚少阳，寒热往来。治法要平少阳肝胆之邪、补脾胃之气、去痰去湿为主。",
+   "indication": "",
+   "usage": "加生姜、大枣煎。",
+   "formula_type": "",
+   "modifications": "[{\"cond\":\"脾虚\",\"add\":\"加白术或党参、茯苓，开胃苓散\"},{\"cond\":\"热甚\",\"add\":\"加知母、石膏，开玉露散\"},{\"cond\":\"湿盛\",\"add\":\"加苍术、茵陈，开甘泉散\"},{\"cond\":\"夹食\",\"add\":\"加神曲、尖槟，开胃苓散\"},{\"cond\":\"口渴甚\",\"add\":\"加干葛、花粉，开甘泉散\"},{\"cond\":\"现当暑症\",\"add\":\"加木瓜、扁豆、香薷，开甘泉散\"},{\"cond\":\"暑热甚\",\"add\":\"加川连、木瓜、香薷、扁豆，开甘泉散\"},{\"cond\":\"日久虚热\",\"add\":\"加鳖甲、青蒿、银胡、乌梅、地龙，开胃苓散\"},{\"cond\":\"日久作肿\",\"add\":\"加白术、木瓜、加皮、茯苓、郁李仁，开胃苓散\"},{\"cond\":\"疟母\",\"add\":\"加鳖甲、三棱、莪术、尖槟，开转笑散\"}]",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-6e2aa05502",
+   "name": "补中益气汤",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "疟疾",
+   "composition": [
+    {
+     "name": "北芪",
+     "dose": "二钱"
+    },
+    {
+     "name": "防党",
+     "dose": "三钱"
+    },
+    {
+     "name": "白术",
+     "dose": "二钱"
+    },
+    {
+     "name": "陈皮",
+     "dose": "一钱"
+    },
+    {
+     "name": "当归",
+     "dose": "钱半"
+    },
+    {
+     "name": "柴胡",
+     "dose": "一钱"
+    },
+    {
+     "name": "升麻",
+     "dose": "七分"
+    },
+    {
+     "name": "炙草",
+     "dose": "二钱"
+    }
+   ],
+   "function": "治日久发冷虚疟、寒疟、寒多热少者。",
+   "indication": "",
+   "usage": "加姜枣煎，开胃苓散。",
+   "formula_type": "",
+   "modifications": "[{\"cond\":\"热多冷少（虚疟）\",\"add\":\"加青蒿、银胡、乌梅、白芍\"},{\"cond\":\"冷多热少（寒疟）\",\"add\":\"加白附子、草果仁、干姜少许\"},{\"cond\":\"渴\",\"add\":\"加干葛、乌梅，或用北味、麦冬（米炒）\"},{\"cond\":\"血虚\",\"add\":\"加首乌、当归倍半；有痰加半夏、前胡（大去少阳之痰）\"}]",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-7dd30f249b",
+   "name": "发冷敷脐法",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "疟疾外治",
+   "composition": [],
+   "function": "治疟发冷。",
+   "indication": "",
+   "usage": "草果仁一钱、北辛（细辛）一钱、牙皂五分、苍术一钱、鹿耳铃三钱，共末分为两份。用时先放末在碗内以酒润湿，后和鸡蛋一枚搅匀，在锅内煎饼一个。当在病未发的时辰内，以饼贴肚脐上，用带束紧。此皆外法，其效如神。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-28ae6b9c7e",
+   "name": "发冷药枣方",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "疟疾外治",
+   "composition": [],
+   "function": "治疟发冷。",
+   "indication": "",
+   "usage": "常山三钱、苍术三钱、草果三钱，以水一碗煎汤去渣，以大乌枣二十枚去核，将前药汤同枣煮至枣熟汤干，再入黄酒一大茶杯，复慢火煎干，取起待冷，饭前服十枚，以南茶送下，二次再服十枚，其妙。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-fd434dc9d6",
+   "name": "香薷饮（治暑方底）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "暑症",
+   "composition": [
+    {
+     "name": "香薷",
+     "dose": "一钱"
+    },
+    {
+     "name": "川朴",
+     "dose": "一钱"
+    },
+    {
+     "name": "扁豆",
+     "dose": "三钱"
+    },
+    {
+     "name": "木瓜",
+     "dose": "钱半"
+    }
+   ],
+   "function": "治暑方底，临时随症用之。",
+   "indication": "",
+   "usage": "加灯芯草，开甘泉散。",
+   "formula_type": "",
+   "modifications": "[{\"cond\":\"热盛\",\"add\":\"加川连，甚再加石膏、淡竹叶，开玉露散\"},{\"cond\":\"泄泻\",\"add\":\"加茯苓、白术、炙草；甚则加冬瓜仁（此味家秘）\"},{\"cond\":\"脾虚\",\"add\":\"加防党、白术、陈皮、炙草\"},{\"cond\":\"夹惊风吐泻抽掣\",\"add\":\"与慢惊参治，但必要夹用解暑药香薷饮\"},{\"cond\":\"夹食\",\"add\":\"加神曲、麦芽、山楂\"},{\"cond\":\"夹痰\",\"add\":\"加瓜蒌（去净油）、旧胆星；不渴加半夏；有渴加花粉\"},{\"cond\":\"夹寒热往来\",\"add\":\"本方合小柴胡汤并用\"},{\"cond\":\"呕吐\",\"add\":\"热用竹茹、藿香梗；寒用砂仁、藿香叶\"},{\"cond\":\"渴\",\"add\":\"加麦冬；有汗而渴者加北味少许用\"},{\"cond\":\"抽筋\",\"add\":\"加钩藤、木瓜并用\"}]",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-af950cfe76",
+   "name": "六和汤",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "暑症",
+   "composition": [
+    {
+     "name": "川朴",
+     "dose": "一钱"
+    },
+    {
+     "name": "藿香",
+     "dose": "一钱"
+    },
+    {
+     "name": "杏仁",
+     "dose": "钱半"
+    },
+    {
+     "name": "砂仁",
+     "dose": "钱半"
+    },
+    {
+     "name": "木瓜",
+     "dose": "二钱"
+    },
+    {
+     "name": "赤苓",
+     "dose": "二钱"
+    },
+    {
+     "name": "防党",
+     "dose": "二钱"
+    },
+    {
+     "name": "白术",
+     "dose": "二钱"
+    },
+    {
+     "name": "扁豆",
+     "dose": "五钱"
+    },
+    {
+     "name": "甘草",
+     "dose": "钱半"
+    },
+    {
+     "name": "香薷",
+     "dose": "钱半"
+    },
+    {
+     "name": "钩藤",
+     "dose": "二钱"
+    }
+   ],
+   "function": "凡暑症脾胃虚、吐泻转筋甚者为急症，不上治退暑热，但顾脾胃为主，用此方。",
+   "indication": "",
+   "usage": "加姜枣煎。肝脉盛者加酒芍钱半。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-d8351ac07b",
+   "name": "导赤各半汤（治暑邪传心）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "暑症",
+   "composition": [
+    {
+     "name": "川连",
+     "dose": "钱半"
+    },
+    {
+     "name": "黄芩",
+     "dose": "钱半"
+    },
+    {
+     "name": "知母",
+     "dose": "二钱"
+    },
+    {
+     "name": "山栀",
+     "dose": "二钱"
+    },
+    {
+     "name": "滑石",
+     "dose": "三钱"
+    },
+    {
+     "name": "犀角",
+     "dose": "二钱"
+    },
+    {
+     "name": "麦冬",
+     "dose": "二钱"
+    },
+    {
+     "name": "防党",
+     "dose": "二钱"
+    },
+    {
+     "name": "茯神",
+     "dose": "二钱"
+    },
+    {
+     "name": "甘草",
+     "dose": "一钱"
+    }
+   ],
+   "function": "治着暑后二难症之一：身不热、口不渴、不吐泻，但神昏目闭、小便短赤、唇面通红、虚汗时出、醒眠无语、或睡中谵语、不饮食、形如醉人——暑邪传入心经、心火上而逼肺故也。如伤寒越经之法治之，百发百中。",
+   "indication": "",
+   "usage": "加灯芯煎服。",
+   "formula_type": "",
+   "modifications": "[{\"cond\":\"带血热\",\"add\":\"加生地；喘热甚者加石膏、淡竹叶\"},{\"cond\":\"风掣筋惕\",\"add\":\"加钩藤\"},{\"cond\":\"有痰\",\"add\":\"照暑症条加\"}]",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-78ae2750f5",
+   "name": "暑伤脾胃验方（治暑风虚症）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "暑症",
+   "composition": [
+    {
+     "name": "北芪",
+     "dose": ""
+    },
+    {
+     "name": "防党",
+     "dose": ""
+    },
+    {
+     "name": "白术",
+     "dose": ""
+    },
+    {
+     "name": "防风",
+     "dose": ""
+    },
+    {
+     "name": "扁豆",
+     "dose": ""
+    },
+    {
+     "name": "木瓜",
+     "dose": ""
+    },
+    {
+     "name": "甘草",
+     "dose": ""
+    },
+    {
+     "name": "茯苓",
+     "dose": ""
+    },
+    {
+     "name": "川朴",
+     "dose": ""
+    },
+    {
+     "name": "香薷",
+     "dose": ""
+    },
+    {
+     "name": "冬瓜仁",
+     "dose": ""
+    },
+    {
+     "name": "枣仁",
+     "dose": ""
+    }
+   ],
+   "function": "治着暑后二难症之二：暑伤胃而吐、伤脾而泻，身热有汗、口渴——最驳杂难治。总因暑伤脾胃之一大端，治以补脾、祛暑、祛风，各般症候混一而愈。此方是治暑风虚症，曾愈多人。",
+   "indication": "",
+   "usage": "加姜枣（和阴阳、止吐泻）。此数味相因、相制、相扶、相助，最妙。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-8ba523d580",
+   "name": "出麻备用方",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "麻疹",
+   "composition": [
+    {
+     "name": "荆芥",
+     "dose": "钱半"
+    },
+    {
+     "name": "防风",
+     "dose": "一钱"
+    },
+    {
+     "name": "银花",
+     "dose": "二钱"
+    },
+    {
+     "name": "桑白",
+     "dose": "一钱"
+    },
+    {
+     "name": "桔梗",
+     "dose": "二钱"
+    },
+    {
+     "name": "知母",
+     "dose": "二钱"
+    },
+    {
+     "name": "石膏",
+     "dose": "五钱"
+    },
+    {
+     "name": "山楂",
+     "dose": "二钱"
+    },
+    {
+     "name": "连翘",
+     "dose": "一钱"
+    },
+    {
+     "name": "牛子",
+     "dose": "钱半"
+    },
+    {
+     "name": "地丁",
+     "dose": "二钱"
+    },
+    {
+     "name": "黄芩",
+     "dose": "钱半"
+    },
+    {
+     "name": "木通",
+     "dose": "一钱"
+    }
+   ],
+   "function": "治麻疹。治麻以凉血、托口、解暑湿、清心脾胃之火为要。",
+   "indication": "",
+   "usage": "净水煎服。",
+   "formula_type": "",
+   "modifications": "[{\"cond\":\"出不快（不透彻）\",\"add\":\"加蝉蜕、干葛、苏叶，开甘泉散\"},{\"cond\":\"色红暗（血热）\",\"add\":\"加生地、赤芍、丹皮，开玉露散\"},{\"cond\":\"夹气喘（干咳气喘为重，有痰气喘为轻）\",\"add\":\"干咳加瓜蒌、天冬，去荆芥、防风，开玉露散；有痰加杏霜、花粉、浙贝、莱菔子，开珠珀惊痰散\"},{\"cond\":\"热大甚\",\"add\":\"加川连、羚羊，开保婴丹或玉露散\"},{\"cond\":\"气弱、麻色淡滞出不快\",\"add\":\"加防党、苡仁，去山楂、石膏\"},{\"cond\":\"夹呕（胃虚）\",\"add\":\"加生竹茹、石斛、枳壳，开玉露散\"},{\"cond\":\"泄泻\",\"add\":\"加茯苓、淮山，开甘泉散\"},{\"cond\":\"夹斑\",\"add\":\"加犀角、丹皮、元参，开玉露散，并与燥火条同参\"}]",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-ac1c5cd455",
+   "name": "出白痱子方",
+   "aliases": [
+    "白痱子书名白㾦，俗名痱子"
+   ],
+   "source": "《程氏家传儿科秘要》",
+   "category": "麻疹",
+   "composition": [
+    {
+     "name": "桔梗",
+     "dose": "二钱"
+    },
+    {
+     "name": "桑白",
+     "dose": "二钱"
+    },
+    {
+     "name": "地骨",
+     "dose": "二钱"
+    },
+    {
+     "name": "银花",
+     "dose": "二钱"
+    },
+    {
+     "name": "连翘",
+     "dose": "二钱"
+    },
+    {
+     "name": "淡竹",
+     "dose": "二钱"
+    },
+    {
+     "name": "知母",
+     "dose": "钱半"
+    },
+    {
+     "name": "生石膏",
+     "dose": "五钱"
+    },
+    {
+     "name": "花粉",
+     "dose": "二钱"
+    }
+   ],
+   "function": "治白痱子：满身如撒小珍珠状、胸背独密、外兼身热干咳者，治以肺中湿热、心经伏火为要。此二症（麻与痱）缘自肺、胃二经之湿而出，有当暑月而发、有四时染热而发不等；但白痱子属气分为轻，麻疹属血分为重。",
+   "indication": "",
+   "usage": "加灯芯煎。",
+   "formula_type": "",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-f6b95c17c5",
+   "name": "痢症方",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "痢疾",
+   "composition": [
+    {
+     "name": "川朴",
+     "dose": "一钱"
+    },
+    {
+     "name": "山楂",
+     "dose": "二钱"
+    },
+    {
+     "name": "神曲",
+     "dose": "二钱"
+    },
+    {
+     "name": "白芍",
+     "dose": "二钱"
+    },
+    {
+     "name": "黄芩",
+     "dose": "二钱"
+    },
+    {
+     "name": "甘草",
+     "dose": "钱半"
+    },
+    {
+     "name": "川连",
+     "dose": "钱半"
+    },
+    {
+     "name": "木香",
+     "dose": "五分"
+    }
+   ],
+   "function": "治小儿痢症（名滞下）。病由湿热传脾、肝木克脾土而成。治之之法：以去湿积为要，次平肝木，次补脾土；最忌利小便（小便利则干涸大肠）。初起要推利使积不留滞（通因通用），次去湿热，次行气止痛，次平肝木，有毒要解（人所罕知）；日久肝不痛而肠滑者补脾土、安胃、提气、收脱。总以平肝、补脾、泻心之秘法贯穿始终。",
+   "indication": "",
+   "usage": "加伏龙肝煎，开胃苓散、转笑散。",
+   "formula_type": "",
+   "modifications": "[{\"cond\":\"热太重\",\"add\":\"加羚羊、犀角、龙胆、黄柏；脾虚加白术\"},{\"cond\":\"肚痛甚\",\"add\":\"加莱菔子、元胡、青皮，开转笑散\"},{\"cond\":\"肠涩难通\",\"add\":\"加杏仁、瓜蒌仁、尖槟、莱菔子\"},{\"cond\":\"外有热\",\"add\":\"加柴胡、栀子皮\"},{\"cond\":\"时行毒气\",\"add\":\"加银花、槐花、羚羊、犀角、绿豆、蝉蜕\"},{\"cond\":\"色黄\",\"add\":\"加姜黄少许，黄连倍用；或加大黄、朴硝、黄柏\"},{\"cond\":\"色红\",\"add\":\"加红花、生地、赤芍、地榆（炒黑止血）、阿胶、赤小豆\"},{\"cond\":\"色白\",\"add\":\"加桔梗、桑白、生苡仁\"},{\"cond\":\"兼暑（暑痢）\",\"add\":\"加生扁豆、赤小豆、冬瓜、南瓜。痢重于暑者参痢条下，暑重于痢者参暑条下\"},{\"cond\":\"气太弱\",\"add\":\"加防党、白术\"},{\"cond\":\"久痢缓\",\"add\":\"加扁豆、淮山、苡仁、黄连少用\"},{\"cond\":\"日久脾虚肠滑、肚不痛\",\"add\":\"可止，用脾虚泄泻之法治之；或仍参用痢药\"},{\"cond\":\"白色（滑脱）\",\"add\":\"加阿胶珠、牡蛎粉、龙骨、椿皮\"},{\"cond\":\"红色（滑脱）\",\"add\":\"加赤石脂、禹余粮、黑地榆\"},{\"cond\":\"红白兼\",\"add\":\"同用玉蔻霜、诃子肉、粟壳、椿根白皮（少用）\"}]",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-334bfea3e2",
+   "name": "万应丸",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "风热配用；急惊泄泻可加白芍开万应丸",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "平肝、治风热惊风常用"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-42f2f73fb2",
+   "name": "万灵丹",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "急惊泄泻青黄水者开；慢惊随宜择用",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "驱风常用"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-2892395e25",
+   "name": "惊风散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "风重热轻者开",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "治惊风"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-7fd1ef0e50",
+   "name": "急惊散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "急惊本方配开；慢惊随宜",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "大治惊风"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-19091e8b70",
+   "name": "慢惊散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "慢惊、慢脾配开",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "为最止泻"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-59690b3cbe",
+   "name": "玉露散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "热重风轻者开；燥火配开",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "大去壮热、实热"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-f9504805fd",
+   "name": "胃苓散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "伤食者开；脾虚配开",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "消食去积、补消兼行"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-3a09c69ff1",
+   "name": "珠珀惊痰散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "有痰者开；咳嗽配开",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "化惊痰"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-d5d6133452",
+   "name": "保婴丹",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "身热重者用；大凉惊",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "退热定惊"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-4d93d4ef6b",
+   "name": "甘泉散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "身热夹湿者用之",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "清暑退热"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-b173904f7f",
+   "name": "抱龙丸",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "驱风退热",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "大治惊风"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-d1fd440a66",
+   "name": "至宝丹",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "慢脾风配开",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "能止泻"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-0cf5f82aa6",
+   "name": "转笑散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "疟母、痢症配开",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "去积"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-7a9768da8d",
+   "name": "疳眼散",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "丸散",
+   "composition": [],
+   "function": "",
+   "indication": "",
+   "usage": "疳积上眼",
+   "formula_type": "丸散",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": "治疳眼"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-563c5c0120",
+   "name": "慢脾风止泻贴脐法",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "外治",
+   "composition": [],
+   "function": "原著：此外治良法也。",
+   "indication": "",
+   "usage": "原著：此外治良法也。",
+   "formula_type": "外治",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-e1f3ec9c64",
+   "name": "慢脾风止汗扑法",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "外治",
+   "composition": [],
+   "function": "原著：良法也。",
+   "indication": "",
+   "usage": "原著：良法也。",
+   "formula_type": "外治",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-99467f5e80",
+   "name": "脾虚泄泻封脐法",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "外治",
+   "composition": [],
+   "function": "脾虚条泄泻甚者用之。",
+   "indication": "",
+   "usage": "脾虚条泄泻甚者用之。",
+   "formula_type": "外治",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-aba7c0ae10",
+   "name": "疟疾敷脐法",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "外治",
+   "composition": [],
+   "function": "此皆外法，其效如神。",
+   "indication": "",
+   "usage": "此皆外法，其效如神。",
+   "formula_type": "外治",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-5d8fb0a259",
+   "name": "灯火十三灼（治脐风）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "外治",
+   "composition": [],
+   "function": "《幼科铁镜》：此火攻之法，何异吕祖肚中药、卢公再生方哉。",
+   "indication": "",
+   "usage": "《幼科铁镜》：此火攻之法，何异吕祖肚中药、卢公再生方哉。",
+   "formula_type": "外治",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-def1afb04e",
+   "name": "元宵火十五（定惊）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "外治",
+   "composition": [],
+   "function": "胎寒者先于精灵、威灵二穴对拿紧，并将昆仑穴拿紧，其声稍出即用十五元宵火断之。",
+   "indication": "",
+   "usage": "胎寒者先于精灵、威灵二穴对拿紧，并将昆仑穴拿紧，其声稍出即用十五元宵火断之。",
+   "formula_type": "外治",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-f-5a4cd3fed9",
+   "name": "艾灸要穴",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "外治",
+   "composition": [],
+   "function": "《幼科铁镜》载，凡症载明灯火艾灸俱起死回生秘法。",
+   "indication": "",
+   "usage": "《幼科铁镜》载，凡症载明灯火艾灸俱起死回生秘法。",
+   "formula_type": "外治",
+   "modifications": "",
+   "extra": {
+    "decoction": "",
+    "note": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-fengre-fang",
+   "name": "第一方（专治小儿风热）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "八症主方",
+   "composition": [
+    {
+     "name": "羌活",
+     "dose": "一钱"
+    },
+    {
+     "name": "防风",
+     "dose": "一钱"
+    },
+    {
+     "name": "薄荷",
+     "dose": "七分"
+    },
+    {
+     "name": "蝉蜕",
+     "dose": "十只"
+    },
+    {
+     "name": "木通",
+     "dose": "二钱"
+    },
+    {
+     "name": "生栀",
+     "dose": "二钱"
+    },
+    {
+     "name": "甘草",
+     "dose": "七分"
+    },
+    {
+     "name": "川地骨",
+     "dose": "二钱"
+    },
+    {
+     "name": "淡竹叶",
+     "dose": "二钱"
+    },
+    {
+     "name": "灯芯",
+     "dose": "一丸"
+    },
+    {
+     "name": "生葱",
+     "dose": "一条"
+    }
+   ],
+   "function": "外感风邪闭塞腠理，脏腑之热不得宣通；肝木心火相搏而成。治以平肝风、泻心火。",
+   "indication": "风热",
+   "usage": "净水煎服。",
+   "formula_type": "内服",
+   "extra": {
+    "syndrome_id": "fengre",
+    "notes": "羌活:发表、平肝风;防风:祛风、平肝;薄荷:祛风;蝉蜕:散表、定惊、去心经热;木通:泻心火;生栀:平肝火;甘草:退热、和表;川地骨:退身热;淡竹叶:清上焦风热、凉心、去痰;灯芯:引;生葱:引（原著此字模糊，依用药引法补）"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-jijing-fang",
+   "name": "第二方（治小儿惊风初起）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "八症主方",
+   "composition": [
+    {
+     "name": "钩藤",
+     "dose": "一钱"
+    },
+    {
+     "name": "薄荷",
+     "dose": "七分"
+    },
+    {
+     "name": "甘草",
+     "dose": "七分"
+    },
+    {
+     "name": "柴胡",
+     "dose": "二钱"
+    },
+    {
+     "name": "淡竹叶",
+     "dose": "二钱"
+    },
+    {
+     "name": "地骨皮",
+     "dose": "二钱"
+    },
+    {
+     "name": "木通",
+     "dose": "二钱"
+    },
+    {
+     "name": "连翘",
+     "dose": "二钱"
+    },
+    {
+     "name": "蝉蜕",
+     "dose": "十只"
+    }
+   ],
+   "function": "肝风与心火相合，平肝则风熄、泻心则惊去。",
+   "indication": "急惊风",
+   "usage": "加灯芯一丸、金银一件同煎，开急惊散。",
+   "formula_type": "内服",
+   "extra": {
+    "syndrome_id": "jijing",
+    "notes": "钩藤:去肝风、治抽掣;薄荷:祛肝风、退惊热;甘草:与薄荷相济;柴胡:平肝退热;淡竹叶:去上焦风热、凉心去痰;地骨皮:退热除惊;木通:退心火;连翘:去心惊、退热;蝉蜕:去惊"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-manjing-fang",
+   "name": "第三方（治急惊转慢惊）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "八症主方",
+   "composition": [
+    {
+     "name": "白术",
+     "dose": "二钱"
+    },
+    {
+     "name": "川朴",
+     "dose": "七分"
+    },
+    {
+     "name": "甘草",
+     "dose": "七分"
+    },
+    {
+     "name": "茯神",
+     "dose": "二钱"
+    },
+    {
+     "name": "茯苓",
+     "dose": "二钱"
+    },
+    {
+     "name": "薄荷",
+     "dose": "七分"
+    },
+    {
+     "name": "陈皮",
+     "dose": "七分"
+    }
+   ],
+   "function": "急惊失治传入里，肝木克脾土；治以平肝泻心兼补脾土。",
+   "indication": "慢惊风",
+   "usage": "加金银煎，开万灵散、慢惊散。",
+   "formula_type": "内服",
+   "extra": {
+    "syndrome_id": "manjing",
+    "notes": "白术:补脾;川朴:平肝、泻土中之水;甘草:和中;茯神:定惊;茯苓:补脾;薄荷:退肝风惊热;陈皮:行脾气"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-manpi-fang",
+   "name": "第四方（平肝补脾重剂，专治慢脾风重症）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "八症主方",
+   "composition": [
+    {
+     "name": "米党参",
+     "dose": "三钱"
+    },
+    {
+     "name": "白术",
+     "dose": "二钱"
+    },
+    {
+     "name": "茯苓",
+     "dose": "二钱"
+    },
+    {
+     "name": "陈皮",
+     "dose": "一钱"
+    },
+    {
+     "name": "焦芍",
+     "dose": "三钱"
+    },
+    {
+     "name": "僵蚕",
+     "dose": "钱半"
+    },
+    {
+     "name": "钩藤",
+     "dose": "三钱"
+    },
+    {
+     "name": "白附子",
+     "dose": "钱半"
+    },
+    {
+     "name": "炙甘草",
+     "dose": "钱半"
+    }
+   ],
+   "function": "慢惊失治，风热全传入脾，比慢惊更甚；唯大补脾胃、涩肠止泻一法。",
+   "indication": "慢脾风",
+   "usage": "此为异功散加味补脾的首方。加伏龙肝煎，开至宝丹，或万应丸、慢惊散。",
+   "formula_type": "内服",
+   "extra": {
+    "syndrome_id": "manpi",
+    "notes": "白术:土炒;僵蚕:姜汁炒"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-pixu-fang",
+   "name": "第五方（加味六神散）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "八症主方",
+   "composition": [
+    {
+     "name": "米党参",
+     "dose": "三钱"
+    },
+    {
+     "name": "白术",
+     "dose": "二钱"
+    },
+    {
+     "name": "茯苓",
+     "dose": "二钱"
+    },
+    {
+     "name": "炙草",
+     "dose": "钱半"
+    },
+    {
+     "name": "淮山",
+     "dose": "三钱"
+    },
+    {
+     "name": "扁豆",
+     "dose": "三钱"
+    },
+    {
+     "name": "陈皮",
+     "dose": "一钱"
+    },
+    {
+     "name": "山楂",
+     "dose": "钱半"
+    },
+    {
+     "name": "神曲",
+     "dose": "钱半"
+    },
+    {
+     "name": "白芍",
+     "dose": "钱半"
+    }
+   ],
+   "function": "脾为后天之本；脾虚之症带受肝克，治必兼平肝而后补脾。",
+   "indication": "脾虚",
+   "usage": "净水煎服，开胃苓散，或随症引用。按：此方前人用治疳积屡试皆验，故为脾虚之主要良方。",
+   "formula_type": "内服",
+   "extra": {
+    "syndrome_id": "pixu",
+    "notes": "淮山:炒;扁豆:炒"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-ganji-fang",
+   "name": "第六方（治小儿疳积，各经各有加法）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "八症主方",
+   "composition": [
+    {
+     "name": "白术",
+     "dose": "二钱"
+    },
+    {
+     "name": "莪术",
+     "dose": "二钱"
+    },
+    {
+     "name": "茯苓",
+     "dose": "二钱"
+    },
+    {
+     "name": "山楂",
+     "dose": "二钱"
+    },
+    {
+     "name": "麦芽",
+     "dose": "钱半"
+    },
+    {
+     "name": "酒芍",
+     "dose": "钱半"
+    },
+    {
+     "name": "川郁金",
+     "dose": "钱半"
+    },
+    {
+     "name": "柴胡",
+     "dose": "钱半"
+    }
+   ],
+   "function": "脾虚食滞、肝火气郁二大端；治以平肝、补脾、去积。",
+   "indication": "疳症",
+   "usage": "净水煎。",
+   "formula_type": "内服",
+   "extra": {
+    "syndrome_id": "ganji",
+    "notes": "白术:补脾;莪术:开胃、化食积;茯苓:助脾去湿;山楂:消肉食;麦芽:消面食;酒芍:平肝;川郁金:开郁;柴胡:平肝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-zaohuo-fang",
+   "name": "第七方（治小儿燥火总剂）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "八症主方",
+   "composition": [
+    {
+     "name": "川连",
+     "dose": "钱半"
+    },
+    {
+     "name": "知母",
+     "dose": "三钱"
+    },
+    {
+     "name": "黄芩",
+     "dose": "钱半"
+    },
+    {
+     "name": "元参",
+     "dose": "三钱"
+    },
+    {
+     "name": "龙胆",
+     "dose": "二钱"
+    },
+    {
+     "name": "甘草",
+     "dose": "一钱"
+    },
+    {
+     "name": "木通",
+     "dose": "二钱"
+    },
+    {
+     "name": "犀角",
+     "dose": "钱半"
+    }
+   ],
+   "function": "心主火，火太旺而燥生；泻心即泻君火之源，各经之热由之而清。",
+   "indication": "燥火",
+   "usage": "加灯芯煎，开玉露散或保婴丹。",
+   "formula_type": "内服",
+   "extra": {
+    "syndrome_id": "zaohuo",
+    "notes": "川连:心;知母:肺;黄芩:胞（膀胱）;元参:肾;龙胆:肝;甘草:和中;木通:引火下出;犀角:统治五经"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-kesou-fang",
+   "name": "第八方（治小儿咳嗽）",
+   "aliases": [],
+   "source": "《程氏家传儿科秘要》",
+   "category": "八症主方",
+   "composition": [
+    {
+     "name": "前胡",
+     "dose": "一钱"
+    },
+    {
+     "name": "桔梗",
+     "dose": "钱半"
+    },
+    {
+     "name": "桑白皮",
+     "dose": "二钱"
+    },
+    {
+     "name": "生栀",
+     "dose": "钱半"
+    },
+    {
+     "name": "木通",
+     "dose": "二钱"
+    },
+    {
+     "name": "地骨皮",
+     "dose": "二钱"
+    },
+    {
+     "name": "款冬花",
+     "dose": "二钱"
+    },
+    {
+     "name": "甘草",
+     "dose": "一钱"
+    },
+    {
+     "name": "薄荷",
+     "dose": "七分"
+    }
+   ],
+   "function": "咳不离肺；平肝使脾不受制、泻心使肺不受火克、理脾以生肺气。",
+   "indication": "咳嗽",
+   "usage": "加莲叶蒂煎，开珠珀惊痰散。",
+   "formula_type": "内服",
+   "extra": {
+    "syndrome_id": "kesou",
+    "notes": "前胡:疏肺;桔梗:清肺;桑白皮:清肺湿热;生栀:泻心、平肝;木通:泻心火下行;地骨皮:清肺退火;款冬花:下气、清热、去痰;甘草:同桔梗治肺;薄荷:祛风清热"
+   }
+  }
+ ],
+ "herbs": [],
+ "diseases": [],
+ "syndromes": [
+  {
+   "module": "pediatrics",
+   "origin_id": "p-fengre",
+   "name": "风热",
+   "aliases": [],
+   "yin_yang": "",
+   "stage": "",
+   "summary": "外感风邪闭塞腠理，脏腑之热不得宣通；肝木心火相搏而成。治以平肝风、泻心火。",
+   "extra": {
+    "methods": [
+     "平肝",
+     "泻心"
+    ],
+    "waihou": {
+     "original": "凡小儿风热之症，外候身热，唇色深红而亮，或鼻塞，或泻青黄色如浮萍状，或不泻。",
+     "plain": "发热；口唇深红而光亮（唇皮软薄血纹易现）；或鼻塞不通；或大便泻下青黄相间、形如浮萍的水样便；也有不泻的。"
+    },
+    "bingyin": {
+     "original": "此症由外感风邪闭塞腠理，脏腑之热不得宣通故身热。唇皮软薄血纹易现，内有风故色亮；内有热，血亦有热，故色深红。风热闭塞肺窍故鼻不通。因肝木色青，泻由脾致，脾土色黄，肝木旺克脾土，故泻青黄色；其或不泻者，是脾土未受肝克，故不泻也。",
+     "plain": "风邪郁表、热不得外透则发热；唇薄血络易显，风使色亮、热使色深红；肺窍被风热所闭则鼻塞；肝（青）乘脾（黄）则泻青黄色，脾未受克则不泻。"
+    },
+    "shouwen": {
+     "original": "手纹浮紫，左手纹常浮于右手。左手纹主肝，肝风动故纹浮，浮为风在表也；紫色为热，故纹紫也。",
+     "plain": "指纹浮露、颜色紫；左手（肝）指纹常比右手更浮——浮主表、紫主热。"
+    },
+    "maifa": {
+     "original": "脉按之必浮数，脉浮为风、数为热，左手更甚。左手是肝脉主风也，心亦在左手。此是肝风心火相合而成。",
+     "plain": "脉浮数，左手更明显（浮主风、数主热，左候肝心）。"
+    },
+    "zhifa": {
+     "original": "治尚平肝风、泻心火，症必早复。",
+     "plain": "平熄肝风、清泻心火，病可速愈。"
+    },
+    "fangyao": {
+     "name": "第一方（专治小儿风热）",
+     "usage": "净水煎服。",
+     "herbs": [
+      {
+       "name": "羌活",
+       "dose": "一钱",
+       "note": "发表、平肝风"
+      },
+      {
+       "name": "防风",
+       "dose": "一钱",
+       "note": "祛风、平肝"
+      },
+      {
+       "name": "薄荷",
+       "dose": "七分",
+       "note": "祛风"
+      },
+      {
+       "name": "蝉蜕",
+       "dose": "十只",
+       "note": "散表、定惊、去心经热"
+      },
+      {
+       "name": "木通",
+       "dose": "二钱",
+       "note": "泻心火"
+      },
+      {
+       "name": "生栀",
+       "dose": "二钱",
+       "note": "平肝火"
+      },
+      {
+       "name": "甘草",
+       "dose": "七分",
+       "note": "退热、和表"
+      },
+      {
+       "name": "川地骨",
+       "dose": "二钱",
+       "note": "退身热"
+      },
+      {
+       "name": "淡竹叶",
+       "dose": "二钱",
+       "note": "清上焦风热、凉心、去痰"
+      },
+      {
+       "name": "灯芯",
+       "dose": "一丸",
+       "note": "引"
+      },
+      {
+       "name": "生葱",
+       "dose": "一条",
+       "note": "引（原著此字模糊，依用药引法补）"
+      }
+     ],
+     "source": "下编·一、风热治法"
+    },
+    "bianzheng": []
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-jijing",
+   "name": "急惊风",
+   "aliases": [
+    "风热夹惊"
+   ],
+   "yin_yang": "",
+   "stage": "",
+   "summary": "肝风与心火相合，平肝则风熄、泻心则惊去。",
+   "extra": {
+    "methods": [
+     "平肝",
+     "泻心"
+    ],
+    "waihou": {
+     "original": "小儿急惊之症即风热夹惊。上则风热证之外候已备见，加以睡中心常跳动，手足常惕，或两手握拳，或眼直视或往上视，或咬牙，或喉中痰鸣如锯之声。",
+     "plain": "具备风热证的全部外候，再加上：睡中惊跳、手足常抽动；或两手握拳；或两目直视、上视；或咬牙；或喉中痰鸣如拉锯声。"
+    },
+    "bingyin": {
+     "original": "心有惊故跳动；手抽为搐、放痉为惊，肝主惊，有风故两手筋络抽掣；目乃肝窍，开窍于目，直视上视系肝风多动；咬牙亦肝风抽筋；风塞则痰升，此风痰也，在喉间停滞不散故有此声。此肝风心火相搏而成，肝主风、心主惊，风性善动、痰由惊来，故有上项症候。失治不险，痰消而症即愈。",
+     "plain": "心主惊、肝主风：心惊则跳动；肝风动则抽掣、直视上视、咬牙；风动痰升、痰滞喉间则痰鸣如锯。属肝风心火相搏，及时治疗并无大险，痰化则症自愈。"
+    },
+    "shouwen": {
+     "original": "手纹浮紧，兼开短丫，或三五条不等，夹惊故手纹开丫。左手纹浮于右手，解见前风热论。",
+     "plain": "指纹浮而紧，兼见短丫形（或三五条不等），左手比右手浮——丫纹主惊。"
+    },
+    "maifa": {
+     "original": "脉按之浮滑而数。脉浮滑为痰、为风。",
+     "plain": "脉浮、滑、数（浮滑主风痰）。"
+    },
+    "zhifa": {
+     "original": "治以平肝风、泻心火，去惊退热。",
+     "plain": "平肝熄风、清心定惊、退热。"
+    },
+    "fangyao": {
+     "name": "第二方（治小儿惊风初起）",
+     "usage": "加灯芯一丸、金银一件同煎，开急惊散。",
+     "herbs": [
+      {
+       "name": "钩藤",
+       "dose": "一钱",
+       "note": "去肝风、治抽掣"
+      },
+      {
+       "name": "薄荷",
+       "dose": "七分",
+       "note": "祛肝风、退惊热"
+      },
+      {
+       "name": "甘草",
+       "dose": "七分",
+       "note": "与薄荷相济"
+      },
+      {
+       "name": "柴胡",
+       "dose": "二钱",
+       "note": "平肝退热"
+      },
+      {
+       "name": "淡竹叶",
+       "dose": "二钱",
+       "note": "去上焦风热、凉心去痰"
+      },
+      {
+       "name": "地骨皮",
+       "dose": "二钱",
+       "note": "退热除惊"
+      },
+      {
+       "name": "木通",
+       "dose": "二钱",
+       "note": "退心火"
+      },
+      {
+       "name": "连翘",
+       "dose": "二钱",
+       "note": "去心惊、退热"
+      },
+      {
+       "name": "蝉蜕",
+       "dose": "十只",
+       "note": "去惊"
+      }
+     ],
+     "source": "下编·二、急惊治法"
+    },
+    "bianzheng": []
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-manjing",
+   "name": "慢惊风",
+   "aliases": [],
+   "yin_yang": "",
+   "stage": "",
+   "summary": "急惊失治传入里，肝木克脾土；治以平肝泻心兼补脾土。",
+   "extra": {
+    "methods": [
+     "平肝",
+     "泻心",
+     "补脾"
+    ],
+    "waihou": {
+     "original": "小儿慢惊之症，多由急惊失治、迁延日久传里而成，亦有起而即成此症者（此内生风也），但急惊传慢惊者居多。外候：急惊之证已具，加以手足冷，或发厥或不发厥，吐泻不止；唇色淡红而亮，或泻黄带热，或泻白屎汤带寒，眼眶微陷，眼白青蓝色。",
+     "plain": "多由急惊迁延而来。在急惊外候基础上，出现手足冷、四肢厥冷（或不厥）、吐泻不止；唇淡红而亮；大便或泻黄（带热）或泻白水（带寒）；眼眶微陷；眼白发青蓝色。"
+    },
+    "bingyin": {
+     "original": "此肝风入内克脾之故。脾主四肢，脾气受克不通四肢故手足冷；四肢冷不知人事为厥，厥为风重；胃受风则吐、脾受风则泻；唇属脾，脾虚受风故唇淡红而亮；眼眶属脾，脾气不升故陷，眼深者危；肝开窍于目，青蓝为肝风。",
+     "plain": "肝风入里克脾：脾主四肢，脾气受制则手足冷、甚则厥；胃受风则吐、脾受风则泻；脾虚则唇淡、眼眶陷（眼深陷者危）；眼白青蓝是肝风外露。"
+    },
+    "shouwen": {
+     "original": "手纹必沉而青，右手纹为参差离乱，亦有两手纹作弓反内外形或开长丫者。弓反外者重、开短丫者轻、开长丫者重。纹青风也、沉传里也、参差离乱内脏受风、血气错杂不和平也；丫形肝风克土也。",
+     "plain": "指纹沉而青；右手纹参差离乱；或见弓反内外形、开丫纹。沉主里、青主风；弓反外、开长丫者病重，开短丫者较轻。"
+    },
+    "maifa": {
+     "original": "脉必沉迟或沉紧无力。脉沉为邪在里，沉迟则为内虚寒，沉紧则为内寒。",
+     "plain": "脉沉迟或沉紧无力（沉主里、迟主虚寒、紧主寒）。"
+    },
+    "zhifa": {
+     "original": "慢惊症是肝风入里相克而成，治要平肝、补脾为主，兼镇心定惊。",
+     "plain": "平肝、补脾为主，兼镇心安神定惊。"
+    },
+    "fangyao": {
+     "name": "第三方（治急惊转慢惊）",
+     "usage": "加金银煎，开万灵散、慢惊散。",
+     "herbs": [
+      {
+       "name": "白术",
+       "dose": "二钱",
+       "note": "补脾"
+      },
+      {
+       "name": "川朴",
+       "dose": "七分",
+       "note": "平肝、泻土中之水"
+      },
+      {
+       "name": "甘草",
+       "dose": "七分",
+       "note": "和中"
+      },
+      {
+       "name": "茯神",
+       "dose": "二钱",
+       "note": "定惊"
+      },
+      {
+       "name": "茯苓",
+       "dose": "二钱",
+       "note": "补脾"
+      },
+      {
+       "name": "薄荷",
+       "dose": "七分",
+       "note": "退肝风惊热"
+      },
+      {
+       "name": "陈皮",
+       "dose": "七分",
+       "note": "行脾气"
+      }
+     ],
+     "source": "下编·三、慢惊症治"
+    },
+    "bianzheng": []
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-manpi",
+   "name": "慢脾风",
+   "aliases": [],
+   "yin_yang": "",
+   "stage": "",
+   "summary": "慢惊失治，风热全传入脾，比慢惊更甚；唯大补脾胃、涩肠止泻一法。",
+   "extra": {
+    "methods": [
+     "大平肝木",
+     "大补脾土"
+    ],
+    "waihou": {
+     "original": "小儿慢脾风症，由脾胃气虚，惊风之病气已全传入脾。前急惊、慢惊之候已见，日延至坏，其儿不即死，今一味呕吐、泄泻白屎汤不止，手足常冷无温，闭目亡魂，唇色淡白，不饮食，不语。",
+     "plain": "继急惊、慢惊之后病情深入：不断呕吐、泻下白水不止、手足常冷、闭目失神、唇淡白、不思饮食、不能言语。"
+    },
+    "bingyin": {
+     "original": "肝气犯胃故作呕、犯脾故作泻；泻白为脾寒；手足常冷是脾气欲绝；闭目亡魂是风闭五脏；唇色淡白是脾胃虚寒；不饮食、不语是脾气将绝也。此时有惊惊无可去，有风风无可祛，脾气欲绝，治依风不应，故云无可也。唯大补脾胃、涩肠止泻一法，即用真人方亦无不可。",
+     "plain": "肝气乘虚犯胃犯脾，脾气将绝：呕、泻白、手足冷、闭目、唇淡、不食不语。此时惊无可去、风无可祛，唯有大补脾胃、涩肠止泻，如真人养脏汤之类。"
+    },
+    "shouwen": {
+     "original": "手纹斯时或隐或现、或有或无，最难凭验。五脏之气息已乱，不如常。",
+     "plain": "指纹隐现无常，难以作为凭据——五脏气机已乱。"
+    },
+    "maifa": {
+     "original": "脉息浮沉有无不等。但脉微有而不乱、重按至底迟而有力者为有望；若浮泛无力、脉息离乱、数到十余至、重按则无者，此散脉也，难望有生矣。又脉浮沉俱无，其人未死，试服药急救，药后脉微续者生，脉暴出全现者死。脉沉微有底及微续者气尚藏也，脉浮泛及暴出者元气尽泄也。",
+     "plain": "脉微而不乱、沉按迟而有力者尚有生机；脉浮泛散乱、十余至而无根者为散脉，难生。脉伏者服药后脉微续者生、脉暴出者死。"
+    },
+    "zhifa": {
+     "original": "此症汗出而清、身温暖者为有望；汗出而滑、身冷气长吁者无望。但以大重剂以挽回天命，略尽人事而已。",
+     "plain": "冷汗如油、身冷气促者预后极差；须以大剂量重剂抢救，尽力而为。"
+    },
+    "fangyao": {
+     "name": "第四方（平肝补脾重剂，专治慢脾风重症）",
+     "usage": "此为异功散加味补脾的首方。加伏龙肝煎，开至宝丹，或万应丸、慢惊散。",
+     "herbs": [
+      {
+       "name": "米党参",
+       "dose": "三钱"
+      },
+      {
+       "name": "白术",
+       "dose": "二钱",
+       "note": "土炒"
+      },
+      {
+       "name": "茯苓",
+       "dose": "二钱"
+      },
+      {
+       "name": "陈皮",
+       "dose": "一钱"
+      },
+      {
+       "name": "焦芍",
+       "dose": "三钱"
+      },
+      {
+       "name": "僵蚕",
+       "dose": "钱半",
+       "note": "姜汁炒"
+      },
+      {
+       "name": "钩藤",
+       "dose": "三钱"
+      },
+      {
+       "name": "白附子",
+       "dose": "钱半"
+      },
+      {
+       "name": "炙甘草",
+       "dose": "钱半"
+      }
+     ],
+     "source": "下编·四、慢脾风症"
+    },
+    "bianzheng": []
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-pixu",
+   "name": "脾虚",
+   "aliases": [],
+   "yin_yang": "",
+   "stage": "",
+   "summary": "脾为后天之本；脾虚之症带受肝克，治必兼平肝而后补脾。",
+   "extra": {
+    "methods": [
+     "平肝",
+     "补脾"
+    ],
+    "waihou": {
+     "original": "小儿脾虚之症，外候面目暗、气弱神倦、面色黄白、头发疏黄、唇色淡白、好啼哭、恋母、不自嬉耍、无精神不能自持、身体倦怠、常欲依人以自安。",
+     "plain": "面色黄白少华、神疲气弱、发稀而黄、唇淡白、喜哭恋母、精神不振、倦怠喜依偎。"
+    },
+    "bingyin": {
+     "original": "脾属土，土色黄，脾虚故面白而黄；唇属脾，脾有寒故唇白，受湿则带黄。脾气虚、精神弱、身无挟持则不能支。有病：伤食——脾气弱不能克化水谷故饮食难下；伤湿——脾土虚湿易染；或吐（胃虚）或泻（脾虚）；或潮热、或暮热（脾虚生内热）；或盗汗（睡而出汗者，气不归藏泄于外也）、自汗（醒时无故而出汗者，是脾土虚，腠理不固不能护卫，脾管血故汗自出也）；或因肝风心火而成慢惊慢脾症（肝克脾）；或因食积、肝郁气滞而成疳症；或湿郁而成痢疾；或发冷伤暑——脾土虚则暑邪易入；或湿痰——痰由湿生，脾虚受湿故生痰；或生水肿——脾主肌肉，肌肉受湿故肿。种种病端皆由脾虚而得。",
+     "plain": "脾胃虚弱，百病丛生：饮食难化、易受湿、吐泻、潮热暮热、盗汗自汗、变生慢惊慢脾、疳积、痢疾、暑症、痰、水肿——故脾虚小儿平素最宜调理脾胃。"
+    },
+    "shouwen": {
+     "original": "手纹必沉淡而生毛，且长出至气命二关，开长丫则夹食、开短丫则夹惊，如鱼骨形则水湿、水字形、弓反内外形，其十八般手纹亦间有之。或纹沉紫为内热，沉而淡红为寒。",
+     "plain": "指纹沉而色淡、边缘生毛，甚至长至气关、命关；开长丫主夹食、开短丫主夹惊、鱼骨形主水湿，水字、弓反内外等形间或有之；沉紫主内热、沉淡红主寒。"
+    },
+    "maifa": {
+     "original": "脉息左手略大于右手，是木胜相克也（左寸心克右寸肺、左关肝克右关脾之类，脉图可考）。若纯脾虚，脉息濡而无力；兼沉滑为痰、沉紧为内寒、沉数为内热。",
+     "plain": "左手脉大于右手是肝木乘脾之象；单纯脾虚脉濡而无力；兼沉滑主痰、沉紧主寒、沉数主热。"
+    },
+    "zhifa": {
+     "original": "此症带受肝克，治之必兼平肝而后补脾。",
+     "plain": "先兼平肝，再行补脾。"
+    },
+    "fangyao": {
+     "name": "第五方（加味六神散）",
+     "usage": "净水煎服，开胃苓散，或随症引用。按：此方前人用治疳积屡试皆验，故为脾虚之主要良方。",
+     "herbs": [
+      {
+       "name": "米党参",
+       "dose": "三钱"
+      },
+      {
+       "name": "白术",
+       "dose": "二钱"
+      },
+      {
+       "name": "茯苓",
+       "dose": "二钱"
+      },
+      {
+       "name": "炙草",
+       "dose": "钱半"
+      },
+      {
+       "name": "淮山",
+       "dose": "三钱",
+       "note": "炒"
+      },
+      {
+       "name": "扁豆",
+       "dose": "三钱",
+       "note": "炒"
+      },
+      {
+       "name": "陈皮",
+       "dose": "一钱"
+      },
+      {
+       "name": "山楂",
+       "dose": "钱半"
+      },
+      {
+       "name": "神曲",
+       "dose": "钱半"
+      },
+      {
+       "name": "白芍",
+       "dose": "钱半"
+      }
+     ],
+     "source": "下编·五、脾虚论治"
+    },
+    "bianzheng": []
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-ganji",
+   "name": "疳症",
+   "aliases": [
+    "疳积"
+   ],
+   "yin_yang": "",
+   "stage": "",
+   "summary": "脾虚食滞、肝火气郁二大端；治以平肝、补脾、去积。",
+   "extra": {
+    "methods": [
+     "平肝",
+     "补脾",
+     "去积"
+    ],
+    "waihou": {
+     "original": "小儿疳症虽有五疳——脾疳（面黄肌瘦、肚大筋青、食多不化、时泄屎溏屎糊，或食倍如常而不生肌肉）、肝疳（善哭、善怒、腹痛、咬指，或眼起白膜、面青筋露）、心疳（即惊疳：多烦、惊扰、头上生小疮）、肺疳（咳嗽气喘、鼻孔生疮，或以指控鼻孔、善悲泣无声、皮聚毛落）、肾疳（囟门坑陷、囟大而软、目无光彩、骨软迟行）——各各不同，但治同不必深究，总不外乎脾虚食滞、肝火气郁二大端。常见面黄肌瘦、唇暗而黄白、发毛生穗、常咬指头、肚皮胀薄、青筋绕露、胃口不开、食不知饱、食后泄泻、不长肌肉、愈食愈瘦。",
+     "plain": "五疳各有所见：脾疳面黄肚大青筋、食而不化；肝疳善哭怒、咬指、眼生白膜；心疳（惊疳）多烦惊、头生小疮；肺疳咳喘、鼻生疮、皮聚毛落；肾疳囟陷、目无光、骨软迟行。总因脾虚食滞、肝火气郁，故常见面黄肌瘦、发穗、咬指、肚胀青筋、食后即泻、愈食愈瘦。"
+    },
+    "bingyin": {
+     "original": "脾虚食入难化，因滞而成积；又肝木相克。肝主恼怒，肝气郁、脾气虚，故成疳症。食不知饱、食后泄泻、不长肌肉者：食凭胃气、运化在脾气，此是脾气虚不能化，非胃气能食；胃有湿热熏蒸故不生肌肉且泄泻也。即以胃口不开论治，当补脾气、清胃经浮火、肝经湿热及郁。",
+     "plain": "病根有二：一是脾虚不化、食滞成积；二是肝木乘克、气郁不舒。食而不化、愈食愈瘦，是脾气不运、胃有湿热之故。治疗当补脾气、清胃热、解肝郁。"
+    },
+    "shouwen": {
+     "original": "手纹浮现而长，或开长丫，或三五条不等，或纹乱，或即有即无，或散大生毛。色必青淡——纹浮现即为虚，长了有食积，三五条为热积，乱纹为虚积，即有即无为积滞，散大生毛为虚湿，色青淡为风虚。",
+     "plain": "指纹浮而长、或开长丫（食积）、三五条（热积）、乱纹（虚积）、隐现无常（积滞）、散大生毛（虚湿），色青淡（风虚）。"
+    },
+    "maifa": {
+     "original": "两手脉必沉弦——肝郁在内；或沉迟内虚寒、或沉数内湿热；或迟数大小参差不齐，是内有积滞。",
+     "plain": "脉沉弦（肝郁），或沉迟（虚寒）、沉数（湿热）、迟数大小不齐（积滞）。"
+    },
+    "zhifa": {
+     "original": "此症总属脾气虚、肝气郁而成，治以平肝、补脾、去积之法。但问某经现症则加某经之药。",
+     "plain": "平肝、补脾、消积；并随五经所见之症加用本经之药。"
+    },
+    "fangyao": {
+     "name": "第六方（治小儿疳积，各经各有加法）",
+     "usage": "净水煎。",
+     "herbs": [
+      {
+       "name": "白术",
+       "dose": "二钱",
+       "note": "补脾"
+      },
+      {
+       "name": "莪术",
+       "dose": "二钱",
+       "note": "开胃、化食积"
+      },
+      {
+       "name": "茯苓",
+       "dose": "二钱",
+       "note": "助脾去湿"
+      },
+      {
+       "name": "山楂",
+       "dose": "二钱",
+       "note": "消肉食"
+      },
+      {
+       "name": "麦芽",
+       "dose": "钱半",
+       "note": "消面食"
+      },
+      {
+       "name": "酒芍",
+       "dose": "钱半",
+       "note": "平肝"
+      },
+      {
+       "name": "川郁金",
+       "dose": "钱半",
+       "note": "开郁"
+      },
+      {
+       "name": "柴胡",
+       "dose": "钱半",
+       "note": "平肝"
+      }
+     ],
+     "source": "下编·六、疳症诠治"
+    },
+    "bianzheng": []
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-zaohuo",
+   "name": "燥火",
+   "aliases": [],
+   "yin_yang": "",
+   "stage": "",
+   "summary": "心主火，火太旺而燥生；泻心即泻君火之源，各经之热由之而清。",
+   "extra": {
+    "methods": [
+     "泻心"
+    ],
+    "waihou": {
+     "original": "小儿燥火之症，外候面目红赤，重则滞暗，或面枯，或唇色深红，口鼻干燥，眼屎黄结，身热如火，大渴引饮，夜间热增，时发谵语，或冷热往来大作。此阳症似阳，易识易治。",
+     "plain": "面目红赤（重则晦暗、面枯）、唇深红、口鼻干燥、眼屎黄结、高热如火、大渴引饮、夜间热甚、时有谵语、或寒热往来大作——阳证明显，易辨易治。"
+    },
+    "bingyin": {
+     "original": "面目唇色深红其热可知；火盛故色枯滞；口鼻通气出入，内有火故干燥；身热大渴亦内热熏逼津液；火伏内故夜热甚；心伏火故谵语；热极生风故寒热大作；见有斑点是热聚血分。又有变证：冷热时作时止、手足时冷时热、食入即吐、神昏目闭、形如醉人、唤之则醒、不唤不动，唯唇红舌干、或小便短赤、大便泻黄——此证寒热难决，能识者易辨，仍是热症（阳症似阴）。冷热时作、手足时冷时热者，是伏热在内不能宣通也；食入即吐者，是胃火内冲不下食故即吐；神昏目闭者，火乱神明也；形如醉人、唤之则醒、不唤勿动者，是心有惊热不能安神也；唇红者胃属唇、胃有伏热故色红；舌为心苗、心伏火故舌干；热闭心、心与小肠相表里故小便短赤；热伤于脾故大便泻而色黄。",
+     "plain": "心火炽盛、津液被灼：面红唇深、口鼻干、大渴、夜热、谵语。注意\"阳症似阴\"的变证：寒热时作、手足时冷时热、食入即吐、神昏目闭如醉人——看似阴证，实为伏热内闭，仍按热治。"
+    },
+    "shouwen": {
+     "original": "两手必粗大而紫——纹为热盛而出现，即是浮极，浮为阳、为表。或手纹隐约而滞、或纹见一截一截模糊——此即伏热（阳症似阴），沉伏为阴、为里，必参手脉。",
+     "plain": "指纹粗大色紫（热盛浮露）；伏热者指纹隐约而滞、一截一截模糊不清。"
+    },
+    "maifa": {
+     "original": "两手浮沉俱有力而滑数——滑有力、数热也。左手甚于右手为重，右手甚于左手为轻（言相克不相克也）。",
+     "plain": "脉滑数有力（浮沉皆然）；左手脉大于右手者病重（木火相生），右手大于左手者病轻。"
+    },
+    "zhifa": {
+     "original": "此方为治小儿燥火总剂，按各经加味治之。",
+     "plain": "以泻心火为主，按心、肺、肝、脾、肾各经见证加味。"
+    },
+    "fangyao": {
+     "name": "第七方（治小儿燥火总剂）",
+     "usage": "加灯芯煎，开玉露散或保婴丹。",
+     "herbs": [
+      {
+       "name": "川连",
+       "dose": "钱半",
+       "note": "心"
+      },
+      {
+       "name": "知母",
+       "dose": "三钱",
+       "note": "肺"
+      },
+      {
+       "name": "黄芩",
+       "dose": "钱半",
+       "note": "胞（膀胱）"
+      },
+      {
+       "name": "元参",
+       "dose": "三钱",
+       "note": "肾"
+      },
+      {
+       "name": "龙胆",
+       "dose": "二钱",
+       "note": "肝"
+      },
+      {
+       "name": "甘草",
+       "dose": "一钱",
+       "note": "和中"
+      },
+      {
+       "name": "木通",
+       "dose": "二钱",
+       "note": "引火下出"
+      },
+      {
+       "name": "犀角",
+       "dose": "钱半",
+       "note": "统治五经"
+      }
+     ],
+     "source": "下编·七、小儿燥火"
+    },
+    "bianzheng": []
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-kesou",
+   "name": "咳嗽",
+   "aliases": [],
+   "yin_yang": "",
+   "stage": "",
+   "summary": "咳不离肺；平肝使脾不受制、泻心使肺不受火克、理脾以生肺气。",
+   "extra": {
+    "methods": [
+     "平肝",
+     "泻心",
+     "补脾"
+    ],
+    "waihou": {
+     "original": "咳嗽之症，有声无痰者谓之咳，火燥肺经也；有痰无声者谓之嗽，气动脾胃之湿也；有痰有声者谓之咳嗽，是痰与火气动而作也。外候有痰有嗽自然知之，不待审问也。有甚至气喘痰鸣似乎危殆者，但由咳而喘者，因肺受痰火而然，病虽喘亦无碍；不比肝风夹惊泻而喘、因肝木克脾气、胃气欲脱而喘者，则危候也。",
+     "plain": "有声无痰为咳（燥火伤肺）、有痰无声为嗽（脾湿）、有痰有声为咳嗽。因咳而喘者多属肺受痰火，尚非大险；若肝风夹惊、胃气欲脱之喘方为危候。"
+    },
+    "bingyin": {
+     "original": "此症有肺受风热而重者（风热之咳）；有燥火烁肺而致者（燥火之咳）；有因惊痰而咳者；有因食痰而咳者；有因乳痰而咳者（此咳俗名吼症）。凡咳嗽总因内先有痰，更遇肝木盛生心火、心火相克肺金而成咳嗽。",
+     "plain": "咳嗽分五类：风热咳、燥火咳、惊痰咳、食痰咳、乳痰咳（吼症）。总因内有痰，加肝木生心火、火克肺金而发。"
+    },
+    "shouwen": {
+     "original": "手纹右手必浮于左手——病儿若现此纹有咳无疑，右手纹主肺故也。纹浮紫为风热，沉紫为燥热，开短丫为惊痰，长丫为食痰；如系吼症则开短丫、离乱太多；喜病（胎乳致咳）则照脾虚疳积手纹而断。",
+     "plain": "右手（肺）指纹浮于左手，是咳嗽的标志；浮紫风热、沉紫燥火、开短丫惊痰、开长丫食痰；吼症则短丫而纹乱。"
+    },
+    "maifa": {
+     "original": "两手脉浮滑皆滑——浮滑为风痰，滑为燥火痰、食痰、乳痰，更看有力无力以分虚实。若咳嗽气喘而两手脉大、数至十余至者危。",
+     "plain": "脉浮滑主风痰，滑主诸痰；按有力无力分虚实；脉大数而喘者危。"
+    },
+    "zhifa": {
+     "original": "治须平肝、泻心，兼理肺虚，更兼理脾以生肺气。要在心、肝、脾、肺四经风火痰而作用。按《内经》云\"五脏六腑皆令人咳\"，然咳不离于肺；在心肝而作用者，经云隔一隔二之治法也，理脾亦隔一而言，补土生金。",
+     "plain": "平肝、泻心，兼清肺理肺、健脾化痰——即\"隔一隔二\"之法，治咳而治心肝、补脾以生肺金。"
+    },
+    "fangyao": {
+     "name": "第八方（治小儿咳嗽）",
+     "usage": "加莲叶蒂煎，开珠珀惊痰散。",
+     "herbs": [
+      {
+       "name": "前胡",
+       "dose": "一钱",
+       "note": "疏肺"
+      },
+      {
+       "name": "桔梗",
+       "dose": "钱半",
+       "note": "清肺"
+      },
+      {
+       "name": "桑白皮",
+       "dose": "二钱",
+       "note": "清肺湿热"
+      },
+      {
+       "name": "生栀",
+       "dose": "钱半",
+       "note": "泻心、平肝"
+      },
+      {
+       "name": "木通",
+       "dose": "二钱",
+       "note": "泻心火下行"
+      },
+      {
+       "name": "地骨皮",
+       "dose": "二钱",
+       "note": "清肺退火"
+      },
+      {
+       "name": "款冬花",
+       "dose": "二钱",
+       "note": "下气、清热、去痰"
+      },
+      {
+       "name": "甘草",
+       "dose": "一钱",
+       "note": "同桔梗治肺"
+      },
+      {
+       "name": "薄荷",
+       "dose": "七分",
+       "note": "祛风清热"
+      }
+     ],
+     "source": "下编·八、咳嗽症"
+    },
+    "bianzheng": []
+   }
+  }
+ ],
+ "cases": [
+  {
+   "module": "pediatrics",
+   "origin_id": "p-qf01",
+   "title": "脐风案·灯火十三灼即退",
+   "disease": "脐风",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "长山新友储二有，一日托掌下，偶道及从前举子俱不育于脐风。余为约日后生子，三朝内招余过望，此患可除。后果如约，将儿抱出，两眼畔黄色方兴，用灯火十三灼即退。",
+   "treatment": "灯火十三灼",
+   "effect": "此望脐风不克之一验也。",
+   "extra": {
+    "plain": "脐风先兆在生后三朝内两眼角发黄——见黄即用灯火十三灼，风止黄退。重在\"三朝内\"先期诊治。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-qf02",
+   "title": "脐风案·延至七日犹可救",
+   "disease": "脐风",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余尼中峰栖居士刘伯宗先生乃郎，三妇初举女，脐风延至七日，口不吹嘘，亦不撮紧，两眼角黄色深集溶溶，鼻准并沟畔黄色淡淡，身上微烧。从未有脐风能延至七日者，以眼角鼻上黄色浓淡揣之，知其脾土尚旺，风难下入，以故尔尔。余重揉外劳，用灯火十三灼攻拔肝风，并左右沟里加火三灼以截去路，用防风一钱煎服，立愈。",
+   "treatment": "灯火十三灼、防风汤",
+   "effect": "此脐风并治之一验也。",
+   "extra": {
+    "plain": "以眼角、鼻准黄色之浓淡判断风入深浅与脾土盛衰；脐风七日仍可救——灯火攻肝风、沟里加火截去路、防风煎服。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-th01",
+   "title": "胎寒案·元宵火加肺俞少商",
+   "disease": "胎寒",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余同学摩友方重居举子，刚出世，少顷通面青如靛染，踉跄呼门，振袂往视。知为胎寒至极，拿精威二穴无声，曲小指揉外劳，随用元宵火加肺俞二灼、少商各一灼，即乳。余知必吐，预用藿香防之。果吐，与服之。早食候天庭青退，至亭午通面转红矣。",
+   "treatment": "元宵火、藿香",
+   "effect": "此执色验症之一症也。",
+   "extra": {
+    "plain": "胎寒至极：通面青如靛染、拿精威无声。元宵火加肺俞、少商即能吮乳；预知必吐，先备藿香。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-th02",
+   "title": "牙关肿硬案·针刺即乳",
+   "disease": "胎热",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "方姓有子，生子七日内不吮乳。适余在郡，请别医误作脐风。余归，要路留治。见其唇燥极，面色红中带滞，烧热甚重。揣不吮乳之故必是牙关肿硬。用针于骨合处各一针，血出放手即乳。用连翘一钱、灶心土二钱、木通五分煎服，即愈。",
+   "treatment": "连翘、灶心土、木通",
+   "effect": "此望色审窍之一验也。",
+   "extra": {
+    "plain": "七日不吮乳勿概作脐风——唇燥、面红滞、烧热甚者，查牙关肿硬，针刺出血即能吮乳。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-th03",
+   "title": "胎黄案·问色知症",
+   "disease": "胎黄",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余男之同年友胡增珂，生男四日，内地距四十里许，不便邀看，来与余说：面上黄色，身有微烧。余揣脐风，黄色必不遍面，因问眼内何如。彼说亦有黄色势样。余曰：定是胎黄。以地黄茵陈汤方授之，愈。",
+   "treatment": "地黄茵陈汤",
+   "effect": "此问色知症之一验也。",
+   "extra": {
+    "plain": "脐风之黄不遍面、胎黄之黄及于眼内——一问\"眼内何如\"即辨脐风胎黄，远程授方而愈。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-jf01",
+   "title": "脾湿动痰案·挑筋无济",
+   "disease": "惊痰",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "九玑轩措大方某（名影印模糊，存疑），举子才两月，症属脾湿动痰，传入肺窍。乃妻呼挑筋妇挑之，症加甚。余往视之，拿之无声，审音知病入肺窍。先用推拿兼使灯火，随用半夏二钱，桔梗、枳壳、白术各一钱，服之稍愈。渠闻余言，半夏合症重用之，微动燥气。余即用赤芍等味解之，全愈。",
+   "treatment": "半夏、桔梗、枳壳、白术、赤芍",
+   "effect": "此脾湿动痰，挑筋无济，用药见效之一验也。",
+   "extra": {
+    "plain": "脾湿动痰传入肺窍：挑筋反加重；半夏为君、桔梗枳壳白术辅之；半夏过重动燥，以赤芍解之。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-jf02",
+   "title": "热极似寒案·犀角磨水",
+   "disease": "惊热",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余长女甫四岁，身上微热，口说诡话，面色紫黄，唇色略红，舌尖独燥，口气如火，精神不弱，口不作渴。据面色却是中暑，但病值三月，暑非其时。以唇色口气并精神揣之，定是热极似寒。用犀角磨水一杯服之，少顷一吐即愈。",
+   "treatment": "犀角磨水",
+   "effect": "此热极似寒，审窍探情之一验也。",
+   "extra": {
+    "plain": "面色紫黄似中暑而三月非暑令——凭唇红、口气如火、精神不弱断为热极似寒，犀角磨水即愈。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-xs01",
+   "title": "血虚烧热案·四物汤加味",
+   "disease": "烧热",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余会试都门，有粤东臬司张玉川乃孙，年十三岁，身极瘦弱，每食只能一茶杯许，终日微微烧热，下午加甚。都中医俱作童疳治，不效。延余一望，知为血虚。血虚必肠胃无滋，以致窍狭，故不能多食。用四物汤加厚朴、橘红，服十剂，兼用焙大麦米为饭，半月愈。",
+   "treatment": "四物汤加厚朴、橘红、焙大麦米为饭",
+   "effect": "此望色审窍而知血虚烧热之一验也。",
+   "extra": {
+    "plain": "午后热甚、面少血气、食少便滞——血虚烧热，不可概作疳治；四物汤加厚朴橘红，食疗以焙大麦米为饭。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-nz01",
+   "title": "热疟案·清脾饮善后",
+   "disease": "疟疾",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余老友方某（名影印模糊，存疑）讶曰：有此疟症就有此奇医。仍检清脾饮二剂命服之，俱随命服六君子汤三剂以防去路。",
+   "treatment": "清脾饮、六君子汤",
+   "effect": "此热疟认症既真，不听阻挠之一验也。",
+   "extra": {
+    "plain": "热疟治后以清脾饮二剂、六君子汤三剂善后，防其去路复发。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-jf03",
+   "title": "阳痫案·天保采薇汤",
+   "disease": "惊痫",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "乌沙夹双麻程灼公子九岁时得病，请余往治。群医在座，抱儿出，两手挑破筋肉，脓血淋漓，惨不忍见，每日夜抽掣数十次，壮热不退。有以竹沥豁痰言者，有以牛黄镇惊丸言者，有以天麻钩藤定惊言者。余不禁掀髯：此症君辈理不知也。此阳症兼阳痫也。用天保采薇汤各一钱五分，半夏倍之，共三两许，一服抽定，烧热减半。随用清脾饮一剂，全愈。",
+   "treatment": "天保采薇汤（半夏倍用）、清脾饮",
+   "effect": "此挑筋无济、望色通神之一验也。",
+   "extra": {
+    "plain": "阳痫抽掣壮热，挑筋致脓血淋漓反加重；天保采薇汤（半夏倍用）一服抽定，清脾饮收功。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-jf04",
+   "title": "热疟兼痫案·望色审声",
+   "disease": "惊痫",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "邻邑石壤沈葵锡，年五十余，仅晚出一子方二岁，患痫请救于余。即拿精威二穴，了不出声，通身烧热，面白虽惨，宝色内存，皮不轻浮光溜。据面色不应无声，据无声却犯死症。因问前可医过否。沈曰：初起时蒙邻妪挑筋两次，又别请拿推数次，昨有人将桃柳嫩枝遍身推刮，晚便无声矣。余揣病久肺气已虚，屡经推刮致损气闭，以致无声，唯有照色用剂。以天保采薇汤外加冬花一钱，薄荷煎服，夜半热退。",
+   "treatment": "天保采薇汤加冬花",
+   "effect": "此热疟兼痫望色审声之一验也。",
+   "extra": {
+    "plain": "面白而宝色内存者虽无声非死候——屡经挑筋推刮损气致闭；天保采薇汤加冬花，夜半热退。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-jf05",
+   "title": "阳痫已死案·灸肺俞起死",
+   "disease": "惊痫",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "徐圣绪子患惊痫，不省人事约五六日。精威二穴拿之无声，即向肺俞重揉，声虽不出，却有累累痰珠挣不出来模样。灸肺俞各三壮，用天保采薇汤倍加半夏。余临别云：服此一剂，鸡鸣便退烧热。果如期热退，二服全愈。",
+   "treatment": "灸肺俞各三壮、天保采薇汤倍加半夏",
+   "effect": "此阳痫已死揉肺俞探肺窍之一验也。",
+   "extra": {
+    "plain": "惊痫五六日不省人事，肺俞重揉探得痰珠未绝——灸肺俞三壮加天保采薇汤倍半夏，鸡鸣热退。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-jf06",
+   "title": "痰迷案·老龙穴一掐",
+   "disease": "惊痫",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "摩友张孔途之婿王绍宗，年可二十余岁，一时痫死不知人事约半月余。他医纯用连芩之剂毫不见效，邀余看治。一见颜色便知痰患，拿精威二穴不应，于老龙穴一掐，直视乎余，有了咿咿声。用半夏四钱，桔梗二钱，枳壳、防风、甘草各一钱，一剂稍苏，五剂全愈。足见肺虽无声非金碎，何不可药。",
+   "treatment": "半夏四钱、桔梗二钱、枳壳、防风、甘草各一钱",
+   "effect": "此中痰望形审窍大小同验之一验也。",
+   "extra": {
+    "plain": "痫死半月，连芩清火不应；老龙穴一掐得声——中痰之证，半夏四钱为君，一剂稍苏、五剂全愈。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-jf07",
+   "title": "柔痉案·小续命汤去麻黄",
+   "disease": "痉症",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "竹浪陈讳春者一子，十一岁，患痉病十余日不省人事。初见其不醒以为惊死，于鞋带穴人中乱咬，破烂不堪。余往治，见其唇口颜色如常，不抽不热不渴，肢冷如冰。治用灯火十五元宵，随服小续命汤去麻黄一剂，即苏。",
+   "treatment": "灯火十五元宵、小续命汤去麻黄",
+   "effect": "此望色审窍而知为柔痉之一验也。",
+   "extra": {
+    "plain": "痉病不省人事而唇口如常、不抽不热不渴、肢冷如冰者，是柔痉而非惊死——元宵火加小续命汤去麻黄。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-mz01",
+   "title": "麻毒内攻案·天保采薇汤倍升麻",
+   "disease": "麻疹",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "本郡马陶一公涯玉之子，麻症发热方两日。医人误为除热，麻伏不出，形状似惊。差役请余治，面色花杂，喘急不嗽。必有内毒，于太阳穴以口吮之，皮内隐有红点，知是麻毒内攻，无烧不出。用天保采薇汤倍加升麻、干葛，一服额上见点，色不红起，面色唇口惨淡无泽，知为内虚，即用固真汤一服，遍身发热。陶公惊怖，余曰：麻非带热不出。仍服天保采薇汤一剂，通体透发，愈。",
+   "treatment": "天保采薇汤倍加升麻、干葛、固真汤",
+   "effect": "此见面色花杂便知内毒之一验也。",
+   "extra": {
+    "plain": "麻伏不出、形状似惊：太阳穴吮出红点断为麻毒内攻；升麻干葛透发→固真汤托虚→天保采薇汤透齐。\"麻非带热不出\"。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-mz02",
+   "title": "麻症内虚案·顾脾为主",
+   "disease": "麻疹",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "培继楼同学摩友方恒绶一子麻症，隐而不出，形症甚凶。见其面色惨白，口气微冷，唇舌淡白，大便泄泻。即用八珍汤，一服额稍见点。恒绶因侄前麻症死于泄泻，力迫止泻。余曰：分利则更危。不允。见口吻间似以泻关性命，勉强用五苓散，果止而额上红点即隐。又用十全大补汤内托，外用酒蒸升提，终不透发。余值事往郡，中途札示：皮上每发一泡，破即成黑陷。余札复曰：肌肉脾属，破即黑陷，是脾虚至极，何可攻毒，唯用六君子汤顾脾为主。果效。",
+   "treatment": "八珍汤、十全大补汤、六君子汤",
+   "effect": "此望色审窍万无一失，分利伤脾即此可见之一验也。",
+   "extra": {
+    "plain": "麻症隐而不出、面白便泻——脾虚当补不当分利：误用五苓散红点即隐；脾虚至极何可攻毒，六君子汤顾脾为主。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-mz03",
+   "title": "麻症凉遏案·苗窍辨真",
+   "disease": "麻疹",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "思诚堂同学友方薪衍第五郎患麻症，初医者不知麻候，用六一散以除烧热。邀余过治，见其色纯紫，两唇燥裂，大小二便皆秘，啼声不已。即用黄连八分，木通、黄柏各一钱，服下大便泻白如冷痢。然在座者皆谓凉剂所致。余问前医退热所用何剂，薪衍曰：六一散。余便恍觉下元为六一寒滞所闭，致火不降，无疑矣。随以炒盐熨脐下，仍用前味黄连倍加，服之方下大便燥结与黑粪无异。",
+   "treatment": "黄连、木通、黄柏、炒盐熨脐",
+   "effect": "可见苗窍辨真、治定不疑之一验也。",
+   "extra": {
+    "plain": "麻症误用六一散寒滞下元、火不下降——唇燥裂、二便秘、色纯紫是真热：黄连倍加，炒盐熨脐，燥粪方下。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-sh01",
+   "title": "伤寒表证案·一剂热退",
+   "disease": "伤寒",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "本郡田三公祖之公孙方二岁，患风寒烧热症。郡医见烧有惊情，便作惊症治，数日不愈。余以三指按额俱热，儿十指俱冷，用芎苏饮一剂。留饮。席未解，内小童报曰：小相公热退矣。",
+   "treatment": "芎苏饮",
+   "effect": "此烧有表里，不可不辨之一验也。",
+   "extra": {
+    "plain": "三指按额俱热、十指俱冷——伤寒表证，不可因烧有惊情而作惊治；芎苏饮一剂热退。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-sh02",
+   "title": "伤寒邪伏案·关门杀贼",
+   "disease": "伤寒",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余于癸丑科会试，盛京有銮仪卫正堂许公万孙方岁半，患伤寒症，初延太医院幼科失表。但见身冷如冰，毫毛竖竖，面色惨白，不知人事。知寒邪内伏，用天保采薇汤一剂，嘱曰：夜发热则明日来治，不则无可奈何矣。夜果发热，仍用前汤一剂，热又解。许曰：发热退热，药同效异，真出奇也。余曰：寻常症在表感一剂便解。如今公孙，邪被药误伏内，昨一剂攻出，邪到肌表，表见邪自是作热，仍以原方加追一剂，表解热除，无甚奇也。",
+   "treatment": "天保采薇汤",
+   "effect": "此关门杀贼之一症也。",
+   "extra": {
+    "plain": "伤寒失表、寒邪内伏：身冷如冰、毫毛竖、面惨白不知人事；天保采薇汤先托邪出表（反见发热），再一剂表解热除——即\"关门杀贼\"之戒。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-jf08",
+   "title": "惊风案·三味即愈",
+   "disease": "惊风",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "方伯张厅癸初生有公郎患惊风，病初，郡中医作夹食，用消导剂，症加甚。后余用半夏四钱、生姜一钱、防风二钱，一服即愈。",
+   "treatment": "半夏四钱、生姜一钱、防风二钱",
+   "effect": "此药用当而通神之一验也。",
+   "extra": {
+    "plain": "惊风误作夹食、消导加重；半夏四钱、生姜一钱、防风二钱，一服即愈——药不在多，贵在对症。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-ws01",
+   "title": "望色知死案·面浮无宝色",
+   "disease": "死症",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余吧张中尊媛患病，彼中医曾治十余日不愈。会余到彼，中尊得请，接余治。婢方抱出，离座五六步外，望见面上光光浮浮毫无宝色，余曰：不须抱近，请回。中尊问症若何。余曰：肺气已绝，不可治矣。明日果死。",
+   "treatment": "",
+   "effect": "此望色而知为死症之验也。",
+   "extra": {
+    "plain": "五六步外望面色光浮无宝色，即断肺气已绝——望诊决死生之验；次日果死。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-sh03",
+   "title": "内伤外感案·藿香正气散",
+   "disease": "伤食",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "珀山孝廉方韵皇乃孙，发吐烧热微甚，吐轻热重。余子婿方平阶初业斯道，投天保采薇汤一剂，不效，邀余。一见知为内伤饮食，外感风寒未深，用藿香正气散一服即愈。余以汤名取天保采薇，取其治外治内之意，用之不当，虽多亦奚为。",
+   "treatment": "藿香正气散",
+   "effect": "此学者之所宜知而宜慎也。",
+   "extra": {
+    "plain": "内伤饮食夹轻感：天保采薇汤（重剂）不当，藿香正气散一服即愈——轻症不可轻发重剂。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-lj01",
+   "title": "痢疾案·脾虚纯补",
+   "disease": "痢疾",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余长男五岁时与幼甥同患痢疾，男素脾弱，痛轻腹并不痛，痢下纯脓，白色中带蓝色，口气微冷。不用通利，即以六君子汤服之。甥病纯红，遍身有风疹，用四顺清凉饮加防风、柴胡。两药各置同炉前。姻家误以男药与甥服之，风疹即隐，气喘促，睡卧不宁。余急以天保采薇汤与服，风疹复出，喘止。仍用前汤数剂愈。",
+   "treatment": "六君子汤、四顺清凉饮加防风、柴胡、天保采薇汤",
+   "effect": "此可见脾土虚至极不必清利，硬用补剂；热痢宜清不可用补之一验也。",
+   "extra": {
+    "plain": "同患痢而寒热迥别：脾弱白痢（带蓝、口气冷）纯补六君子汤；热痢纯红用四顺清凉饮。误服补剂风疹隐而气喘，以天保采薇汤挽回。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-xk01",
+   "title": "心火刑金案·泻心救肺",
+   "disease": "咳嗽",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "形色灰白之子（病家名氏影印缺），并来药单，尽泻肺之味。据曰：面白后口唇红，小便赤色。余札复：示以泻心之剂。后闻三剂愈。",
+   "treatment": "泻心之剂",
+   "effect": "此心火刑金、泻心救肺之一验也。",
+   "extra": {
+    "plain": "面白而唇红、尿赤——是心火刑金之咳，非肺虚：泻肺无功，泻心三剂愈。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-dh01",
+   "title": "痘后虚证案·十全大补汤",
+   "disease": "痘疹",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "郡城孝廉危东原两甥，痘后一痂期不收，一收后痘痂平白，俱有微热。邀余过治，见唇口惨白，气出微微。并用十全大补汤，服两剂，热除痂脱，俱转红润。随以保元汤调服之，愈。",
+   "treatment": "十全大补汤、保元汤",
+   "effect": "此望色审窍，知血气两虚之一验也。",
+   "extra": {
+    "plain": "痘后痂不收、唇口惨白、气微微——血气两虚：十全大补汤两剂热除痂脱，保元汤调养。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-tx01",
+   "title": "气虚血脱案·参芪肉桂两剂愈",
+   "disease": "失血",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余友陈公载之侄女，七岁，血吐数升，身冷如冰，通身斑现青色，平日扑跌处青更甚，唇口惨白，口气微冷。此乃气虚血脱。初大方脉作肺热，迫血妄行，用栀仁、黄芩等味，吐愈甚。后余用人参、黄芪、肉桂、麦冬、甘草、白茯苓，两剂而愈。",
+   "treatment": "人参、黄芪、肉桂、麦冬、甘草、白茯苓",
+   "effect": "此气虚脱血、望形审窍之一验也。",
+   "extra": {
+    "plain": "吐血数升而身冷、斑青、唇白、口气冷——气虚血脱，非肺热：栀芩清火反吐甚；参芪肉桂温摄两剂愈。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-zs01",
+   "title": "中暑误治案·清暑益气汤",
+   "disease": "中暑",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "穿山郡庠方绍文，仅一子，年十余岁抱疾。以余只知幼科，延两方脉共治。彼见口说谵语，便作热治，用尽犀角、连翘、芩、连凉剂，症益加甚。急闻于余，余往见，直卧如尸，口气冰冷，唇舌灰白。乃中暑之症，误作中热，大可怪也。用清暑益气汤，一服立愈。",
+   "treatment": "清暑益气汤",
+   "effect": "此大方脉切脉，不如小儿科望色辨窍为妙之一症也。",
+   "extra": {
+    "plain": "口说谵语而口气冰冷、唇舌灰白——中暑误作中热，凉剂益甚；清暑益气汤一服立愈。望色辨窍胜于切脉。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-zs02",
+   "title": "中暑案·一服人苏",
+   "disease": "中暑",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "（余从伯一孙方四岁患暑，伯母呼予往治。）举室阻挠，且怖之曰：彼孙一死，祸来匪轻。余曰：具有两眼，不烦过虑。视之，口气微微，面色惨极，唇舌白淡，口道谵语。知为中暑，用清暑益气汤，一服人苏。",
+   "treatment": "清暑益气汤",
+   "effect": "此望色审窍之一验也。",
+   "extra": {
+    "plain": "口气微、面惨、唇舌淡白而谵语——中暑；清暑益气汤一服即苏。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-mz04",
+   "title": "慢症案·寒热异治",
+   "disease": "慢症",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余幼女于癸丑冬值先君弃世之会患病，有失经理，冷泻成慢。幼甥同症，热泻成慢。妹婿闻远波僧精于此道，呼治之，日索药价，丸如绿豆大，每丸银三钱，屡服症加重。余女眼闭不开约十余日，问乳母，幸吮乳不辍，面上宝色有存。余用固真汤加附子五分，服三剂眼一开顷又闭。揣之药力未及，连服十剂，愈。甥慢虽同寒热迥别，知不可治。妹婿嗔余有亲疏之别，药吝参附，与余妹反目。远波僧见余甥光景，强壮如故，满口许其必生。余作色辨之：尔以健壮为生耶，独不思热则气壮，况热泻，明知肺热用参反伤乎肺，不用则慢无治法。将欲清肺再用参，一清则脾气即绝，清不得、补不得，何生之有。远波默然趋去。越三日，死。",
+   "treatment": "固真汤加附子五分",
+   "effect": "此慢症虽同，寒热异，不可不察之验也。",
+   "extra": {
+    "plain": "同为慢症：冷泻者固真汤加附子连服十剂而愈（吮乳不辍、宝色存者为生）；热泻者清不得、补不得，参附误用则死——慢症必辨寒热。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-tu01",
+   "title": "吐症案·热石膏茶下立愈",
+   "disease": "呕吐",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余同年砚席友陈公某患吐症，适余抱风寒，因延大方脉用温胃剂，吐益甚。带疾往视，口唇红丽，气出蒸手，舌色红紫。用热石膏一钱研碎，以茶一碗送下，稍止，随加一服，立愈。后又患吐，色窍俱同，仍用石膏，却不即效，揣之下元或有寒气，用炒盐熨之，仍服石膏即愈。可见苗窍颜色从不一误。",
+   "treatment": "热石膏一钱",
+   "effect": "此苗窍颜色从不一误之验。",
+   "extra": {
+    "plain": "吐症而唇红、气蒸手、舌红紫——胃热之吐：热石膏茶下立愈；兼下元寒者炒盐熨之。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-px01",
+   "title": "脾泻将慢案·参附收功",
+   "disease": "泄泻",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "余于癸丑北上到会馆，适陈是庵幼郎脾泻将慢，付余治。问其曾服参否。是庵曰：如服一分便爬上了壁。余心以为南北或亦有异。以六君子汤去人参连服两剂，了无一效，遂接别医。忽一医拥至馆中，余请所发剂视之，剂属消导。余曰：久泻将慢尚可再用消导之药，用之命不可知矣。乃止。余便不以是庵之言为正，硬用六君子汤加人参，且外加附子五分，两服即愈。是庵叹服：素闻妙手，今果然矣。",
+   "treatment": "六君子汤加人参、附子五分",
+   "effect": "此辨色审窍、勿以人言为信之一验也。",
+   "extra": {
+    "plain": "久泻将慢，人言\"服参即甚\"不可尽信——六君子去参不效、消导更危；加人参、附子五分两服即愈。"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-bm01",
+   "title": "大便不通案·四物汤润下",
+   "disease": "便秘",
+   "syndrome": "",
+   "expert_name": "程康圃",
+   "source": "《程氏家传儿科秘要》",
+   "chief_complaint": "",
+   "history": "同邑绅徐梅宣公郎，痘后四十日，大便闭有七日。他医以承气汤单授之。余舅氏时在徐宅，力荐请余。往视之曰：血虚至极，幸未通利，通则不可药救。梅宣且幸且疑，硬用四物汤一服，便出乃溏粪，带白色。梅宣拍案叫绝曰：一望即知，神矣。",
+   "treatment": "四物汤",
+   "effect": "此一望即知之验。",
+   "extra": {
+    "plain": "痘后血虚便闭，承气峻下则不可救——四物汤养血润下，一服便通。"
+   }
+  }
+ ],
+ "tips": [
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-f519297387",
+   "category": "危候警示",
+   "content": "气绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "气绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-af7915f52b",
+   "category": "危候警示",
+   "content": "脾气坏",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "脾气坏"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-70c18fa6b9",
+   "category": "危候警示",
+   "content": "肺绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肺绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-f519297387",
+   "category": "危候警示",
+   "content": "气绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "气绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-f1f455bf4e",
+   "category": "危候警示",
+   "content": "肌坏",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肌坏"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-3705402950",
+   "category": "危候警示",
+   "content": "肝风证",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肝风证"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-9dbb38b77c",
+   "category": "危候警示",
+   "content": "骨绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "骨绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-ae4ca957c4",
+   "category": "危候警示",
+   "content": "脾绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "脾绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-911a048939",
+   "category": "危候警示",
+   "content": "胃死",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "胃死"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-557de12ca0",
+   "category": "危候警示",
+   "content": "水克火",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "水克火"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-f519297387",
+   "category": "危候警示",
+   "content": "气绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "气绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-68ed52fd51",
+   "category": "危候警示",
+   "content": "骨烂",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "骨烂"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-a4efc2623c",
+   "category": "危候警示",
+   "content": "肾绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肾绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-2f128528d1",
+   "category": "危候警示",
+   "content": "肝死脾",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肝死脾"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-f4b70a6f3a",
+   "category": "危候警示",
+   "content": "全阴",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "全阴"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-9dbb38b77c",
+   "category": "危候警示",
+   "content": "骨绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "骨绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-f0e3e96086",
+   "category": "危候警示",
+   "content": "肝心绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肝心绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-70c18fa6b9",
+   "category": "危候警示",
+   "content": "肺绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肺绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-e897bdf79d",
+   "category": "危候警示",
+   "content": "土绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "土绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-395b21b2cd",
+   "category": "危候警示",
+   "content": "血绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "血绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-c3cf7863d4",
+   "category": "危候警示",
+   "content": "心坏",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "心坏"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-4dac2cd911",
+   "category": "危候警示",
+   "content": "脱液",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "脱液"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-8c43aed4c9",
+   "category": "危候警示",
+   "content": "肝克胃死",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肝克胃死"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-6a40102386",
+   "category": "危候警示",
+   "content": "属阴",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "属阴"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-ff53c82111",
+   "category": "危候警示",
+   "content": "肝血绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肝血绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-5270b3ec00",
+   "category": "危候警示",
+   "content": "肝绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肝绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-480f8902ba",
+   "category": "危候警示",
+   "content": "胃绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "胃绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-d6ec0c08db",
+   "category": "危候警示",
+   "content": "胃坏",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "胃坏"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-1ab02cdd3f",
+   "category": "危候警示",
+   "content": "肝肾绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肝肾绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-8d7da53646",
+   "category": "危候警示",
+   "content": "肝胃坏",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肝胃坏"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-ae4ca957c4",
+   "category": "危候警示",
+   "content": "脾绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "脾绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-0d9c9a9eb0",
+   "category": "危候警示",
+   "content": "肾气绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肾气绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-26a8bd9e51",
+   "category": "危候警示",
+   "content": "肺坏",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肺坏"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-a1e0598315",
+   "category": "危候警示",
+   "content": "肺脱",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肺脱"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-6018d27531",
+   "category": "危候警示",
+   "content": "收甚",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "收甚"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-351d423133",
+   "category": "危候警示",
+   "content": "有收烂",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "有收烂"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-701512c9af",
+   "category": "危候警示",
+   "content": "气下绝",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "气下绝"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-8c43aed4c9",
+   "category": "危候警示",
+   "content": "肝克胃死",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肝克胃死"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-e5c1f4a0ba",
+   "category": "医道训诫",
+   "content": "风热退热\n风热之症兼身热者，要祛风方能退热，勿概用凉药，以水清风害也。\n风热发热先祛风，不能一味用凉药。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "风热退热"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-e7780450a4",
+   "category": "医道训诫",
+   "content": "急惊退热\n急惊之症兼身热痰喘者，必要去惊痰方能退热。\n急惊发热痰喘，须先除惊痰，热方能退。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "急惊退热"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-cf6cb04a0f",
+   "category": "医道训诫",
+   "content": "慢惊止泻\n慢惊之症必要止吐泻方能病退；泄甚身热者止泻为重，泻止热必自退。\n慢惊以止吐泻为病退之机；泻甚者止泻为先，泻止热自退。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "慢惊止泻"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-0bb80be819",
+   "category": "医道训诫",
+   "content": "泻与渴\n凡泄泻必作渴，泻止渴自止；兼呕者止呕则渴自止。\n泄泻津液下行故渴，止泻则渴止。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "泻与渴"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-03627d2939",
+   "category": "医道训诫",
+   "content": "止泻三法\n泄泻必要利小便，又要兼平肝木，并要温肠。\n止泻三要：利小便、平肝木、温肠。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "止泻三法"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-ab39c4087d",
+   "category": "医道训诫",
+   "content": "慢脾专止泻\n慢脾急症必要以止泻为重，间有各般症候不兼理，兼理则药味多杂难取速效；然泻止则各般症候亦渐减矣。\n慢脾风专务止泻，不兼治他症，免药味杂乱；泻止则诸症自减。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "慢脾专止泻"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-5a39080e4a",
+   "category": "医道训诫",
+   "content": "脾虚专补脾\n脾虚之证必以补脾为主，间有兼症亦兼理之，切勿舍补脾而不顾，后为生变脱无余。\n脾虚以补脾为主，兼症兼顾，但补脾始终不能丢。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "脾虚专补脾"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-c53dc79710",
+   "category": "医道训诫",
+   "content": "失乳小儿\n失乳小儿有病由失乳而得者，必有乳食方能医治，否则仙丹不应。\n因断乳致病的患儿，须恢复乳食才能治好。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "失乳小儿"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-16db4f9b53",
+   "category": "医道训诫",
+   "content": "疳症专治\n疳症要在疳症作用，不然用药不应。\n疳症必须用治疳的思路（平肝补脾去积），否则药不应。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "疳症专治"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-6e58eff6dc",
+   "category": "医道训诫",
+   "content": "燥火分经\n燥火之症，夜热则向左手着意心、肝；唇热则向右手着意肺、胃、脾。\n燥火夜热重者从心肝（左手脉）着力；唇热重者从肺胃脾（右手脉）着力。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "燥火分经"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-9135e13433",
+   "category": "医道训诫",
+   "content": "咳嗽立意在肺\n咳嗽之症要在肺经立意，余经次之，去痰以下气为先。\n治咳以肺为主，化痰以下气为先。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "咳嗽立意在肺"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-4e39937112",
+   "category": "医道训诫",
+   "content": "干咳滋润\n治干咳必用滋润心肺之药。\n干咳当润心肺。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "干咳滋润"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-e770bd0027",
+   "category": "医道训诫",
+   "content": "湿症利水\n治湿症必用利水之药。\n湿证当利水。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "湿症利水"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-f91aa31ec9",
+   "category": "医道训诫",
+   "content": "补脾兼行滞\n用补脾必兼行滞之药，不然反滞而伤药食。\n补脾须配行滞之品，否则壅滞反碍。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "补脾兼行滞"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-95c570fd77",
+   "category": "医道训诫",
+   "content": "甘草和药\n用药防其太猛则用甘草以和缓之。\n药力太猛者用甘草和缓。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "甘草和药"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-6bb9b10615",
+   "category": "医道训诫",
+   "content": "石药煅过\n石类药必须煅过、出尽火气然后用之，又要甘草以制其毒，否则小便不通。\n石膏等石类药须煅过并用甘草制毒，否则伤肾致小便不通。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "石药煅过"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-99c50cb359",
+   "category": "医道训诫",
+   "content": "夹食先消食\n症夹伤食必须消食然后见效，不然食阻无功。\n兼夹伤食者必先消食。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "夹食先消食"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-77de13b0ad",
+   "category": "医道训诫",
+   "content": "药引\n用药引如：灯芯能引热下行、去惊、去心火；生姜发散通阳，风重用此；生葱风轻用此；金银镇惊；伏龙肝引药入脾胃；莲叶蒂止咳、通心肺；大枣和中、同姜止呕；白米和胃止呕等类，必告其加入煎药，因药铺常无此味，若遗忘则作用不全，或不应效。\n药引不可缺：灯芯引热下行、生姜风重、生葱风轻、金银镇惊、伏龙肝入脾胃、莲叶蒂止咳、大枣白米和中止呕。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "药引"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-0bc737457b",
+   "category": "医道训诫",
+   "content": "方不过十二味\n立方不可多用药味，以十二味为率，多则杂乱不应；若不得已，多至十四味足矣。\n一张方以十二味为限，最多十四味。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "方不过十二味"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-c19eeb69e3",
+   "category": "医道训诫",
+   "content": "丸散分服\n随症用汤药、开丸散，可令其分二次服方能服适；务要令其多服，免致药少不应。\n丸散分两次服，务使药量服足。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "丸散分服"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-8c71acb8e3",
+   "category": "医道训诫",
+   "content": "避苦药\n小儿食药怕苦，大人见其难食则药必少，少则不应。有苦味者可避用则避之，不得已然后可用。\n小儿畏苦则服药不足量；苦味药能避则避。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "避苦药"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-fc4f3c520d",
+   "category": "医道训诫",
+   "content": "煎法先后\n药味坚硬难出味者要先煎，如羚羊、犀角、石膏之类；不耐煎者要后下，如薄荷、木香、玉桂之类，煎药待滚其味始全。\n羚羊犀角石膏先煎；薄荷木香肉桂后下。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "煎法先后"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-c1c9c7291c",
+   "category": "医道训诫",
+   "content": "乳母戒口\n小儿有病服药必告其乳母戒口食素，若不戒肥腻荤腥者则服药不效。\n乳母必须戒口，否则药效不显。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "乳母戒口"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-37a5916622",
+   "category": "医道训诫",
+   "content": "富贵之家\n富贵子女势必姑息，服药必难。若遇顽症、深症，服药要多，当先说明要服药多方能医治；若症深而不言，首剂药或不应则枉失功名也。又有男人面承多服而家人女子阳奉阴违、或药令彼儿食无一半则隐而告尽以哄男子者，姑息儿女妇人往往有之，医者信其服尽、见症仍不愈另施别法，致错误证候归咎药之无功。噫乎！须告其家长督令服药然后可。\n富贵之家多姑息：须先言明服药要求，并请家长亲自督促，防家人阳奉阴违。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "富贵之家"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-404c7b1e62",
+   "category": "医道训诫",
+   "content": "贫家之治\n贫家遇有顽症勉强计算而医，虽能一一从医嘱，但多购药则力不能办，或借财用仍是拖延误深之势。须先说明能舍财救命，医者亦舍财取名，方能两就成功。\n贫家须先讲明舍财救命之理；医者亦可舍财取名，两相成就。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "贫家之治"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-8cbddfa9b1",
+   "category": "医道训诫",
+   "content": "信巫之家\n信巫不信医者，不可阻其拜神而信己药。设或病愈则功归鬼神，医者不但不能取利而心力人情亦不可得也，且又令巫者生妒；倘病有失则归咎服药，而巫者拜神耽误日深断不肯痛责其过也。\n遇信巫之家，不必阻止其拜神；成则功归巫、败则咎归药，医者当自明。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "信巫之家"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-8e563cc0c6",
+   "category": "医道训诫",
+   "content": "七情饮食之戒\n不论小儿大人，病本七情六欲、饮食失节而致者，症在未坏，全赖清静和平以培元气，不能自养则不可治。或大人不能戒饮食、或不屏去忧愁、不能自禁房劳；小儿则抛弃失抚、积啼成惊、积食成伤。须要劝其戒慎，能听从则可治，不能则不可强为调治。\n病起于情志饮食者，须患者（或家长）配合调养，否则不可强治。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "七情饮食之戒"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-aee945ae8e",
+   "category": "医道训诫",
+   "content": "济世之心\n业斯道者，虽为衣食之计，亦要存济世之心，幸勿专图财利不顾功名。倘有症治，则常存父母之心，各尽生平所学，必求病愈为念。富者得其财，与其解厄；贫者领其情，与其消灾。纵或富人忘谢、贫者忘情，宁人负我，勿我负人。此吾祖训，历代遵行，医传五六代幸有达人，岂非先祖明德遗训之验耶。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "济世之心"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-7b78a437ca",
+   "category": "医道训诫",
+   "content": "至诚礼敬\n凡到人家看病，必须至诚礼敬。失礼无礼敬则不尊重，不尊重则主人起轻慢之心，自己有失名望身份。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "至诚礼敬"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-459bef5033",
+   "category": "医道训诫",
+   "content": "同道相处\n凡属道友贤良智愚不等：贤良者我则谦恭待之以资学益；或论高于我者则敬学之，或明以请教；或愚下于我者勿以才智骄人、以取怨谤。倘或同在一家医病，自显所长，切勿訾人短处，又勿贬其方药，唯以自己之见而告东家，舍取在人。倘或主人明理，自己自不失为君子雅道。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "同道相处"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-a0a1f70f60",
+   "category": "医道训诫",
+   "content": "实录传后\n我家六代业医，幼科为最良。予亦五十年来阅历幼科，因而留心治验，所有祖传及自己所得秘奥一一实录于此，并不杜撰成说、虚伪成文，一字不苟以传后人。凡数易稿校订稳当，虽虚字亦有深意可会然后抄正。学者勿以浅近而忽之，又勿览此而自足。倘能博考群书，一则可以再广才智，二则可以见予苦心不诬。若学者无诚不笃、传者隐秘遗才，入斯门者断断不能显达。学者能精此一艺，自有无穷佳境也。卷内有密圈者为紧要之文，旁点者次之，末后有色者则分此一段矣。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "实录传后"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-561337f126",
+   "category": "医道训诫",
+   "content": "一恨挑筋割肉\n五脏之病岂尽在筋？挑断不知当哪一味药；六淫之贼岂尽在血？血出又不知退哪一经邪。这一种挑筋的，死后定在阿鼻地狱。如对予说出理来，予便不恨。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "一恨挑筋割肉"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-6cba371186",
+   "category": "医道训诫",
+   "content": "二恨死作活医\n病儿见面，寒热虚实茫然不知，辄曰\"死作活医，药之不效，死不任过\"。一药偶中，活即居功，死证能生。对予说出理来，予便不恨。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "二恨死作活医"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-2dcaa590d9",
+   "category": "医道训诫",
+   "content": "三恨乱推乱拿\n见儿烧热，并不知烧从何感、热自何生，乱推乱拿，致儿大啼大叫。汗出热解，偶尔撞着，便自称神。既自称神，缘何有效不效？对予说出理来，予便不恨。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "三恨乱推乱拿"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-5a0eee85b1",
+   "category": "医道训诫",
+   "content": "四恨药与病反\n不知症候，药与病反。不曰自己用药不当，且曰儿母有失护持。对予说出理来，予便不恨。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "四恨药与病反"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-34875c1173",
+   "category": "医道训诫",
+   "content": "五恨时运之说\n活症屡药不效，名医一药成功。不曰自己不知，且曰他合时运。对予说出理来，予便不恨。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "五恨时运之说"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-e8024488b9",
+   "category": "医道训诫",
+   "content": "六恨丸散渔利\n以丸散为渔人之具，其实不值一文，且曰此丸此散真是无价，不论中病与否，解包投服；不愈则多方以药本为辞。丸散既属无价，投服病胡不瘳？对予说出理来，予便不恨。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "六恨丸散渔利"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-cc800715cc",
+   "category": "医道训诫",
+   "content": "七恨滥用除痰药\n动用牛黄、竹沥、贝母为除痰要药。痰有寒热：热痰见此，真似滚汤泼雪；寒痰见此，竟是雪上加霜。不论寒热，概投儿服。对予说出理来，予便不恨。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "七恨滥用除痰药"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-f0606a507f",
+   "category": "医道训诫",
+   "content": "八恨必用柴胡退烧\n烧热有表里之殊，柴胡专属解表之味。脾虚肾虚、气血两虚，诸烧热亦用柴胡。对予说出理来，予便不恨。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "八恨必用柴胡退烧"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-b4d23b83cc",
+   "category": "医道训诫",
+   "content": "九恨内减外加\n用汤头有内减外加之说。加减原在汤头内，看脏腑之有虚有实，酌药味之宜多宜寡；间或清病之来路、塞病之去路，外加一二味，此是变通妙手。如曰内可减、外可加，则四君子加两味便成六君子，十全大补减两味便是八珍。对予说出理来，予便不恨。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "九恨内减外加"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "残暴之人必不恻怛，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "弛纵之人必无静气，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "卑下之人必无慧思，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "鲁莽之人必不思索，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "犹豫之人必无定见，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "固执之人必不融通，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "轻浮之人必多忽略，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "急达之人必期速效，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "怠缓之人必多逡巡，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "性急之人借此报复，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "自是之人必以非为是，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "居奇之人必以此居奇，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "category": "医道训诫",
+   "content": "贪婪之人必以此网利，不可学",
+   "source": "《程氏家传儿科秘要》"
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-a56ffbb2b2",
+   "category": "医道训诫",
+   "content": "一、啼而无声音\n儿啼无声音，前辈俱作死症，以为肺绝故也。独予先君于啼之无声者，审出肺气未绝，一药即生。而予亦经验过，历历不爽。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "一、啼而无声音"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-5b7cc37449",
+   "category": "医道训诫",
+   "content": "二、惊风伤寒热症之辨\n惊风、伤寒、热症三种相似，前辈俱未能辨，误医误死不知凡几。独予先君准出惊风的模样、伤寒的光景、热症的认法，透彻无遗。一经医治，无有不生。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "二、惊风伤寒热症之辨"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-5bc93bcbf2",
+   "category": "医道训诫",
+   "content": "三、左手部位之正\n儿左手之三关六腑、大指之脾位、五指之上下、两脚之左右，前辈无不误传。独余先君悟出至理，辟尽各处差谬，指出部位根源，推无不效、补无不应、泻无不神。毫厘千里，何可秘而不传？",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "三、左手部位之正"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-7e83b32dbf",
+   "category": "医道训诫",
+   "content": "四、脐风深浅\n儿脐风，前辈只知风入脐内，以致撮口噤口；殊不知风入有深浅，死生有异。予独悟出道克至理，见外知内，治无不通。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "四、脐风深浅"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-497be1e8a0",
+   "category": "医道训诫",
+   "content": "五、慢症不作风治\n儿慢症，前辈多作慢惊，乱推乱拿、乱掐乱火，以致汗愈亡阳、痛愈伤脾。独予体贴\"慢\"字，不作惊治，唯补脾虚。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "五、慢症不作风治"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-b9f5e3b081",
+   "category": "医道训诫",
+   "content": "六、实痰取法\n儿胃有实痰，药解不散，唯有取法。前人取之，多有变：筑喉内，不吐出又不下去，因不敢取。予偶见修养家作练功大睡法，眼翻气筑时，于气海穴以手指曲节抵之，一放即活。予因悟及取痰不出又不下者，以是法行之，果即下，复取便出。此因诗悟礼，触类旁通——万病俱可因端起悟。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "六、实痰取法"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-f2760d5114",
+   "category": "医道训诫",
+   "content": "七、用推用药之辨\n儿有惊风，痰热虚实表里，前人俱用推拿，且曰小儿肝肠脆嫩不可服药。独予先君云：急惊风痰，非推拿不效；脏腑虚寒，非药味莫疗。此予两代因病用推用药，经验过历历不爽。刻舟胶柱，必不相宜。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "七、用推用药之辨"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-35c1a6aaf1",
+   "category": "医道训诫",
+   "content": "八、弃轻从重\n儿有病，前人以四季之五行按五脏之五行，以药味之四性合天时之四季，其理固是；然不知弃轻从重之妙。如当夏宜用黄连等味以泻心，不宜用苡仁等味以补心，理也。设使心经虚极，或怔忡不眠、或汗出如雨，补耶泻耶？当夏宜用五味等味以救肺，不宜用桑皮等味以泻肺，理也。设使肺经热极，或大便闭塞、或热血妄流，泻耶救耶？此种学问，余从不固执，唯相其缓急、权其标本，弃轻从重，不拘时令，只照病医，却无不好。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "八、弃轻从重"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-15a85e6a54",
+   "category": "医道训诫",
+   "content": "九、把定舵牙\n望儿颜色不错、证之苗窍相符、药之又与病合。若服一二三剂，病犹照常不除、又不加甚，切不可因人言药不合症，半路更方。盖在我望色既真、辨窍既确，效不见速，无非病深药浅、药力未到。譬之舟人驾舟，两岸辽阔，一时难到。我既认定风色，亦只把定舵牙、活捉篷索，一任浪涌兼天，一应自然到岸。如把持不定，在半江中或辞篷转舵，则断无不覆之舟。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "九、把定舵牙"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-37e05d38d4",
+   "category": "医道训诫",
+   "content": "十、望色审窍为主\n儿病患，举世幼科皆于儿第二指面筋纹细摹细看，以形色论症候、以透关决死生。予两代以医术济人共约七十余年，治活小儿不下百千万数，皆以望面色、审苗窍为主，治无不神；间亦摹看筋纹，了无证验。似此迷津道岸，何可秘而不传？",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "十、望色审窍为主"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-6e7b657902",
+   "category": "医道训诫",
+   "content": "夏禹铸曰：摹看手指筋纹，乃医家异教。盖指面筋纹，生来已定，岂因咳嗽而变为反弓、惊积而化为鱼刺、脑热而结为流珠、肝郁气粗而来蛇状之理？即曰能变能化，亦不过反弓知咳嗽、鱼刺知惊积、流珠知脑热、蛇来知气粗而已，外有何知？况二指一面，仅大小二肠所属，非五脏诸经并见之地。即曰并见，一指长不过寸许、阔不过分余，设也有肾热而兼气粗、气粗而兼咳嗽，则流珠与反弓蛇来并相混淆，将从何辨？又诀曰：\"初关乍入宜防退，筋透三关命必亡。\"常见筋透三关竟无病者，亦有病时透三关而必不亡者。此种道理，殊不知解。余两代经过不验，不忍隐而不言，见之者幸勿执迷不悟。\n夏氏认为指纹生来已定、不能随病而变，主张以望面色、审苗窍为主。此与程氏诊手纹法主张不同——两说并录，供学者互参，临床以四诊合参为准。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-68549518b1",
+   "category": "医道训诫",
+   "content": "脏腑之病，必有贼邪，或自外至，或自内成。祛贼不寻去路，以致内伏，是谓闭门杀贼。如伤寒贼由外入，法宜表散；心火贼自内成，清利为先。是知降心火而不利小便、除肺热而不引大肠、治风热而不发表药、伤食而不导消、痢初起而不通利、疟始发而中用截方，凡此皆闭门之弊。不第不能杀贼，而五脏六腑无地不受其蹂躏，则闭门之害可胜道哉！",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-ed8a9d9f36",
+   "category": "医道训诫",
+   "content": "若脏腑有虚，外虽伤感，误为表散分利，若来别症，是谓开门揖盗。试以脾虚作泻论之：脾虚唯恐补之不及，一用分利则正气日下而脾愈伤，便来脾慢之症。譬之六国之病在弱，合纵连横乃季子补救之策；解约散纵，自开吞并之门，是乱臣亡国，与分利伤脾无异理也。至于肺虚误为发散、心虚利水、肝虚抑肝诸类，当从脾虚分利而类推之可也。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-0eae0594b6",
+   "category": "医道训诫",
+   "content": "在汤头中更换药味，有宜不宜，犹文字上更换字眼有妥不妥一般。更换了字眼，有曾思慧思之殊；更换药味，亦有曾见慧见之别。如范希文作子陵祠堂记，有了歌曰\"先生之德\"，时李太伯在座，以风字易德字，洵是曾思；李太白诗\"人烟寒橘柚\"，而黄鲁直以家园字易烟寒字，便是鄙见。至于医家用四物汤以补血，内有熟地，若心有火而血热，以生地易熟地，却是慧思；若心无火、血不热，而亦以生地易熟地，便是愚见。此等学问，只可与知者道，难与不知者言也。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-2bb70eea3d",
+   "category": "医道训诫",
+   "content": "凡小儿病有百端，逃不去五脏六腑气血；症虽多怪，怪不去虚实寒热风痰；病纵难知，瞒不过颜色苗窍；症即难辨，莫忽略青白红黄。面上之颜色苗窍，乃脏腑气血发出来的；颜色之红黄青白，乃寒热虚实献出来的。业医者能从此处做工夫，便得吾家之秘诀。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-aff87b34c4",
+   "category": "推拿代药",
+   "content": "前人忽略推拿，今来一赋。寒热温平，药之四性；推拿揉掐，性与药同。用推即是用药，不明何可乱推。推上三关，代却麻黄肉桂；退下六腑，替来滑石羚羊。水底捞月，便是黄连犀角；天河引水，还同芩柏连翘。大指脾面旋推，味似人参白术，泻之则为灶土石膏；大肠侧推虎口，何殊诃子炮姜，反之则为大黄枳实。涌泉右转不揉，朴硝何异；一推一揉右转，参术无差。食指泻肺，功并桑皮桔梗；旋推止嗽，效争五味冬花。精威拿紧，岂羡牛黄贝母；肺俞重揉，漫夸半夏南星。黄蜂入洞，超出防风羌活；捧耳摇头，远过生地木香。五指节上轮揉，乃祛风之苍术；足拿大敦鞋带，实定掣之钩藤。后溪推上，不减猪苓泽泻；小指补肾，焉差杜仲地黄。涌泉左揉，类夫砂仁藿叶；重揉手背，同乎白芍川芎。脐风灯火十三，恩符再造；定惊元宵十五，不啻仙丹。病知表里虚实，推合重症能生；不谙推拿揉掐，乱用便添一死。代药五十八言，自古无人道及；虽无格致之功，却亦透宗之赋。\n推拿与药同性：推三关≈麻黄、肉桂（温散）；退六腑≈滑石、羚羊（清泻）；水底捞月≈黄连、犀角；引水上天河≈黄芩、黄柏、连翘；旋推大指脾面≈人参、白术（补），直推为泻≈灶心土、石膏；大肠侧推至虎口≈诃子、炮姜（止泻），反向则≈大黄、枳实（通泻）；涌泉右转不揉≈朴硝；揉掐精威二穴≈牛黄、贝母；重揉肺俞≈半夏、南星；黄蜂入洞≈防风、羌活；捧耳摇头≈生地、木香；轮揉五指节≈苍术；拿大敦、鞋带≈钩藤；后溪推上≈猪苓、泽泻；小指补肾≈杜仲、地黄；涌泉左揉≈砂仁、藿香；重揉手背≈白芍、川芎。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-bfa5c66221",
+   "category": "推拿代药",
+   "content": "推法：用葱姜煎汤浸染医人大指，先从眉心向额上，推至二十四数；次从眉心分推，至太阳、太阴九数；再自天庭至承浆各穴，一下，以代针法；再于太阳、太阴，或发汗，或止汗；再将两耳下垂尖捻而揉之；又将两手捧头面摇之，以顺其气；再看寒热，向手推三关六腑及运八卦；随分推胸口，及揉脐；推委中毕，再揉肩井。至于别穴看症，再加揉法。\n开首推法：葱姜汤浸指——眉心推额上24次；眉心分推至太阳太阴9次；天庭至承浆逐穴点一下以代针；太阳太阴可发汗可止汗；捻揉耳垂尖；捧头摇之以顺气；再按寒热推三关六腑、运八卦；分推胸口、揉脐；推委中、揉肩井。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-256e0075b0",
+   "category": "推拿代药",
+   "content": "婴儿十指冷如冰，便是惊风体不安；十指梢头热似火，定是夹食又伤寒（握之慌不真，再以儿手指贴吾面试之）。以下三指按儿额，感受风邪三指热；三指按今三指冷，内伤饮食风邪入。\n十指冰冷→惊风；指尖如火→夹食兼伤寒。医者三指按儿额：三指皆热→外感风邪；三指皆冷→内伤饮食。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-709e0c510e",
+   "category": "推拿代药",
+   "content": "灯火十三灼",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "灯火十三灼"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-96384324cd",
+   "category": "推拿代药",
+   "content": "元宵火十五",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "元宵火十五"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-bb66c4ce72",
+   "category": "推拿代药",
+   "content": "百会灸",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "百会灸"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-0c19340b6c",
+   "category": "推拿代药",
+   "content": "鬼眼灸",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "鬼眼灸"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-62d164d173",
+   "category": "推拿代药",
+   "content": "肺俞灸",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "肺俞灸"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-16536bf873",
+   "category": "推拿代药",
+   "content": "龟尾灸",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "龟尾灸"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-d115e66a20",
+   "category": "推拿代药",
+   "content": "昆仑拿",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": "昆仑拿"
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-bdc80d3367",
+   "category": "用药心得",
+   "content": "平常用：钩藤、薄荷、蝉蜕凉散。要润则用防风、玉竹——风中润剂，但力缓；如欲猛速，则用羌活、独活、川乌、北细辛、白芷（后三味不可轻用，宜戒，缘其气不平良也）。\n风热轻症用钩藤、薄荷、蝉蜕凉散；需滋润用防风、玉竹（缓）；欲速用羌活、独活；川乌、细辛、白芷辛烈不可轻用。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-4f63a3989b",
+   "category": "用药心得",
+   "content": "退热则用柴胡、地骨（此二味略犯泻，或舍之）；淡竹叶此味最去上焦风热，平良佳品；大退身热必用石膏；最去壮热用干葛；解重热则用川连（兼能厚肠）、羚羊（兼能祛风）。\n退热：淡竹叶清上焦风热最稳；壮热用石膏、干葛；重热用川连（兼厚肠）、羚羊（兼祛风）。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-5369018279",
+   "category": "用药心得",
+   "content": "丸散：驱风药常用万灵丹，重用万应丸、抱龙丸；退热则用玉露散（大去壮热实热）、保婴丹（身热重者用之）、甘泉散（有身热夹湿者用之）。\n丸散配用：驱风万灵丹→万应丸、抱龙丸；退热玉露散、保婴丹；夹湿身热用甘泉散。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-9ce5e5ffbf",
+   "category": "用药心得",
+   "content": "小儿急惊，缘风热夹惊，风热照上则用药，唯要泻惊。泻心常用：木通、地骨、淡竹、灯芯、连翘；重则用川连、生栀、龙胆、羚羊、朱砂。寻常去惊惯用：蝉蜕、金银、灯芯、干地龙。治抽掣必用钩藤，次用防风、僵蚕。大抽掣必用全蝎、蜈蚣、僵蚕、酒芍。\n泻心定惊：轻用木通、地骨、淡竹叶、灯芯、连翘；重用川连、生栀、龙胆、羚羊、朱砂。去惊用蝉蜕、金银、灯芯、地龙。抽掣用钩藤；大抽掣加全蝎、蜈蚣、僵蚕。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-eddbcc4ac3",
+   "category": "用药心得",
+   "content": "丸散：大凉惊用保婴丹，次用甘泉散；大治惊风用保婴急惊散、抱龙丸、万灵丹。\n丸散：保婴丹、甘泉散凉惊；急惊散、抱龙丸、万灵丹治惊风。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-d80072d671",
+   "category": "用药心得",
+   "content": "小儿慢惊，风、热、惊三般药用上则同参，唯理泻用后药：身热脉有力者为热呕，用栀子仁（姜汁炒）、竹茹（姜汁炒）、川朴（姜汁炒）、川连（姜汁炒）、川椒（麦皮炒）、石斛、藿香——急用驱风、缓用醒脾，随宜择用。\n热呕：栀子仁、竹茹、川朴、川连、川椒、石斛、藿香（均姜汁炒），急则驱风、缓则醒脾。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-bc4b33d325",
+   "category": "用药心得",
+   "content": "寒呕为重，用川朴、藿香、砂仁，甚则丁香、白蔻。止呕必用和中药：甘草、姜、枣。\n寒呕：川朴、藿香、砂仁，甚加丁香、白蔻；止呕和中用甘草、姜、枣。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-af24d671d9",
+   "category": "用药心得",
+   "content": "泻清水、止痛：用茯苓、泽泻——止泻必要利小便，因水向大肠而出则泻，利小便则大肠水止。不止必涩肠，用诃子肉（煨熟）、粟壳（蜜炙）。\n止泻先利小便（茯苓、泽泻），不止再涩肠（煨诃子肉、蜜炙粟壳）。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-c658995d99",
+   "category": "用药心得",
+   "content": "泻白：用赤石脂、龙骨、禹余粮、干葛（姜汁微炒，升清气兼引津液上行而止泻）。凡止泻汤中皆用；不止到底加玉蔻霜，用贴脐法，随宜。肝气旺而受寒加桂枝、白芍，本草云木得桂而枯。\n泻白加赤石脂、龙骨、禹余粮、姜炒干葛升清止泻；仍不止加玉蔻霜并用贴脐法；肝旺受寒加桂枝、白芍。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-ca4df5e07d",
+   "category": "用药心得",
+   "content": "散：用慢惊散为最止泻。因脾虚必以补脾药为底子，如扁豆。\n慢惊散止泻最佳，必以补脾药为方底。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-d50edda0fc",
+   "category": "用药心得",
+   "content": "小儿慢脾风以止泻为要。止泻之法：大补元气、温中、祛寒、涩肠、利水、补气——当用米党、焦白术、炙草、枣仁；祛寒附子、北味（用热防太燥猛，故用北味伍而和之）；甘草、白芍二味亦用。\n慢脾风以止泻为第一要务：米党参、焦白术、炙草、枣仁补气；附子祛寒，配北五味防其燥；甘草、白芍和中敛肝。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-2528126733",
+   "category": "用药心得",
+   "content": "平肝：重用僵蚕、全蝎、蜈蚣、桂枝、木香。止寒虚汗：用桂枝、白芍、甘草，三味皆能实表。\n平肝重用僵蚕、全蝎、蜈蚣、桂枝、木香；止虚汗用桂枝、白芍、甘草实表。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-892b52fedf",
+   "category": "用药心得",
+   "content": "散：用至宝丹能止泻。凡止泻必用散以散结，能缩内脏之水也。\n至宝丹止泻；止泻必用散剂以散结缩水。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-dd3a901830",
+   "category": "用药心得",
+   "content": "补脾药以四君为主。如脾虚泄泻用药不效，须兼提气之药——书云\"浊气在下则生飧泄\"，故提清气而泻自止，当用干葛、柴胡、升麻等类药物。\n补脾以四君子汤为主；久泻不效须加干葛、柴胡、升麻等升提清气。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-bc7dffe46d",
+   "category": "用药心得",
+   "content": "去脾虚身热：用柴胡（大退脾经虚热且清元气，最要用）、白芍（敛气归阴）、银胡（不发表）、青蒿（大退身热）、地骨（退骨蒸正药）、鳖甲（引药入骨且又平肝）；或虚甚用秦艽、胡连；或有虚汗热用乌梅三个，一敛即能退热。\n脾虚发热：柴胡、白芍、银柴胡、青蒿、地骨皮、鳖甲；虚甚加秦艽、胡黄连；虚汗热用乌梅收敛。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-69155c5e87",
+   "category": "用药心得",
+   "content": "独肝虚无风症急症为缓症，不必用猛，宜用补脾中和药，如六神散之类，久服自能见效，不必用苦寒、不必用温燥之药，或以肥儿糕做果子饲之。\n单纯脾虚属缓症，用六神散等平和之剂久服，不用苦寒温燥，可用肥儿糕食疗。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-804946a017",
+   "category": "用药心得",
+   "content": "小儿伤湿（伤食）用消食之药不应，缘饮食大伤脾胃而成积滞之故，当用莪术（最消食积又不伤胃）、谷芽（消食而生胃气）、川朴（破滞），兼用杏仁、槟榔、白术等补消兼行。或小儿伤食脾不虚者欲其速效，当微泻之，用宣风散。凡伤食不是伤肉食者，山楂宜少用，为其消胃气且解参、芪、术之力也。\n消食不应则用莪术（消积不伤胃）、谷芽、川朴，配杏仁、槟榔、白术补消兼行；脾不虚欲速效微泻用宣风散；非肉食积山楂宜少用。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-582f22e5b3",
+   "category": "用药心得",
+   "content": "小儿脾虚，问其是否曾食肥腻寒滞之物，致内生风痰、食酿胸膈、膈上痰水潮心，则目闭痰鸣、手足冷、不省人事、如惊风发厥状。若不知此而误服惊风药，不独不效且生燥热之患。宜用四君子汤加川朴、尖槟、砂仁、莪术、半夏、桔梗等即醒，醒脾也最妙；或开万应丸、胃苓散。凡消食药物丸散，用此一方最稳。\n注意\"食厥\"：食肥腻生痰，痰水潮心而目闭痰鸣、手足冷、不省人事，状似惊风——不可误投惊风药，当用四君子加川朴、尖槟、砂仁、莪术、半夏、桔梗醒脾。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-16a7e65398",
+   "category": "用药心得",
+   "content": "去疳当用：莪术、三棱、尖槟、山楂、桔梗、元明粉、杏仁、使君、神曲、海螵蛸等，此长行治疳之药。顽积：用干漆、芜荑、蚊蛤、白矾，俱猛药，当慎用。虫积：用川楝子、使君子、榧子、凤仙子、胡连、榧子、雷丸、乌梅、杏仁、芦荟、百部。\n常行消疳药：莪术、三棱、尖槟、山楂、元明粉、使君子、神曲、海螵蛸；顽积用干漆、芜荑、白矾（猛药慎用）；虫积用川楝子、使君子、榧子、雷丸、乌梅、芦荟、百部等。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-2d316a767c",
+   "category": "用药心得",
+   "content": "肝脾二经用前长行之药，问其有肺、心、肾之积者则用后药：肺疳加紫菀、杏仁；心疳加远志、川连、枳实；肾疳加远志、砂仁。疳症身热用龙胆草、芦荟、秦艽、鳖甲、胡连；丸散择用，开疳积散或转笑散、胃苓散。\n随经加药：肺疳紫菀杏仁、心疳远志川连枳实、肾疳远志砂仁；疳热身热用龙胆草、芦荟、秦艽、鳖甲、胡连。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-4775c2fb99",
+   "category": "用药心得",
+   "content": "小儿脾虚肿胀：腹胀则用枳实（此味破积最好，若胃脘心窝有痰水者，非此开导药不能到）、川朴、郁李仁、大腹皮。寒加用草果（其气力雄猛，用以达中最速）；热加用枳实、川连，胸滞积气非此不达；莱菔子炒用。手足肿用利水：茯苓、防己、郁李仁、川加皮、木瓜、干地龙，用以刮水消肿甚妙；再有补土药以克水则肿自消。平肝以补脾用白芍、木瓜、川楝壳、全蝎梢。\n脾虚肿胀：枳实破积、川朴、郁李仁、大腹皮行气；寒加草果、热加川连枳实莱菔子；手足肿用茯苓、防己、郁李仁、五加皮、木瓜、地龙利水，再以补土克水；平肝用白芍、木瓜、川楝壳、全蝎梢。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-be1e5189f6",
+   "category": "用药心得",
+   "content": "泻药戒律：小儿热症用凉药、泻心肝药，虽大凉者无过寒之患；若泻肺、脾、肾之凉，虽热症亦当慎用，以其脾胃过凉能脱元气也。又有\"有胃则生、无胃则死\"，故泻胃药亦宜慎用，中病则已。热渴：用干葛、花粉、麦冬，系兼带凉润之味。泻肝：用川连、龙胆、丹皮、黑栀、羚羊。泻肺：用桑白、枇杷叶、花粉、款冬、天冬。泻胃：用知母、石膏、茅根、人中白、人中黄。泻脾：用大黄、朴硝、黄芩。泻肾：用六味丸，或用元参、丹皮、泽泻、黄柏。\n泻心肝可放胆用凉；泻肺脾肾须慎（过凉脱元气）；泻胃药中病即止。各经泻药：心肝—川连龙胆丹皮黑栀羚羊；肺—桑白枇杷叶花粉款冬天冬；胃—知母石膏茅根人中白人中黄；脾—大黄朴硝黄芩；肾—六味丸或元参丹皮泽泻黄柏。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-75aba4469a",
+   "category": "用药心得",
+   "content": "小儿咳嗽之症，首先在肺经用意，次在心经、脾胃经。理热痰在肺，理食痰在脾胃，寒痰亦在胃。干咳为燥火，清润在肺：用天冬、麦冬、百合、玉竹、瓜霜，以上皆润药；夹惊热用枇杷叶（此味最治热咳）、款冬、紫菀、桑白。治肺湿：苡仁、旋覆花、茯苓、防己。\n治咳先肺次心脾：燥火干咳用天冬、麦冬、百合、玉竹、瓜霜清润；热咳用枇杷叶、款冬、紫菀、桑白；肺湿用苡仁、旋覆花、茯苓、防己。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-814382cc1b",
+   "category": "用药心得",
+   "content": "痰嗽必降气：用前胡、杏霜、瓜霜、花粉（以上去热痰）；苏子、川贝、莱菔子、葶苈（肺气喘不能卧者此味最妙，以上治气痰）；半夏、胆星、川朴、尖槟、大腹皮、神曲、山楂、麦芽（以上治脾胃湿、食之痰）。\n痰嗽以降气为先：热痰前胡杏霜瓜霜花粉；气痰苏子川贝莱菔子葶苈；湿食痰半夏胆星川朴尖槟大腹皮神曲山楂麦芽。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-791b7677c1",
+   "category": "用药心得",
+   "content": "治热咳以泻心火之药佐之——心属火，泻之免克肺金。治寒嗽、寒痰用温胃之药，即温肺当用白蔻（肺经主药）兼温胃；白附子寒痰主药；余温胃去痰之药见前。丸散：有痰必用珠珀惊痰散，其余各项丸散可任意参用。\n热咳佐泻心火药；寒嗽寒痰温胃（白蔻温肺兼温胃、白附子为寒痰主药）；有痰必配珠珀惊痰散。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-646c949072",
+   "category": "总论",
+   "content": "以上八般症候，小儿日常之病不外乎此。间有别病，亦古板之症，当求古书一定治法。予不能述，唯向日常所多见而治法与人不同、经自己实验者录而存之。今分详八则，症方并授，但能熟习灵活通融，首、中、尾皆相应，则有数十症候深意无穷矣。如每则条下俱有某症加用某药之说，则一条之加是一症候矣；八则方论后皆有数条加法，则是共有数十症候矣。\n八症之外的小儿病，按古书定法治疗即可。八症每条的加减法合起来就是数十个具体证候——熟习灵活运用，方为首尾相应。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-13862af3b1",
+   "category": "总论",
+   "content": "八症者何？即风热、急惊风、慢惊风、慢脾风、脾虚、疳积、燥火、咳嗽是也。治法六字者何？平肝、补脾、泻心是也。盖小儿肝常有余、脾常不足、心火常炎，染病多由此致，若知因而造其极，则病无不愈。\n小儿体质三大特点：肝常有余、脾常不足、心火常炎。八症的治法归纳起来只有六个字——平肝、补脾、泻心，或单用其一，或兼其二，或三者并用。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-01d32e6738",
+   "category": "总论",
+   "content": "纹浮主表、纹沉主里。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-2369d1df08",
+   "category": "总论",
+   "content": "纹紫主热、纹青主风；青紫难辨时须结合外候判断。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-df30930ed7",
+   "category": "总论",
+   "content": "纹淡主虚、纹滞主实。按：原书此歌原缺，今据《幼幼集成》补入以成其全。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-77f28f751d",
+   "category": "杂论",
+   "content": "所谓三症者，即疟、暑、痢三症也。此三症不列入前八症之内者何也？因大人亦有此症，故另列于后。小儿疟疾是由暑伏于内，夏季受之待秋而发者多，故经云\"夏伤于暑秋为疟\"。初起由风邪感于皮毛、外湿引内邪聚于少阳之经，此经属半表半里：入里是太阴脾经，阴气作则寒；出外是阳明胃经，阳气作则热；阴阳交争则寒热往来。夏受而秋发者为秋疟；亦有现受暑邪、祛里不彻、暑邪传入少阳者为暑疟；亦有脾受湿、因风而作者为湿疟、食疟；又有初起阳气胜、净热无寒、有期而作者为阳疟、又为瘅疟；又有日久脾胃气弱，则阴气胜、净寒无热者为阴疟、又名寒疟；又有腹中积滞成块发现者名为疟母；又有外感伤寒、发表未透、邪入少阳之界，出与阳争阳胜则热、入与阴争阴胜则寒，故阴阳交争则寒热往来，有期而作者则为疟症。\n疟疾总因暑伏于内、邪聚少阳，阴阳交争而寒热往来。分型：秋疟、暑疟、湿疟食疟、阳疟（瘅疟）、阴疟（寒疟）、疟母、伤寒转疟。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-62f3d9514c",
+   "category": "杂论",
+   "content": "小儿伤暑之症，由夏月在日中晒冒风热，因而内热发作，大渴饮冷，致水停胸次，时作呕吐泄泻；内热熏逼，外油油然汗出身热。以上是暑症之常。甚至肝木乘机以克脾土，则变成慢惊者往往有之，外候如慢惊一般，以慢惊、暑症两门参同治之。两岁以后小儿有上项之症者，乃自感受暑邪而来；两岁以前小儿由乳母在日光中操作汗出、身有暑气，儿啼即把乳之，上受暑气又食暑乳，而内夹惊、夹风、夹痰、夹湿、夹热随症而出。治法以消暑为主，有是因则用是药，随症加减。又有小儿感时之气、内发湿热，多咳嗽身热，出麻疹、出白痱子。若治麻以凉血、托口、解暑湿、清心脾胃之火为要。如净出白痱子，满身如撒小珍珠状、胸背独密、外兼身热干咳者，治以肺中湿热、心经伏火为要，间有出斑疹者看后加减分条治法。又有暑症已备，因吐泻而动胃气、四肢筋抽掣，此症为霍乱转筋，俗名反筋腹泻——因胃中有宗筋为周身筋脉之宗，今吐泻动乱胃气、胃犯宗筋，故周身四肢筋脉应动。治亦平肝补脾之法。因肝主筋、肝木犯胃、胃脾气虚受肝克制，故有是症。治法：脾虚用官方六和汤，实症用香薷饮加重木瓜，开胃苓散。\n暑症：暑热内蒸、水停胸中而呕泻、身热汗出；重则肝木乘脾变成慢惊（两门合参）。两岁前由乳母受暑酿乳所致。治法以消暑为主；夹麻夹痱按凉血清肺治；暑症转筋（霍乱转筋）者脾虚用六和汤、实证用香薷饮加木瓜。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-4868c6613c",
+   "category": "杂论",
+   "content": "儿脐风，前辈只知风入脐内，以致撮口噤口；殊不知风入有深浅，死生有异。三朝七日眼边黄，便是脐风肝受伤，急将灯火十三点，此是医门第一方。\n脐风：生后三至七日内两眼眦发黄即是先兆，急用灯火十三灼。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-8427e8504e",
+   "category": "杂论",
+   "content": "胎寒，下地后或半日、一日内，通面带青如靛染，口不吮乳，先有啼声后复不啼而昏迷者是也。观儿两眼、鼻准无黄色，口又不吹嘘，征是胎寒。先于精灵、威灵二穴对拿紧，并将昆仑穴拿紧，其声稍出即用十五元宵火断之；或声不出，亦用此火，则声必出、乳必吸、青色必渐退矣。然此症须防作吐——胎寒者脏腑皆寒，胃先纳乳、胃寒不能纳故必吐。治用人参一分、桔梗一钱、白术三分、藿香五分，服之即愈。亦有发之迟者：胎有寒而外无感冒，则迟之二三日之间；胎有寒而下地复感其寒，故即发于半日一日之内。面必青色、唇白、泻白，或睡、或腹痛、或口不吮乳、四肢必冷，或手拳脚擎、或啼哭不已，皆胎寒也。治之切勿认为脐风，当以辨脐风之法辨之，治宜用理中汤加附子。迟久或变为盘肠内吊。此症由娠母好食生冷、坐卧贪凉所至。\n胎寒：生后通面青如靛染、不吮乳、不啼而昏。先对拿精灵威灵、拿昆仑，用元宵火；服药人参桔梗白术藿香，重者理中汤加附子。由母好食生冷、贪凉所致。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-4c08cace83",
+   "category": "杂论",
+   "content": "胎热者，通面大红。红虽赤子本色，惑人不能辨——盖本色红而淡、淡而正；热色深红而燥、燥而色杂，如满口热气蒸郁，或面肿而红紫、口气蒸手，或大便闭结、小便短赤、目内红赤，此皆胎热也。如牙关肿硬不能吸乳，用银簪于牙上下合骨处刺破出血，而乳自能吸。随用连翘一钱、伏龙肝二钱、车前子一钱煎服，或用大连翘饮。此症由娠母喜睡火炕、好食辛炒所致。\n胎热：面深红而燥、口气热、便结、尿赤、目红。牙关肿硬者银簪刺破出血；服连翘、伏龙肝、车前子或大连翘饮。由母嗜热辛炒所致。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-5563f06dd3",
+   "category": "杂论",
+   "content": "此证由娠妇常浴热汤、或久卧火炕、或过食煎炒辛辣。其候丹发头面四肢、赤色游走不定。先用天保采薇汤表散，次用大连翘饮。或伤乳发丹、大便闭结，宜用四顺清凉饮。\n胎毒发丹：头面四肢赤色游走不定，先表散（天保采薇汤）、次清热（大连翘饮）；便闭用四顺清凉饮。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-00863cff17",
+   "category": "杂论",
+   "content": "胎惊胎风：惊与风名异而症同，如面青搐搦、口噤身热背强者是也。\n胎惊胎风：面青、抽搐、口噤、身热、背强。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-137db0a57c",
+   "category": "杂论",
+   "content": "胎黄：生下遍体面目皆黄，如金色，壮热、大便不通、小便如栀汁、乳食不思、啼哭不止。\n胎黄：遍身金黄、壮热、便闭、尿黄如栀子汁、不思乳、啼哭。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-19d62f375f",
+   "category": "杂论",
+   "content": "小儿生下，三十二日一变，六十四日一蒸……变蒸者，生五脏之形神也；其候身热、微惊、耳冷、尻冷、上唇起白泡如鱼目珠子者是也，不可作惊风治。\n蒸变：生后三十二日一变、六十四日一蒸，身微热、耳尻冷、上唇起白泡如鱼目——生理性发热，不可当惊风误治。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-ee5c83597d",
+   "category": "杂论",
+   "content": "脾实热：面黄带赤、唇红、口渴、眼红、大便硬、小便黄；脾虚热：面萎黄、神倦、食少、午后热。\n脾实热面黄带赤、唇红口渴便硬；脾虚热面萎黄神倦、午后发热。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-b3991ec669",
+   "category": "杂论",
+   "content": "心实热：面红唇赤、舌红、小便短赤、或啼哭烦躁；心虚热：面无光彩、惊悸、盗汗。\n心实热面红舌红尿赤烦躁；心虚热面少华、惊悸盗汗。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-5cd096251b",
+   "category": "杂论",
+   "content": "心经热极似惊：心火盛则热极生风，症见目直视、咬牙、手足抽掣、面红唇赤、小便短赤，此热极似惊，非真惊风也，清心泻火则愈。\n心火盛可热极似惊（直视咬牙抽掣），与真惊风鉴别要点在面红唇赤、尿短赤，清心火即愈。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  },
+  {
+   "module": "pediatrics",
+   "origin_id": "p-t-ba22215db9",
+   "category": "药性赋",
+   "content": "《幼科铁镜》卷六\"药性赋幼科摘要\"。夏氏药性小引云：\"医家治病如经生制艺然……爱约略幼科常用百味之性，列于篇下以便详究，以供采择。\"\n按：此为原书《幼科铁镜》药性赋之幼科摘要，据原著整理，个别模糊字以医理校订；临证仍以程氏\"用药秘验杂说\"为主。",
+   "source": "《程氏家传儿科秘要》",
+   "extra": {
+    "name": ""
+   }
+  }
+ ]
+}

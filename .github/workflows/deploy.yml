@@ -1,0 +1,62 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 部署目标
+        required: true
+        default: backend
+        type: choice
+        options: [backend, frontend, both]
+
+jobs:
+  deploy:
+    name: 部署到生产服务器
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 配置 SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+
+      - name: 同步后端代码到暂存区
+        if: inputs.target == 'backend' || inputs.target == 'both'
+        run: |
+          rsync -az --delete \
+            --exclude '.env' --exclude 'uploads' --exclude '__pycache__' --exclude '*.pyc' \
+            --exclude '.venv-test' --exclude 'tests' --exclude '*.db' \
+            platform/backend/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/root/tcm-platform/backend/
+
+      - name: 同步前端 dist 到暂存区
+        if: inputs.target == 'frontend' || inputs.target == 'both'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: 构建前端
+        if: inputs.target == 'frontend' || inputs.target == 'both'
+        run: |
+          cd platform/web && npm ci || npm install
+          npm run build
+          rsync -az --delete dist/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/tcm-platform/dist.new/
+
+      - name: 服务器应用(重建后端 + 健康检查 + 切换前端)
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'REMOTE'
+            set -e
+            cd /root/zhilou-clinic
+            rsync -a --delete --exclude '.env' --exclude 'uploads' --exclude '__pycache__' --exclude '*.pyc' \
+              /root/tcm-platform/backend/ backend/
+            docker compose up -d --build backend
+            for i in $(seq 1 30); do curl -sf http://127.0.0.1:8001/api/health >/dev/null && break; sleep 5; done
+            curl -s http://127.0.0.1:8001/api/health
+            if [ -d /var/www/tcm-platform/dist.new ]; then
+              cd /var/www/tcm-platform
+              [ -d dist.old ] && rm -rf dist.old
+              mv dist dist.old 2>/dev/null || true
+              mv dist.new dist
+            fi
+            echo DEPLOY_OK
+          REMOTE
