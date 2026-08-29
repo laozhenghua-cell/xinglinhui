@@ -7,7 +7,7 @@
 
         <el-form label-position="top">
           <el-form-item label="专科范围">
-            <el-select v-model="form.module" placeholder="不限专科(跨专科辨证)" style="width: 260px">
+            <el-select v-model="form.module" placeholder="不限专科(跨专科辨证)" class="module-select">
               <el-option label="不限专科(跨专科)" value="" />
               <el-option label="外科疮疡" value="surgery" />
               <el-option label="肛肠痔漏" value="anorectal" />
@@ -38,8 +38,13 @@
           <template #header>
             <b>辨证结果</b>
             <el-tag size="small" type="success" style="margin-left:10px">知识总库匹配 · 3532 条内容</el-tag>
-            <el-button text size="small" style="float:right" @click="router.push('/kb/search?q=' + encodeURIComponent(mainName))">总库检索「{{ mainName }}」</el-button>
+            <span style="float:right">
+              <el-button text size="small" @click="printReport">🖨️ 打印/导出报告</el-button>
+              <el-button text size="small" @click="router.push('/kb/search?q=' + encodeURIComponent(mainName))">总库检索「{{ mainName }}」</el-button>
+            </span>
           </template>
+
+          <div class="med-disclaimer">⚠️ 本结果由中医典籍知识库与 AI 辅助生成,仅供学习参考,不构成医疗建议;急危重症请立即线下就医。</div>
 
           <div v-if="visionResult" class="vision-block">
             <h4>📷 拍照辨病(Qwen-VL)</h4>
@@ -47,7 +52,7 @@
           </div>
 
           <el-row :gutter="16">
-            <el-col :span="12">
+            <el-col :xs="24" :sm="12">
               <h4>证型匹配 <el-tag size="small" type="purple" v-for="s in result.syndromes" :key="s.id" style="margin-left:4px">{{ MODULE_NAMES[s.module] }}</el-tag></h4>
               <div v-if="!result.syndromes.length" class="empty">未匹配到证型,请补充四诊信息</div>
               <div v-for="s in result.syndromes" :key="s.id" class="match-item">
@@ -64,7 +69,7 @@
                 </div>
               </div>
             </el-col>
-            <el-col :span="12">
+            <el-col :xs="24" :sm="12">
               <h4>病种匹配</h4>
               <div v-if="!result.diseases.length" class="empty">未匹配到病种</div>
               <div v-for="d in result.diseases" :key="d.id" class="match-item">
@@ -120,7 +125,7 @@
           <div v-for="(list, mod) in result.formulas" :key="mod" style="margin-bottom:12px">
             <div class="mod-label">{{ MODULE_NAMES[mod] || mod }}</div>
             <el-row :gutter="10">
-              <el-col v-for="f in list" :key="f.id" :span="8">
+              <el-col v-for="f in list" :key="f.id" :xs="24" :sm="8">
                 <el-card shadow="hover" class="formula-card" @click="router.push('/kb/formulas/' + f.id)">
                   <b>{{ f.name }}</b><span class="src">{{ f.source }}</span>
                   <div class="fx">{{ (f.function || '').slice(0, 24) }}</div>
@@ -132,16 +137,39 @@
 
           <div v-if="result.systems" class="sys-block">
             <h4>🧭 辨证体系对照(八纲 · 六经 · 卫气营血 · 脏腑 · 三焦 · 经络)</h4>
+            <div class="sys-summary-strip">
+              <span class="ss-label">结论链</span>
+              <span v-for="(sys, sk) in result.systems" :key="sk" class="ss-chip" :class="{ 'ss-empty': sys.summary === '信息不足' }">
+                <b>{{ SYS_SHORT[sk] || sys.name }}</b>{{ sys.summary }}
+              </span>
+              <span v-if="result.consistency && result.consistency.score !== null" class="ss-cons" :class="{ 'ss-bad': result.consistency.score < 0.6 }">
+                {{ result.consistency.verdict }}({{ Math.round(result.consistency.score * 100) }}%)
+              </span>
+            </div>
             <el-row :gutter="10">
-              <el-col v-for="(sys, sk) in result.systems" :key="sk" :span="8">
-                <div class="sys-card">
-                  <div class="sys-head">{{ sys.name }}<span class="sys-conf">{{ Math.round((sys.confidence || 0) * 100) }}%</span></div>
+              <el-col v-for="(sys, sk) in result.systems" :key="sk" :xs="24" :sm="12" :md="8">
+                <div class="sys-card" :class="{ 'sys-empty': sys.summary === '信息不足' }">
+                  <div class="sys-head">{{ sys.name }}<span class="sys-conf" v-if="sys.summary !== '信息不足'">{{ Math.round((sys.confidence || 0) * 100) }}%</span></div>
                   <div class="sys-main">{{ sys.summary }}</div>
-                  <div v-for="t in sys.top" :key="t.key" class="sys-item">
-                    <b>{{ t.name }}</b>({{ t.score }} 分)
-                    <div class="sys-hits"><el-tag v-for="h in t.hits" :key="h" size="small" type="info" style="margin:0 2px 2px 0">{{ h }}</el-tag></div>
-                    <div class="sys-exp">{{ t.explain }}</div>
-                  </div>
+                  <template v-if="sys.summary !== '信息不足'">
+                    <div v-if="sk === 'bagang' && bagangPairs(sys).length" class="sys-pairs">
+                      <span v-for="(p, i) in bagangPairs(sys)" :key="i" class="bp-chip">{{ p }}</span>
+                    </div>
+                    <div class="sys-top1">
+                      <b>{{ sys.top[0].name }}</b>({{ sys.top[0].score }} 分)
+                      <div class="sys-hits"><el-tag v-for="h in sys.top[0].hits" :key="h" size="small" type="info" style="margin:0 2px 2px 0">{{ h }}</el-tag></div>
+                      <div class="sys-exp">{{ sys.top[0].explain }}</div>
+                    </div>
+                    <el-collapse v-if="sys.top.length > 1" class="sys-more">
+                      <el-collapse-item :title="`其余候选 ${sys.top.length - 1} 个`" :name="sk">
+                        <div v-for="t in sys.top.slice(1)" :key="t.key" class="sys-item">
+                          <b>{{ t.name }}</b>({{ t.score }} 分)
+                          <div class="sys-hits"><el-tag v-for="h in t.hits" :key="h" size="small" type="info" style="margin:0 2px 2px 0">{{ h }}</el-tag></div>
+                          <div class="sys-exp">{{ t.explain }}</div>
+                        </div>
+                      </el-collapse-item>
+                    </el-collapse>
+                  </template>
                 </div>
               </el-col>
             </el-row>
@@ -169,22 +197,25 @@
                 <span class="consist-verdict">{{ result.consistency.verdict }}</span>
               </div>
               <div class="consist-pairs">
-                <span v-for="(p, i) in result.consistency.pairs" :key="i" class="c-pair" :class="{ 'c-bad': p.endsWith('✗') }">{{ p }}</span>
+                <span v-for="(p, i) in (showAllPairs ? result.consistency.pairs : result.consistency.pairs.slice(0, 6))" :key="i" class="c-pair" :class="{ 'c-bad': !p.ok }">{{ p.text }}</span>
+                <el-button v-if="result.consistency.pairs.length > 6" link type="primary" size="small" @click="showAllPairs = !showAllPairs">
+                  {{ showAllPairs ? '收起' : `展开全部 ${result.consistency.pairs.length} 对` }}
+                </el-button>
               </div>
             </div>
           </div>
 
           <h4 style="margin-top:18px">关联内容</h4>
           <el-row :gutter="10">
-            <el-col :span="8">
+            <el-col :xs="24" :sm="8">
               <div class="mod-label">医案({{ (result.related.cases || []).length }})</div>
               <div v-for="c in result.related.cases" :key="c.id" class="rel-item" @click="router.push('/kb/cases/' + c.id)">{{ c.title }}</div>
             </el-col>
-            <el-col :span="8">
+            <el-col :xs="24" :sm="8">
               <div class="mod-label">要诀({{ (result.related.tips || []).length }})</div>
               <div v-for="t in result.related.tips" :key="t.id" class="rel-item" @click="router.push('/kb/tips/' + t.id)">{{ t.category }}:{{ (t.content || '').slice(0, 30) }}…</div>
             </el-col>
-            <el-col :span="8">
+            <el-col :xs="24" :sm="8">
               <div class="mod-label">引药({{ (result.related.dulong || []).length }})</div>
               <div v-for="d in result.related.dulong" :key="d.id" class="rel-item" @click="router.push('/kb/dulong/' + d.id)">{{ d.disease }} → {{ d.guide }}</div>
             </el-col>
@@ -201,7 +232,7 @@
               </el-descriptions>
             </el-collapse-item>
           </el-collapse>
-          <div v-else class="empty" style="margin-top:12px">AI 报告暂不可用,已按知识库规则匹配(可稍后重试)</div>
+          <div v-else-if="aiRequested" class="empty" style="margin-top:12px">AI 报告暂不可用(服务繁忙或限流),已按知识库规则匹配,可稍后重试</div>
         </el-card>
       </div>
 
@@ -230,6 +261,8 @@ const router = useRouter()
 const route = useRoute()
 
 const MODULE_NAMES = { anorectal: '肛肠痔漏', surgery: '外科疮疡', pediatrics: '儿科', alchemy: '丹药研究' }
+const SYS_SHORT = { bagang: '八纲', liujing: '六经', weiqiyingxue: '卫气营血', zangfu: '脏腑', sanjiao: '三焦', jingluo: '经络' }
+const BAGANG_PAIRS = [['表', '里'], ['寒', '热'], ['虚', '实'], ['阴', '阳']]
 const commonSymptoms = ['发热', '咳嗽', '红肿热痛', '疮顶脓头', '便血', '肛门坠胀', '腹泻', '便秘', '呕吐', '纳差', '口渴', '舌红', '脉数', '脉浮', '瘙痒', '疼痛拒按', '神疲乏力', '夜啼']
 
 const form = reactive({ module: '', symptoms: [], tongue: '', pulse: '', local: '', systemic: '', detail: '', use_ai: true })
@@ -266,6 +299,21 @@ const visionSummary = computed(() => {
 const loading = ref(false)
 const result = ref(null)
 const records = ref([])
+const showAllPairs = ref(false)
+const aiRequested = ref(false)
+
+function bagangPairs(sys) {
+  const byKey = {}
+  for (const t of sys.top || []) byKey[t.key] = t
+  return BAGANG_PAIRS.filter(([a, b]) => byKey[a] || byKey[b]).map(([a, b]) => {
+    const sa = byKey[a]?.score ?? 0
+    const sb = byKey[b]?.score ?? 0
+    if (sa === 0 && sb === 0) return null
+    const win = sa >= sb ? byKey[a].name : byKey[b].name
+    return `${a}/${b}→${win}`
+  }).filter(Boolean)
+}
+function printReport() { window.print() }
 
 const mainName = computed(() => {
   const s = result.value?.syndromes?.[0]?.name
@@ -301,8 +349,11 @@ async function run() {
   }
   loading.value = true
   try {
+    aiRequested.value = !!form.use_ai
     const res = await dxAnalyze({ ...form })
     result.value = res
+    showAllPairs.value = false
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     await loadRecords()
   } catch (e) {
     ElMessage.error('辨证失败:' + (e?.response?.data?.detail || e.message))
@@ -317,7 +368,12 @@ async function loadRecords() {
   } catch { records.value = [] }
 }
 function loadRecord(r) {
-  dxRecord(r.id).then(res => { result.value = res.result }).catch(() => {})
+  dxRecord(r.id).then(res => {
+    result.value = res.result
+    aiRequested.value = !!res.result?.ai
+    showAllPairs.value = false
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }).catch(() => {})
 }
 function recordSummary(r) {
   const rr = r.result || {}
@@ -381,4 +437,27 @@ function fmtTime(t) {
 .sys-item { font-size: 12.5px; margin: 6px 0; border-top: 1px dashed #eee; padding-top: 4px; }
 .sys-hits { margin: 2px 0; }
 .sys-exp { color: #8A94A0; font-size: 11.5px; }
+.module-select { width: 100%; max-width: 260px; }
+.med-disclaimer { background: #FFF7F0; border: 1px solid #F3D5BE; color: #9C5B2D; border-radius: 8px; padding: 6px 12px; font-size: 12.5px; margin-bottom: 12px; }
+.sys-summary-strip { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 10px; padding: 8px 10px; background: #fff; border: 1px solid var(--xl-line); border-radius: 8px; }
+.ss-label { font-weight: 700; color: var(--xl-deep); font-size: 13px; margin-right: 2px; }
+.ss-chip { font-size: 12.5px; background: #F2F7F4; border: 1px solid #D5E8DC; color: #35684C; border-radius: 5px; padding: 2px 7px; }
+.ss-chip b { margin-right: 4px; }
+.ss-empty { background: #F5F5F5; border-color: #E5E5E5; color: #9a9a9a; }
+.ss-cons { font-size: 12.5px; font-weight: 700; color: #3E7C55; background: #E2F2E9; border: 1px solid #BFE0CC; border-radius: 5px; padding: 2px 8px; margin-left: auto; }
+.ss-bad { color: #A05A2C; background: #F9E8D8; border-color: #E8C97A; }
+.sys-empty .sys-main { color: #9a9a9a; font-size: 13px; }
+.sys-top1 { font-size: 12.5px; margin: 6px 0 2px; border-top: 1px dashed #eee; padding-top: 4px; }
+.sys-pairs { display: flex; flex-wrap: wrap; gap: 4px; margin: 2px 0 6px; }
+.bp-chip { font-size: 12px; color: #4C6B58; background: #EDF5F0; border-radius: 4px; padding: 1px 6px; }
+.sys-more { border-top: none; margin-top: 4px; }
+.sys-more :deep(.el-collapse-item__header) { font-size: 12px; color: #7a8a80; height: 30px; line-height: 30px; background: transparent; border-bottom: none; }
+.sys-more :deep(.el-collapse-item__wrap) { border-bottom: none; }
+@media print {
+  .dx-input-card, .dx-records, .med-disclaimer { display: none !important; }
+  .dx-body { max-width: 100%; padding: 0; margin: 0; }
+  .dx-page { background: #fff; }
+  .el-collapse-item__content { display: block !important; }
+  body { background: #fff; }
+}
 </style>

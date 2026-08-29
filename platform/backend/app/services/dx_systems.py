@@ -188,7 +188,7 @@ def _consistency(out: dict[str, Any]) -> dict[str, Any]:
                 ok = any(_pair_aligned(a, active[a], "bagang", c) for c in comps)
             if ok:
                 aligned += 1
-            pairs_out.append(f"{_SYS_NAME[a]}↔{_SYS_NAME[b]}:{active[a]}↔{active[b]}{'✓' if ok else '✗'}")
+            pairs_out.append({"text": f"{_SYS_NAME[a]}↔{_SYS_NAME[b]}:{active[a]}↔{active[b]}{'✓' if ok else '✗'}", "ok": ok})
     score = round(aligned / checked, 2) if checked else None
     if score is None:
         verdict = "体系对照库未覆盖该组合"
