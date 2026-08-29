@@ -15,9 +15,12 @@ const routes = [
         meta: { title: '新建就诊', module: 'clinic', public: true } },
       { path: 'clinic/:id', name: 'ClinicDetail', component: () => import('@/views/clinic/ClinicDetail.vue'),
         meta: { title: '就诊详情', module: 'clinic', public: true } },
-      // ---- 症状辨证(选择症状 → 典籍规则引擎六体系辨证) ----
+      // ---- 病种辨证(专科库:疮疡/痔漏/儿科/丹药) ----
       { path: 'dx', name: 'DxCenter', component: () => import('@/views/dx/DxCenter.vue'),
-        meta: { title: '症状辨证', module: 'dx', public: true } },
+        meta: { title: '病种辨证', module: 'dx', public: true } },
+      // ---- 六体系辨证(八纲/六经/卫气营血/脏腑/三焦/经络) ----
+      { path: 'systems', name: 'SystemsDx', component: () => import('@/views/dx/SystemsDx.vue'),
+        meta: { title: '六体系辨证', module: 'dx', public: true } },
       // ---- 知识总库 ----
       {
         path: 'kb',

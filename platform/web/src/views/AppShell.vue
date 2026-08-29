@@ -19,7 +19,10 @@
           <el-icon><FirstAidKit /></el-icon><template #title>门诊诊疗</template>
         </el-menu-item>
         <el-menu-item index="/dx">
-          <el-icon><MagicStick /></el-icon><template #title>症状辨证</template>
+          <el-icon><MagicStick /></el-icon><template #title>病种辨证</template>
+        </el-menu-item>
+        <el-menu-item index="/systems">
+          <el-icon><Compass /></el-icon><template #title>六体系辨证</template>
         </el-menu-item>
         <el-menu-item index="/kb">
           <el-icon><Collection /></el-icon><template #title>知识总库</template>
@@ -48,7 +51,7 @@
           <el-button size="small" type="primary" @click="router.push('/clinic/new')">
             <el-icon><Plus /></el-icon>&nbsp;新建就诊
           </el-button>
-          <el-button size="small" plain @click="router.push('/dx')">症状辨证</el-button>
+          <el-button size="small" plain @click="router.push('/systems')">六体系辨证</el-button>
         </div>
       </header>
       <main class="shell-body">
@@ -61,7 +64,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { Odometer, FirstAidKit, MagicStick, Collection, Reading, TrendCharts, Fold, Plus } from '@element-plus/icons-vue'
+import { Odometer, FirstAidKit, MagicStick, Compass, Collection, Reading, TrendCharts, Fold, Plus } from '@element-plus/icons-vue'
 
 const route = useRoute()
 const router = useRouter()
