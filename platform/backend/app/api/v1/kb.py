@@ -131,6 +131,9 @@ async def kb_stats(db: AsyncSession = Depends(get_db)):
         count = (await db.execute(select(func.count()).select_from(model))).scalar() or 0
         tables[type_name] = count
         total += count
+        # 无 module 列的表(如典籍库)跳过按专科聚合
+        if "module" not in model.__table__.columns:
+            continue
         rows = (await db.execute(
             select(model.module, func.count()).group_by(model.module)
         )).all()
@@ -362,7 +365,7 @@ async def kb_list(
     """各类型列表(统一返回 {total, items})。"""
     model = _get_model(type)
     filters = []
-    if module:
+    if module and "module" in model.__table__.columns:
         filters.append(model.module == module)
     if category and hasattr(model, "category"):
         filters.append(model.category == category)
