@@ -309,19 +309,26 @@ def _match_names(src_names: list[str], cand_names: list[str]) -> list[str]:
     return list(dict.fromkeys(matched))[:5]
 
 
-async def _seed_classics_if_empty(db: AsyncSession) -> None:
-    """典籍表为空时导入种子条文(幂等)。"""
+async def _seed_classics(db: AsyncSession) -> int:
+    """按 (book, article) 幂等合并导入种子条文(已存在的跳过)。"""
     from pathlib import Path as _P
     import json as _j
 
-    cnt = (await db.execute(select(func.count()).select_from(KbClassic))).scalar() or 0
-    if cnt:
-        return
     p = _P(__file__).resolve().parent.parent.parent / "data" / "classics_seed.json"
     data = _j.loads(p.read_text(encoding="utf-8"))
+    rows = (await db.execute(select(KbClassic.book, KbClassic.article))).all()
+    existing = {(b, a) for b, a in rows}
+    added = 0
     for c in data["classics"]:
+        key = (c.get("book", ""), c.get("article", ""))
+        if key in existing:
+            continue
         db.add(KbClassic(**{k: c.get(k, "") for k in ("book", "chapter", "article", "original", "plain", "source")}))
-    await db.commit()
+        existing.add(key)
+        added += 1
+    if added:
+        await db.commit()
+    return added
 
 
 @router.get("/classics")
@@ -332,7 +339,7 @@ async def kb_classics(
     db: AsyncSession = Depends(get_db),
 ):
     """经典典籍条文检索。"""
-    await _seed_classics_if_empty(db)
+    await _seed_classics(db)
     stmt = select(KbClassic)
     if book:
         stmt = stmt.where(KbClassic.book == book)
