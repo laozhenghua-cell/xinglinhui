@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "辨证引擎评测集 v1",
-    "note": "标准答案依经典提纲(八纲/六经/卫气营血/脏腑/三焦/经络);labels 为四诊标签。评测调用 analyze_systems 对比 summary。"
+    "note": "标准答案依经典提纲(八纲/六经/卫气营血/脏腑/三焦/经络,含奇经八脉);另含六体系一致性交叉印证与动态推理(合病/并病/传变)评测。"
   },
   "samples": [
     {
@@ -559,7 +559,8 @@
         "脉弦"
       ],
       "expected": {
-        "zangfu": "肝气郁结"
+        "zangfu": "肝气郁结",
+        "consistency": 1.0
       }
     },
     {
@@ -658,7 +659,8 @@
         "脉数"
       ],
       "expected": {
-        "zangfu": "心火亢盛"
+        "zangfu": "心火亢盛",
+        "consistency": 1.0
       }
     },
     {
@@ -771,7 +773,8 @@
       ],
       "expected": {
         "zangfu": "风寒束肺",
-        "liujing": "太阳病"
+        "liujing": "太阳病",
+        "consistency": 1.0
       }
     },
     {
@@ -786,7 +789,8 @@
       ],
       "expected": {
         "zangfu": "风热犯肺",
-        "weiqiyingxue": "卫分证"
+        "weiqiyingxue": "卫分证",
+        "consistency": 1.0
       }
     },
     {
@@ -828,7 +832,8 @@
       ],
       "expected": {
         "zangfu": "肾阳虚",
-        "liujing": "少阴病"
+        "liujing": "少阴病",
+        "consistency": 1.0
       }
     },
     {
@@ -1630,7 +1635,8 @@
       ],
       "expected": {
         "sanjiao": "邪犯肺卫",
-        "weiqiyingxue": "卫分证"
+        "weiqiyingxue": "卫分证",
+        "consistency": 1.0
       }
     },
     {
@@ -2062,6 +2068,257 @@
       ],
       "expected": {
         "jingluo": "足太阳膀胱经"
+      }
+    },
+    {
+      "id": "j18",
+      "desc": "冲脉病候(逆气里急)",
+      "labels": [
+        "气上冲",
+        "少腹里急",
+        "月经不调",
+        "崩漏"
+      ],
+      "expected": {
+        "jingluo": "冲脉"
+      }
+    },
+    {
+      "id": "j19",
+      "desc": "带脉病候(腰溶溶如坐水中)",
+      "labels": [
+        "腰冷如坐水中",
+        "赤白带下",
+        "腹满",
+        "腰溶溶"
+      ],
+      "expected": {
+        "jingluo": "带脉"
+      }
+    },
+    {
+      "id": "j20",
+      "desc": "阴跷脉病候(阴急嗜睡)",
+      "labels": [
+        "下肢内侧拘急",
+        "足内翻",
+        "嗜睡",
+        "多寐"
+      ],
+      "expected": {
+        "jingluo": "阴跷脉"
+      }
+    },
+    {
+      "id": "j21",
+      "desc": "阳跷脉病候(阳急失眠)",
+      "labels": [
+        "下肢外侧拘急",
+        "足外翻",
+        "失眠",
+        "不寐",
+        "目不合"
+      ],
+      "expected": {
+        "jingluo": "阳跷脉"
+      }
+    },
+    {
+      "id": "j22",
+      "desc": "阴维脉病候(苦心痛)",
+      "labels": [
+        "心痛",
+        "胸痛",
+        "脘痛"
+      ],
+      "expected": {
+        "jingluo": "阴维脉"
+      }
+    },
+    {
+      "id": "j23",
+      "desc": "阳维脉病候(苦寒热)",
+      "labels": [
+        "恶寒发热",
+        "寒热交作",
+        "苦寒热"
+      ],
+      "expected": {
+        "jingluo": "阳维脉"
+      }
+    },
+    {
+      "id": "j24",
+      "desc": "冲脉病候(冲气上逆)",
+      "labels": [
+        "气上冲",
+        "奔豚",
+        "少腹里急"
+      ],
+      "expected": {
+        "jingluo": "冲脉"
+      }
+    },
+    {
+      "id": "j25",
+      "desc": "带脉病候(腰腹纵)",
+      "labels": [
+        "腰冷如坐水中",
+        "带下",
+        "腰腹纵"
+      ],
+      "expected": {
+        "jingluo": "带脉"
+      }
+    },
+    {
+      "id": "d01",
+      "desc": "太阳阳明合病",
+      "labels": [
+        "恶寒",
+        "发热",
+        "头项强痛",
+        "脉浮",
+        "壮热",
+        "大渴",
+        "大汗出",
+        "脉洪大"
+      ],
+      "expected": {
+        "liujing": "太阳病",
+        "dynamic": {
+          "liujing_merge": "太阳阳明合病"
+        }
+      }
+    },
+    {
+      "id": "d02",
+      "desc": "太阳少阳合病",
+      "labels": [
+        "恶寒",
+        "发热",
+        "脉浮",
+        "口苦",
+        "咽干",
+        "往来寒热",
+        "胸胁苦满"
+      ],
+      "expected": {
+        "liujing": "少阳病",
+        "dynamic": {
+          "liujing_merge": "太阳少阳合病"
+        }
+      }
+    },
+    {
+      "id": "d03",
+      "desc": "卫气同病",
+      "labels": [
+        "发热",
+        "恶寒",
+        "咳嗽",
+        "脉浮数",
+        "壮热",
+        "大汗"
+      ],
+      "expected": {
+        "weiqiyingxue": "卫分证",
+        "dynamic": {
+          "weiqi_merge": "卫气同病"
+        }
+      }
+    },
+    {
+      "id": "d04",
+      "desc": "气营两燔",
+      "labels": [
+        "壮热",
+        "口渴",
+        "心烦",
+        "谵语",
+        "斑疹隐隐",
+        "舌绛"
+      ],
+      "expected": {
+        "weiqiyingxue": "营分证",
+        "dynamic": {
+          "weiqi_merge": "气营两燔"
+        }
+      }
+    },
+    {
+      "id": "d05",
+      "desc": "上焦→中焦顺传",
+      "labels": [
+        "发热",
+        "微恶风寒",
+        "咳嗽",
+        "脉浮数",
+        "壮热",
+        "大渴"
+      ],
+      "expected": {
+        "sanjiao": "邪犯肺卫",
+        "dynamic": {
+          "sanjiao_trans": "上焦→中焦"
+        }
+      }
+    },
+    {
+      "id": "d06",
+      "desc": "逆传心包",
+      "labels": [
+        "发热",
+        "咳嗽",
+        "神昏",
+        "谵语",
+        "舌蹇",
+        "身灼热"
+      ],
+      "expected": {
+        "sanjiao": "热陷心包",
+        "dynamic": {
+          "sanjiao_trans": "逆传"
+        }
+      }
+    },
+    {
+      "id": "d07",
+      "desc": "中焦→下焦(真阴被灼)",
+      "labels": [
+        "壮热",
+        "大渴",
+        "苔黄燥",
+        "手足心热",
+        "口燥咽干",
+        "脉细数"
+      ],
+      "expected": {
+        "sanjiao": "阳明燥热",
+        "dynamic": {
+          "sanjiao_trans": "中焦→下焦"
+        }
+      }
+    },
+    {
+      "id": "d08",
+      "desc": "三阳合病",
+      "labels": [
+        "恶寒",
+        "发热",
+        "脉浮",
+        "壮热",
+        "大渴",
+        "大汗出",
+        "口苦",
+        "咽干",
+        "往来寒热"
+      ],
+      "expected": {
+        "liujing": "太阳病",
+        "dynamic": {
+          "liujing_merge": "三阳合病"
+        }
       }
     }
   ]

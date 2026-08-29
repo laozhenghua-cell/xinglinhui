@@ -475,11 +475,21 @@ async def _ai_report(keywords: list[str], ctx: dict) -> Optional[dict]:
     if not settings.DEEPSEEK_API_KEY:
         return None
     ctx_text = json.dumps(ctx, ensure_ascii=False)[:3000]
+    systems_text = json.dumps(ctx.get("systems", []), ensure_ascii=False)
+    consistency_text = json.dumps(ctx.get("consistency", {}), ensure_ascii=False)
+    dynamic_text = json.dumps(ctx.get("dynamic", {}), ensure_ascii=False)
     prompt = f"""你是资深中医师。下面是知识总库按"{"、".join(keywords[:12])}"匹配出的候选结果(JSON):
 {ctx_text}
 
-请严格依据上述候选中的原文辨证:证型、病种、方剂建议必须引用原文依据并注明出处(如"《医宗金鉴》五味消毒饮:疔疮痈疡"),不得自行发挥;原文未覆盖之处明确说明"原书未见"。只返回 JSON(不要其他文字):
-{{"syndrome_analysis":"证型分析(含病机)","disease_suggestion":"最可能病种及鉴别","formula_suggestion":"推荐方剂(可跨专科参考,注明出处与加减)","precautions":"注意事项与禁忌","confidence":0.7}}"""
+规则引擎还给出六体系辨证对照:八纲/六经/卫气营血/脏腑/三焦/经络各自结论:
+{systems_text}
+
+六体系交叉印证(一致性评分):{consistency_text}
+
+动态推理(六经合病/并病、卫气营血同病、三焦传变):{dynamic_text}
+
+请严格依据上述候选中的原文辨证:证型、病种、方剂建议必须引用原文依据并注明出处(如"《医宗金鉴》五味消毒饮:疔疮痈疡"),不得自行发挥;原文未覆盖之处明确说明"原书未见"。请在 syndrome_analysis 中综合六体系结论做交叉印证评述:互洽时点明(如"脏腑↔六经↔经络互洽"),存在冲突时说明取舍理由;dynamic 中有合病/传变提示时一并纳入。只返回 JSON(不要其他文字):
+{{"syndrome_analysis":"证型分析(含六体系交叉印证评述)","disease_suggestion":"最可能病种及鉴别","formula_suggestion":"推荐方剂(可跨专科参考,注明出处与加减)","precautions":"注意事项与禁忌","confidence":0.7}}"""
     try:
         from app.core.ai_gateway import chat_json
 
@@ -679,6 +689,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
 
     ai = None
     if body.use_ai:
+        system_keys = ("bagang", "liujing", "weiqiyingxue", "zangfu", "sanjiao", "jingluo")
         ctx = {
             "engine": None,
             "syndromes": [
@@ -691,16 +702,25 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
             ],
             "formulas": {k: [f["name"] for f in v[:3]] for k, v in formulas.items()},
             "peds": None,
+            "systems": [
+                {"体系": systems_result[k]["name"], "结论": systems_result[k]["summary"], "置信度": systems_result[k]["confidence"]}
+                for k in system_keys
+            ],
+            "consistency": systems_result.get("consistency"),
+            "dynamic": systems_result.get("dynamic"),
         }
         ai = await _ai_report(keywords, ctx)
 
+    system_keys = ("bagang", "liujing", "weiqiyingxue", "zangfu", "sanjiao", "jingluo")
     result = {
         "syndromes": synd_out,
         "diseases": dis_out,
         "formulas": formulas,
         "related": related,
         "ai": ai,
-        "systems": systems_result,
+        "systems": {k: systems_result[k] for k in system_keys},
+        "consistency": systems_result.get("consistency"),
+        "dynamic": systems_result.get("dynamic"),
     }
 
     if peds_result:
@@ -856,6 +876,28 @@ async def dx_eval():
                     if all(x in comps for x in exp):
                         st["correct"] += 1
                 elif got == exp:
+                    st["correct"] += 1
+        # 一致性交叉印证
+        if sm["expected"].get("consistency") is not None:
+            cons = result.get("consistency") or {}
+            st = per_system.setdefault("consistency", {"total": 0, "correct": 0})
+            st["total"] += 1
+            ok = cons.get("score") is not None and cons["score"] >= sm["expected"]["consistency"]
+            if ok:
+                st["correct"] += 1
+            row["consistency"] = {"score": cons.get("score"), "verdict": cons.get("verdict"), "expected": sm["expected"]["consistency"]}
+        # 动态推理(合病/并病、卫气营血同病、三焦传变)
+        if sm["expected"].get("dynamic"):
+            dyn = result.get("dynamic") or {}
+            merge_labels = "|".join([m.get("label", "") for m in dyn.get("liujing_merge", [])])
+            merge_labels += "|" + "|".join([m.get("label", "") for m in dyn.get("weiqi_merge", [])])
+            stage = (dyn.get("sanjiao_trans") or {}).get("stage", "")
+            row["dynamic"] = {"merge": merge_labels or None, "stage": stage, "expected": sm["expected"]["dynamic"]}
+            for k, want in sm["expected"]["dynamic"].items():
+                st = per_system.setdefault("dynamic", {"total": 0, "correct": 0})
+                st["total"] += 1
+                ok = (want in stage) if k == "sanjiao_trans" else (want in merge_labels)
+                if ok:
                     st["correct"] += 1
         detail.append(row)
     acc = {}

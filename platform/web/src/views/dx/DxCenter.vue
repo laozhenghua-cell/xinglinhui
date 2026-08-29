@@ -145,6 +145,33 @@
                 </div>
               </el-col>
             </el-row>
+            <div v-if="result.dynamic" class="dyn-strip">
+              <div v-if="result.dynamic.liujing_merge && result.dynamic.liujing_merge.length" class="dyn-item">
+                ⚡ 六经合病/并病:<b>{{ result.dynamic.liujing_merge.map(m => m.label).join(';') }}</b>
+                <span class="dyn-ev">{{ result.dynamic.liujing_merge[0].evidence.join(', ') }}</span>
+                <span class="dyn-note">{{ result.dynamic.liujing_merge[0].note }}</span>
+              </div>
+              <div v-if="result.dynamic.weiqi_merge && result.dynamic.weiqi_merge.length" class="dyn-item">
+                🔥 卫气营血同病:<b>{{ result.dynamic.weiqi_merge.map(m => m.label).join(';') }}</b>
+                <span class="dyn-ev">{{ result.dynamic.weiqi_merge[0].evidence.join(', ') }}</span>
+              </div>
+              <div v-if="result.dynamic.sanjiao_trans && result.dynamic.sanjiao_trans.stage !== '信息不足'" class="dyn-item">
+                🌊 三焦传变:<b>{{ result.dynamic.sanjiao_trans.stage }}</b>
+                <span class="dyn-ev">{{ result.dynamic.sanjiao_trans.hint }}</span>
+              </div>
+            </div>
+            <div v-if="result.consistency" class="consist-strip">
+              <div class="consist-head">🔗 六体系交叉印证
+                <el-tag v-if="result.consistency.score !== null && result.consistency.score !== undefined" size="small"
+                  :type="result.consistency.score >= 0.99 ? 'success' : result.consistency.score >= 0.6 ? 'warning' : 'danger'">
+                  {{ Math.round(result.consistency.score * 100) }}%
+                </el-tag>
+                <span class="consist-verdict">{{ result.consistency.verdict }}</span>
+              </div>
+              <div class="consist-pairs">
+                <span v-for="(p, i) in result.consistency.pairs" :key="i" class="c-pair" :class="{ 'c-bad': p.endsWith('✗') }">{{ p }}</span>
+              </div>
+            </div>
           </div>
 
           <h4 style="margin-top:18px">关联内容</h4>
@@ -340,6 +367,17 @@ function fmtTime(t) {
 .sys-head { font-weight: 700; color: var(--xl-ink); display: flex; justify-content: space-between; }
 .sys-conf { color: var(--xl-teal); font-size: 12px; }
 .sys-main { font-family: "Songti SC", serif; font-size: 15px; color: var(--xl-cinnabar); margin: 4px 0 6px; }
+.dyn-strip { margin-top: 10px; padding: 8px 12px; background: #FFF8E6; border: 1px dashed #E8C97A; border-radius: 8px; }
+.dyn-item { font-size: 13px; color: var(--xl-ink); margin: 3px 0; }
+.dyn-item b { color: #9A6B00; margin: 0 4px; }
+.dyn-ev { color: #8a8370; margin-left: 6px; font-size: 12px; }
+.dyn-note { display: block; color: #a89c80; font-size: 12px; margin-top: 2px; }
+.consist-strip { margin-top: 10px; padding: 8px 12px; background: #F2F8F4; border: 1px solid #BFE0CC; border-radius: 8px; }
+.consist-head { font-size: 13px; font-weight: 700; color: var(--xl-deep); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.consist-verdict { color: #3E7C55; font-weight: 600; }
+.consist-pairs { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.c-pair { font-size: 12px; color: #4C6B58; background: #E2F2E9; border-radius: 4px; padding: 2px 6px; }
+.c-bad { color: #A05A2C; background: #F9E8D8; }
 .sys-item { font-size: 12.5px; margin: 6px 0; border-top: 1px dashed #eee; padding-top: 4px; }
 .sys-hits { margin: 2px 0; }
 .sys-exp { color: #8A94A0; font-size: 11.5px; }
