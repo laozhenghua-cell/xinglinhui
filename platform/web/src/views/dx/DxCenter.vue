@@ -131,9 +131,9 @@
           </div>
 
           <div v-if="result.systems" class="sys-block">
-            <h4>🧭 辨证体系对照(八纲 · 六经 · 卫气营血 · 脏腑)</h4>
+            <h4>🧭 辨证体系对照(八纲 · 六经 · 卫气营血 · 脏腑 · 三焦 · 经络)</h4>
             <el-row :gutter="10">
-              <el-col v-for="(sys, sk) in result.systems" :key="sk" :span="6">
+              <el-col v-for="(sys, sk) in result.systems" :key="sk" :span="8">
                 <div class="sys-card">
                   <div class="sys-head">{{ sys.name }}<span class="sys-conf">{{ Math.round((sys.confidence || 0) * 100) }}%</span></div>
                   <div class="sys-main">{{ sys.summary }}</div>

@@ -104,7 +104,7 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
     PAIRS = [("表", "里"), ("寒", "热"), ("虚", "实"), ("阴", "阳")]
 
     out: dict[str, Any] = {}
-    for system in ("bagang", "liujing", "weiqiyingxue", "zangfu"):
+    for system in ("bagang", "liujing", "weiqiyingxue", "zangfu", "sanjiao", "jingluo"):
         items = []
         for rule in data[system]:
             score, hits = _score_indicators(rule["indicators"], list(tokens))
@@ -141,7 +141,7 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
                 components.append(by_key[a]["name"] if sa >= sb else by_key[b]["name"])
             summary = "·".join(components) if components else "信息不足"
         out[system] = {
-            "name": {"bagang": "八纲辨证", "liujing": "六经辨证", "weiqiyingxue": "卫气营血辨证", "zangfu": "脏腑辨证"}[system],
+            "name": {"bagang": "八纲辨证", "liujing": "六经辨证", "weiqiyingxue": "卫气营血辨证", "zangfu": "脏腑辨证", "sanjiao": "三焦辨证", "jingluo": "经络辨证"}[system],
             "top": top,
             "summary": summary,
             "components": components,
