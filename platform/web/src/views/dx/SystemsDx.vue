@@ -14,9 +14,9 @@
         <!-- 第 1 步:主诉 -->
         <div v-show="step === 1">
           <el-form label-position="top">
-            <el-form-item label="主诉(一句话说明最难受之处,如:胃脘胀痛反复两月,进食后加重)" required>
+            <el-form-item label="主诉(一句话说明最难受之处;写白话也行,系统自动识别)" required>
               <el-input v-model="complaint" type="textarea" :rows="2" maxlength="120" show-word-limit
-                placeholder="哪里不舒服?持续多久了?" />
+                placeholder="如:这两天感冒了,怕冷、流清涕、有点咳嗽" />
             </el-form-item>
             <el-row :gutter="12">
               <el-col :xs="24" :sm="12">
@@ -95,6 +95,11 @@
             <span v-if="trigger"> · 诱因:{{ trigger }}</span>
           </div>
 
+          <!-- 白话结论 -->
+          <div v-if="result.plain" class="plain-box" :class="{ 'plain-danger': result.plain.danger }">
+            🌿 {{ result.plain.verdict }}
+          </div>
+
           <div class="sys-block">
             <h4>🧭 六体系对照(八纲 · 六经 · 卫气营血 · 脏腑 · 三焦 · 经络)</h4>
             <div class="sys-summary-strip">
@@ -152,13 +157,15 @@
 
             <!-- 开方建议(六体系主方 → 方剂库) -->
             <div v-if="result.formula_suggestions && result.formula_suggestions.length" class="prescribe-strip">
-              <div class="care-head">📜 开方建议(据六体系主方,剂量为常用参考量)</div>
-              <div v-for="f in result.formula_suggestions" :key="f.id" class="rx-card">
+              <div class="care-head">📜 开方建议(据六体系主方)</div>
+              <div class="rx-warn">⚠️ 教学参考:剂量为常用参考量,须经中医师面诊辨证后处方使用,切勿自行抓药服用</div>
+              <div v-for="f in (showAllRx ? result.formula_suggestions : result.formula_suggestions.slice(0, 3))" :key="f.id" class="rx-card">
                 <div class="rx-head">
                   <b class="rx-name" @click="router.push('/kb/yifang/' + f.id)">{{ f.name }}</b>
                   <el-tag size="small" type="warning">{{ f.category }}</el-tag>
                   <span class="rx-src">{{ f.source }}</span>
                 </div>
+                <div class="rx-line rx-contra" v-if="f.contraindications"><b>禁忌:</b>{{ f.contraindications }}</div>
                 <div class="rx-comp">组成:<el-tag v-for="c in f.composition" :key="c.name" size="small" type="info" style="margin:0 3px 3px 0">{{ c.name }} {{ c.dosage || c.dose }}</el-tag></div>
                 <div class="rx-ana" v-if="f.analysis && f.analysis.length">
                   <span v-for="a in f.analysis" :key="a.name" class="rx-herb">
@@ -167,8 +174,10 @@
                 </div>
                 <div class="rx-line"><b>功效:</b>{{ f.function }}</div>
                 <div class="rx-line"><b>主治:</b>{{ f.indications }}</div>
-                <div class="rx-line rx-contra" v-if="f.contraindications"><b>禁忌:</b>{{ f.contraindications }}</div>
               </div>
+              <el-button v-if="result.formula_suggestions.length > 3" link type="primary" size="small" @click="showAllRx = !showAllRx">
+                {{ showAllRx ? '收起' : `展开其余 ${result.formula_suggestions.length - 3} 首` }}
+              </el-button>
             </div>
 
             <!-- 调护建议 -->
@@ -255,6 +264,7 @@ const loading = ref(false)
 const result = ref(null)
 const records = ref([])
 const showAllPairs = ref(false)
+const showAllRx = ref(false)
 
 const complaintText = computed(() => complaint.value.trim() || '未填写')
 
@@ -312,6 +322,7 @@ async function run(opts = {}) {
     const res = await dxAnalyze(payload)
     result.value = res
     showAllPairs.value = false
+    showAllRx.value = false
     if (!opts.keepPos) window.scrollTo({ top: 0, behavior: 'smooth' })
     await loadRecords()
   } catch (e) {
@@ -340,6 +351,7 @@ function loadRecord(r) {
   dxRecord(r.id).then(res => {
     result.value = res.result
     showAllPairs.value = false
+    showAllRx.value = false
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }).catch(() => {})
 }
@@ -374,6 +386,9 @@ function fmtTime(t) {
 .danger-item { color: #B42318; font-size: 13px; font-weight: 700; margin: 3px 0; }
 .complaint-box { background: #F2F7F4; border: 1px solid #D5E8DC; border-radius: 8px; padding: 8px 12px; font-size: 13px; color: #35684C; margin-bottom: 12px; }
 .complaint-box b { color: var(--xl-deep); }
+.plain-box { background: #FFFDF4; border: 1px solid #EAD9A8; border-left: 4px solid #C9A227; border-radius: 8px; padding: 10px 14px; font-size: 14px; color: #5A4E2E; line-height: 1.7; margin-bottom: 12px; font-weight: 500; }
+.plain-danger { border-color: #E8A0A0; border-left-color: #C0392B; background: #FDF0F0; color: #7A2318; }
+.rx-warn { color: #A03D2C; background: #FCEBE8; border: 1px solid #E8B4A8; border-radius: 6px; padding: 6px 10px; font-size: 12.5px; font-weight: 600; margin-bottom: 8px; }
 .med-disclaimer { background: #FFF7F0; border: 1px solid #F3D5BE; color: #9C5B2D; border-radius: 8px; padding: 6px 12px; font-size: 12.5px; }
 .sys-block { background: #F7FAF9; border: 1px solid #DCEBE4; border-radius: 10px; padding: 12px 14px; margin-top: 6px; }
 .sys-block h4 { margin: 0 0 8px; color: var(--xl-deep); }
@@ -422,7 +437,7 @@ function fmtTime(t) {
 .rx-role { font-style: normal; color: #B07A2E; background: #F3E4C8; border-radius: 3px; padding: 0 4px; margin: 0 4px; font-size: 11px; }
 .rx-line { font-size: 12.5px; color: #5A4E38; margin-top: 4px; }
 .rx-line b { color: #8A5A12; }
-.rx-contra { color: #A05A2C; }
+.rx-contra { color: #B42318; font-weight: 700; }
 .dyn-strip { margin-top: 10px; padding: 8px 12px; background: #FFF8E6; border: 1px dashed #E8C97A; border-radius: 8px; }
 .dyn-item { font-size: 13px; color: var(--xl-ink); margin: 3px 0; }
 .dyn-item b { color: #9A6B00; margin: 0 4px; }

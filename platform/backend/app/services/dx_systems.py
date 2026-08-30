@@ -446,7 +446,83 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
     out["care"] = _care_advice(out)
     out["danger"] = _danger_alerts(user_labels)
     out["followup"] = _followup(out)
+    out["plain"] = _plain_summary(out)
     return out
+
+
+# 口语 → 标准证候标签(患者白话主诉解析用)
+SYNONYMS = {
+    "怕冷": "恶寒", "怕风": "恶风", "发烧": "发热", "烧了两天": "发热",
+    "拉肚子": "泄泻", "拉稀": "泄泻", "睡不着": "失眠", "睡不好": "失眠",
+    "没胃口": "纳差", "不想吃": "纳差", "吃不下": "纳差", "没劲": "神疲乏力", "浑身没劲": "神疲乏力",
+    "老出汗": "自汗", "爱出汗": "自汗", "晚上出汗": "盗汗", "手脚冰凉": "畏寒肢冷", "手脚冷": "畏寒肢冷",
+    "尿黄": "小便短赤", "心慌": "心悸", "心跳快": "心悸", "头昏": "头晕",
+    "腰疼": "腰痛", "腰酸": "腰痛", "胃疼": "胃痛", "肚子疼": "腹痛", "肚子痛": "腹痛",
+    "嗓子疼": "咽痛", "喉咙痛": "咽痛", "打嗝": "嗳气", "眼睛干": "目涩", "眼花": "目眩",
+    "鼻子不通": "鼻塞", "流鼻涕": "流清涕", "清鼻涕": "流清涕", "憋气": "胸闷", "气短": "气短",
+    "口苦": "口苦", "口臭": "口臭", "口干": "口干", "恶心": "恶心",
+    "痛经": "少腹疼痛", "例假不准": "月经不调",
+}
+_NEG = "不无未没"
+
+
+def extract_symptom_terms(texts: list[str]) -> list[str]:
+    """从白话主诉/长文本中抽取标准证候标签(否定语境如'不发热'跳过)。"""
+    import re as _re
+
+    data = _load()
+    terms: set[str] = set()
+    for sys_name in ("bagang", "liujing", "weiqiyingxue", "zangfu", "sanjiao", "jingluo"):
+        for r in data[sys_name]:
+            terms.update(i for i in r["indicators"] if 2 <= len(i) <= 6)
+    out: list[str] = []
+    src = [str(t or "") for t in texts]
+    for t in src:
+        if len(t) <= 8:
+            continue  # 短标签本身已参与匹配
+        for term in terms:
+            if term not in out:
+                for m in _re.finditer(_re.escape(term), t):
+                    prev = t[m.start() - 1] if m.start() > 0 else ""
+                    if prev in _NEG:
+                        continue
+                    out.append(term)
+                    break
+    for kw, std in SYNONYMS.items():
+        if std not in out and any(kw in t for t in src):
+            out.append(std)
+    return out
+
+
+def _plain_summary(out: dict[str, Any]) -> Optional[dict]:
+    """一句话白话结论(病患视角)。"""
+    zf = out["zangfu"]["summary"]
+    if zf == "信息不足":
+        zf = out["liujing"]["summary"]
+        if zf == "信息不足":
+            zf = out["sanjiao"]["summary"]
+    if zf == "信息不足":
+        return None
+    top1 = None
+    for sys in ("zangfu", "liujing", "sanjiao", "weiqiyingxue", "jingluo"):
+        t = out[sys]["top"]
+        if t and t[0]["name"] == zf:
+            top1 = t[0]
+            break
+    if top1 is None:
+        return None
+    bg = out["bagang"]["summary"] if out["bagang"]["summary"] != "信息不足" else ""
+    parts = [f"综合六体系辨证,您这属于「{zf}」"]
+    if bg:
+        parts.append(f"证属{bg}")
+    parts.append(f"病机:{top1.get('explain', '')}")
+    if top1.get("treatment"):
+        parts.append(f"治当{top1['treatment']}")
+    if top1.get("formulas"):
+        parts.append(f"代表方:{'、'.join(top1['formulas'][:2])}")
+    if out.get("danger"):
+        parts.append("⚠️ 已出现危候信号,请立即就医,勿延误")
+    return {"verdict": ";".join(parts) + "。", "danger": bool(out.get("danger"))}
 
 
 _DQ_CACHE: Optional[dict] = None

@@ -534,7 +534,13 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         anorectal_result = await _anorectal_structured_dx(user_labels, db)
 
     # 0.7 多辨证体系对照(八纲/六经/卫气营血,所有专科通用)
-    from app.services.dx_systems import analyze_systems
+    from app.services.dx_systems import analyze_systems, extract_symptom_terms
+
+    # 白话主诉解析:从长文本抽取标准证候标签并入辨证(患者只写一句话即可)
+    extra_terms = extract_symptom_terms([body.detail, body.systemic, *user_labels])
+    for t in extra_terms:
+        if t not in user_labels:
+            user_labels.append(t)
 
     systems_result = analyze_systems(user_labels)
 
@@ -751,6 +757,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "care": systems_result.get("care", []),
         "danger": systems_result.get("danger", []),
         "followup": systems_result.get("followup"),
+        "plain": systems_result.get("plain"),
         "formula_suggestions": formula_suggestions,
     }
 
@@ -966,6 +973,15 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["followup"] = {"got": bool(fu and fu.get("questions")), "expected": True}
+        # 白话结论
+        if sm["expected"].get("plain_has"):
+            st = per_system.setdefault("plain", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = (result.get("plain") or {}).get("verdict", "")
+            ok = sm["expected"]["plain_has"] in got
+            if ok:
+                st["correct"] += 1
+            row["plain"] = {"got": got[:80], "expected": sm["expected"]["plain_has"]}
         detail.append(row)
     acc = {}
     for k, v in per_system.items():
