@@ -35,7 +35,7 @@ def _bigrams(text: str, cap: int = 40) -> list[str]:
     return out
 
 
-STOP_BIGRAMS = {"大便", "小便", "腹部", "口渴", "腹痛"}
+STOP_BIGRAMS = {"大便", "小便", "腹部", "口渴", "腹痛", "头身"}
 
 # 整体性二便术语:内部 bigram(如"自利")不应误命中其他证型
 BOWEL_NEUTRAL = {
