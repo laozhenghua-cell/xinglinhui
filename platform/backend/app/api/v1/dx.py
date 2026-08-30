@@ -724,12 +724,28 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
     # 开方建议:按六体系 top1 主方查方剂库(按方名幂等合并 seed)
     formula_suggestions = []
     formula_names: list[str] = []
+    zf_clear = systems_result["zangfu"].get("summary") != "信息不足"
+    lj_clear = systems_result["liujing"].get("summary") != "信息不足"
     for k in system_keys:
         if systems_result[k].get("summary") == "信息不足":
             continue  # 证据不足的体系不参与开方
         top = systems_result[k].get("top") or []
-        if top:
-            for fn in top[0].get("formulas") or []:
+        if not top:
+            continue
+        if k == "liujing" and zf_clear and not top[0].get("variant"):
+            continue  # 脏腑已明确,六经无分型的通用主方不参与(防风热误荐桂枝汤)
+        if k == "bagang" and (zf_clear or lj_clear):
+            continue  # 八纲通用主方仅在脏腑/六经均无结论时兜底
+        if systems_result["zangfu"].get("summary") == "风寒束肺" and k in ("weiqiyingxue", "sanjiao"):
+            continue  # 风寒束肺时,温病卫分/肺卫的辛凉方(银翘桑菊)不参与开方
+        lj_top = systems_result["liujing"].get("top") or []
+        if k in ("weiqiyingxue", "sanjiao") and lj_top and lj_top[0].get("variant"):
+            continue  # 六经分型已明确(伤寒/中风/蓄水/蓄血),卫分辛凉方不参与开方
+        for fn in top[0].get("formulas") or []:
+            if fn and fn not in formula_names:
+                formula_names.append(fn)
+        if top[0].get("variant"):
+            for fn in top[0]["variant"].get("formulas") or []:
                 if fn and fn not in formula_names:
                     formula_names.append(fn)
     if formula_names:
