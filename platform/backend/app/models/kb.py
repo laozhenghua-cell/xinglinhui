@@ -211,6 +211,7 @@ class KbYifang(Base):
     indications: Mapped[str] = mapped_column(Text, default="")
     contraindications: Mapped[str] = mapped_column(Text, default="")
     source: Mapped[str] = mapped_column(String(300), default="")
+    analysis: Mapped[list] = mapped_column(JSONB, default=list)  # 逐药方解 [{name, role, note}]
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

@@ -146,6 +146,11 @@
                   <span class="rx-src">{{ f.source }}</span>
                 </div>
                 <div class="rx-comp">组成:<el-tag v-for="c in f.composition" :key="c.name" size="small" type="info" style="margin:0 3px 3px 0">{{ c.name }} {{ c.dosage || c.dose }}</el-tag></div>
+                <div class="rx-ana" v-if="f.analysis && f.analysis.length">
+                  <span v-for="a in f.analysis" :key="a.name" class="rx-herb">
+                    <b>{{ a.name }}</b><i class="rx-role">{{ a.role }}</i>{{ a.note }}
+                  </span>
+                </div>
                 <div class="rx-line"><b>功效:</b>{{ f.function }}</div>
                 <div class="rx-line"><b>主治:</b>{{ f.indications }}</div>
                 <div class="rx-line rx-contra" v-if="f.contraindications"><b>禁忌:</b>{{ f.contraindications }}</div>
@@ -380,6 +385,10 @@ function fmtTime(t) {
 .rx-name:hover { text-decoration: underline; }
 .rx-src { color: #a99a7d; font-size: 12px; }
 .rx-comp { margin-top: 6px; font-size: 12.5px; color: #6B5C42; }
+.rx-ana { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 3px 10px; background: #FBF4E4; border-radius: 6px; padding: 6px 8px; }
+.rx-herb { font-size: 12px; color: #6B5C42; }
+.rx-herb b { color: #7A4A12; }
+.rx-role { font-style: normal; color: #B07A2E; background: #F3E4C8; border-radius: 3px; padding: 0 4px; margin: 0 4px; font-size: 11px; }
 .rx-line { font-size: 12.5px; color: #5A4E38; margin-top: 4px; }
 .rx-line b { color: #8A5A12; }
 .rx-contra { color: #A05A2C; }

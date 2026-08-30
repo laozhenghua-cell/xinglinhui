@@ -48,10 +48,20 @@
             </el-table-column>
             <el-table-column label="剂量" width="140">
               <template #default="{ row }">
-                {{ typeof row === 'object' ? (row.dose ?? '—') : '—' }}
+                {{ typeof row === 'object' ? (row.dose ?? row.dosage ?? '—') : '—' }}
               </template>
             </el-table-column>
           </el-table>
+        </div>
+
+        <div v-if="analysis.length" class="detail-section">
+          <h4>方解(君臣佐使)</h4>
+          <div class="ana-list">
+            <div v-for="(a, i) in analysis" :key="i" class="ana-item">
+              <b>{{ a.name }}</b><el-tag size="small" type="warning" effect="plain">{{ a.role }}</el-tag>
+              <span class="ana-note">{{ a.note }}</span>
+            </div>
+          </div>
         </div>
 
         <div v-if="meridians.length" class="detail-section">
@@ -149,6 +159,11 @@ const aliases = computed(() => {
 const composition = computed(() => {
   const c = detail.value?.composition
   return Array.isArray(c) ? c : []
+})
+
+const analysis = computed(() => {
+  const a = detail.value?.analysis
+  return Array.isArray(a) ? a : []
 })
 
 const meridians = computed(() => {
@@ -266,6 +281,10 @@ watch(() => [type.value, id.value], load, { immediate: true })
   padding-left: 8px;
   border-left: 3px solid #409eff;
 }
+.ana-list { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.ana-item { font-size: 13px; color: #5A4E38; display: flex; align-items: center; gap: 6px; }
+.ana-item b { color: #7A4A12; }
+.ana-note { color: #6B5C42; }
 
 .linked-item {
   display: block;

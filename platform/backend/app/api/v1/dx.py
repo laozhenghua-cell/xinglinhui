@@ -737,7 +737,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
                     "id": str(r.id), "name": r.name, "category": r.category,
                     "composition": r.composition or [], "function": r.function,
                     "indications": r.indications, "contraindications": r.contraindications,
-                    "source": r.source,
+                    "source": r.source, "analysis": r.analysis or [],
                 })
     result = {
         "syndromes": synd_out,

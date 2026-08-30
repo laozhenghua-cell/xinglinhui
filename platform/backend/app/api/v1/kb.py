@@ -361,7 +361,7 @@ async def _seed_yifang(db: AsyncSession) -> int:
                 name=name, category=f.get("category", ""), aliases=f.get("aliases", []),
                 composition=f.get("composition", []), function=f.get("function", ""),
                 indications=f.get("indications", ""), contraindications=f.get("contraindications", ""),
-                source=f.get("source", ""),
+                source=f.get("source", ""), analysis=f.get("analysis", []),
             ))
             added += 1
         else:
@@ -372,6 +372,7 @@ async def _seed_yifang(db: AsyncSession) -> int:
             obj.indications = f.get("indications", obj.indications)
             obj.contraindications = f.get("contraindications", obj.contraindications)
             obj.source = f.get("source", obj.source)
+            obj.analysis = f.get("analysis", obj.analysis or [])
     await db.commit()
     return added
 
