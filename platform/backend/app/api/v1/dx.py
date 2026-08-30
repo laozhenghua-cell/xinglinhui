@@ -982,6 +982,17 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["plain"] = {"got": got[:80], "expected": sm["expected"]["plain_has"]}
+        # 口语词库抽取
+        if sm["expected"].get("colloquial"):
+            from app.services.dx_systems import extract_symptom_terms
+
+            st = per_system.setdefault("colloquial", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = extract_symptom_terms(sm["labels"])
+            ok = all(x in got for x in sm["expected"]["colloquial"])
+            if ok:
+                st["correct"] += 1
+            row["colloquial"] = {"got": got, "expected": sm["expected"]["colloquial"]}
         detail.append(row)
     acc = {}
     for k, v in per_system.items():
