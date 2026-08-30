@@ -64,6 +64,15 @@
           </div>
         </div>
 
+        <div v-if="derivations.length" class="detail-section">
+          <h4>加减附方(衍化链)</h4>
+          <div class="ana-list">
+            <div v-for="(dv, i) in derivations" :key="i" class="ana-item">
+              <b>{{ dv.name }}</b><span class="ana-note">{{ dv.note }}</span>
+            </div>
+          </div>
+        </div>
+
         <div v-if="meridians.length" class="detail-section">
           <h4>归经</h4>
           <el-tag v-for="(m, i) in meridians" :key="i" size="small" type="success" class="alias-tag">{{ m }}</el-tag>
@@ -163,6 +172,11 @@ const composition = computed(() => {
 
 const analysis = computed(() => {
   const a = detail.value?.analysis
+  return Array.isArray(a) ? a : []
+})
+
+const derivations = computed(() => {
+  const a = detail.value?.derivations
   return Array.isArray(a) ? a : []
 })
 
