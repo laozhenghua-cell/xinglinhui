@@ -27833,6 +27833,543 @@
         }
       ],
       "derivations": []
+    },
+    {
+      "name": "六郁汤",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "香附",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "苍术",
+          "dosage": "9"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "神曲",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "砂仁",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "行气解郁,祛湿化痰",
+      "indications": "六郁(气、血、痰、火、湿、食)之脘腹胀满、嗳气吞酸、胸膈痞闷",
+      "contraindications": "阴虚者慎",
+      "source": "《医方集解》引《丹溪心法》",
+      "analysis": [
+        {
+          "name": "香附",
+          "role": "君",
+          "note": "行气解郁"
+        },
+        {
+          "name": "川芎",
+          "role": "臣",
+          "note": "活血"
+        },
+        {
+          "name": "苍术",
+          "role": "臣",
+          "note": "燥湿"
+        },
+        {
+          "name": "栀子",
+          "role": "臣",
+          "note": "清热"
+        },
+        {
+          "name": "神曲",
+          "role": "臣",
+          "note": "消食"
+        },
+        {
+          "name": "陈皮",
+          "role": "佐",
+          "note": "理气"
+        },
+        {
+          "name": "半夏",
+          "role": "佐",
+          "note": "化痰"
+        },
+        {
+          "name": "茯苓",
+          "role": "佐",
+          "note": "渗湿"
+        },
+        {
+          "name": "砂仁",
+          "role": "佐",
+          "note": "行气醒脾"
+        },
+        {
+          "name": "甘草",
+          "role": "使",
+          "note": "调和"
+        }
+      ],
+      "derivations": [
+        {
+          "name": "越鞠丸",
+          "note": "去陈皮、半夏、茯苓、砂仁,药简力专"
+        }
+      ]
+    },
+    {
+      "name": "五淋散",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "赤茯苓",
+          "dosage": "15"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "赤芍",
+          "dosage": "9"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草梢",
+          "dosage": "6"
+        }
+      ],
+      "function": "清热利湿,通淋止痛",
+      "indications": "五淋(石淋、气淋、膏淋、劳淋、血淋)小便淋涩疼痛",
+      "contraindications": "虚寒淋证者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》",
+      "analysis": [
+        {
+          "name": "赤茯苓",
+          "role": "君",
+          "note": "利水通淋"
+        },
+        {
+          "name": "栀子",
+          "role": "臣",
+          "note": "清热"
+        },
+        {
+          "name": "赤芍",
+          "role": "臣",
+          "note": "凉血"
+        },
+        {
+          "name": "当归",
+          "role": "佐",
+          "note": "养血和血"
+        },
+        {
+          "name": "甘草梢",
+          "role": "佐使",
+          "note": "缓急止痛,引药达茎"
+        }
+      ],
+      "derivations": [
+        {
+          "name": "八正散",
+          "note": "加车前、瞿麦、萹蓄、滑石、木通、大黄,通淋力峻"
+        }
+      ]
+    },
+    {
+      "name": "大安丸",
+      "category": "消导之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "山楂",
+          "dosage": "15"
+        },
+        {
+          "name": "神曲",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "连翘",
+          "dosage": "6"
+        },
+        {
+          "name": "莱菔子",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        }
+      ],
+      "function": "消食导滞,健脾",
+      "indications": "食积兼脾虚:饮食不消、脘腹胀满、大便溏泄",
+      "contraindications": "实热积滞重者宜加减",
+      "source": "《医方集解》引《丹溪心法》",
+      "analysis": [
+        {
+          "name": "山楂",
+          "role": "君",
+          "note": "消肉食"
+        },
+        {
+          "name": "神曲",
+          "role": "臣",
+          "note": "消酒食"
+        },
+        {
+          "name": "莱菔子",
+          "role": "臣",
+          "note": "消谷面下气"
+        },
+        {
+          "name": "半夏",
+          "role": "佐",
+          "note": "和胃"
+        },
+        {
+          "name": "陈皮",
+          "role": "佐",
+          "note": "理气"
+        },
+        {
+          "name": "茯苓",
+          "role": "佐",
+          "note": "渗湿"
+        },
+        {
+          "name": "连翘",
+          "role": "佐",
+          "note": "清热散结"
+        },
+        {
+          "name": "白术",
+          "role": "佐",
+          "note": "健脾"
+        }
+      ],
+      "derivations": [
+        {
+          "name": "保和丸",
+          "note": "去白术,纯消无补"
+        }
+      ]
+    },
+    {
+      "name": "建瓴汤",
+      "category": "祛风之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "生怀山药",
+          "dosage": "15"
+        },
+        {
+          "name": "怀牛膝",
+          "dosage": "15"
+        },
+        {
+          "name": "生赭石",
+          "dosage": "15"
+        },
+        {
+          "name": "生龙骨",
+          "dosage": "15"
+        },
+        {
+          "name": "生牡蛎",
+          "dosage": "15"
+        },
+        {
+          "name": "生地黄",
+          "dosage": "12"
+        },
+        {
+          "name": "生杭芍",
+          "dosage": "12"
+        },
+        {
+          "name": "柏子仁",
+          "dosage": "9"
+        }
+      ],
+      "function": "镇肝熄风,滋阴安神",
+      "indications": "肝阳上亢、肝风内动:头目眩晕、耳鸣目胀、心悸健忘、烦躁不宁",
+      "contraindications": "脾胃虚寒者慎",
+      "source": "《医学衷中参西录》(后世名方补入)",
+      "analysis": [
+        {
+          "name": "怀牛膝",
+          "role": "君",
+          "note": "引血下行(重用)"
+        },
+        {
+          "name": "生赭石",
+          "role": "臣",
+          "note": "镇肝降逆"
+        },
+        {
+          "name": "生龙骨",
+          "role": "臣",
+          "note": "潜阳"
+        },
+        {
+          "name": "生牡蛎",
+          "role": "臣",
+          "note": "潜阳"
+        },
+        {
+          "name": "生地黄",
+          "role": "臣",
+          "note": "滋阴凉血"
+        },
+        {
+          "name": "生杭芍",
+          "role": "臣",
+          "note": "养血柔肝"
+        },
+        {
+          "name": "生怀山药",
+          "role": "佐",
+          "note": "健脾固肾"
+        },
+        {
+          "name": "柏子仁",
+          "role": "佐",
+          "note": "养心安神"
+        }
+      ],
+      "derivations": [
+        {
+          "name": "镇肝熄风汤",
+          "note": "加玄参、天冬、龟板、茵陈、川楝子、麦芽,镇潜之力更峻"
+        }
+      ]
+    },
+    {
+      "name": "藿朴夏苓汤",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "藿香",
+          "dosage": "9"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "12"
+        },
+        {
+          "name": "杏仁",
+          "dosage": "9"
+        },
+        {
+          "name": "薏苡仁",
+          "dosage": "18"
+        },
+        {
+          "name": "白蔻仁",
+          "dosage": "6"
+        },
+        {
+          "name": "猪苓",
+          "dosage": "9"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "9"
+        },
+        {
+          "name": "淡豆豉",
+          "dosage": "9"
+        }
+      ],
+      "function": "芳香化湿,宣通气机",
+      "indications": "湿温初起:身热不扬、肢体倦怠、胸闷脘痞、口腻不渴、苔白腻",
+      "contraindications": "阴虚者慎",
+      "source": "《医原》(后世名方补入)",
+      "analysis": [
+        {
+          "name": "藿香",
+          "role": "君",
+          "note": "芳香化湿"
+        },
+        {
+          "name": "厚朴",
+          "role": "臣",
+          "note": "行气化湿"
+        },
+        {
+          "name": "半夏",
+          "role": "臣",
+          "note": "燥湿和胃"
+        },
+        {
+          "name": "杏仁",
+          "role": "佐",
+          "note": "宣肺利气"
+        },
+        {
+          "name": "薏苡仁",
+          "role": "佐",
+          "note": "渗湿"
+        },
+        {
+          "name": "白蔻仁",
+          "role": "佐",
+          "note": "化湿畅中"
+        },
+        {
+          "name": "茯苓",
+          "role": "佐",
+          "note": "渗湿"
+        },
+        {
+          "name": "猪苓",
+          "role": "佐",
+          "note": "利湿"
+        },
+        {
+          "name": "泽泻",
+          "role": "佐",
+          "note": "利湿"
+        },
+        {
+          "name": "淡豆豉",
+          "role": "佐",
+          "note": "宣郁"
+        }
+      ],
+      "derivations": [
+        {
+          "name": "三仁汤",
+          "note": "去藿香、半夏、厚朴、猪苓、泽泻、豆豉,加滑石、通草、竹叶,清热利湿"
+        }
+      ]
+    },
+    {
+      "name": "清宫汤",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "犀角尖(水牛角代)",
+          "dosage": "9"
+        },
+        {
+          "name": "玄参心",
+          "dosage": "9"
+        },
+        {
+          "name": "莲子心",
+          "dosage": "3"
+        },
+        {
+          "name": "竹叶卷心",
+          "dosage": "6"
+        },
+        {
+          "name": "连心麦冬",
+          "dosage": "9"
+        },
+        {
+          "name": "连翘心",
+          "dosage": "6"
+        }
+      ],
+      "function": "清心解毒,养阴生津",
+      "indications": "温病热入心包:神昏谵语、舌蹇肢厥、舌绛",
+      "contraindications": "脱证神昏者忌",
+      "source": "《温病条辨》(后世名方补入)",
+      "analysis": [
+        {
+          "name": "犀角尖(水牛角代)",
+          "role": "君",
+          "note": "清心凉血"
+        },
+        {
+          "name": "玄参心",
+          "role": "臣",
+          "note": "滋阴降火"
+        },
+        {
+          "name": "莲子心",
+          "role": "臣",
+          "note": "清心"
+        },
+        {
+          "name": "连心麦冬",
+          "role": "臣",
+          "note": "养阴"
+        },
+        {
+          "name": "竹叶卷心",
+          "role": "佐",
+          "note": "清心除烦"
+        },
+        {
+          "name": "连翘心",
+          "role": "佐",
+          "note": "清心透邪"
+        }
+      ],
+      "derivations": [
+        {
+          "name": "清营汤",
+          "note": "加生地、黄连、丹参、银花、竹叶心,透热转气力强"
+        }
+      ]
     }
   ]
 }
