@@ -240,6 +240,63 @@
       "formulas": [
         "桂枝汤",
         "麻黄汤"
+      ],
+      "variants": [
+        {
+          "key": "ty_zhongfeng",
+          "name": "太阳中风(表虚)",
+          "indicators": [
+            "汗出",
+            "恶风",
+            "脉浮缓"
+          ],
+          "treatment": "解肌发表,调和营卫(桂枝汤)",
+          "formulas": [
+            "桂枝汤"
+          ]
+        },
+        {
+          "key": "ty_shanghan",
+          "name": "太阳伤寒(表实)",
+          "indicators": [
+            "无汗",
+            "恶寒",
+            "身痛",
+            "脉浮紧"
+          ],
+          "treatment": "发汗解表,宣肺平喘(麻黄汤)",
+          "formulas": [
+            "麻黄汤"
+          ]
+        },
+        {
+          "key": "ty_xushui",
+          "name": "太阳蓄水",
+          "indicators": [
+            "小便不利",
+            "口渴",
+            "水入即吐",
+            "脉浮"
+          ],
+          "treatment": "化气行水(五苓散)",
+          "formulas": [
+            "五苓散"
+          ]
+        },
+        {
+          "key": "ty_xuxue",
+          "name": "太阳蓄血",
+          "indicators": [
+            "少腹硬满",
+            "如狂",
+            "发狂",
+            "小便自利"
+          ],
+          "treatment": "攻下逐瘀(桃核承气汤、抵当汤)",
+          "formulas": [
+            "桃核承气汤"
+          ]
+        }
       ]
     },
     {
@@ -264,6 +321,37 @@
       "formulas": [
         "白虎汤",
         "大承气汤"
+      ],
+      "variants": [
+        {
+          "key": "ym_jing",
+          "name": "阳明经证(气分)",
+          "indicators": [
+            "壮热",
+            "大汗出",
+            "大渴",
+            "脉洪大"
+          ],
+          "treatment": "清热生津(白虎汤)",
+          "formulas": [
+            "白虎汤"
+          ]
+        },
+        {
+          "key": "ym_fu",
+          "name": "阳明腑证",
+          "indicators": [
+            "便秘",
+            "潮热",
+            "谵语",
+            "腹满",
+            "脉沉实"
+          ],
+          "treatment": "通腑泄热(大承气汤)",
+          "formulas": [
+            "大承气汤"
+          ]
+        }
       ]
     },
     {
@@ -284,6 +372,35 @@
       "treatment": "和解少阳(小柴胡汤类)",
       "formulas": [
         "小柴胡汤"
+      ],
+      "variants": [
+        {
+          "key": "sy_ben",
+          "name": "少阳本证",
+          "indicators": [
+            "往来寒热",
+            "胸胁苦满",
+            "默默不欲饮食",
+            "心烦喜呕"
+          ],
+          "treatment": "和解少阳(小柴胡汤)",
+          "formulas": [
+            "小柴胡汤"
+          ]
+        },
+        {
+          "key": "sy_jym",
+          "name": "少阳兼阳明",
+          "indicators": [
+            "便秘",
+            "腹满",
+            "心下急"
+          ],
+          "treatment": "和解兼攻下(大柴胡汤)",
+          "formulas": [
+            "大柴胡汤"
+          ]
+        }
       ]
     },
     {
@@ -305,6 +422,23 @@
       "treatment": "温中健脾散寒(理中汤、四逆辈)",
       "formulas": [
         "理中汤"
+      ],
+      "variants": [
+        {
+          "key": "ty_ben",
+          "name": "太阴本证(脏虚寒)",
+          "indicators": [
+            "腹满",
+            "时腹自痛",
+            "自利",
+            "食不下",
+            "便溏"
+          ],
+          "treatment": "温中散寒(理中汤)",
+          "formulas": [
+            "理中汤"
+          ]
+        }
       ]
     },
     {
@@ -332,6 +466,37 @@
       "formulas": [
         "四逆汤",
         "黄连阿胶汤"
+      ],
+      "variants": [
+        {
+          "key": "sy_hanhua",
+          "name": "少阴寒化",
+          "indicators": [
+            "畏寒",
+            "四肢厥冷",
+            "下利清谷",
+            "脉微细",
+            "但欲寐"
+          ],
+          "treatment": "回阳救逆(四逆汤)",
+          "formulas": [
+            "四逆汤"
+          ]
+        },
+        {
+          "key": "sy_rehua",
+          "name": "少阴热化",
+          "indicators": [
+            "心烦",
+            "不得眠",
+            "口燥咽干",
+            "脉细数"
+          ],
+          "treatment": "育阴清热(黄连阿胶汤)",
+          "formulas": [
+            "黄连阿胶汤"
+          ]
+        }
       ]
     },
     {
@@ -350,6 +515,34 @@
       "treatment": "寒温并用,调理厥阴(乌梅丸类)",
       "formulas": [
         "乌梅丸"
+      ],
+      "variants": [
+        {
+          "key": "jy_ben",
+          "name": "厥阴本证(寒热错杂)",
+          "indicators": [
+            "消渴",
+            "气上撞心",
+            "心中疼热",
+            "饥而不欲食"
+          ],
+          "treatment": "寒热并用(乌梅丸)",
+          "formulas": [
+            "乌梅丸"
+          ]
+        },
+        {
+          "key": "jy_xuhan",
+          "name": "血虚寒厥",
+          "indicators": [
+            "手足厥寒",
+            "脉细欲绝"
+          ],
+          "treatment": "养血温经,散寒通脉(当归四逆汤)",
+          "formulas": [
+            "当归四逆汤"
+          ]
+        }
       ]
     }
   ],

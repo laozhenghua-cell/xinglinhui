@@ -761,6 +761,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "danger": systems_result.get("danger", []),
         "followup": systems_result.get("followup"),
         "ask": systems_result.get("ask", []),
+        "modifications": systems_result.get("modifications", []),
         "plain": systems_result.get("plain"),
         "formula_suggestions": formula_suggestions,
     }
@@ -1007,6 +1008,25 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["ask"] = {"got": ids + fu_ids, "expected": sm["expected"]["ask_has"]}
+        # 六经分型
+        if sm["expected"].get("variant_has"):
+            st = per_system.setdefault("variant", {"total": 0, "correct": 0})
+            st["total"] += 1
+            v = ((result.get("liujing") or {}).get("top") or [{}])[0].get("variant") or {}
+            ok = sm["expected"]["variant_has"] in (v.get("formulas") or [])
+            if ok:
+                st["correct"] += 1
+            row["variant"] = {"got": (v.get("name"), v.get("formulas")), "expected": sm["expected"]["variant_has"]}
+        # 随症加减
+        if sm["expected"].get("modification_has"):
+            st = per_system.setdefault("modification", {"total": 0, "correct": 0})
+            st["total"] += 1
+            mods = result.get("modifications") or []
+            herbs = [a.get("name", "") for m in mods for e in m["entries"] for a in e.get("add", [])]
+            ok = sm["expected"]["modification_has"] in herbs
+            if ok:
+                st["correct"] += 1
+            row["modification"] = {"got": herbs, "expected": sm["expected"]["modification_has"]}
         detail.append(row)
     acc = {}
     for k, v in per_system.items():

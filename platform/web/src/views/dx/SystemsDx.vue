@@ -124,6 +124,9 @@
                       <b>{{ sys.top[0].name }}</b>({{ sys.top[0].score }} 分)
                       <div class="sys-hits"><el-tag v-for="h in sys.top[0].hits" :key="h" size="small" type="info" style="margin:0 2px 2px 0">{{ h }}</el-tag></div>
                       <div class="sys-exp">病机:{{ sys.top[0].explain }}</div>
+                      <div v-if="sk === 'liujing' && sys.top[0].variant" class="sys-variant">
+                        分型:{{ sys.top[0].variant.name }}——{{ sys.top[0].variant.treatment }}
+                      </div>
                       <div v-if="sk === 'zangfu' && sys.top[0].missing && sys.top[0].missing.length" class="sys-miss">
                         📌 补录线索可坐实:{{ sys.top[0].missing.join('、') }}
                       </div>
@@ -193,6 +196,14 @@
                 </div>
                 <div class="rx-line"><b>功效:</b>{{ f.function }}</div>
                 <div class="rx-line"><b>主治:</b>{{ f.indications }}</div>
+                <div v-for="(en, ei) in rxMods(f.name)" :key="ei" class="rx-mod">
+                  <template v-if="en.add && en.add.length">
+                    ➕<el-tag v-for="a in en.add" :key="a.name" size="small" type="success" style="margin:0 3px 0 0">{{ a.name }} {{ a.dosage }}g</el-tag>
+                    <span class="rx-mod-reason">{{ en.add.map(a => a.reason).join('、') }}</span>
+                  </template>
+                  <template v-if="en.remove && en.remove.length">➖ 去:{{ en.remove.join('、') }}</template>
+                  <span class="rx-mod-src">{{ en.source }}</span>
+                </div>
               </div>
               <el-button v-if="result.formula_suggestions.length > 3" link type="primary" size="small" @click="showAllRx = !showAllRx">
                 {{ showAllRx ? '收起' : `展开其余 ${result.formula_suggestions.length - 3} 首` }}
@@ -287,6 +298,11 @@ const showAllRx = ref(false)
 const trajectory = ref([])
 
 const complaintText = computed(() => complaint.value.trim() || '未填写')
+
+function rxMods(name) {
+  const m = (result.value?.modifications || []).find(x => x.formula === name)
+  return m ? m.entries : []
+}
 
 function picked(field) {
   return field === 'symptoms' ? form.symptoms : String(form[field] || '').split('、').filter(Boolean)
@@ -464,6 +480,10 @@ function fmtTime(t) {
 .sys-hits { margin: 2px 0; }
 .sys-exp { color: #8A94A0; font-size: 11.5px; }
 .sys-treat { color: #7A4A12; background: #FFF6E8; border-left: 3px solid #E8A84C; border-radius: 4px; padding: 3px 8px; margin-top: 4px; font-size: 12px; }
+.sys-variant { color: #2F6DA0; background: #EAF3FB; border-left: 3px solid #6AA0D8; border-radius: 4px; padding: 3px 8px; margin-top: 4px; font-size: 12px; }
+.rx-mod { font-size: 12px; color: #3E7C55; margin-top: 5px; background: #F0F8F2; border-radius: 4px; padding: 3px 8px; }
+.rx-mod-reason { color: #6B5C42; margin-left: 4px; }
+.rx-mod-src { color: #a99a7d; margin-left: 6px; font-size: 11px; }
 .sys-miss { color: #7A6A2E; background: #FBF6DE; border-left: 3px solid #D8C25A; border-radius: 4px; padding: 3px 8px; margin-top: 4px; font-size: 12px; }
 .fu-strip { margin-top: 12px; padding: 10px 12px; background: #F0F6FB; border: 1px dashed #9DBFE3; border-radius: 8px; }
 .fu-head { font-weight: 700; color: #2F6DA0; font-size: 13px; margin-bottom: 6px; }

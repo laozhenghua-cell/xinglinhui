@@ -404,6 +404,7 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
                 "explain": rule["explain"],
                 "treatment": rule.get("treatment", ""),
                 "formulas": rule.get("formulas", []),
+                "variants": rule.get("variants", []),
             })
         items.sort(key=lambda x: -x["score"])
         max_score = max((i["score"] for i in items), default=1)
@@ -419,6 +420,14 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
                 if idx > 0 and top[idx]["score"] >= top[0]["score"]:
                     top.insert(0, top.pop(idx))
                     break
+            # 六经分型:对 top1 经证再辨子型(中风/伤寒、寒化/热化等)
+            best_v = None
+            for v in top[0].get("variants", []):
+                sc, vhits = _score_indicators(v["indicators"], list(tokens))
+                if sc > 0 and (best_v is None or sc > best_v["score"]):
+                    best_v = {"key": v["key"], "name": v["name"], "score": sc, "hits": vhits,
+                              "treatment": v.get("treatment", ""), "formulas": v.get("formulas", [])}
+            top[0]["variant"] = best_v
         summary = top[0]["name"] if top else "信息不足"
         # 证据不足(仅 1 分弱命中)不轻易下结论,老中医作风;八纲按四对维度不受此限
         if system != "bagang" and top and top[0]["score"] <= 1:
@@ -452,6 +461,7 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
     followup = _followup(out)
     out["followup"] = followup
     out["ask"] = _ask_questions(user_labels, followup)
+    out["modifications"] = _modifications(user_labels, out)
     out["plain"] = _plain_summary(out)
     return out
 
@@ -636,6 +646,48 @@ def extract_symptom_terms(texts: list[str], synonyms: Optional[dict] = None) -> 
                 if std not in out:
                     out.append(std)
     return out
+
+
+_JIAJIAN_CACHE: Optional[list] = None
+
+
+def _load_jiajian() -> list:
+    global _JIAJIAN_CACHE
+    if _JIAJIAN_CACHE is None:
+        try:
+            p = Path(__file__).resolve().parent.parent / "data" / "jiajian_rules.json"
+            _JIAJIAN_CACHE = json.loads(p.read_text(encoding="utf-8"))["rules"]
+        except Exception:
+            _JIAJIAN_CACHE = []
+    return _JIAJIAN_CACHE
+
+
+def _modifications(user_labels: list[str], out: dict[str, Any]) -> list[dict]:
+    """随症加减:按主方(含六经分型主方)匹配兼症加减规则(加味/减味+出处)。"""
+    joined = "、".join(str(x) for x in user_labels)
+    formula_names: list[str] = []
+    for sys in ("zangfu", "liujing", "sanjiao", "weiqiyingxue", "jingluo"):
+        t = out[sys]["top"]
+        if t and out[sys]["summary"] != "信息不足":
+            for fn in t[0].get("formulas") or []:
+                if fn not in formula_names:
+                    formula_names.append(fn)
+    lj = out["liujing"]["top"]
+    if lj and lj[0].get("variant"):
+        for fn in lj[0]["variant"].get("formulas") or []:
+            if fn not in formula_names:
+                formula_names.append(fn)
+    res: list[dict] = []
+    for rule in _load_jiajian():
+        if rule.get("formula") not in formula_names:
+            continue
+        entries = []
+        for e in rule.get("entries", []):
+            if all(c in joined for c in e.get("cond", [])):
+                entries.append({"add": e.get("add", []), "remove": e.get("remove", []), "source": e.get("source", "")})
+        if entries:
+            res.append({"formula": rule["formula"], "entries": entries})
+    return res
 
 
 def _plain_summary(out: dict[str, Any]) -> Optional[dict]:
