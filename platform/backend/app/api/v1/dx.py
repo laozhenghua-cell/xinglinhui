@@ -721,6 +721,8 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "systems": {k: systems_result[k] for k in system_keys},
         "consistency": systems_result.get("consistency"),
         "dynamic": systems_result.get("dynamic"),
+        "care": systems_result.get("care", []),
+        "danger": systems_result.get("danger", []),
     }
 
     if peds_result:
@@ -899,6 +901,24 @@ async def dx_eval():
                 ok = (want in stage) if k == "sanjiao_trans" else (want in merge_labels)
                 if ok:
                     st["correct"] += 1
+        # 治则治法(脏腑主结论)
+        if sm["expected"].get("treatment_has"):
+            st = per_system.setdefault("treatment", {"total": 0, "correct": 0})
+            st["total"] += 1
+            t = ((result.get("zangfu") or {}).get("top") or [{}])[0].get("treatment", "")
+            ok = sm["expected"]["treatment_has"] in t
+            if ok:
+                st["correct"] += 1
+            row["treatment"] = {"got": t, "expected": sm["expected"]["treatment_has"]}
+        # 危候警示
+        if sm["expected"].get("danger_has"):
+            st = per_system.setdefault("danger", {"total": 0, "correct": 0})
+            st["total"] += 1
+            joined = "|".join(result.get("danger") or [])
+            ok = sm["expected"]["danger_has"] in joined
+            if ok:
+                st["correct"] += 1
+            row["danger"] = {"got": result.get("danger") or [], "expected": sm["expected"]["danger_has"]}
         detail.append(row)
     acc = {}
     for k, v in per_system.items():

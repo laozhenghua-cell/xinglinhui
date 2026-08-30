@@ -284,6 +284,75 @@ def _score_indicators(indicators: list[str], tokens: list[str]) -> tuple[int, li
     return score, hits
 
 
+DANGER_RULES = [
+    ("神昏", "神志危候——神昏谵语,病势危重,立即就医"),
+    ("昏仆", "神志危候——卒然昏仆,立即就医"),
+    ("抽搐", "动风危候——四肢抽搐,病势危重,立即就医"),
+    ("角弓反张", "动风危候——角弓反张,立即就医"),
+    ("高热不退", "高热危候——高热持续不退,立即就医"),
+    ("壮热", "高热危候——壮热不退,谨防传变,及时就医"),
+    ("大出血", "出血危候——大出血,立即就医"),
+    ("呕血", "出血危候——呕血,立即就医"),
+    ("咯血", "出血危候——咯血,立即就医"),
+    ("便血不止", "出血危候——便血不止,立即就医"),
+    ("崩漏", "出血危候——崩漏量多不止,立即就医"),
+    ("呼吸困难", "气道危候——呼吸困难,立即就医"),
+    ("喘促", "气道危候——喘促不能平卧,立即就医"),
+    ("胸痛剧烈", "胸痹危候——胸痛剧烈,立即就医"),
+    ("心痛彻背", "胸痹危候——心痛彻背,立即就医"),
+    ("冷汗淋漓", "厥脱危候——冷汗淋漓,阳气欲脱,立即就医"),
+    ("四肢厥冷", "厥脱危候——四肢厥冷,谨防厥脱,及时就医"),
+]
+
+CARE_BY_ZANG = {
+    "肝": "调畅情志,戒怒少忧;夜卧养肝,忌熬夜",
+    "心": "安神静养,勿过思虑;劳逸结合",
+    "脾": "饮食规律,忌生冷油腻;少食多餐",
+    "肺": "避风保暖,戒烟;空气清新,适度呼吸锻炼",
+    "肾": "节劳节欲,腰膝保暖;忌久立久行",
+    "胃": "少食多餐,忌辛辣刺激;食后稍息",
+    "胆": "饮食清淡,忌肥甘厚味;调畅情志",
+    "大肠": "多食蔬果粗纤维,定时排便,忌辛辣酒浆",
+    "膀胱": "多饮水,忌憋尿,注意下焦清洁",
+}
+
+CARE_BY_BAGANG = {
+    "寒证": "避风寒,重保暖,忌食生冷",
+    "热证": "饮食清淡,忌辛辣炙煿、烟酒",
+    "虚证": "劳逸结合,勿过劳,饮食有节以养正气",
+    "实证": "饮食有节,勿过饱,保持二便通畅",
+    "表证": "避风保暖,慎起居,忌汗出当风",
+    "里证": "饮食规律,调护脾胃,忌生冷油腻",
+}
+
+
+def _care_advice(out: dict[str, Any]) -> list[str]:
+    """老中医式调护建议:按八纲性质 + 脏腑病位 + 经络归属组合。"""
+    tips: list[str] = []
+    comps = out["bagang"]["components"]
+    for c in comps:
+        t = CARE_BY_BAGANG.get(c)
+        if t and t not in tips:
+            tips.append(t)
+    zf = out["zangfu"]["summary"]
+    for zang, t in CARE_BY_ZANG.items():
+        if zang in zf and t not in tips:
+            tips.append(t)
+    if not tips:
+        tips.append("饮食有节,起居有常,调畅情志")
+    return tips[:4]
+
+
+def _danger_alerts(user_labels: list[str]) -> list[str]:
+    """危候警示:命中危重词即提示就医(规则表)。"""
+    alerts = []
+    joined = "、".join(str(x) for x in user_labels)
+    for word, msg in DANGER_RULES:
+        if word in joined and msg not in alerts:
+            alerts.append(msg)
+    return alerts[:3]
+
+
 def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
     """并行输出三个体系的对照结论。"""
     data = _load()
@@ -300,15 +369,17 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
         tokens.add(lab)
         if lab in BOWEL_NEUTRAL:
             continue  # 整体术语不拆 bigram,防"自利"等误命中
+        if len(lab) > 8:
+            continue  # 长文本(如主诉一句话)只取完整词,不拆 bigram,防噪音
         tokens.update(_bigrams(lab, cap=8))
     # 剔除否定核心词及其 bigram
     for n in negated:
         tokens.discard(n)
         for g in _bigrams(n):
             tokens.discard(g)
-    # 拼接上下文 bigram 仅取非否定标签(避免"不恶寒"重新引入"恶寒")
+    # 拼接上下文 bigram 仅取非否定标签(避免"不恶寒"重新引入"恶寒");长文本(主诉)不参与拼接
     positive_labels = [str(x or "").strip() for x in user_labels if str(x or "").strip() and not str(x or "").strip().startswith(("不", "无", "未"))]
-    tokens.update(_bigrams("、".join(positive_labels), cap=60))
+    tokens.update(_bigrams("、".join(l for l in positive_labels if len(l) <= 8), cap=60))
     # 拼接上下文 bigram 亦剔除二便整体术语的内部词(如"便自/自利")
     for lab in positive_labels:
         if lab in BOWEL_NEUTRAL:
@@ -328,6 +399,7 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
                 "score": score,
                 "hits": hits,
                 "explain": rule["explain"],
+                "treatment": rule.get("treatment", ""),
             })
         items.sort(key=lambda x: -x["score"])
         max_score = max((i["score"] for i in items), default=1)
@@ -363,4 +435,6 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
         }
     out["consistency"] = _consistency(out)
     out["dynamic"] = _dynamic(out)
+    out["care"] = _care_advice(out)
+    out["danger"] = _danger_alerts(user_labels)
     return out
