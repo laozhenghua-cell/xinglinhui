@@ -2365,6 +2365,19 @@
         "treatment_has": "温补肾阳",
         "formula_has": "金匮肾气丸"
       }
+    },
+    {
+      "id": "f01",
+      "desc": "鉴别追问(肝火上炎vs胆郁痰扰接近)",
+      "labels": [
+        "口苦",
+        "胁痛",
+        "脉弦"
+      ],
+      "expected": {
+        "zangfu": "肝火上炎",
+        "followup": true
+      }
     }
   ]
 }

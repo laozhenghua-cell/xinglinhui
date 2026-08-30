@@ -119,6 +119,9 @@
                       <b>{{ sys.top[0].name }}</b>({{ sys.top[0].score }} 分)
                       <div class="sys-hits"><el-tag v-for="h in sys.top[0].hits" :key="h" size="small" type="info" style="margin:0 2px 2px 0">{{ h }}</el-tag></div>
                       <div class="sys-exp">病机:{{ sys.top[0].explain }}</div>
+                      <div v-if="sk === 'zangfu' && sys.top[0].missing && sys.top[0].missing.length" class="sys-miss">
+                        📌 补录线索可坐实:{{ sys.top[0].missing.join('、') }}
+                      </div>
                       <div v-if="sys.top[0].treatment" class="sys-treat">治则:{{ sys.top[0].treatment }}</div>
                     </div>
                     <el-collapse v-if="sys.top.length > 1" class="sys-more">
@@ -135,6 +138,17 @@
                 </div>
               </el-col>
             </el-row>
+
+            <!-- 鉴别追问 -->
+            <div v-if="result.followup && result.followup.questions && result.followup.questions.length" class="fu-strip">
+              <div class="fu-head">🔍 鉴别追问:{{ result.followup.top1 }} 与 {{ result.followup.top2 }} 接近,再答一个关键问题即可明确</div>
+              <div v-for="q in result.followup.questions" :key="q.id" class="fu-q">
+                <div class="fu-qt">{{ q.q }}</div>
+                <div class="fu-opts">
+                  <el-tag v-for="o in q.options" :key="o.label" class="chip" type="info" @click="applyFollowup(o)">{{ o.label }}</el-tag>
+                </div>
+              </div>
+            </div>
 
             <!-- 开方建议(六体系主方 → 方剂库) -->
             <div v-if="result.formula_suggestions && result.formula_suggestions.length" class="prescribe-strip">
@@ -282,7 +296,7 @@ onMounted(async () => {
   await loadRecords()
 })
 
-async function run() {
+async function run(opts = {}) {
   if (!complaint.value.trim() && !form.symptoms.length && !form.tongue && !form.pulse && !form.local && !form.systemic) {
     ElMessage.warning('请先填写主诉或点选症状')
     return
@@ -298,13 +312,23 @@ async function run() {
     const res = await dxAnalyze(payload)
     result.value = res
     showAllPairs.value = false
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (!opts.keepPos) window.scrollTo({ top: 0, behavior: 'smooth' })
     await loadRecords()
   } catch (e) {
     ElMessage.error('辨证失败:' + (e?.response?.data?.detail || e.message))
   } finally {
     loading.value = false
   }
+}
+function applyFollowup(opt) {
+  for (const r of opt.remove || []) {
+    const i = form.symptoms.indexOf(r)
+    if (i >= 0) form.symptoms.splice(i, 1)
+  }
+  for (const a of opt.add || []) {
+    if (!form.symptoms.includes(a)) form.symptoms.push(a)
+  }
+  run({ keepPos: true })
 }
 async function loadRecords() {
   try {
@@ -375,6 +399,13 @@ function fmtTime(t) {
 .sys-hits { margin: 2px 0; }
 .sys-exp { color: #8A94A0; font-size: 11.5px; }
 .sys-treat { color: #7A4A12; background: #FFF6E8; border-left: 3px solid #E8A84C; border-radius: 4px; padding: 3px 8px; margin-top: 4px; font-size: 12px; }
+.sys-miss { color: #7A6A2E; background: #FBF6DE; border-left: 3px solid #D8C25A; border-radius: 4px; padding: 3px 8px; margin-top: 4px; font-size: 12px; }
+.fu-strip { margin-top: 12px; padding: 10px 12px; background: #F0F6FB; border: 1px dashed #9DBFE3; border-radius: 8px; }
+.fu-head { font-weight: 700; color: #2F6DA0; font-size: 13px; margin-bottom: 6px; }
+.fu-q { margin: 8px 0; }
+.fu-qt { font-size: 13px; color: var(--xl-ink); margin-bottom: 5px; }
+.fu-opts { display: flex; flex-wrap: wrap; gap: 6px; }
+.fu-opts .chip { cursor: pointer; user-select: none; }
 .care-strip { margin-top: 12px; padding: 10px 12px; background: #F4FBF7; border: 1px solid #C9E8D5; border-radius: 8px; }
 .care-head { font-weight: 700; color: #2F7A50; font-size: 13px; margin-bottom: 4px; }
 .care-item { font-size: 12.5px; color: #3E5E4F; margin: 3px 0; }

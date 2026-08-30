@@ -750,6 +750,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "dynamic": systems_result.get("dynamic"),
         "care": systems_result.get("care", []),
         "danger": systems_result.get("danger", []),
+        "followup": systems_result.get("followup"),
         "formula_suggestions": formula_suggestions,
     }
 
@@ -956,6 +957,15 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["danger"] = {"got": result.get("danger") or [], "expected": sm["expected"]["danger_has"]}
+        # 鉴别追问
+        if sm["expected"].get("followup"):
+            st = per_system.setdefault("followup", {"total": 0, "correct": 0})
+            st["total"] += 1
+            fu = result.get("followup")
+            ok = bool(fu and fu.get("questions"))
+            if ok:
+                st["correct"] += 1
+            row["followup"] = {"got": bool(fu and fu.get("questions")), "expected": True}
         detail.append(row)
     acc = {}
     for k, v in per_system.items():

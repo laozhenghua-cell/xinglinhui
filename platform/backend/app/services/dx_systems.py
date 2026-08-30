@@ -400,6 +400,8 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
                 "name": rule["name"],
                 "score": score,
                 "hits": hits,
+                "indicators": list(rule["indicators"]),
+                "missing": [i for i in rule["indicators"] if i not in hits][:4],
                 "explain": rule["explain"],
                 "treatment": rule.get("treatment", ""),
                 "formulas": rule.get("formulas", []),
@@ -443,4 +445,43 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
     out["dynamic"] = _dynamic(out)
     out["care"] = _care_advice(out)
     out["danger"] = _danger_alerts(user_labels)
+    out["followup"] = _followup(out)
     return out
+
+
+_DQ_CACHE: Optional[dict] = None
+
+
+def _load_dq() -> dict:
+    global _DQ_CACHE
+    if _DQ_CACHE is None:
+        p = Path(__file__).resolve().parent.parent / "data" / "differential_questions.json"
+        _DQ_CACHE = json.loads(p.read_text(encoding="utf-8"))
+    return _DQ_CACHE
+
+
+def _followup(out: dict[str, Any]) -> Optional[dict]:
+    """鉴别追问:top1/top2 接近时,推荐最能区分二者的问诊问题。"""
+    for sys in ("zangfu", "liujing"):
+        top = out[sys]["top"]
+        if len(top) < 2 or top[0]["score"] < 2:
+            continue
+        if top[0]["score"] - top[1]["score"] > 2:
+            continue
+        pool = set(top[0]["indicators"]) | set(top[1]["indicators"])
+        scored = []
+        for q in _load_dq()["questions"]:
+            adds = {lab for opt in q["options"] for lab in opt.get("add", [])}
+            overlap = len(adds & pool)
+            if overlap:
+                scored.append((overlap, q))
+        if not scored:
+            continue
+        scored.sort(key=lambda x: -x[0])
+        return {
+            "system": sys,
+            "top1": top[0]["name"],
+            "top2": top[1]["name"],
+            "questions": [q for _, q in scored[:3]],
+        }
+    return None
