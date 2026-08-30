@@ -1050,6 +1050,2469 @@
           "source": "医方集解加减"
         }
       ]
+    },
+    {
+      "formula": "三仁汤",
+      "entries": [
+        {
+          "cond": [
+            "头身困重",
+            "苔腻"
+          ],
+          "add": [
+            {
+              "name": "藿香",
+              "dosage": "9",
+              "reason": "芳香化湿"
+            },
+            {
+              "name": "佩兰",
+              "dosage": "9",
+              "reason": "化湿醒脾"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "身热",
+            "口渴"
+          ],
+          "add": [
+            {
+              "name": "黄芩",
+              "dosage": "9",
+              "reason": "清热"
+            },
+            {
+              "name": "滑石",
+              "dosage": "12",
+              "reason": "利湿"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "三子养亲汤",
+      "entries": [
+        {
+          "cond": [
+            "痰多",
+            "苔腻"
+          ],
+          "add": [
+            {
+              "name": "半夏",
+              "dosage": "9",
+              "reason": "化痰"
+            },
+            {
+              "name": "茯苓",
+              "dosage": "12",
+              "reason": "渗湿"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "三拗汤",
+      "entries": [
+        {
+          "cond": [
+            "咳嗽"
+          ],
+          "add": [
+            {
+              "name": "紫菀",
+              "dosage": "9",
+              "reason": "止咳"
+            },
+            {
+              "name": "百部",
+              "dosage": "9",
+              "reason": "止咳"
+            }
+          ],
+          "source": "止嗽散法"
+        },
+        {
+          "cond": [
+            "恶寒"
+          ],
+          "add": [
+            {
+              "name": "荆芥",
+              "dosage": "9",
+              "reason": "疏风散寒"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "乌梅丸",
+      "entries": [
+        {
+          "cond": [
+            "腹痛"
+          ],
+          "add": [
+            {
+              "name": "使君子",
+              "dosage": "9",
+              "reason": "杀虫"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "久泻"
+          ],
+          "add": [
+            {
+              "name": "诃子",
+              "dosage": "9",
+              "reason": "涩肠止泻"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "养心汤",
+      "entries": [
+        {
+          "cond": [
+            "失眠",
+            "多梦"
+          ],
+          "add": [
+            {
+              "name": "夜交藤",
+              "dosage": "15",
+              "reason": "安神"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "加减复脉汤",
+      "entries": [
+        {
+          "cond": [
+            "便溏"
+          ],
+          "add": [
+            {
+              "name": "牡蛎",
+              "dosage": "15",
+              "reason": "固涩"
+            }
+          ],
+          "remove": [
+            "麻仁"
+          ],
+          "source": "温病条辨加减"
+        }
+      ]
+    },
+    {
+      "formula": "参苓白术散",
+      "entries": [
+        {
+          "cond": [
+            "食少",
+            "腹胀"
+          ],
+          "add": [
+            {
+              "name": "山楂",
+              "dosage": "9",
+              "reason": "消食"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "苔腻",
+            "困重"
+          ],
+          "add": [
+            {
+              "name": "苍术",
+              "dosage": "9",
+              "reason": "燥湿"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "右归丸",
+      "entries": [
+        {
+          "cond": [
+            "泄泻"
+          ],
+          "add": [
+            {
+              "name": "肉豆蔻",
+              "dosage": "6",
+              "reason": "温中涩肠"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "水肿"
+          ],
+          "add": [
+            {
+              "name": "茯苓",
+              "dosage": "12",
+              "reason": "利水"
+            },
+            {
+              "name": "泽泻",
+              "dosage": "9",
+              "reason": "利水"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "增液汤",
+      "entries": [
+        {
+          "cond": [
+            "便秘",
+            "腹满"
+          ],
+          "add": [
+            {
+              "name": "麻仁",
+              "dosage": "12",
+              "reason": "润肠"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "大定风珠",
+      "entries": [
+        {
+          "cond": [
+            "神昏"
+          ],
+          "add": [
+            {
+              "name": "石菖蒲",
+              "dosage": "9",
+              "reason": "开窍"
+            }
+          ],
+          "source": "温病条辨加减"
+        },
+        {
+          "cond": [
+            "痰多"
+          ],
+          "add": [
+            {
+              "name": "天竺黄",
+              "dosage": "9",
+              "reason": "豁痰"
+            }
+          ],
+          "source": "温病条辨加减"
+        }
+      ]
+    },
+    {
+      "formula": "天王补心丹",
+      "entries": [
+        {
+          "cond": [
+            "心烦",
+            "惊悸"
+          ],
+          "add": [
+            {
+              "name": "龙骨",
+              "dosage": "15",
+              "reason": "镇惊"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "天麻钩藤饮",
+      "entries": [
+        {
+          "cond": [
+            "头痛"
+          ],
+          "add": [
+            {
+              "name": "川芎",
+              "dosage": "6",
+              "reason": "活血止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "目眩"
+          ],
+          "add": [
+            {
+              "name": "菊花",
+              "dosage": "9",
+              "reason": "清肝明目"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "导赤散",
+      "entries": [
+        {
+          "cond": [
+            "尿血"
+          ],
+          "add": [
+            {
+              "name": "小蓟",
+              "dosage": "12",
+              "reason": "凉血止血"
+            }
+          ],
+          "source": "小蓟饮子法"
+        },
+        {
+          "cond": [
+            "口舌生疮"
+          ],
+          "add": [
+            {
+              "name": "黄连",
+              "dosage": "6",
+              "reason": "清心泻火"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "左归丸",
+      "entries": [
+        {
+          "cond": [
+            "五心烦热",
+            "潮热"
+          ],
+          "add": [
+            {
+              "name": "知母",
+              "dosage": "9",
+              "reason": "滋阴降火"
+            },
+            {
+              "name": "黄柏",
+              "dosage": "9",
+              "reason": "泻相火"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "目涩"
+          ],
+          "add": [
+            {
+              "name": "菊花",
+              "dosage": "9",
+              "reason": "明目"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "平胃散",
+      "entries": [
+        {
+          "cond": [
+            "食少",
+            "厌食"
+          ],
+          "add": [
+            {
+              "name": "神曲",
+              "dosage": "9",
+              "reason": "消食"
+            },
+            {
+              "name": "麦芽",
+              "dosage": "9",
+              "reason": "消食"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "恶心"
+          ],
+          "add": [
+            {
+              "name": "半夏",
+              "dosage": "9",
+              "reason": "和胃降逆"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "柴胡疏肝散",
+      "entries": [
+        {
+          "cond": [
+            "刺痛"
+          ],
+          "add": [
+            {
+              "name": "延胡索",
+              "dosage": "9",
+              "reason": "活血止痛"
+            },
+            {
+              "name": "川楝子",
+              "dosage": "9",
+              "reason": "疏肝止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "口苦",
+            "烦躁易怒"
+          ],
+          "add": [
+            {
+              "name": "栀子",
+              "dosage": "9",
+              "reason": "清肝"
+            },
+            {
+              "name": "牡丹皮",
+              "dosage": "9",
+              "reason": "凉血"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "止嗽散",
+      "entries": [
+        {
+          "cond": [
+            "痰多"
+          ],
+          "add": [
+            {
+              "name": "半夏",
+              "dosage": "9",
+              "reason": "化痰"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "恶寒"
+          ],
+          "add": [
+            {
+              "name": "防风",
+              "dosage": "6",
+              "reason": "祛风散寒"
+            },
+            {
+              "name": "紫苏叶",
+              "dosage": "9",
+              "reason": "解表"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "沙参麦冬汤",
+      "entries": [
+        {
+          "cond": [
+            "咳嗽"
+          ],
+          "add": [
+            {
+              "name": "川贝母",
+              "dosage": "9",
+              "reason": "化痰止咳"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "咽痛"
+          ],
+          "add": [
+            {
+              "name": "玄参",
+              "dosage": "9",
+              "reason": "利咽"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "清胃散",
+      "entries": [
+        {
+          "cond": [
+            "便秘"
+          ],
+          "add": [
+            {
+              "name": "大黄",
+              "dosage": "6",
+              "reason": "泻热通便"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "口渴"
+          ],
+          "add": [
+            {
+              "name": "石膏",
+              "dosage": "15",
+              "reason": "清胃热"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "清营汤",
+      "entries": [
+        {
+          "cond": [
+            "神昏",
+            "谵语"
+          ],
+          "add": [
+            {
+              "name": "安宫牛黄丸",
+              "dosage": "1丸",
+              "reason": "清心开窍"
+            }
+          ],
+          "source": "温病条辨加减"
+        },
+        {
+          "cond": [
+            "抽搐"
+          ],
+          "add": [
+            {
+              "name": "羚羊角",
+              "dosage": "3",
+              "reason": "凉肝熄风"
+            },
+            {
+              "name": "钩藤",
+              "dosage": "12",
+              "reason": "熄风"
+            }
+          ],
+          "source": "温病条辨加减"
+        }
+      ]
+    },
+    {
+      "formula": "清金化痰汤",
+      "entries": [
+        {
+          "cond": [
+            "痰多",
+            "苔黄腻"
+          ],
+          "add": [
+            {
+              "name": "瓜蒌",
+              "dosage": "12",
+              "reason": "清热化痰"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "气喘"
+          ],
+          "add": [
+            {
+              "name": "麻黄",
+              "dosage": "6",
+              "reason": "宣肺平喘"
+            },
+            {
+              "name": "杏仁",
+              "dosage": "9",
+              "reason": "降气"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "炙甘草汤",
+      "entries": [
+        {
+          "cond": [
+            "心悸"
+          ],
+          "add": [
+            {
+              "name": "龙骨",
+              "dosage": "15",
+              "reason": "镇心"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "失眠"
+          ],
+          "add": [
+            {
+              "name": "酸枣仁",
+              "dosage": "12",
+              "reason": "安神"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "犀角地黄汤",
+      "entries": [
+        {
+          "cond": [
+            "神昏"
+          ],
+          "add": [
+            {
+              "name": "石菖蒲",
+              "dosage": "9",
+              "reason": "开窍"
+            },
+            {
+              "name": "郁金",
+              "dosage": "9",
+              "reason": "开郁"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "咯血",
+            "衄血"
+          ],
+          "add": [
+            {
+              "name": "白茅根",
+              "dosage": "15",
+              "reason": "凉血止血"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "玉女煎",
+      "entries": [
+        {
+          "cond": [
+            "口渴",
+            "消谷善饥"
+          ],
+          "add": [
+            {
+              "name": "天花粉",
+              "dosage": "12",
+              "reason": "生津"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "生脉散",
+      "entries": [
+        {
+          "cond": [
+            "自汗"
+          ],
+          "add": [
+            {
+              "name": "黄芪",
+              "dosage": "15",
+              "reason": "固表止汗"
+            },
+            {
+              "name": "浮小麦",
+              "dosage": "15",
+              "reason": "敛汗"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "心悸"
+          ],
+          "add": [
+            {
+              "name": "丹参",
+              "dosage": "9",
+              "reason": "活血宁心"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "白头翁汤",
+      "entries": [
+        {
+          "cond": [
+            "里急后重",
+            "腹痛"
+          ],
+          "add": [
+            {
+              "name": "木香",
+              "dosage": "6",
+              "reason": "行气"
+            },
+            {
+              "name": "槟榔",
+              "dosage": "9",
+              "reason": "导滞"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "便血鲜红"
+          ],
+          "add": [
+            {
+              "name": "地榆",
+              "dosage": "12",
+              "reason": "凉血止血"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "百合固金汤",
+      "entries": [
+        {
+          "cond": [
+            "咳血"
+          ],
+          "add": [
+            {
+              "name": "白茅根",
+              "dosage": "15",
+              "reason": "凉血止血"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "盗汗"
+          ],
+          "add": [
+            {
+              "name": "五味子",
+              "dosage": "6",
+              "reason": "敛汗"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "益胃汤",
+      "entries": [
+        {
+          "cond": [
+            "便秘"
+          ],
+          "add": [
+            {
+              "name": "麻仁",
+              "dosage": "12",
+              "reason": "润肠"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "食少"
+          ],
+          "add": [
+            {
+              "name": "山药",
+              "dosage": "12",
+              "reason": "健脾"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "羚角钩藤汤",
+      "entries": [
+        {
+          "cond": [
+            "神昏"
+          ],
+          "add": [
+            {
+              "name": "安宫牛黄丸",
+              "dosage": "1丸",
+              "reason": "开窍"
+            }
+          ],
+          "source": "通俗伤寒论加减"
+        },
+        {
+          "cond": [
+            "痰多"
+          ],
+          "add": [
+            {
+              "name": "竹沥",
+              "dosage": "30",
+              "reason": "豁痰"
+            }
+          ],
+          "source": "通俗伤寒论加减"
+        }
+      ]
+    },
+    {
+      "formula": "良附丸",
+      "entries": [
+        {
+          "cond": [
+            "胃痛"
+          ],
+          "add": [
+            {
+              "name": "延胡索",
+              "dosage": "9",
+              "reason": "止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "畏寒肢冷"
+          ],
+          "add": [
+            {
+              "name": "干姜",
+              "dosage": "6",
+              "reason": "温中散寒"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "芍药汤",
+      "entries": [
+        {
+          "cond": [
+            "便血鲜红"
+          ],
+          "add": [
+            {
+              "name": "地榆",
+              "dosage": "12",
+              "reason": "凉血止血"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "久痢"
+          ],
+          "add": [
+            {
+              "name": "乌梅",
+              "dosage": "9",
+              "reason": "涩肠"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "茵陈蒿汤",
+      "entries": [
+        {
+          "cond": [
+            "胁痛"
+          ],
+          "add": [
+            {
+              "name": "柴胡",
+              "dosage": "9",
+              "reason": "疏肝"
+            },
+            {
+              "name": "郁金",
+              "dosage": "9",
+              "reason": "利胆"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "结石"
+          ],
+          "add": [
+            {
+              "name": "金钱草",
+              "dosage": "15",
+              "reason": "利胆排石"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "连朴饮",
+      "entries": [
+        {
+          "cond": [
+            "恶心",
+            "呕吐"
+          ],
+          "add": [
+            {
+              "name": "竹茹",
+              "dosage": "9",
+              "reason": "止呕"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "困重"
+          ],
+          "add": [
+            {
+              "name": "薏苡仁",
+              "dosage": "15",
+              "reason": "利湿"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "镇肝熄风汤",
+      "entries": [
+        {
+          "cond": [
+            "头痛"
+          ],
+          "add": [
+            {
+              "name": "菊花",
+              "dosage": "9",
+              "reason": "清肝止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "失眠"
+          ],
+          "add": [
+            {
+              "name": "夜交藤",
+              "dosage": "15",
+              "reason": "安神"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "麦门冬汤",
+      "entries": [
+        {
+          "cond": [
+            "痰多"
+          ],
+          "add": [
+            {
+              "name": "瓜蒌",
+              "dosage": "12",
+              "reason": "化痰"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "咳嗽"
+          ],
+          "add": [
+            {
+              "name": "川贝母",
+              "dosage": "9",
+              "reason": "止咳"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "麻子仁丸",
+      "entries": [
+        {
+          "cond": [
+            "口干",
+            "舌红"
+          ],
+          "add": [
+            {
+              "name": "生地黄",
+              "dosage": "12",
+              "reason": "滋阴"
+            },
+            {
+              "name": "玄参",
+              "dosage": "12",
+              "reason": "增液"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "黄连解毒汤",
+      "entries": [
+        {
+          "cond": [
+            "便秘"
+          ],
+          "add": [
+            {
+              "name": "大黄",
+              "dosage": "9",
+              "reason": "泻热通便"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "斑疹"
+          ],
+          "add": [
+            {
+              "name": "生地黄",
+              "dosage": "15",
+              "reason": "凉血"
+            },
+            {
+              "name": "牡丹皮",
+              "dosage": "9",
+              "reason": "散瘀"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "黄连阿胶汤",
+      "entries": [
+        {
+          "cond": [
+            "失眠"
+          ],
+          "add": [
+            {
+              "name": "酸枣仁",
+              "dosage": "12",
+              "reason": "安神"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "口舌生疮"
+          ],
+          "add": [
+            {
+              "name": "莲子心",
+              "dosage": "3",
+              "reason": "清心"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "五苓散",
+      "entries": [
+        {
+          "cond": [
+            "水肿"
+          ],
+          "add": [
+            {
+              "name": "生姜皮",
+              "dosage": "9",
+              "reason": "散水"
+            },
+            {
+              "name": "大腹皮",
+              "dosage": "9",
+              "reason": "行气利水"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "黄疸"
+          ],
+          "add": [
+            {
+              "name": "茵陈",
+              "dosage": "18",
+              "reason": "利湿退黄"
+            }
+          ],
+          "source": "茵陈五苓散法"
+        }
+      ]
+    },
+    {
+      "formula": "猪苓汤",
+      "entries": [
+        {
+          "cond": [
+            "尿血"
+          ],
+          "add": [
+            {
+              "name": "小蓟",
+              "dosage": "12",
+              "reason": "凉血止血"
+            },
+            {
+              "name": "白茅根",
+              "dosage": "15",
+              "reason": "凉血"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "防己黄芪汤",
+      "entries": [
+        {
+          "cond": [
+            "恶风",
+            "自汗"
+          ],
+          "add": [
+            {
+              "name": "防风",
+              "dosage": "6",
+              "reason": "祛风"
+            },
+            {
+              "name": "浮小麦",
+              "dosage": "15",
+              "reason": "敛汗"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "独活寄生汤",
+      "entries": [
+        {
+          "cond": [
+            "冷痛"
+          ],
+          "add": [
+            {
+              "name": "附子",
+              "dosage": "6",
+              "reason": "温经散寒"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "麻木"
+          ],
+          "add": [
+            {
+              "name": "天麻",
+              "dosage": "9",
+              "reason": "通络"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "消风散",
+      "entries": [
+        {
+          "cond": [
+            "瘙痒"
+          ],
+          "add": [
+            {
+              "name": "白鲜皮",
+              "dosage": "12",
+              "reason": "祛风止痒"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "疹出色红"
+          ],
+          "add": [
+            {
+              "name": "牡丹皮",
+              "dosage": "9",
+              "reason": "凉血"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "川芎茶调散",
+      "entries": [
+        {
+          "cond": [
+            "巅顶痛"
+          ],
+          "add": [
+            {
+              "name": "藁本",
+              "dosage": "6",
+              "reason": "祛风止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "头痛剧烈"
+          ],
+          "add": [
+            {
+              "name": "全蝎",
+              "dosage": "3",
+              "reason": "通络止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "半夏泻心汤",
+      "entries": [
+        {
+          "cond": [
+            "呕吐"
+          ],
+          "add": [
+            {
+              "name": "生姜",
+              "dosage": "12",
+              "reason": "和胃止呕"
+            }
+          ],
+          "source": "生姜泻心汤法"
+        },
+        {
+          "cond": [
+            "食少",
+            "神疲乏力"
+          ],
+          "add": [
+            {
+              "name": "白术",
+              "dosage": "9",
+              "reason": "健脾"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "竹叶石膏汤",
+      "entries": [
+        {
+          "cond": [
+            "口渴"
+          ],
+          "add": [
+            {
+              "name": "天花粉",
+              "dosage": "12",
+              "reason": "生津"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "气短"
+          ],
+          "add": [
+            {
+              "name": "黄芪",
+              "dosage": "15",
+              "reason": "益气"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "泻白散",
+      "entries": [
+        {
+          "cond": [
+            "痰黄"
+          ],
+          "add": [
+            {
+              "name": "黄芩",
+              "dosage": "9",
+              "reason": "清肺"
+            },
+            {
+              "name": "栀子",
+              "dosage": "9",
+              "reason": "泻火"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "咳嗽"
+          ],
+          "add": [
+            {
+              "name": "杏仁",
+              "dosage": "9",
+              "reason": "止咳"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "清气化痰丸",
+      "entries": [
+        {
+          "cond": [
+            "胸痛"
+          ],
+          "add": [
+            {
+              "name": "郁金",
+              "dosage": "9",
+              "reason": "开郁止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "便秘"
+          ],
+          "add": [
+            {
+              "name": "大黄",
+              "dosage": "6",
+              "reason": "泻热通便"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "涤痰汤",
+      "entries": [
+        {
+          "cond": [
+            "神昏"
+          ],
+          "add": [
+            {
+              "name": "安宫牛黄丸",
+              "dosage": "1丸",
+              "reason": "开窍"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "二妙散",
+      "entries": [
+        {
+          "cond": [
+            "下肢痿软"
+          ],
+          "add": [
+            {
+              "name": "牛膝",
+              "dosage": "9",
+              "reason": "强筋健骨"
+            }
+          ],
+          "source": "三妙丸法"
+        },
+        {
+          "cond": [
+            "足膝肿痛"
+          ],
+          "add": [
+            {
+              "name": "牛膝",
+              "dosage": "9",
+              "reason": "引药下行"
+            },
+            {
+              "name": "薏苡仁",
+              "dosage": "15",
+              "reason": "利湿"
+            }
+          ],
+          "source": "四妙丸法"
+        }
+      ]
+    },
+    {
+      "formula": "三妙丸",
+      "entries": [
+        {
+          "cond": [
+            "足膝肿痛"
+          ],
+          "add": [
+            {
+              "name": "薏苡仁",
+              "dosage": "15",
+              "reason": "利湿舒筋"
+            }
+          ],
+          "source": "四妙丸法"
+        }
+      ]
+    },
+    {
+      "formula": "四妙丸",
+      "entries": [
+        {
+          "cond": [
+            "腰膝酸软"
+          ],
+          "add": [
+            {
+              "name": "杜仲",
+              "dosage": "9",
+              "reason": "补肝肾"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "萆薢分清饮",
+      "entries": [
+        {
+          "cond": [
+            "腰膝酸软"
+          ],
+          "add": [
+            {
+              "name": "菟丝子",
+              "dosage": "12",
+              "reason": "补肾"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "吴茱萸汤",
+      "entries": [
+        {
+          "cond": [
+            "呕吐"
+          ],
+          "add": [
+            {
+              "name": "半夏",
+              "dosage": "9",
+              "reason": "降逆止呕"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "腹痛"
+          ],
+          "add": [
+            {
+              "name": "白芍",
+              "dosage": "12",
+              "reason": "缓急止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "当归四逆汤",
+      "entries": [
+        {
+          "cond": [
+            "腰腿疼痛"
+          ],
+          "add": [
+            {
+              "name": "牛膝",
+              "dosage": "9",
+              "reason": "通络"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "畏寒肢冷"
+          ],
+          "add": [
+            {
+              "name": "吴茱萸",
+              "dosage": "3",
+              "reason": "温中"
+            },
+            {
+              "name": "生姜",
+              "dosage": "9",
+              "reason": "散寒"
+            }
+          ],
+          "source": "当归四逆加吴茱萸生姜汤法"
+        }
+      ]
+    },
+    {
+      "formula": "酸枣仁汤",
+      "entries": [
+        {
+          "cond": [
+            "盗汗"
+          ],
+          "add": [
+            {
+              "name": "五味子",
+              "dosage": "6",
+              "reason": "敛汗"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "心悸"
+          ],
+          "add": [
+            {
+              "name": "龙骨",
+              "dosage": "15",
+              "reason": "镇心"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "甘麦大枣汤",
+      "entries": [
+        {
+          "cond": [
+            "失眠"
+          ],
+          "add": [
+            {
+              "name": "酸枣仁",
+              "dosage": "12",
+              "reason": "安神"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "心烦"
+          ],
+          "add": [
+            {
+              "name": "百合",
+              "dosage": "12",
+              "reason": "清心安神"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "四神丸",
+      "entries": [
+        {
+          "cond": [
+            "腹痛"
+          ],
+          "add": [
+            {
+              "name": "白芍",
+              "dosage": "12",
+              "reason": "缓急止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "金锁固精丸",
+      "entries": [
+        {
+          "cond": [
+            "腰膝酸软"
+          ],
+          "add": [
+            {
+              "name": "菟丝子",
+              "dosage": "12",
+              "reason": "补肾"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "小便频数"
+          ],
+          "add": [
+            {
+              "name": "桑螵蛸",
+              "dosage": "9",
+              "reason": "缩尿"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "缩泉丸",
+      "entries": [
+        {
+          "cond": [
+            "腰膝酸软"
+          ],
+          "add": [
+            {
+              "name": "菟丝子",
+              "dosage": "12",
+              "reason": "补肾"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "完带汤",
+      "entries": [
+        {
+          "cond": [
+            "带下黄臭"
+          ],
+          "add": [
+            {
+              "name": "黄柏",
+              "dosage": "9",
+              "reason": "清热燥湿"
+            }
+          ],
+          "source": "易黄汤法"
+        },
+        {
+          "cond": [
+            "腰酸"
+          ],
+          "add": [
+            {
+              "name": "菟丝子",
+              "dosage": "12",
+              "reason": "补肾"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "温经汤",
+      "entries": [
+        {
+          "cond": [
+            "痛经"
+          ],
+          "add": [
+            {
+              "name": "香附",
+              "dosage": "9",
+              "reason": "行气止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "经血色暗"
+          ],
+          "add": [
+            {
+              "name": "桃仁",
+              "dosage": "9",
+              "reason": "活血"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "胶艾汤",
+      "entries": [
+        {
+          "cond": [
+            "腹痛"
+          ],
+          "add": [
+            {
+              "name": "白芍",
+              "dosage": "12",
+              "reason": "缓急止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "生化汤",
+      "entries": [
+        {
+          "cond": [
+            "少腹疼痛"
+          ],
+          "add": [
+            {
+              "name": "延胡索",
+              "dosage": "9",
+              "reason": "止痛"
+            }
+          ],
+          "source": "傅青主女科加减"
+        },
+        {
+          "cond": [
+            "恶露量多"
+          ],
+          "add": [
+            {
+              "name": "益母草",
+              "dosage": "15",
+              "reason": "活血缩宫"
+            }
+          ],
+          "source": "傅青主女科加减"
+        }
+      ]
+    },
+    {
+      "formula": "失笑散",
+      "entries": [
+        {
+          "cond": [
+            "胸痛"
+          ],
+          "add": [
+            {
+              "name": "郁金",
+              "dosage": "9",
+              "reason": "开郁"
+            },
+            {
+              "name": "丹参",
+              "dosage": "12",
+              "reason": "活血"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "黄土汤",
+      "entries": [
+        {
+          "cond": [
+            "便血不止"
+          ],
+          "add": [
+            {
+              "name": "白及",
+              "dosage": "9",
+              "reason": "收敛止血"
+            },
+            {
+              "name": "海螵蛸",
+              "dosage": "12",
+              "reason": "收敛"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "十灰散",
+      "entries": [
+        {
+          "cond": [
+            "咳血"
+          ],
+          "add": [
+            {
+              "name": "花蕊石",
+              "dosage": "9",
+              "reason": "化瘀止血"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "丹参饮",
+      "entries": [
+        {
+          "cond": [
+            "胸痛"
+          ],
+          "add": [
+            {
+              "name": "瓜蒌",
+              "dosage": "12",
+              "reason": "宽胸"
+            },
+            {
+              "name": "薤白",
+              "dosage": "9",
+              "reason": "通阳"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "瓜蒌薤白白酒汤",
+      "entries": [
+        {
+          "cond": [
+            "痰多"
+          ],
+          "add": [
+            {
+              "name": "半夏",
+              "dosage": "9",
+              "reason": "化痰"
+            }
+          ],
+          "source": "瓜蒌薤白半夏汤法"
+        },
+        {
+          "cond": [
+            "胸闷",
+            "气短"
+          ],
+          "add": [
+            {
+              "name": "枳实",
+              "dosage": "9",
+              "reason": "行气"
+            },
+            {
+              "name": "厚朴",
+              "dosage": "9",
+              "reason": "除满"
+            }
+          ],
+          "source": "枳实薤白桂枝汤法"
+        }
+      ]
+    },
+    {
+      "formula": "越鞠丸",
+      "entries": [
+        {
+          "cond": [
+            "痰多"
+          ],
+          "add": [
+            {
+              "name": "半夏",
+              "dosage": "9",
+              "reason": "化痰"
+            },
+            {
+              "name": "茯苓",
+              "dosage": "12",
+              "reason": "渗湿"
+            }
+          ],
+          "source": "六郁汤法"
+        },
+        {
+          "cond": [
+            "食积"
+          ],
+          "add": [
+            {
+              "name": "麦芽",
+              "dosage": "9",
+              "reason": "消食"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "苏子降气汤",
+      "entries": [
+        {
+          "cond": [
+            "痰黄"
+          ],
+          "add": [
+            {
+              "name": "黄芩",
+              "dosage": "9",
+              "reason": "清肺"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "喘甚"
+          ],
+          "add": [
+            {
+              "name": "沉香",
+              "dosage": "3",
+              "reason": "纳气平喘"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "定喘汤",
+      "entries": [
+        {
+          "cond": [
+            "痰稀白"
+          ],
+          "add": [
+            {
+              "name": "细辛",
+              "dosage": "3",
+              "reason": "散寒化饮"
+            },
+            {
+              "name": "干姜",
+              "dosage": "6",
+              "reason": "温肺"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "旋覆代赭汤",
+      "entries": [
+        {
+          "cond": [
+            "呕吐"
+          ],
+          "add": [
+            {
+              "name": "竹茹",
+              "dosage": "9",
+              "reason": "止呕"
+            }
+          ],
+          "source": "医方集解加减"
+        },
+        {
+          "cond": [
+            "痰多"
+          ],
+          "add": [
+            {
+              "name": "茯苓",
+              "dosage": "12",
+              "reason": "化痰"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "橘皮竹茹汤",
+      "entries": [
+        {
+          "cond": [
+            "呕吐"
+          ],
+          "add": [
+            {
+              "name": "半夏",
+              "dosage": "9",
+              "reason": "降逆止呕"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "丁香柿蒂汤",
+      "entries": [
+        {
+          "cond": [
+            "胃寒"
+          ],
+          "add": [
+            {
+              "name": "干姜",
+              "dosage": "6",
+              "reason": "温中"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "大秦艽汤",
+      "entries": [
+        {
+          "cond": [
+            "肢体麻木"
+          ],
+          "add": [
+            {
+              "name": "天麻",
+              "dosage": "9",
+              "reason": "通络"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "牵正散",
+      "entries": [
+        {
+          "cond": [
+            "面肌抽动"
+          ],
+          "add": [
+            {
+              "name": "蜈蚣",
+              "dosage": "1条",
+              "reason": "熄风止痉"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "地黄饮子",
+      "entries": [
+        {
+          "cond": [
+            "痰多"
+          ],
+          "add": [
+            {
+              "name": "天竺黄",
+              "dosage": "9",
+              "reason": "豁痰"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "真人养脏汤",
+      "entries": [
+        {
+          "cond": [
+            "腹痛"
+          ],
+          "add": [
+            {
+              "name": "白芍",
+              "dosage": "12",
+              "reason": "缓急止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "桑螵蛸散",
+      "entries": [
+        {
+          "cond": [
+            "遗精"
+          ],
+          "add": [
+            {
+              "name": "芡实",
+              "dosage": "12",
+              "reason": "固精"
+            },
+            {
+              "name": "金樱子",
+              "dosage": "12",
+              "reason": "固涩"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "牡蛎散",
+      "entries": [
+        {
+          "cond": [
+            "盗汗"
+          ],
+          "add": [
+            {
+              "name": "五味子",
+              "dosage": "6",
+              "reason": "敛汗"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "四磨汤",
+      "entries": [
+        {
+          "cond": [
+            "便秘"
+          ],
+          "add": [
+            {
+              "name": "大黄",
+              "dosage": "6",
+              "reason": "通便"
+            }
+          ],
+          "source": "六磨汤法"
+        }
+      ]
+    },
+    {
+      "formula": "香苏散",
+      "entries": [
+        {
+          "cond": [
+            "鼻塞"
+          ],
+          "add": [
+            {
+              "name": "苍耳子",
+              "dosage": "9",
+              "reason": "通鼻窍"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "参苏饮",
+      "entries": [
+        {
+          "cond": [
+            "咳嗽",
+            "痰多"
+          ],
+          "add": [
+            {
+              "name": "杏仁",
+              "dosage": "9",
+              "reason": "止咳"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "人参败毒散",
+      "entries": [
+        {
+          "cond": [
+            "身痛"
+          ],
+          "add": [
+            {
+              "name": "桂枝",
+              "dosage": "6",
+              "reason": "温通止痛"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "荆防败毒散",
+      "entries": [
+        {
+          "cond": [
+            "疮疡初起"
+          ],
+          "add": [
+            {
+              "name": "金银花",
+              "dosage": "12",
+              "reason": "解毒"
+            },
+            {
+              "name": "连翘",
+              "dosage": "9",
+              "reason": "散结"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
+    },
+    {
+      "formula": "葛根汤",
+      "entries": [
+        {
+          "cond": [
+            "项背强痛"
+          ],
+          "add": [
+            {
+              "name": "葛根",
+              "dosage": "15",
+              "reason": "升津舒筋(重用)"
+            }
+          ],
+          "source": "伤寒论加减"
+        },
+        {
+          "cond": [
+            "下利"
+          ],
+          "add": [
+            {
+              "name": "葛根",
+              "dosage": "15",
+              "reason": "升清止利"
+            }
+          ],
+          "source": "葛根芩连法"
+        }
+      ]
+    },
+    {
+      "formula": "升麻葛根汤",
+      "entries": [
+        {
+          "cond": [
+            "疹出不畅"
+          ],
+          "add": [
+            {
+              "name": "薄荷",
+              "dosage": "6",
+              "reason": "透疹"
+            },
+            {
+              "name": "蝉蜕",
+              "dosage": "6",
+              "reason": "透疹"
+            }
+          ],
+          "source": "医方集解加减"
+        }
+      ]
     }
   ]
 }

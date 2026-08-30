@@ -124,7 +124,7 @@
                       <b>{{ sys.top[0].name }}</b>({{ sys.top[0].score }} 分)
                       <div class="sys-hits"><el-tag v-for="h in sys.top[0].hits" :key="h" size="small" type="info" style="margin:0 2px 2px 0">{{ h }}</el-tag></div>
                       <div class="sys-exp">病机:{{ sys.top[0].explain }}</div>
-                      <div v-if="sk === 'liujing' && sys.top[0].variant" class="sys-variant">
+                      <div v-if="(sk === 'liujing' || sk === 'zangfu') && sys.top[0].variant" class="sys-variant">
                         分型:{{ sys.top[0].variant.name }}——{{ sys.top[0].variant.treatment }}
                       </div>
                       <div v-if="sk === 'zangfu' && sys.top[0].missing && sys.top[0].missing.length" class="sys-miss">
@@ -208,6 +208,15 @@
               <el-button v-if="result.formula_suggestions.length > 3" link type="primary" size="small" @click="showAllRx = !showAllRx">
                 {{ showAllRx ? '收起' : `展开其余 ${result.formula_suggestions.length - 3} 首` }}
               </el-button>
+            </div>
+
+            <!-- 治法门类(医方集解) -->
+            <div v-if="result.menlei && result.menlei.length" class="menlei-strip">
+              <div class="care-head">📚 治法门类(依《医方集解》)</div>
+              <div v-for="m in result.menlei" :key="m.menlei" class="menlei-item">
+                <b>{{ m.menlei }}</b>({{ m.zhifa }}):
+                <el-tag v-for="f in m.formulas" :key="f.name" size="small" type="warning" class="menlei-chip" @click="router.push('/kb/yifang?q=' + encodeURIComponent(f.name))">{{ f.name }}</el-tag>
+              </div>
             </div>
 
             <!-- 调护建议 -->
@@ -494,6 +503,10 @@ function fmtTime(t) {
 .traj-strip { margin-top: 12px; padding: 10px 12px; background: #F4F1FA; border: 1px dashed #B9A8DD; border-radius: 8px; }
 .traj-item { font-size: 12.5px; color: #4A3E6B; margin: 4px 0; }
 .care-strip { margin-top: 12px; padding: 10px 12px; background: #F4FBF7; border: 1px solid #C9E8D5; border-radius: 8px; }
+.menlei-strip { margin-top: 12px; padding: 10px 12px; background: #FBF6EC; border: 1px solid #E8D9BC; border-radius: 8px; }
+.menlei-item { font-size: 12.5px; color: #5A4E2E; margin: 4px 0; }
+.menlei-item b { color: #8A5A12; margin-right: 4px; }
+.menlei-chip { cursor: pointer; margin: 0 6px 2px 0; }
 .care-head { font-weight: 700; color: #2F7A50; font-size: 13px; margin-bottom: 4px; }
 .care-item { font-size: 12.5px; color: #3E5E4F; margin: 3px 0; }
 .prescribe-strip { margin-top: 12px; padding: 10px 12px; background: #FDF7EC; border: 1px solid #EAD9B8; border-radius: 8px; }

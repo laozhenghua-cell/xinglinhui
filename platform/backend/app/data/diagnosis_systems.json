@@ -647,6 +647,34 @@
       "formulas": [
         "柴胡疏肝散",
         "逍遥散"
+      ],
+      "variants": [
+        {
+          "key": "gy_huahuo",
+          "name": "气郁化火",
+          "indicators": [
+            "口苦",
+            "烦躁易怒",
+            "舌红"
+          ],
+          "treatment": "疏肝清热(丹栀逍遥散)",
+          "formulas": [
+            "丹栀逍遥散"
+          ]
+        },
+        {
+          "key": "gy_xueyu",
+          "name": "气滞血瘀",
+          "indicators": [
+            "刺痛",
+            "舌紫暗",
+            "痛有定处"
+          ],
+          "treatment": "理气活血(血府逐瘀汤)",
+          "formulas": [
+            "血府逐瘀汤"
+          ]
+        }
       ]
     },
     {
@@ -667,7 +695,8 @@
       "treatment": "清肝泻火(龙胆泻肝汤)",
       "formulas": [
         "龙胆泻肝汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "ganyangshangkang",
@@ -687,6 +716,21 @@
       "formulas": [
         "天麻钩藤饮",
         "镇肝熄风汤"
+      ],
+      "variants": [
+        {
+          "key": "gyk_feng",
+          "name": "阳亢化风",
+          "indicators": [
+            "肢麻",
+            "震颤",
+            "眩晕欲仆"
+          ],
+          "treatment": "平肝熄风(天麻钩藤饮)",
+          "formulas": [
+            "天麻钩藤饮"
+          ]
+        }
       ]
     },
     {
@@ -706,7 +750,8 @@
       "treatment": "养血柔肝(四物汤、补肝汤)",
       "formulas": [
         "四物汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "ganfengneidong",
@@ -725,7 +770,8 @@
       "formulas": [
         "羚角钩藤汤",
         "镇肝熄风汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "xinqixu",
@@ -743,7 +789,8 @@
       "formulas": [
         "养心汤",
         "保元汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "xinxuexu",
@@ -762,7 +809,8 @@
       "formulas": [
         "归脾汤",
         "天王补心丹"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "xinhuokangsheng",
@@ -781,6 +829,20 @@
       "formulas": [
         "导赤散",
         "泻心汤"
+      ],
+      "variants": [
+        {
+          "key": "xh_yire",
+          "name": "心移热小肠",
+          "indicators": [
+            "小便短赤",
+            "尿痛"
+          ],
+          "treatment": "清心利水(导赤散)",
+          "formulas": [
+            "导赤散"
+          ]
+        }
       ]
     },
     {
@@ -798,7 +860,8 @@
       "treatment": "活血化瘀,通络止痛(血府逐瘀汤)",
       "formulas": [
         "血府逐瘀汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "piqixu",
@@ -817,6 +880,34 @@
       "formulas": [
         "四君子汤",
         "参苓白术散"
+      ],
+      "variants": [
+        {
+          "key": "pq_zhongqi",
+          "name": "中气下陷",
+          "indicators": [
+            "脱肛",
+            "久泻",
+            "内脏下垂"
+          ],
+          "treatment": "补中益气,升阳举陷(补中益气汤)",
+          "formulas": [
+            "补中益气汤"
+          ]
+        },
+        {
+          "key": "pq_tongxue",
+          "name": "脾不统血",
+          "indicators": [
+            "崩漏",
+            "便血",
+            "月经量多"
+          ],
+          "treatment": "益气摄血(归脾汤)",
+          "formulas": [
+            "归脾汤"
+          ]
+        }
       ]
     },
     {
@@ -835,7 +926,8 @@
       "formulas": [
         "附子理中丸",
         "理中汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "hanshikunpi",
@@ -852,7 +944,8 @@
       "treatment": "温化寒湿,健脾燥湿(平胃散、胃苓汤)",
       "formulas": [
         "平胃散"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "shireyunpi",
@@ -870,7 +963,8 @@
       "formulas": [
         "连朴饮",
         "三仁汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "feiqixu",
@@ -888,6 +982,21 @@
       "formulas": [
         "玉屏风散",
         "补肺汤"
+      ],
+      "variants": [
+        {
+          "key": "fq_weibiao",
+          "name": "卫表不固",
+          "indicators": [
+            "自汗",
+            "易感冒",
+            "恶风"
+          ],
+          "treatment": "益气固表(玉屏风散)",
+          "formulas": [
+            "玉屏风散"
+          ]
+        }
       ]
     },
     {
@@ -907,7 +1016,8 @@
       "formulas": [
         "沙参麦冬汤",
         "百合固金汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "fenghanshufei",
@@ -925,7 +1035,8 @@
       "formulas": [
         "三拗汤",
         "止嗽散"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "fengrefanfei",
@@ -942,7 +1053,8 @@
       "formulas": [
         "桑菊饮",
         "银翘散"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "tanreyongfei",
@@ -960,6 +1072,21 @@
       "formulas": [
         "清金化痰汤",
         "麻杏石甘汤"
+      ],
+      "variants": [
+        {
+          "key": "tr_xiong",
+          "name": "痰热蕴肺",
+          "indicators": [
+            "咳喘",
+            "痰黄",
+            "胸痛"
+          ],
+          "treatment": "清肺化痰(清金化痰汤)",
+          "formulas": [
+            "清金化痰汤"
+          ]
+        }
       ]
     },
     {
@@ -977,7 +1104,8 @@
       "formulas": [
         "二陈汤",
         "三子养亲汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "shenyangxu",
@@ -995,6 +1123,34 @@
       "formulas": [
         "金匮肾气丸",
         "右归丸"
+      ],
+      "variants": [
+        {
+          "key": "sx_mingmen",
+          "name": "命门火衰",
+          "indicators": [
+            "阳痿",
+            "畏寒肢冷",
+            "腰膝酸冷"
+          ],
+          "treatment": "温补命门(右归丸)",
+          "formulas": [
+            "右归丸"
+          ]
+        },
+        {
+          "key": "sx_qihua",
+          "name": "气化不利",
+          "indicators": [
+            "水肿",
+            "小便不利",
+            "夜尿多"
+          ],
+          "treatment": "温阳化气行水(金匮肾气丸)",
+          "formulas": [
+            "金匮肾气丸"
+          ]
+        }
       ]
     },
     {
@@ -1014,6 +1170,34 @@
       "formulas": [
         "六味地黄丸",
         "左归丸"
+      ],
+      "variants": [
+        {
+          "key": "syx_huowang",
+          "name": "阴虚火旺",
+          "indicators": [
+            "五心烦热",
+            "潮热",
+            "盗汗"
+          ],
+          "treatment": "滋阴降火(知柏地黄丸)",
+          "formulas": [
+            "知柏地黄丸"
+          ]
+        },
+        {
+          "key": "syx_jingkui",
+          "name": "精亏髓减",
+          "indicators": [
+            "眩晕",
+            "耳鸣",
+            "健忘"
+          ],
+          "treatment": "填精益髓(左归丸)",
+          "formulas": [
+            "左归丸"
+          ]
+        }
       ]
     },
     {
@@ -1034,7 +1218,8 @@
       "formulas": [
         "河车大造丸",
         "左归丸"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "shenbunaqi",
@@ -1052,7 +1237,8 @@
       "formulas": [
         "金匮肾气丸",
         "人参蛤蚧散"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "weire",
@@ -1071,7 +1257,8 @@
       "formulas": [
         "清胃散",
         "玉女煎"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "weihan",
@@ -1089,7 +1276,8 @@
       "formulas": [
         "良附丸",
         "理中汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "shizhiweiwan",
@@ -1106,7 +1294,8 @@
       "treatment": "消食导滞(保和丸)",
       "formulas": [
         "保和丸"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "weiyinxu",
@@ -1123,7 +1312,8 @@
       "formulas": [
         "益胃汤",
         "麦门冬汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "danyutansheng",
@@ -1140,7 +1330,8 @@
       "treatment": "清胆化痰,和胃安神(温胆汤)",
       "formulas": [
         "温胆汤"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "dachangshire",
@@ -1158,6 +1349,20 @@
       "formulas": [
         "芍药汤",
         "白头翁汤"
+      ],
+      "variants": [
+        {
+          "key": "dc_xueli",
+          "name": "热毒血痢",
+          "indicators": [
+            "里急后重",
+            "便血鲜红"
+          ],
+          "treatment": "清热解毒,凉血止痢(白头翁汤)",
+          "formulas": [
+            "白头翁汤"
+          ]
+        }
       ]
     },
     {
@@ -1175,7 +1380,8 @@
       "formulas": [
         "增液汤",
         "麻子仁丸"
-      ]
+      ],
+      "variants": []
     },
     {
       "key": "pangguangshire",
@@ -1193,6 +1399,19 @@
       "treatment": "清热利湿通淋(八正散)",
       "formulas": [
         "八正散"
+      ],
+      "variants": [
+        {
+          "key": "pg_xueluo",
+          "name": "热伤血络",
+          "indicators": [
+            "尿血"
+          ],
+          "treatment": "凉血止血通淋(小蓟饮子)",
+          "formulas": [
+            "小蓟饮子"
+          ]
+        }
       ]
     }
   ],

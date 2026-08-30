@@ -762,6 +762,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "followup": systems_result.get("followup"),
         "ask": systems_result.get("ask", []),
         "modifications": systems_result.get("modifications", []),
+        "menlei": systems_result.get("menlei", []),
         "plain": systems_result.get("plain"),
         "formula_suggestions": formula_suggestions,
     }
@@ -1008,15 +1009,26 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["ask"] = {"got": ids + fu_ids, "expected": sm["expected"]["ask_has"]}
-        # 六经分型
+        # 六经/脏腑分型
         if sm["expected"].get("variant_has"):
             st = per_system.setdefault("variant", {"total": 0, "correct": 0})
             st["total"] += 1
             v = ((result.get("liujing") or {}).get("top") or [{}])[0].get("variant") or {}
-            ok = sm["expected"]["variant_has"] in (v.get("formulas") or [])
+            v2 = ((result.get("zangfu") or {}).get("top") or [{}])[0].get("variant") or {}
+            got = (v.get("formulas") or []) + (v2.get("formulas") or [])
+            ok = sm["expected"]["variant_has"] in got
             if ok:
                 st["correct"] += 1
-            row["variant"] = {"got": (v.get("name"), v.get("formulas")), "expected": sm["expected"]["variant_has"]}
+            row["variant"] = {"got": got, "expected": sm["expected"]["variant_has"]}
+        # 治法门类(医方集解)
+        if sm["expected"].get("menlei_has"):
+            st = per_system.setdefault("menlei", {"total": 0, "correct": 0})
+            st["total"] += 1
+            mls = [m.get("menlei", "") for m in (result.get("menlei") or [])]
+            ok = sm["expected"]["menlei_has"] in mls
+            if ok:
+                st["correct"] += 1
+            row["menlei"] = {"got": mls, "expected": sm["expected"]["menlei_has"]}
         # 随症加减
         if sm["expected"].get("modification_has"):
             st = per_system.setdefault("modification", {"total": 0, "correct": 0})

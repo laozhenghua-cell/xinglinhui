@@ -428,6 +428,15 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
                     best_v = {"key": v["key"], "name": v["name"], "score": sc, "hits": vhits,
                               "treatment": v.get("treatment", ""), "formulas": v.get("formulas", [])}
             top[0]["variant"] = best_v
+        if system == "zangfu" and top:
+            # 脏腑分型:对 top1 证型再辨子型(命门火衰/气化不利、阴虚火旺/精亏等)
+            best_v = None
+            for v in top[0].get("variants", []):
+                sc, vhits = _score_indicators(v["indicators"], list(tokens))
+                if sc > 0 and (best_v is None or sc >= best_v["score"]):
+                    best_v = {"key": v["key"], "name": v["name"], "score": sc, "hits": vhits,
+                              "treatment": v.get("treatment", ""), "formulas": v.get("formulas", [])}
+            top[0]["variant"] = best_v
         summary = top[0]["name"] if top else "信息不足"
         # 证据不足(仅 1 分弱命中)不轻易下结论,老中医作风;八纲按四对维度不受此限
         if system != "bagang" and top and top[0]["score"] <= 1:
@@ -462,6 +471,7 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
     out["followup"] = followup
     out["ask"] = _ask_questions(user_labels, followup)
     out["modifications"] = _modifications(user_labels, out)
+    out["menlei"] = _menlei(user_labels, out)
     out["plain"] = _plain_summary(out)
     return out
 
@@ -649,6 +659,86 @@ def extract_symptom_terms(texts: list[str], synonyms: Optional[dict] = None) -> 
 
 
 _JIAJIAN_CACHE: Optional[list] = None
+_MENLEI_CACHE: Optional[list] = None
+
+
+def _load_yifang_lib() -> list:
+    global _MENLEI_CACHE
+    if _MENLEI_CACHE is None:
+        try:
+            p = Path(__file__).resolve().parent.parent / "data" / "yifang_seed.json"
+            _MENLEI_CACHE = json.loads(p.read_text(encoding="utf-8"))["formulas"]
+        except Exception:
+            _MENLEI_CACHE = []
+    return _MENLEI_CACHE
+
+
+def _menlei(user_labels: list[str], out: dict[str, Any]) -> list[dict]:
+    """医方集解治法门类辨证:症状+八纲+脏腑结论 → 治法门类 → 门类代表方。"""
+    joined = "、".join(str(x) for x in user_labels)
+    comps = out["bagang"]["components"]
+    zf = out["zangfu"]["summary"]
+    picks: list[tuple[str, str]] = []
+
+    def has(*ks):
+        return any(k in joined for k in ks)
+
+    if "表证" in comps or has("恶寒", "发热", "鼻塞", "流清涕"):
+        picks.append(("发表之剂", "解表祛邪"))
+    if has("痰", "咳喘") or zf in ("痰湿阻肺", "痰热壅肺", "胆郁痰扰"):
+        picks.append(("除痰之剂", "化痰止咳"))
+    if has("浮肿", "水肿", "带下", "困重", "湿") or zf in ("湿热蕴脾", "寒湿困脾", "大肠湿热", "膀胱湿热", "太阴湿热"):
+        picks.append(("利湿之剂", "利水渗湿"))
+    if has("胀痛", "痞满", "嗳气", "善太息", "胸闷") or zf in ("肝气郁结", "食滞胃脘"):
+        picks.append(("理气之剂", "行气解郁"))
+    if has("刺痛", "瘀斑", "舌紫暗", "痛有定处", "痛经") or zf in ("心血瘀阻",):
+        picks.append(("理血之剂", "活血化瘀"))
+    if has("痒", "痹", "麻木", "抽搐", "震颤") or zf in ("肝风内动", "虚风内动"):
+        picks.append(("祛风之剂", "祛风通络"))
+    if "寒证" in comps or zf in ("胃寒", "脾阳虚", "肾阳虚"):
+        picks.append(("祛寒之剂", "温里散寒"))
+    if "热证" in comps or zf in ("心火亢盛", "肝火上炎", "胃热炽盛"):
+        picks.append(("泻火之剂", "清热泻火"))
+    if "虚证" in comps or zf in ("脾气虚", "肾阴虚", "肾阳虚", "肺气虚", "心血虚", "肝血虚", "胃阴虚", "脾阳虚"):
+        picks.append(("补养之剂", "补虚扶正"))
+    if has("便秘", "腹满", "燥屎", "大便干结"):
+        picks.append(("攻里之剂", "攻下里实"))
+    if has("嗳腐", "厌食") or zf == "食滞胃脘":
+        picks.append(("消导之剂", "消食导滞"))
+    if has("遗精", "自汗", "盗汗", "久泻", "崩漏"):
+        picks.append(("收涩之剂", "固涩止脱"))
+    if has("疮", "痈", "疔"):
+        picks.append(("痈疡之剂", "解毒消痈"))
+    if has("月经", "经期", "胎", "带下", "产后"):
+        picks.append(("经产之剂", "调经安胎"))
+    if has("暑"):
+        picks.append(("清暑之剂", "清暑益气"))
+    if has("干咳", "口干", "便干"):
+        picks.append(("润燥之剂", "润燥生津"))
+    seen: set[str] = set()
+    uniq = []
+    for ml, zhifa in picks:
+        if ml not in seen:
+            seen.add(ml)
+            uniq.append((ml, zhifa))
+    prefer: set[str] = set()
+    for sys in ("zangfu", "liujing", "sanjiao"):
+        t = out[sys]["top"]
+        if t:
+            prefer.update(t[0].get("formulas") or [])
+            if t[0].get("variant"):
+                prefer.update(t[0]["variant"].get("formulas") or [])
+    yf = _load_yifang_lib()
+    res: list[dict] = []
+    for ml, zhifa in uniq[:4]:
+        base = ml.replace("之剂", "")
+        cands = [f for f in yf if (f.get("category") or "").startswith(base)]
+        top_cands = [f for f in cands if f["name"] in prefer][:2]
+        if not top_cands:
+            top_cands = cands[:2]
+        res.append({"menlei": ml, "zhifa": zhifa,
+                    "formulas": [{"name": f["name"], "source": f.get("source", "")} for f in top_cands]})
+    return res
 
 
 def _load_jiajian() -> list:
