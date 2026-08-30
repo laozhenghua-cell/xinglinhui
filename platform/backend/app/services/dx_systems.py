@@ -445,7 +445,9 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
     out["dynamic"] = _dynamic(out)
     out["care"] = _care_advice(out)
     out["danger"] = _danger_alerts(user_labels)
-    out["followup"] = _followup(out)
+    followup = _followup(out)
+    out["followup"] = followup
+    out["ask"] = _ask_questions(user_labels, followup)
     out["plain"] = _plain_summary(out)
     return out
 
@@ -677,3 +679,25 @@ def _followup(out: dict[str, Any]) -> Optional[dict]:
             "questions": [q for _, q in scored[:3]],
         }
     return None
+
+
+def _ask_questions(user_labels: list[str], followup: Optional[dict]) -> list[dict]:
+    """症状→鉴别问句反向引导:按患者已述症状触发关键问句(如'肚子疼'→反问喜按拒按)。"""
+    joined = "、".join(str(x) for x in user_labels)
+    followup_ids = {q.get("id") for q in (followup or {}).get("questions", [])}
+    scored = []
+    for q in _load_dq()["questions"]:
+        if q.get("id") in followup_ids:
+            continue  # 与体系追问去重
+        trigs = q.get("triggers") or []
+        n = sum(1 for t in trigs if t in joined)
+        if not n:
+            continue
+        # 已答跳过:该题任一选项标签已出现且非触发词本身 → 视为已答
+        trig_set = set(trigs)
+        answered = any(lab in joined for opt in q["options"] for lab in opt.get("add", []) if lab not in trig_set)
+        if answered:
+            continue
+        scored.append((n, q))
+    scored.sort(key=lambda x: -x[0])
+    return [q for _, q in scored[:3]]

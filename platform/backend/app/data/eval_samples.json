@@ -2612,6 +2612,46 @@
           "夜尿多"
         ]
       }
+    },
+    {
+      "id": "h01",
+      "desc": "反向引导(肚子疼→疼痛性质/部位)",
+      "labels": [
+        "肚子疼"
+      ],
+      "expected": {
+        "ask_has": "q_press"
+      }
+    },
+    {
+      "id": "h02",
+      "desc": "反向引导(头痛→部位)",
+      "labels": [
+        "头痛"
+      ],
+      "expected": {
+        "ask_has": "q_headache"
+      }
+    },
+    {
+      "id": "h03",
+      "desc": "反向引导(腰痛→性质)",
+      "labels": [
+        "腰痛"
+      ],
+      "expected": {
+        "ask_has": "q_backpain"
+      }
+    },
+    {
+      "id": "h04",
+      "desc": "反向引导(头晕→感觉)",
+      "labels": [
+        "头晕"
+      ],
+      "expected": {
+        "ask_has": "q_dizzy"
+      }
     }
   ]
 }

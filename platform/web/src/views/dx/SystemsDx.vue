@@ -144,6 +144,17 @@
               </el-col>
             </el-row>
 
+            <!-- 症状反向引导 -->
+            <div v-if="result.ask && result.ask.length" class="fu-strip">
+              <div class="fu-head">🔍 针对您的症状,再问几个关键问题(点选后自动重辨,更精确)</div>
+              <div v-for="q in result.ask" :key="q.id" class="fu-q">
+                <div class="fu-qt">{{ q.q }}</div>
+                <div class="fu-opts">
+                  <el-tag v-for="o in q.options" :key="o.label" class="chip" type="info" @click="applyFollowup(o)">{{ o.label }}</el-tag>
+                </div>
+              </div>
+            </div>
+
             <!-- 鉴别追问 -->
             <div v-if="result.followup && result.followup.questions && result.followup.questions.length" class="fu-strip">
               <div class="fu-head">🔍 鉴别追问:{{ result.followup.top1 }} 与 {{ result.followup.top2 }} 接近,再答一个关键问题即可明确</div>

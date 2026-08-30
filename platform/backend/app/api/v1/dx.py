@@ -757,6 +757,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "care": systems_result.get("care", []),
         "danger": systems_result.get("danger", []),
         "followup": systems_result.get("followup"),
+        "ask": systems_result.get("ask", []),
         "plain": systems_result.get("plain"),
         "formula_suggestions": formula_suggestions,
     }
@@ -993,6 +994,16 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["colloquial"] = {"got": got, "expected": sm["expected"]["colloquial"]}
+        # 症状→鉴别问句反向引导
+        if sm["expected"].get("ask_has"):
+            st = per_system.setdefault("ask", {"total": 0, "correct": 0})
+            st["total"] += 1
+            ids = [q.get("id", "") for q in (result.get("ask") or [])]
+            fu_ids = [q.get("id", "") for q in (result.get("followup") or {}).get("questions", [])]
+            ok = sm["expected"]["ask_has"] in ids + fu_ids
+            if ok:
+                st["correct"] += 1
+            row["ask"] = {"got": ids + fu_ids, "expected": sm["expected"]["ask_has"]}
         detail.append(row)
     acc = {}
     for k, v in per_system.items():
