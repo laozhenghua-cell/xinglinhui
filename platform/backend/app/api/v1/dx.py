@@ -779,6 +779,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "ask": systems_result.get("ask", []),
         "modifications": systems_result.get("modifications", []),
         "menlei": systems_result.get("menlei", []),
+        "prescription": systems_result.get("prescription"),
         "plain": systems_result.get("plain"),
         "formula_suggestions": formula_suggestions,
     }
@@ -1045,6 +1046,15 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["menlei"] = {"got": mls, "expected": sm["expected"]["menlei_has"]}
+        # 拟方合成
+        if sm["expected"].get("prescription_has"):
+            st = per_system.setdefault("prescription", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = (result.get("prescription") or {}).get("name", "")
+            ok = sm["expected"]["prescription_has"] in got
+            if ok:
+                st["correct"] += 1
+            row["prescription"] = {"got": got, "expected": sm["expected"]["prescription_has"]}
         # 随症加减
         if sm["expected"].get("modification_has"):
             st = per_system.setdefault("modification", {"total": 0, "correct": 0})

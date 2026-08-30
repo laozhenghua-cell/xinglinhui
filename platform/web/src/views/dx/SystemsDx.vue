@@ -181,6 +181,18 @@
             <div v-if="result.formula_suggestions && result.formula_suggestions.length" class="prescribe-strip">
               <div class="care-head">📜 开方建议(据六体系主方)</div>
               <div class="rx-warn">⚠️ 教学参考:剂量为常用参考量,须经中医师面诊辨证后处方使用,切勿自行抓药服用</div>
+              <!-- 拟方合成:主方+随症加减 → 完整处方单 -->
+              <div v-if="result.prescription" class="presc-box">
+                <div class="presc-head">
+                  📋 拟方:<b>{{ result.prescription.name }}</b>
+                  <span class="rx-src">{{ result.prescription.source }}</span>
+                </div>
+                <div class="presc-items">
+                  <span v-for="(it, i) in result.prescription.items" :key="i" class="presc-item" :class="{ 'presc-add': it.note !== '原方' }">
+                    {{ it.name }} {{ it.dosage }}<template v-if="it.note !== '原方'">({{ it.note }})</template>
+                  </span>
+                </div>
+              </div>
               <div v-for="f in (showAllRx ? result.formula_suggestions : result.formula_suggestions.slice(0, 3))" :key="f.id" class="rx-card">
                 <div class="rx-head">
                   <b class="rx-name" @click="router.push('/kb/yifang/' + f.id)">{{ f.name }}</b>
@@ -464,6 +476,12 @@ function fmtTime(t) {
 .plain-box { background: #FFFDF4; border: 1px solid #EAD9A8; border-left: 4px solid #C9A227; border-radius: 8px; padding: 10px 14px; font-size: 14px; color: #5A4E2E; line-height: 1.7; margin-bottom: 12px; font-weight: 500; }
 .plain-danger { border-color: #E8A0A0; border-left-color: #C0392B; background: #FDF0F0; color: #7A2318; }
 .rx-warn { color: #A03D2C; background: #FCEBE8; border: 1px solid #E8B4A8; border-radius: 6px; padding: 6px 10px; font-size: 12.5px; font-weight: 600; margin-bottom: 8px; }
+.presc-box { background: #fff; border: 1px solid #E8C97A; border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; }
+.presc-head { font-size: 13px; color: #5A4E2E; }
+.presc-head b { color: #8A5A12; font-size: 15px; font-family: "Songti SC", serif; }
+.presc-items { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.presc-item { font-size: 13px; color: #3E5E4F; background: #F0F8F2; border-radius: 4px; padding: 2px 7px; }
+.presc-add { background: #FFF6E8; color: #7A4A12; }
 .med-disclaimer { background: #FFF7F0; border: 1px solid #F3D5BE; color: #9C5B2D; border-radius: 8px; padding: 6px 12px; font-size: 12.5px; }
 .sys-block { background: #F7FAF9; border: 1px solid #DCEBE4; border-radius: 10px; padding: 12px 14px; margin-top: 6px; }
 .sys-block h4 { margin: 0 0 8px; color: var(--xl-deep); }

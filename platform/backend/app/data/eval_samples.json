@@ -2712,7 +2712,8 @@
       ],
       "expected": {
         "liujing": "太阳病",
-        "modification_has": "葛根"
+        "modification_has": "葛根",
+        "prescription_has": "桂枝汤"
       }
     },
     {

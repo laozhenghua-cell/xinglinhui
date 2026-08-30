@@ -472,6 +472,7 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
     out["ask"] = _ask_questions(user_labels, followup)
     out["modifications"] = _modifications(user_labels, out)
     out["menlei"] = _menlei(user_labels, out)
+    out["prescription"] = _prescription(user_labels, out)
     out["plain"] = _plain_summary(out)
     return out
 
@@ -766,6 +767,43 @@ def _load_jiajian() -> list:
         except Exception:
             _JIAJIAN_CACHE = []
     return _JIAJIAN_CACHE
+
+
+def _prescription(user_labels: list[str], out: dict[str, Any]) -> Optional[dict]:
+    """拟方合成:首选主方 + 随症加减 → 一张完整处方单(药+量+加减理由)。
+    首选优先级:六经分型方 > 脏腑强结论(≥4分) > 六经通用方 > 脏腑一般结论。"""
+    primary = None
+    lj = out["liujing"]["top"]
+    lj_variant = None
+    if lj and lj[0].get("variant"):
+        lj_variant = (lj[0]["variant"].get("formulas") or [None])[0]
+    zf = out["zangfu"]["top"]
+    zf_first = (zf[0].get("formulas") or [None])[0] if zf and out["zangfu"]["summary"] != "信息不足" else None
+    zf_score = zf[0]["score"] if zf else 0
+    lj_first = (lj[0].get("formulas") or [None])[0] if lj else None
+    if lj_variant:
+        primary = lj_variant
+    elif zf_first and zf_score >= 4:
+        primary = zf_first
+    elif lj_first:
+        primary = lj_first
+    elif zf_first:
+        primary = zf_first
+    if not primary:
+        return None
+    base = next((f for f in _load_yifang_lib() if f["name"] == primary), None)
+    if not base:
+        return None
+    mods = {m["formula"]: m["entries"] for m in _modifications(user_labels, out)}
+    items = [{"name": c.get("name", ""), "dosage": c.get("dosage", ""), "note": "原方"}
+             for c in base.get("composition", [])]
+    for e in mods.get(primary, []):
+        for a in e.get("add", []):
+            items.append({"name": a.get("name", ""), "dosage": a.get("dosage", ""),
+                          "note": f"加:{a.get('reason', '')}({e.get('source', '')})"})
+        for rm in e.get("remove", []):
+            items = [i for i in items if i["name"] != rm]
+    return {"name": primary, "source": base.get("source", ""), "items": items}
 
 
 def _modifications(user_labels: list[str], out: dict[str, Any]) -> list[dict]:
