@@ -64,6 +64,8 @@ _ALIGN = {
     ("zangfu", "肾阴虚", "liujing", "少阴病"), ("zangfu", "胃热炽盛", "liujing", "阳明病"),
     ("zangfu", "胃阴虚", "liujing", "阳明病"), ("zangfu", "胆郁痰扰", "liujing", "少阳病"),
     ("zangfu", "大肠湿热", "liujing", "阳明病"), ("zangfu", "膀胱湿热", "liujing", "太阳病"),
+    ("zangfu", "膀胱湿热", "liujing", "少阳病"), ("zangfu", "膀胱湿热", "jingluo", "足少阳胆经"),
+    ("bagang", "热证", "liujing", "少阳病"), ("bagang", "热证", "jingluo", "足少阳胆经"),
     # 脏腑 ↔ 经络(本经)
     ("zangfu", "肝气郁结", "jingluo", "足厥阴肝经"), ("zangfu", "肝火上炎", "jingluo", "足厥阴肝经"),
     ("zangfu", "肝阳上亢", "jingluo", "足厥阴肝经"), ("zangfu", "肝血虚", "jingluo", "足厥阴肝经"),
@@ -416,6 +418,9 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
                     top.insert(0, top.pop(idx))
                     break
         summary = top[0]["name"] if top else "信息不足"
+        # 证据不足(仅 1 分弱命中)不轻易下结论,老中医作风;八纲按四对维度不受此限
+        if system != "bagang" and top and top[0]["score"] <= 1:
+            summary = "信息不足"
         components: list[str] = []
         if system == "bagang":
             by_key = {i["key"]: i for i in items}
