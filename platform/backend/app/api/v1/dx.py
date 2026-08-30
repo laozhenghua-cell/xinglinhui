@@ -23,7 +23,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import settings
 from app.database import get_db
-from app.models.dx import DxRecord
+from app.models.dx import DxRecord, DxTongueReading
 from app.models.kb import (
     KBCase,
     KBDisease,
@@ -894,6 +894,64 @@ async def dx_vision(
     return {"module": module, "result": out}
 
 
+@router.post("/tongue")
+async def dx_tongue(
+    image: UploadFile = File(...),
+    request: Request = None,
+    db: AsyncSession = Depends(get_db),
+):
+    """拍照识舌:上传舌象照片,Qwen-VL 结构化 + 规则归一化为六体系词表标签。
+
+    返回 labels(直接并入 form.tongue 再辨证);AI 失败/非舌象照片一律 200 降级,前端回退手动点选。
+    """
+    from app.core.surgery_security import is_valid_image, limit_ai, read_limited
+
+    limit_ai(request)
+    ext = (image.filename or "").rsplit(".", 1)[-1].lower()
+    if ext not in ("jpg", "jpeg", "png", "webp", "bmp"):
+        raise HTTPException(status_code=400, detail="不支持的图片格式(仅 JPEG/PNG/WebP/BMP)")
+    data = await read_limited(image, max_size=8 * 1024 * 1024)
+    if not is_valid_image(data):
+        raise HTTPException(status_code=400, detail="文件内容不是有效图片")
+    import base64
+
+    digest = hashlib.sha1(data).hexdigest()[:24]
+    fname = f"tongue_{digest}.{ext if ext != 'jpeg' else 'jpg'}"
+    from pathlib import Path as _P
+
+    abs_dir = _P(settings.UPLOAD_DIR) / "tongue"
+    abs_dir.mkdir(parents=True, exist_ok=True)
+    (abs_dir / fname).write_bytes(data)
+    image_url = f"/uploads/tongue/{fname}"
+
+    from app.services.tongue_ai import analyze_tongue
+
+    out = await analyze_tongue(base64.b64encode(data).decode("utf-8"))
+    ip_h, ua_h = _device_hashes(request)
+    rec = DxTongueReading(
+        image_url=image_url,
+        feats=out.get("feats") or {},
+        labels=out.get("labels") or [],
+        source=out.get("source", "unavailable"),
+        confidence=out.get("confidence"),
+        ip_hash=ip_h,
+        ua_hash=ua_h,
+    )
+    db.add(rec)
+    await db.commit()
+    return {
+        "id": str(rec.id),
+        "image_url": image_url,
+        "labels": out.get("labels") or [],
+        "source": out.get("source"),
+        "confidence": out.get("confidence"),
+        "low_confidence": bool(out.get("low_confidence")),
+        "not_tongue": bool(out.get("not_tongue")),
+        "message": out.get("message", ""),
+        "feats": out.get("feats"),
+    }
+
+
 @router.get("/quick")
 async def dx_quick(q: str = Query(..., min_length=1), db: AsyncSession = Depends(get_db)):
     """症状/病证名快速联想(从证型、病种、引药病症中抽词)。"""
@@ -1109,6 +1167,26 @@ async def dx_eval():
                 st["correct"] += 1
             row["modification"] = {"got": herbs, "expected": sm["expected"]["modification_has"]}
         detail.append(row)
+    # 舌象归一化评测(VL 特征 → 引擎词表标签,纯规则层;图像识别准确率另以医师标注集评估)
+    tongue_cases = [
+        {"desc": "红舌黄腻苔齿痕舌尖红", "feats": {"tongue_color": "红", "coating_color": "黄", "coating_texture": "腻", "shape": "齿痕", "state": "正常", "zones": {"tip": "红", "center": "正常", "root": "腻", "sides": "正常"}}, "expect": ["舌红", "苔黄腻", "齿痕舌", "舌尖红"]},
+        {"desc": "淡白舌胖大白苔", "feats": {"tongue_color": "淡白", "coating_color": "白", "coating_texture": "薄", "shape": "胖大", "state": "正常", "zones": {}}, "expect": ["舌淡", "苔白", "胖大舌"]},
+        {"desc": "紫暗舌剥苔瘀斑裂纹", "feats": {"tongue_color": "紫", "coating_color": "无苔", "coating_texture": "剥", "shape": "裂纹", "state": "正常", "zones": {"sides": "瘀斑"}}, "expect": ["舌紫暗", "少苔", "舌有瘀斑", "裂纹舌"]},
+        {"desc": "正常淡红舌薄白苔", "feats": {"tongue_color": "淡红", "coating_color": "白", "coating_texture": "薄", "shape": "正常", "state": "正常", "zones": {}}, "expect": ["苔白"]},
+        {"desc": "绛舌黄燥苔", "feats": {"tongue_color": "绛", "coating_color": "黄", "coating_texture": "燥", "shape": "正常", "state": "正常", "zones": {}}, "expect": ["舌绛", "苔黄燥"]},
+        {"desc": "矛盾校验:黄苔+剥苔只留舌红", "feats": {"tongue_color": "红", "coating_color": "黄", "coating_texture": "剥", "shape": "正常", "state": "正常", "zones": {}}, "expect": ["舌红"]},
+        {"desc": "深绛舌点刺", "feats": {"tongue_color": "深绛", "coating_color": "无", "coating_texture": "无", "shape": "点刺", "state": "正常", "zones": {}}, "expect": ["舌深绛", "少苔", "点刺舌"]},
+    ]
+    from app.services.tongue_ai import normalize_tongue
+
+    for tc in tongue_cases:
+        st = per_system.setdefault("tongue", {"total": 0, "correct": 0})
+        st["total"] += 1
+        got = sorted(normalize_tongue(tc["feats"])["labels"])
+        ok = got == sorted(tc["expect"])
+        if ok:
+            st["correct"] += 1
+        detail.append({"id": f"tongue-{tc['desc']}", "desc": tc["desc"], "tongue": {"got": got, "expected": tc["expect"]}})
     acc = {}
     for k, v in per_system.items():
         acc[k] = {"total": v["total"], "correct": v["correct"], "accuracy": round(v["correct"] / v["total"], 4) if v["total"] else None}

@@ -21,3 +21,10 @@ export function dxRecord(id) {
 export function dxQuick(q) {
   return request.get('/dx/quick', { params: { q } })
 }
+
+// POST /dx/tongue (multipart 舌象照片 → 标签)
+export function dxTongue(file) {
+  const fd = new FormData()
+  fd.append('image', file)
+  return request.post('/dx/tongue', fd, { headers: { 'Content-Type': 'multipart/form-data' } })
+}

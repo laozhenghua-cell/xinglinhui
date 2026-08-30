@@ -170,16 +170,18 @@ async def vision(
     symptoms: Optional[str] = None,
     provider: str = "qwen",
     timeout: float = 90.0,
+    prompt: Optional[str] = None,
 ) -> dict:
-    """视觉辨病(Qwen-VL 多模态)。返回 {"text", "json", "usage"}。"""
+    """视觉辨病(Qwen-VL 多模态)。返回 {"text", "json", "usage"}。prompt 为空时用默认疮疡辨病提示词。"""
     if not _breakers.allow(provider):
         raise AIError(f"AI 提供商 {provider} 熔断中,请稍后重试")
     cfg = _provider(provider)
     _gw_stats["calls"] += 1
-    prompt = (
-        "你是中医专家,请对患处照片做辨病辨证:部位、疮形、辨病、辨阴阳、分期、证型、危险提示。"
-        "只返回 JSON(字段:disease_name, confidence, yin_yang, stage, syndrome_name, dangerous, danger_reason, differential, treatment)。"
-    )
+    if prompt is None:
+        prompt = (
+            "你是中医专家,请对患处照片做辨病辨证:部位、疮形、辨病、辨阴阳、分期、证型、危险提示。"
+            "只返回 JSON(字段:disease_name, confidence, yin_yang, stage, syndrome_name, dangerous, danger_reason, differential, treatment)。"
+        )
     if symptoms:
         prompt += f"主诉:{symptoms}"
     content = [

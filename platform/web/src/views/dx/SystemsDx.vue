@@ -15,8 +15,13 @@
         <div v-show="step === 1">
           <el-form label-position="top">
             <el-form-item label="主诉(一句话说明最难受之处;写白话也行,系统自动识别)" required>
-              <el-input v-model="complaint" type="textarea" :rows="2" maxlength="120" show-word-limit
-                placeholder="如:这两天感冒了,怕冷、流清涕、有点咳嗽" />
+              <div class="voice-row">
+                <el-input v-model="complaint" type="textarea" :rows="2" maxlength="120" show-word-limit
+                  placeholder="如:这两天感冒了,怕冷、流清涕、有点咳嗽" />
+                <el-button v-if="voiceSupported" class="mic-btn" :type="voiceOn ? 'danger' : 'primary'" plain
+                  @click="toggleVoice">{{ voiceOn ? '⏹ 停止' : '🎤 语音输入' }}</el-button>
+              </div>
+              <div v-if="voiceOn" class="voice-hint">正在聆听…请用普通话口述主诉(如"这两天怕冷流清涕还有点咳嗽")</div>
             </el-form-item>
             <el-row :gutter="12">
               <el-col :xs="24" :sm="12">
@@ -77,6 +82,13 @@
         <!-- 第 3 步:望闻切 -->
         <div v-show="step === 3">
           <div class="ask-tip">舌与脉为辨证之要,请尽量点选</div>
+          <div class="tongue-cam-row">
+            <el-button type="success" plain @click="tongueVisible = true">📷 拍照识舌(自动识别舌象,可选)</el-button>
+            <template v-if="tongueLabels.length">
+              <span class="hint">已识别并入:</span>
+              <el-tag v-for="t in tongueLabels" :key="t" type="success" size="small" style="margin-right:6px">{{ t }}</el-tag>
+            </template>
+          </div>
           <div v-for="g in lookGroups" :key="g.name" class="ask-group">
             <div class="ask-group-name">{{ g.name }}</div>
             <div class="ask-chips">
@@ -91,6 +103,8 @@
           </div>
         </div>
       </el-card>
+
+      <TongueCapture v-model="tongueVisible" @merged="onTongueMerged" />
 
       <!-- 结果区 -->
       <div v-if="result" class="dx-result">
@@ -339,6 +353,7 @@ import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { dxAnalyze, dxRecords, dxRecord } from '@/api/dx'
 import { buildCategories } from '@/data/fourDiagnosis'
+import TongueCapture from '@/components/TongueCapture.vue'
 
 const router = useRouter()
 
@@ -371,6 +386,44 @@ const records = ref([])
 const showAllPairs = ref(false)
 const showAllRx = ref(false)
 const trajectory = ref([])
+const tongueVisible = ref(false)
+const tongueLabels = ref([])
+
+// 语音输入(Web Speech,不支持则隐藏按钮)
+const SR = typeof window !== 'undefined' ? (window.SpeechRecognition || window.webkitSpeechRecognition) : null
+const voiceSupported = !!SR
+const voiceOn = ref(false)
+let recognition = null
+function toggleVoice() {
+  if (!SR) return
+  if (voiceOn.value) {
+    recognition?.stop()
+    return
+  }
+  recognition = new SR()
+  recognition.lang = 'zh-CN'
+  recognition.interimResults = true
+  recognition.continuous = true
+  recognition.onresult = (e) => {
+    let text = ''
+    for (let i = 0; i < e.results.length; i++) text += e.results[i][0].transcript
+    const base = complaint.value.trim()
+    complaint.value = (base ? base + ' ' : '') + text.trim()
+  }
+  recognition.onend = () => { voiceOn.value = false }
+  recognition.onerror = () => { voiceOn.value = false }
+  voiceOn.value = true
+  try { recognition.start() } catch { voiceOn.value = false }
+}
+
+function onTongueMerged(labels) {
+  const cur = String(form.tongue || '').split('、').filter(Boolean)
+  for (const l of labels) {
+    if (!cur.includes(l)) cur.push(l)
+  }
+  form.tongue = cur.join('、')
+  tongueLabels.value = cur.filter(l => labels.includes(l) || tongueLabels.value.includes(l))
+}
 
 const complaintText = computed(() => complaint.value.trim() || '未填写')
 
@@ -516,6 +569,11 @@ function fmtTime(t) {
 .dx-input-card { margin-bottom: 16px; }
 .hint { color: #999; font-size: 12px; margin-left: 10px; }
 .w100 { width: 100%; }
+.voice-row { display: flex; gap: 8px; width: 100%; align-items: flex-start; }
+.voice-row .el-textarea { flex: 1; }
+.mic-btn { flex-shrink: 0; margin-top: 2px; }
+.voice-hint { color: #B07A2E; font-size: 12px; margin-top: 4px; }
+.tongue-cam-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; background: #F0F8F2; border: 1px dashed #9CC8A8; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; }
 .ask-tip { color: #9a8f6a; font-size: 12.5px; background: #FBF7EC; border-left: 3px solid var(--xl-gold); padding: 4px 10px; margin-bottom: 10px; border-radius: 4px; }
 .ask-group { margin-bottom: 12px; }
 .ask-group-name { font-weight: 700; color: var(--xl-ink); font-size: 13px; margin-bottom: 6px; }

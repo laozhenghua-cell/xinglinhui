@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "name": "舌象标签归一化规则库",
+    "note": "把 Qwen-VL 舌象结构化输出归一化为六体系引擎词表标签;只做映射与校验,不做图像识别",
+    "confidence_floor": 0.6
+  },
+  "color_map": {
+    "淡白": ["舌淡"],
+    "淡红": [],
+    "鲜红": ["舌红"],
+    "深绛": ["舌深绛"],
+    "绛": ["舌绛"],
+    "青紫": ["舌紫暗"],
+    "紫暗": ["舌紫暗"],
+    "紫": ["舌紫暗"],
+    "暗": ["舌紫暗"],
+    "红": ["舌红"]
+  },
+  "coating_rules": [
+    { "color": "黄", "texture": "腻", "labels": ["苔黄腻"] },
+    { "color": "黄", "texture": "厚腻", "labels": ["苔黄腻", "苔厚腻"] },
+    { "color": "黄", "texture": "厚", "labels": ["苔黄腻", "苔厚腻"] },
+    { "color": "黄", "texture": "燥", "labels": ["苔黄燥"] },
+    { "color": "黄", "texture": "薄", "labels": ["苔黄"] },
+    { "color": "黄", "texture": "", "labels": ["苔黄"] },
+    { "color": "白", "texture": "腻", "labels": ["苔白腻"] },
+    { "color": "白", "texture": "厚腻", "labels": ["苔白腻", "苔厚腻"] },
+    { "color": "白", "texture": "厚", "labels": ["苔白腻", "苔厚腻"] },
+    { "color": "白", "texture": "燥", "labels": ["苔白燥"] },
+    { "color": "白", "texture": "滑", "labels": ["苔白滑"] },
+    { "color": "白", "texture": "", "labels": ["苔白"] },
+    { "color": "白", "texture": "薄", "labels": ["苔白"] },
+    { "color": "灰", "texture": "", "labels": ["苔灰黑"] },
+    { "color": "黑", "texture": "", "labels": ["苔灰黑"] },
+    { "color": "灰黑", "texture": "", "labels": ["苔灰黑"] },
+    { "color": "无", "texture": "", "labels": ["少苔"] },
+    { "color": "无苔", "texture": "", "labels": ["少苔"] }
+  ],
+  "shape_map": {
+    "齿痕": ["齿痕舌"],
+    "胖大": ["胖大舌"],
+    "裂纹": ["裂纹舌"],
+    "瘦薄": ["瘦薄舌"],
+    "点刺": ["点刺舌"]
+  },
+  "state_map": {
+    "歪斜": ["舌体歪斜"],
+    "颤动": ["舌体颤动"],
+    "短缩": ["舌体短缩"]
+  },
+  "zone_map": {
+    "tip": { "红": ["舌尖红"] },
+    "sides": { "红": ["舌边尖红"] }
+  },
+  "瘀斑_terms": ["瘀斑", "瘀点"],
+  "contradictions": [
+    { "if_all": ["无苔", "剥"], "drop_contains": "苔" }
+  ]
+}

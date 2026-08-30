@@ -32,7 +32,7 @@ from app.models.kb import (
     KBDulong,
     KbClassic,
 )
-from app.models.dx import DxRecord
+from app.models.dx import DxRecord, DxTongueReading
 from app.models.learn import LearnProgress, LearnNote, LearnFavorite, QuizAttempt
 from app.models.clinic import ClinicVisit
 
@@ -83,6 +83,7 @@ __all__ = [
     "KBTerm",
     "KBDulong",
     "DxRecord",
+    "DxTongueReading",
     "LearnProgress",
     "LearnNote",
     "LearnFavorite",
