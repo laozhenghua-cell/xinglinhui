@@ -35,7 +35,7 @@ def _bigrams(text: str, cap: int = 40) -> list[str]:
     return out
 
 
-STOP_BIGRAMS = {"大便", "小便", "腹部", "口渴", "腹痛", "头身"}
+STOP_BIGRAMS = {"大便", "小便", "腹部", "口渴", "腹痛", "头身", "面色"}
 
 # 整体性二便术语:内部 bigram(如"自利")不应误命中其他证型
 BOWEL_NEUTRAL = {
@@ -95,8 +95,7 @@ _ALIGN = {
     ("weiqiyingxue", "卫分证", "zangfu", "风热犯肺"), ("weiqiyingxue", "气分证", "zangfu", "痰热壅肺"),
     ("weiqiyingxue", "气分证", "zangfu", "胃热炽盛"), ("weiqiyingxue", "卫分证", "liujing", "太阳病"),
     ("weiqiyingxue", "卫分证", "jingluo", "手太阴肺经"), ("weiqiyingxue", "卫分证", "zangfu", "风寒束肺"),
-    ("weiqiyingxue", "营分证", "zangfu", "心火亢盛"), ("liujing", "少阴病", "weiqiyingxue", "营分证"),
-    ("weiqiyingxue", "营分证", "jingluo", "手少阴心经"),
+        ("weiqiyingxue", "营分证", "jingluo", "手少阴心经"),
     # 三焦 ↔ 脏腑 / 经络 / 六经
     ("sanjiao", "邪犯肺卫", "zangfu", "风热犯肺"), ("sanjiao", "邪犯肺卫", "zangfu", "风寒束肺"),
     ("sanjiao", "邪热壅肺", "zangfu", "痰热壅肺"), ("sanjiao", "肾阴耗损", "zangfu", "肾阴虚"),
@@ -432,7 +431,12 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
                 sb = by_key[b]["score"]
                 if sa == 0 and sb == 0:
                     continue
-                components.append(by_key[a]["name"] if sa >= sb else by_key[b]["name"])
+                if sa >= 2 and sb >= 2:
+                    # 双方证候并见(表里同病/寒热错杂/阴阳两虚),同时输出
+                    components.append(by_key[a]["name"])
+                    components.append(by_key[b]["name"])
+                else:
+                    components.append(by_key[a]["name"] if sa >= sb else by_key[b]["name"])
             summary = "·".join(components) if components else "信息不足"
         out[system] = {
             "name": {"bagang": "八纲辨证", "liujing": "六经辨证", "weiqiyingxue": "卫气营血辨证", "zangfu": "脏腑辨证", "sanjiao": "三焦辨证", "jingluo": "经络辨证"}[system],
