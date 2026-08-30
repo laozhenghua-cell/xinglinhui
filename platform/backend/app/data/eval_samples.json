@@ -2333,7 +2333,8 @@
       "expected": {
         "zangfu": "肝气郁结",
         "treatment_has": "疏肝解郁",
-        "consistency": 1.0
+        "consistency": 1.0,
+        "formula_has": "柴胡疏肝散"
       }
     },
     {
@@ -2361,7 +2362,8 @@
       ],
       "expected": {
         "zangfu": "肾阳虚",
-        "treatment_has": "温补肾阳"
+        "treatment_has": "温补肾阳",
+        "formula_has": "金匮肾气丸"
       }
     }
   ]

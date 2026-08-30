@@ -136,6 +136,22 @@
               </el-col>
             </el-row>
 
+            <!-- 开方建议(六体系主方 → 方剂库) -->
+            <div v-if="result.formula_suggestions && result.formula_suggestions.length" class="prescribe-strip">
+              <div class="care-head">📜 开方建议(据六体系主方,剂量为常用参考量)</div>
+              <div v-for="f in result.formula_suggestions" :key="f.id" class="rx-card">
+                <div class="rx-head">
+                  <b class="rx-name" @click="router.push('/kb/yifang/' + f.id)">{{ f.name }}</b>
+                  <el-tag size="small" type="warning">{{ f.category }}</el-tag>
+                  <span class="rx-src">{{ f.source }}</span>
+                </div>
+                <div class="rx-comp">组成:<el-tag v-for="c in f.composition" :key="c.name" size="small" type="info" style="margin:0 3px 3px 0">{{ c.name }} {{ c.dosage || c.dose }}</el-tag></div>
+                <div class="rx-line"><b>功效:</b>{{ f.function }}</div>
+                <div class="rx-line"><b>主治:</b>{{ f.indications }}</div>
+                <div class="rx-line rx-contra" v-if="f.contraindications"><b>禁忌:</b>{{ f.contraindications }}</div>
+              </div>
+            </div>
+
             <!-- 调护建议 -->
             <div v-if="result.care && result.care.length" class="care-strip">
               <div class="care-head">🍵 调护医嘱</div>
@@ -194,9 +210,12 @@
 
 <script setup>
 import { computed, onMounted, reactive, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { dxAnalyze, dxRecords, dxRecord } from '@/api/dx'
 import { buildCategories } from '@/data/fourDiagnosis'
+
+const router = useRouter()
 
 const SYS_SHORT = { bagang: '八纲', liujing: '六经', weiqiyingxue: '卫气营血', zangfu: '脏腑', sanjiao: '三焦', jingluo: '经络' }
 const BAGANG_PAIRS = [['表', '里'], ['寒', '热'], ['虚', '实'], ['阴', '阳']]
@@ -354,6 +373,16 @@ function fmtTime(t) {
 .care-strip { margin-top: 12px; padding: 10px 12px; background: #F4FBF7; border: 1px solid #C9E8D5; border-radius: 8px; }
 .care-head { font-weight: 700; color: #2F7A50; font-size: 13px; margin-bottom: 4px; }
 .care-item { font-size: 12.5px; color: #3E5E4F; margin: 3px 0; }
+.prescribe-strip { margin-top: 12px; padding: 10px 12px; background: #FDF7EC; border: 1px solid #EAD9B8; border-radius: 8px; }
+.rx-card { background: #fff; border: 1px solid #EFE3C8; border-radius: 8px; padding: 8px 10px; margin-top: 8px; }
+.rx-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.rx-name { color: #8A5A12; font-size: 14px; cursor: pointer; }
+.rx-name:hover { text-decoration: underline; }
+.rx-src { color: #a99a7d; font-size: 12px; }
+.rx-comp { margin-top: 6px; font-size: 12.5px; color: #6B5C42; }
+.rx-line { font-size: 12.5px; color: #5A4E38; margin-top: 4px; }
+.rx-line b { color: #8A5A12; }
+.rx-contra { color: #A05A2C; }
 .dyn-strip { margin-top: 10px; padding: 8px 12px; background: #FFF8E6; border: 1px dashed #E8C97A; border-radius: 8px; }
 .dyn-item { font-size: 13px; color: var(--xl-ink); margin: 3px 0; }
 .dyn-item b { color: #9A6B00; margin: 0 4px; }

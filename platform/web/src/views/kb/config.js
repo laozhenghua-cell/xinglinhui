@@ -9,7 +9,8 @@ export const KB_TYPES = [
   { key: 'tips', label: '要诀', icon: '📜', color: '#20A39E' },
   { key: 'terms', label: '术语', icon: '📖', color: '#8E6C4F' },
   { key: 'dulong', label: '引药', icon: '🐉', color: '#C0392B' },
-  { key: 'classics', label: '典籍', icon: '📜', color: '#7A5A2E' }
+  { key: 'classics', label: '典籍', icon: '📜', color: '#7A5A2E' },
+  { key: 'yifang', label: '医方集解', icon: '🧾', color: '#B07A2E' }
 ]
 
 export const TYPE_MAP = Object.fromEntries(KB_TYPES.map((t) => [t.key, t]))
@@ -33,7 +34,8 @@ export const NAME_FIELD = {
   tips: 'category',
   terms: 'term',
   dulong: 'disease',
-  classics: 'article'
+  classics: 'article',
+  yifang: 'name'
 }
 
 export function displayName(type, item) {
@@ -79,7 +81,8 @@ export const TYPE_FIELDS = {
   tips: [['category', '类别'], ['content', '内容', 'truncate'], ['source', '出处']],
   terms: [['definition', '释义'], ['source', '出处']],
   dulong: [['section', '章节'], ['n', '序号'], ['guide', '引药']],
-  classics: [['book', '典籍'], ['article', '条文'], ['original', '原文', 'truncate'], ['plain', '白话', 'truncate']]
+  classics: [['book', '典籍'], ['article', '条文'], ['original', '原文', 'truncate'], ['plain', '白话', 'truncate']],
+  yifang: [['category', '分类'], ['function', '功效'], ['indications', '主治'], ['contraindications', '禁忌'], ['source', '出处']]
 }
 
 // 列表页“主名称列”标题（tips 的 name 即截断 content）
@@ -91,7 +94,8 @@ export const NAME_LABEL = {
   cases: '标题',
   tips: '内容',
   terms: '术语',
-  dulong: '病名'
+  dulong: '病名',
+  yifang: '方名'
 }
 
 // 列表页附加列（除主名称列外）
@@ -136,6 +140,12 @@ export const LIST_COLUMNS = {
     { prop: 'guide', label: '引药' },
     { prop: 'section', label: '章节' },
     { prop: 'n', label: '序号' }
+  ],
+  yifang: [
+    { prop: 'category', label: '分类' },
+    { prop: 'composition', label: '组成', kind: 'composition' },
+    { prop: 'function', label: '功效' },
+    { prop: 'source', label: '出处' }
   ]
 }
 
@@ -145,7 +155,7 @@ export function formatComposition(composition) {
     .map((c) => {
       if (c && typeof c === 'object') {
         const name = c.name || ''
-        const dose = c.dose != null ? String(c.dose) : ''
+        const dose = c.dose != null ? String(c.dose) : (c.dosage != null ? String(c.dosage) : '')
         return dose ? `${name} ${dose}` : name
       }
       return String(c)

@@ -196,3 +196,21 @@ class KbClassic(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
+
+
+class KbYifang(Base):
+    """方剂库(《医方集解》为主体+后世名方;辨证开方联动)。"""
+    __tablename__ = "kb_yifang"
+
+    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    name: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
+    category: Mapped[str] = mapped_column(String(100), nullable=False)
+    aliases: Mapped[list] = mapped_column(JSONB, default=list)
+    composition: Mapped[list] = mapped_column(JSONB, default=list)  # [{name, dosage}]
+    function: Mapped[str] = mapped_column(Text, default="")
+    indications: Mapped[str] = mapped_column(Text, default="")
+    contraindications: Mapped[str] = mapped_column(Text, default="")
+    source: Mapped[str] = mapped_column(String(300), default="")
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+    )

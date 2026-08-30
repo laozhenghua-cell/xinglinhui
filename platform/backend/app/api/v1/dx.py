@@ -712,6 +712,31 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         ai = await _ai_report(keywords, ctx)
 
     system_keys = ("bagang", "liujing", "weiqiyingxue", "zangfu", "sanjiao", "jingluo")
+    # 开方建议:按六体系 top1 主方查方剂库(按方名幂等合并 seed)
+    formula_suggestions = []
+    formula_names: list[str] = []
+    for k in system_keys:
+        top = systems_result[k].get("top") or []
+        if top:
+            for fn in top[0].get("formulas") or []:
+                if fn and fn not in formula_names:
+                    formula_names.append(fn)
+    if formula_names:
+        from app.api.v1.kb import _seed_yifang
+        from app.models.kb import KbYifang
+
+        await _seed_yifang(db)
+        rows = (await db.execute(select(KbYifang).where(KbYifang.name.in_(formula_names)))).scalars().all()
+        by_name = {r.name: r for r in rows}
+        for fn in formula_names:
+            r = by_name.get(fn)
+            if r:
+                formula_suggestions.append({
+                    "id": str(r.id), "name": r.name, "category": r.category,
+                    "composition": r.composition or [], "function": r.function,
+                    "indications": r.indications, "contraindications": r.contraindications,
+                    "source": r.source,
+                })
     result = {
         "syndromes": synd_out,
         "diseases": dis_out,
@@ -723,6 +748,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "dynamic": systems_result.get("dynamic"),
         "care": systems_result.get("care", []),
         "danger": systems_result.get("danger", []),
+        "formula_suggestions": formula_suggestions,
     }
 
     if peds_result:
@@ -910,6 +936,15 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["treatment"] = {"got": t, "expected": sm["expected"]["treatment_has"]}
+        # 主方联动(六体系 top1.formulas)
+        if sm["expected"].get("formula_has"):
+            st = per_system.setdefault("formula", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = ((result.get("zangfu") or {}).get("top") or [{}])[0].get("formulas", [])
+            ok = any(sm["expected"]["formula_has"] in x for x in got)
+            if ok:
+                st["correct"] += 1
+            row["formula"] = {"got": got, "expected": sm["expected"]["formula_has"]}
         # 危候警示
         if sm["expected"].get("danger_has"):
             st = per_system.setdefault("danger", {"total": 0, "correct": 0})

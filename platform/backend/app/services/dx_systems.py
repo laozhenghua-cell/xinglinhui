@@ -402,6 +402,7 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
                 "hits": hits,
                 "explain": rule["explain"],
                 "treatment": rule.get("treatment", ""),
+                "formulas": rule.get("formulas", []),
             })
         items.sort(key=lambda x: -x["score"])
         max_score = max((i["score"] for i in items), default=1)

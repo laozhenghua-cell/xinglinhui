@@ -29,6 +29,7 @@ from app.models.kb import (
     KBSyndrome,
     KBTerm,
     KBTip,
+    KbYifang,
 )
 
 router = APIRouter(prefix="/kb", tags=["知识总库"])
@@ -44,6 +45,7 @@ TYPE_REGISTRY = {
     "terms": KBTerm,
     "dulong": KBDulong,
     "classics": KbClassic,
+    "yifang": KbYifang,
 }
 
 # type → 展示主字段(用于 search 结果标签)
@@ -57,6 +59,7 @@ TYPE_LABEL_FIELD = {
     "terms": "term",
     "dulong": "disease",
     "classics": "article",
+    "yifang": "name",
 }
 
 # type → 可检索字段:(字段名, 是否 JSONB)
@@ -84,6 +87,10 @@ SEARCH_FIELDS = {
     "terms": [("term", False), ("definition", False)],
     "dulong": [("disease", False), ("guide", False)],
     "classics": [("original", False), ("plain", False), ("article", False), ("book", False)],
+    "yifang": [
+        ("name", False), ("aliases", True), ("category", False),
+        ("function", False), ("indications", False), ("composition", True), ("source", False),
+    ],
 }
 
 
@@ -334,6 +341,41 @@ async def _seed_classics(db: AsyncSession) -> int:
     return added
 
 
+async def _seed_yifang(db: AsyncSession) -> int:
+    """方剂库种子幂等 upsert(按方名;已存在则更新,便于维护数据文件后重部署刷新)。"""
+    from pathlib import Path as _P
+    import json as _j
+
+    p = _P(__file__).resolve().parent.parent.parent / "data" / "yifang_seed.json"
+    data = _j.loads(p.read_text(encoding="utf-8"))
+    rows = (await db.execute(select(KbYifang))).scalars().all()
+    by_name = {r.name: r for r in rows}
+    added = 0
+    for f in data["formulas"]:
+        name = f.get("name")
+        if not name:
+            continue
+        obj = by_name.get(name)
+        if obj is None:
+            db.add(KbYifang(
+                name=name, category=f.get("category", ""), aliases=f.get("aliases", []),
+                composition=f.get("composition", []), function=f.get("function", ""),
+                indications=f.get("indications", ""), contraindications=f.get("contraindications", ""),
+                source=f.get("source", ""),
+            ))
+            added += 1
+        else:
+            obj.category = f.get("category", obj.category)
+            obj.aliases = f.get("aliases", obj.aliases)
+            obj.composition = f.get("composition", obj.composition)
+            obj.function = f.get("function", obj.function)
+            obj.indications = f.get("indications", obj.indications)
+            obj.contraindications = f.get("contraindications", obj.contraindications)
+            obj.source = f.get("source", obj.source)
+    await db.commit()
+    return added
+
+
 @router.get("/classics")
 async def kb_classics(
     q: Optional[str] = Query(None, description="检索词(原文/白话/条文号)"),
@@ -364,6 +406,8 @@ async def kb_list(
 ):
     """各类型列表(统一返回 {total, items})。"""
     model = _get_model(type)
+    if type == "yifang":
+        await _seed_yifang(db)
     filters = []
     if module and "module" in model.__table__.columns:
         filters.append(model.module == module)
