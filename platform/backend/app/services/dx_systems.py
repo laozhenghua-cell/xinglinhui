@@ -722,20 +722,36 @@ def _menlei(user_labels: list[str], out: dict[str, Any]) -> list[dict]:
             seen.add(ml)
             uniq.append((ml, zhifa))
     prefer: set[str] = set()
+    zf_clear = out["zangfu"]["summary"] != "信息不足"
     for sys in ("zangfu", "liujing", "sanjiao"):
         t = out[sys]["top"]
         if t:
+            if sys == "liujing" and zf_clear and not t[0].get("variant"):
+                continue
             prefer.update(t[0].get("formulas") or [])
             if t[0].get("variant"):
                 prefer.update(t[0]["variant"].get("formulas") or [])
     yf = _load_yifang_lib()
+    # 相关词:患者标签中的证候词(含分型指标词),用于门类内选方精排
+    rel_terms: set[str] = set()
+    for lab in user_labels:
+        lab = str(lab or "")
+        if 2 <= len(lab) <= 6:
+            rel_terms.add(lab)
+            rel_terms.update(_bigrams(lab, cap=4))
     res: list[dict] = []
-    for ml, zhifa in uniq[:4]:
+    for ml, zhifa in uniq[:5]:
         base = ml.replace("之剂", "")
         cands = [f for f in yf if (f.get("category") or "").startswith(base)]
-        top_cands = [f for f in cands if f["name"] in prefer][:2]
-        if not top_cands:
-            top_cands = cands[:2]
+
+        def _rel(f: dict) -> int:
+            text = f"{f.get('function', '')} {f.get('indications', '')}"
+            return sum(1 for t in rel_terms if t and t in text)
+
+        # 优先证型主方;其余按主治/功效与症状词相关性排序
+        pref = sorted((f for f in cands if f["name"] in prefer), key=lambda f: -_rel(f))
+        rest = sorted((f for f in cands if f["name"] not in prefer), key=lambda f: -_rel(f))
+        top_cands = (pref + rest)[:3]
         res.append({"menlei": ml, "zhifa": zhifa,
                     "formulas": [{"name": f["name"], "source": f.get("source", "")} for f in top_cands]})
     return res
@@ -756,15 +772,22 @@ def _modifications(user_labels: list[str], out: dict[str, Any]) -> list[dict]:
     """随症加减:按主方(含六经分型主方)匹配兼症加减规则(加味/减味+出处)。"""
     joined = "、".join(str(x) for x in user_labels)
     formula_names: list[str] = []
+    zf_clear = out["zangfu"]["summary"] != "信息不足"
     for sys in ("zangfu", "liujing", "sanjiao", "weiqiyingxue", "jingluo"):
         t = out[sys]["top"]
         if t and out[sys]["summary"] != "信息不足":
+            if sys == "liujing" and zf_clear and not t[0].get("variant"):
+                continue  # 脏腑已明确时,六经无分型的通用主方不参与开方
             for fn in t[0].get("formulas") or []:
                 if fn not in formula_names:
                     formula_names.append(fn)
     lj = out["liujing"]["top"]
     if lj and lj[0].get("variant"):
         for fn in lj[0]["variant"].get("formulas") or []:
+            if fn not in formula_names:
+                formula_names.append(fn)
+    elif lj and out["zangfu"]["summary"] == "信息不足":
+        for fn in lj[0].get("formulas") or []:
             if fn not in formula_names:
                 formula_names.append(fn)
     res: list[dict] = []
