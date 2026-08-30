@@ -557,9 +557,30 @@ SYNONYMS: dict[str, list[str]] = {
 }
 _NEG = "不无未没"
 
+_SYN_CACHE: Optional[dict] = None
 
-def extract_symptom_terms(texts: list[str]) -> list[str]:
-    """从白话主诉/长文本中抽取标准证候标签(否定语境如'不发热'跳过)。"""
+
+def _load_synonyms() -> dict:
+    """口语映射表:优先 data/synonyms.json(种子数据),缺省回退内置常量。"""
+    global _SYN_CACHE
+    if _SYN_CACHE is None:
+        try:
+            p = Path(__file__).resolve().parent.parent / "data" / "synonyms.json"
+            _SYN_CACHE = json.loads(p.read_text(encoding="utf-8"))["synonyms"]
+        except Exception:
+            _SYN_CACHE = dict(SYNONYMS)
+    return _SYN_CACHE
+
+
+def invalidate_synonyms_cache() -> None:
+    """管理后台增删改后清缓存。"""
+    global _SYN_CACHE
+    _SYN_CACHE = None
+
+
+def extract_symptom_terms(texts: list[str], synonyms: Optional[dict] = None) -> list[str]:
+    """从白话主诉/长文本中抽取标准证候标签(否定语境如'不发热'跳过)。
+    synonyms: 口语映射表;缺省从 data/synonyms.json 加载,亦可由调用方传入 DB 版(管理后台可热更新)。"""
     import re as _re
 
     data = _load()
@@ -567,6 +588,7 @@ def extract_symptom_terms(texts: list[str]) -> list[str]:
     for sys_name in ("bagang", "liujing", "weiqiyingxue", "zangfu", "sanjiao", "jingluo"):
         for r in data[sys_name]:
             terms.update(i for i in r["indicators"] if 2 <= len(i) <= 6)
+    syn = synonyms if synonyms is not None else _load_synonyms()
     out: list[str] = []
     src = [str(t or "") for t in texts]
     for t in src:
@@ -590,7 +612,7 @@ def extract_symptom_terms(texts: list[str]) -> list[str]:
         if any(n in t for n in _night_ctx) and any(d in t for d in _day_sweat):
             if "盗汗" not in out:
                 out.append("盗汗")
-        for kw in sorted(SYNONYMS, key=len, reverse=True):
+        for kw in sorted(syn, key=len, reverse=True):
             if kw not in t:
                 continue
             # kw 是已命中更长关键词的子串(如'出汗'属于'不出汗'),跳过
@@ -606,7 +628,7 @@ def extract_symptom_terms(texts: list[str]) -> list[str]:
             if after < len(t) and t[after] in "退止愈消":
                 continue  # 如"发热退了"属否定语境
             matched.append(kw)
-            for std in SYNONYMS[kw]:
+            for std in syn[kw]:
                 if std not in out:
                     out.append(std)
     return out

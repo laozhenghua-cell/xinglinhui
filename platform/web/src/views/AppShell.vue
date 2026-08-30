@@ -27,6 +27,9 @@
         <el-menu-item index="/kb">
           <el-icon><Collection /></el-icon><template #title>知识总库</template>
         </el-menu-item>
+        <el-menu-item index="/admin">
+          <el-icon><EditPen /></el-icon><template #title>词库管理</template>
+        </el-menu-item>
         <el-menu-item index="/learn">
           <el-icon><Reading /></el-icon><template #title>学苑</template>
         </el-menu-item>
@@ -64,7 +67,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { Odometer, FirstAidKit, MagicStick, Compass, Collection, Reading, TrendCharts, Fold, Plus } from '@element-plus/icons-vue'
+import { Odometer, FirstAidKit, MagicStick, Compass, Collection, EditPen, Reading, TrendCharts, Fold, Plus } from '@element-plus/icons-vue'
 
 const route = useRoute()
 const router = useRouter()

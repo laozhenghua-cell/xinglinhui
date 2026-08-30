@@ -21,6 +21,9 @@ const routes = [
       // ---- 六体系辨证(八纲/六经/卫气营血/脏腑/三焦/经络) ----
       { path: 'systems', name: 'SystemsDx', component: () => import('@/views/dx/SystemsDx.vue'),
         meta: { title: '六体系辨证', module: 'dx', public: true } },
+      // ---- 词库管理 ----
+      { path: 'admin', name: 'SynonymAdmin', component: () => import('@/views/admin/SynonymAdmin.vue'),
+        meta: { title: '词库管理', module: 'admin', public: true } },
       // ---- 知识总库 ----
       {
         path: 'kb',

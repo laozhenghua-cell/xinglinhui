@@ -106,6 +106,11 @@ app.include_router(clinic_router, prefix="/api/v1")
 # 统一共用知识总库(免鉴权)
 app.include_router(kb_router, prefix="/api/v1")
 
+# 词库管理(口语映射增删改)
+from app.api.v1.admin import router as admin_router
+
+app.include_router(admin_router, prefix="/api/v1")
+
 # 疮疡(外科)模块：各路由 prefix 已含 /api/v1/surgery/...
 app.include_router(surgery_diseases.router)
 app.include_router(surgery_syndromes.router)

@@ -536,8 +536,11 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
     # 0.7 多辨证体系对照(八纲/六经/卫气营血,所有专科通用)
     from app.services.dx_systems import analyze_systems, extract_symptom_terms
 
-    # 白话主诉解析:从长文本抽取标准证候标签并入辨证(患者只写一句话即可)
-    extra_terms = extract_symptom_terms([body.detail, body.systemic, *user_labels])
+    # 白话主诉解析:从长文本抽取标准证候标签并入辨证(患者只写一句话即可;词库取 DB 版,后台可热更新)
+    from app.api.v1.admin import _syn_map
+
+    syn_map = await _syn_map(db)
+    extra_terms = extract_symptom_terms([body.detail, body.systemic, *user_labels], synonyms=syn_map)
     for t in extra_terms:
         if t not in user_labels:
             user_labels.append(t)

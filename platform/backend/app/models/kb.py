@@ -216,3 +216,15 @@ class KbYifang(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
+
+
+class KbSynonym(Base):
+    """口语→证候标签映射(白话主诉解析词库,管理后台可维护)。"""
+    __tablename__ = "kb_synonyms"
+
+    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    keyword: Mapped[str] = mapped_column(String(100), unique=True, index=True, nullable=False)
+    labels: Mapped[list] = mapped_column(JSONB, default=list)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc)
+    )

@@ -155,6 +155,14 @@
               </div>
             </div>
 
+            <!-- 追问轨迹 -->
+            <div v-if="trajectory.length" class="traj-strip">
+              <div class="fu-head">🔎 追问轨迹(结论如何收敛)</div>
+              <div v-for="(t, i) in trajectory" :key="i" class="traj-item">
+                答「{{ t.answer }}」→ 脏腑:{{ t.zf }}<template v-if="t.lj">;六经:{{ t.lj }}</template>
+              </div>
+            </div>
+
             <!-- 鉴别追问 -->
             <div v-if="result.followup && result.followup.questions && result.followup.questions.length" class="fu-strip">
               <div class="fu-head">🔍 鉴别追问:{{ result.followup.top1 }} 与 {{ result.followup.top2 }} 接近,再答一个关键问题即可明确</div>
@@ -276,6 +284,7 @@ const result = ref(null)
 const records = ref([])
 const showAllPairs = ref(false)
 const showAllRx = ref(false)
+const trajectory = ref([])
 
 const complaintText = computed(() => complaint.value.trim() || '未填写')
 
@@ -320,7 +329,7 @@ onMounted(async () => {
 async function run(opts = {}) {
   if (!complaint.value.trim() && !form.symptoms.length && !form.tongue && !form.pulse && !form.local && !form.systemic) {
     ElMessage.warning('请先填写主诉或点选症状')
-    return
+    return null
   }
   loading.value = true
   try {
@@ -334,15 +343,36 @@ async function run(opts = {}) {
     result.value = res
     showAllPairs.value = false
     showAllRx.value = false
-    if (!opts.keepPos) window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (!opts.keepPos) {
+      trajectory.value = []
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
     await loadRecords()
+    return res
   } catch (e) {
     ElMessage.error('辨证失败:' + (e?.response?.data?.detail || e.message))
+    return null
   } finally {
     loading.value = false
   }
 }
+function topCap(res, key) {
+  const t = res?.systems?.[key]?.top?.[0]
+  return t && t.score > 0 ? { name: t.name, score: t.score } : null
+}
+function fmtDelta(prev, now) {
+  if (!prev || !now) return prev ? `${prev.name}(${prev.score}分)→信息不足` : '—'
+  if (prev.name === now.name) {
+    const diff = now.score - prev.score
+    const lock = diff >= 2 ? ',锁定' : ''
+    return `${now.name}(${prev.score}→${now.score}分${lock})`
+  }
+  return `${prev.name}(${prev.score}分)→${now.name}(${now.score}分)`
+}
 function applyFollowup(opt) {
+  const prevRes = result.value
+  const prevZf = topCap(prevRes, 'zangfu')
+  const prevLj = topCap(prevRes, 'liujing')
   for (const r of opt.remove || []) {
     const i = form.symptoms.indexOf(r)
     if (i >= 0) form.symptoms.splice(i, 1)
@@ -350,7 +380,16 @@ function applyFollowup(opt) {
   for (const a of opt.add || []) {
     if (!form.symptoms.includes(a)) form.symptoms.push(a)
   }
-  run({ keepPos: true })
+  run({ keepPos: true }).then((res) => {
+    if (!res) return
+    const z2 = topCap(res, 'zangfu')
+    const l2 = topCap(res, 'liujing')
+    trajectory.value.push({
+      answer: opt.label,
+      zf: fmtDelta(prevZf, z2),
+      lj: fmtDelta(prevLj, l2),
+    })
+  })
 }
 async function loadRecords() {
   try {
@@ -432,6 +471,8 @@ function fmtTime(t) {
 .fu-qt { font-size: 13px; color: var(--xl-ink); margin-bottom: 5px; }
 .fu-opts { display: flex; flex-wrap: wrap; gap: 6px; }
 .fu-opts .chip { cursor: pointer; user-select: none; }
+.traj-strip { margin-top: 12px; padding: 10px 12px; background: #F4F1FA; border: 1px dashed #B9A8DD; border-radius: 8px; }
+.traj-item { font-size: 12.5px; color: #4A3E6B; margin: 4px 0; }
 .care-strip { margin-top: 12px; padding: 10px 12px; background: #F4FBF7; border: 1px solid #C9E8D5; border-radius: 8px; }
 .care-head { font-weight: 700; color: #2F7A50; font-size: 13px; margin-bottom: 4px; }
 .care-item { font-size: 12.5px; color: #3E5E4F; margin: 3px 0; }
