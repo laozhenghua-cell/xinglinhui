@@ -716,6 +716,8 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
     formula_suggestions = []
     formula_names: list[str] = []
     for k in system_keys:
+        if systems_result[k].get("summary") == "信息不足":
+            continue  # 证据不足的体系不参与开方
         top = systems_result[k].get("top") or []
         if top:
             for fn in top[0].get("formulas") or []:

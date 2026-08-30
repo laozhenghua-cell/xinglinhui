@@ -3819,6 +3819,8270 @@
       "indications": "外感风寒、肺气不宣:鼻塞声重、咳嗽痰多、胸满气短",
       "contraindications": "表虚自汗者忌",
       "source": "《太平惠民和剂局方》(后世名方补入)"
+    },
+    {
+      "name": "十全大补汤",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "12"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "黄芪",
+          "dosage": "12"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        }
+      ],
+      "function": "温补气血",
+      "indications": "气血两虚而偏寒:面色萎黄、倦怠食少、头晕目眩、疮疡不敛、妇女崩漏,舌淡脉细弱",
+      "contraindications": "阴虚火旺者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "人参养荣汤",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "12"
+        },
+        {
+          "name": "黄芪",
+          "dosage": "12"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "远志",
+          "dosage": "6"
+        },
+        {
+          "name": "五味子",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        }
+      ],
+      "function": "益气补血,养心安神",
+      "indications": "气血两虚、心神失养:倦怠乏力、心悸健忘、失眠多梦、食少气短、疮疡溃后久不收口",
+      "contraindications": "阴虚火旺者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "大补阴丸",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄柏",
+          "dosage": "9"
+        },
+        {
+          "name": "知母",
+          "dosage": "9"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "龟板",
+          "dosage": "15"
+        },
+        {
+          "name": "猪脊髓",
+          "dosage": "适量"
+        }
+      ],
+      "function": "滋阴降火",
+      "indications": "阴虚火旺:骨蒸潮热、盗汗遗精、咳嗽咯血、心烦易怒、足膝热痛,舌红少苔脉数有力",
+      "contraindications": "脾胃虚寒者忌",
+      "source": "《医方集解》引《丹溪心法》"
+    },
+    {
+      "name": "虎潜丸",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄柏",
+          "dosage": "9"
+        },
+        {
+          "name": "知母",
+          "dosage": "9"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "龟板",
+          "dosage": "15"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "虎骨(狗骨代)",
+          "dosage": "15"
+        },
+        {
+          "name": "锁阳",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "3"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        }
+      ],
+      "function": "滋阴降火,强壮筋骨",
+      "indications": "肝肾不足、阴虚内热之痿证:腰膝酸软、筋骨痿弱、腿足消瘦、步履乏力",
+      "contraindications": "脾胃虚寒者忌",
+      "source": "《医方集解》引《丹溪心法》"
+    },
+    {
+      "name": "龟鹿二仙胶",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "鹿角",
+          "dosage": "15"
+        },
+        {
+          "name": "龟板",
+          "dosage": "15"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "枸杞子",
+          "dosage": "9"
+        }
+      ],
+      "function": "滋阴填精,益气壮阳",
+      "indications": "真元虚损、精血不足:全身瘦削、腰膝酸软、阳痿遗精、久不孕育、目视不明",
+      "contraindications": "脾胃湿盛者忌",
+      "source": "《医方集解》"
+    },
+    {
+      "name": "七宝美髯丹",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "何首乌",
+          "dosage": "18"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "牛膝",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "枸杞子",
+          "dosage": "9"
+        },
+        {
+          "name": "菟丝子",
+          "dosage": "9"
+        },
+        {
+          "name": "补骨脂",
+          "dosage": "6"
+        }
+      ],
+      "function": "补益肝肾,乌发壮骨",
+      "indications": "肝肾不足:须发早白、脱发、齿牙动摇、腰膝酸软、梦遗滑精",
+      "contraindications": "脾虚便溏者慎",
+      "source": "《医方集解》引《医方考》"
+    },
+    {
+      "name": "当归补血汤",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄芪",
+          "dosage": "30"
+        },
+        {
+          "name": "当归",
+          "dosage": "6"
+        }
+      ],
+      "function": "补气生血",
+      "indications": "血虚发热:肌热面赤、烦渴欲饮、脉洪大而虚,及妇人经期、产后血虚发热头痛",
+      "contraindications": "阴虚潮热者忌",
+      "source": "《医方集解》引《内外伤辨惑论》"
+    },
+    {
+      "name": "当归生姜羊肉汤",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "当归",
+          "dosage": "15"
+        },
+        {
+          "name": "生姜",
+          "dosage": "15"
+        },
+        {
+          "name": "羊肉",
+          "dosage": "250"
+        }
+      ],
+      "function": "温中补血,祛寒止痛",
+      "indications": "血虚有寒:腹中㽲痛、胁痛里急、产后腹痛、虚劳不足",
+      "contraindications": "阴虚火旺者忌",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "保元汤",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄芪",
+          "dosage": "15"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        }
+      ],
+      "function": "益气温阳",
+      "indications": "元气不足:倦怠乏力、少气畏寒、痘疮顶陷不起、脉弱",
+      "contraindications": "实热证者忌",
+      "source": "《医方集解》引《博爱心鉴》"
+    },
+    {
+      "name": "大补元煎",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "山药",
+          "dosage": "12"
+        },
+        {
+          "name": "山茱萸",
+          "dosage": "9"
+        },
+        {
+          "name": "杜仲",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "枸杞子",
+          "dosage": "9"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "大补元气,养血滋阴",
+      "indications": "气血大虚、精神失守:神疲气怯、心悸不宁、腰酸耳鸣",
+      "contraindications": "邪实者忌",
+      "source": "《景岳全书》(后世名方补入)"
+    },
+    {
+      "name": "五子衍宗丸",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "枸杞子",
+          "dosage": "12"
+        },
+        {
+          "name": "菟丝子",
+          "dosage": "12"
+        },
+        {
+          "name": "覆盆子",
+          "dosage": "9"
+        },
+        {
+          "name": "五味子",
+          "dosage": "6"
+        },
+        {
+          "name": "车前子",
+          "dosage": "9"
+        }
+      ],
+      "function": "补肾益精",
+      "indications": "肾虚精少:阳痿不育、遗精早泄、腰痛、尿后余沥",
+      "contraindications": "湿热下注者忌",
+      "source": "《医方集解》引《摄生众妙方》"
+    },
+    {
+      "name": "圣愈汤",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芪",
+          "dosage": "12"
+        }
+      ],
+      "function": "补气养血,摄血",
+      "indications": "气血虚弱:月经先期量多、血色淡、倦怠乏力、心悸怔忡",
+      "contraindications": "实热出血者忌",
+      "source": "《医方集解》引《兰室秘藏》"
+    },
+    {
+      "name": "人参蛤蚧散",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "蛤蚧",
+          "dosage": "1对"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "知母",
+          "dosage": "9"
+        },
+        {
+          "name": "贝母",
+          "dosage": "9"
+        },
+        {
+          "name": "桑白皮",
+          "dosage": "9"
+        },
+        {
+          "name": "杏仁",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "补肺益肾,止咳定喘",
+      "indications": "肺肾气虚、痰热内蕴:久咳气喘、痰稠色黄、胸中烦热",
+      "contraindications": "外感咳喘者忌",
+      "source": "《医方集解》引《卫生宝鉴》"
+    },
+    {
+      "name": "泰山磐石散",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芪",
+          "dosage": "12"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "12"
+        },
+        {
+          "name": "续断",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "6"
+        },
+        {
+          "name": "砂仁",
+          "dosage": "3"
+        },
+        {
+          "name": "糯米",
+          "dosage": "9"
+        }
+      ],
+      "function": "益气健脾,养血安胎",
+      "indications": "气血虚弱、胎元不固:胎动不安、屡有堕胎、面色淡白、倦怠乏力",
+      "contraindications": "实热胎动者忌",
+      "source": "《医方集解》引《景岳全书》"
+    },
+    {
+      "name": "斑龙丸",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "鹿角胶",
+          "dosage": "15"
+        },
+        {
+          "name": "鹿角霜",
+          "dosage": "15"
+        },
+        {
+          "name": "菟丝子",
+          "dosage": "12"
+        },
+        {
+          "name": "柏子仁",
+          "dosage": "9"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "补骨脂",
+          "dosage": "9"
+        }
+      ],
+      "function": "温补元阳,填精益髓",
+      "indications": "肾阳不足、精血亏虚:畏寒肢冷、腰膝酸软、阳痿、遗精、小便频数",
+      "contraindications": "阴虚火旺者忌",
+      "source": "《医方集解》"
+    },
+    {
+      "name": "薯蓣丸",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "山药",
+          "dosage": "30"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "12"
+        },
+        {
+          "name": "阿胶",
+          "dosage": "6"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "6"
+        },
+        {
+          "name": "防风",
+          "dosage": "6"
+        },
+        {
+          "name": "柴胡",
+          "dosage": "6"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "6"
+        },
+        {
+          "name": "杏仁",
+          "dosage": "6"
+        },
+        {
+          "name": "大豆黄卷",
+          "dosage": "9"
+        },
+        {
+          "name": "神曲",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "3"
+        },
+        {
+          "name": "大枣",
+          "dosage": "6枚"
+        }
+      ],
+      "function": "补虚祛风,调理脾胃",
+      "indications": "虚劳诸不足、风气百疾:身体瘦弱、易感风邪、纳少乏力",
+      "contraindications": "外感实邪盛者忌",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "葛根汤",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "葛根",
+          "dosage": "12"
+        },
+        {
+          "name": "麻黄",
+          "dosage": "9"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "6"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "生姜",
+          "dosage": "9"
+        },
+        {
+          "name": "大枣",
+          "dosage": "4枚"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "发汗解表,升津舒筋",
+      "indications": "外感风寒、经气不舒:恶寒发热、无汗、项背强几几,或下利",
+      "contraindications": "表虚汗出者忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "升麻葛根汤",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "升麻",
+          "dosage": "6"
+        },
+        {
+          "name": "葛根",
+          "dosage": "12"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "解肌透疹",
+      "indications": "麻疹初起未发或发而不透:发热恶风、头痛、目赤流泪、口渴",
+      "contraindications": "麻疹已透者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "香苏散",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "香附",
+          "dosage": "9"
+        },
+        {
+          "name": "紫苏叶",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "疏散风寒,理气和中",
+      "indications": "外感风寒、内有气滞:恶寒身热、头痛无汗、胸脘痞闷、不思饮食",
+      "contraindications": "风热表证者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "参苏饮",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "紫苏叶",
+          "dosage": "9"
+        },
+        {
+          "name": "葛根",
+          "dosage": "9"
+        },
+        {
+          "name": "前胡",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "枳壳",
+          "dosage": "6"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "木香",
+          "dosage": "3"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        }
+      ],
+      "function": "益气解表,理气化痰",
+      "indications": "气虚外感风寒、内有痰饮:恶寒发热、无汗头痛、咳嗽痰多、胸膈满闷",
+      "contraindications": "纯实表证者慎",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "柴葛解肌汤",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "柴胡",
+          "dosage": "9"
+        },
+        {
+          "name": "葛根",
+          "dosage": "12"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "羌活",
+          "dosage": "6"
+        },
+        {
+          "name": "白芷",
+          "dosage": "6"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "6"
+        },
+        {
+          "name": "石膏",
+          "dosage": "15"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "解肌清热",
+      "indications": "外感风寒、郁而化热:恶寒渐轻、身热增盛、头痛肢楚、目痛鼻干、心烦不眠",
+      "contraindications": "表寒重者宜加减",
+      "source": "《医方集解》引《伤寒六书》"
+    },
+    {
+      "name": "再造散",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄芪",
+          "dosage": "12"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "6"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "熟附子",
+          "dosage": "6"
+        },
+        {
+          "name": "细辛",
+          "dosage": "3"
+        },
+        {
+          "name": "羌活",
+          "dosage": "6"
+        },
+        {
+          "name": "防风",
+          "dosage": "6"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "助阳益气,解表散寒",
+      "indications": "阳气虚弱、外感风寒:恶寒发热、热轻寒重、无汗肢冷、倦怠嗜卧",
+      "contraindications": "血虚阴虚者忌",
+      "source": "《医方集解》引《伤寒六书》"
+    },
+    {
+      "name": "葱豉汤",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "葱白",
+          "dosage": "5茎"
+        },
+        {
+          "name": "淡豆豉",
+          "dosage": "12"
+        }
+      ],
+      "function": "通阳发汗解表",
+      "indications": "外感风寒轻证:恶寒发热、无汗、头痛鼻塞、身痛",
+      "contraindications": "风热重证者宜加辛凉药",
+      "source": "《医方集解》引《肘后备急方》"
+    },
+    {
+      "name": "神术散",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "苍术",
+          "dosage": "12"
+        },
+        {
+          "name": "防风",
+          "dosage": "6"
+        },
+        {
+          "name": "羌活",
+          "dosage": "6"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "白芷",
+          "dosage": "6"
+        },
+        {
+          "name": "细辛",
+          "dosage": "3"
+        },
+        {
+          "name": "藁本",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "葱白",
+          "dosage": "3茎"
+        }
+      ],
+      "function": "发汗祛湿解表",
+      "indications": "外感风寒湿邪:恶寒发热、头痛身痛、鼻塞声重、咳嗽",
+      "contraindications": "阴虚者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "瓜蒂散",
+      "category": "涌吐之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "瓜蒂",
+          "dosage": "3"
+        },
+        {
+          "name": "赤小豆",
+          "dosage": "3"
+        },
+        {
+          "name": "淡豆豉",
+          "dosage": "9"
+        }
+      ],
+      "function": "涌吐痰涎宿食",
+      "indications": "痰涎宿食壅滞胸脘:胸中痞硬、懊憹不安、气上冲咽喉不得息",
+      "contraindications": "体虚、孕妇忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "参芦散",
+      "category": "涌吐之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参芦",
+          "dosage": "9"
+        },
+        {
+          "name": "竹沥",
+          "dosage": "适量"
+        }
+      ],
+      "function": "涌吐痰涎",
+      "indications": "气虚痰涎壅盛:痰壅胸膈、欲吐不出",
+      "contraindications": "体弱血虚者慎",
+      "source": "《医方集解》"
+    },
+    {
+      "name": "盐汤探吐方",
+      "category": "涌吐之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "食盐",
+          "dosage": "15"
+        },
+        {
+          "name": "温水",
+          "dosage": "适量"
+        }
+      ],
+      "function": "涌吐宿食",
+      "indications": "宿食停滞、干霍乱:脘腹胀痛、欲吐不得吐、欲泻不得泻",
+      "contraindications": "孕妇忌",
+      "source": "《医方集解》"
+    },
+    {
+      "name": "小承气汤",
+      "category": "攻里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "大黄",
+          "dosage": "12"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "枳实",
+          "dosage": "9"
+        }
+      ],
+      "function": "轻下热结,除满消痞",
+      "indications": "阳明腑实轻证:谵语潮热、大便秘结、脘腹痞满、苔黄脉滑疾",
+      "contraindications": "气虚津亏、孕妇忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "桃核承气汤",
+      "category": "攻里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "桃仁",
+          "dosage": "12"
+        },
+        {
+          "name": "大黄",
+          "dosage": "12"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "6"
+        },
+        {
+          "name": "芒硝",
+          "dosage": "6"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "逐瘀泻热",
+      "indications": "下焦蓄血:少腹急结、小便自利、其人如狂、烦躁",
+      "contraindications": "孕妇忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "大陷胸汤",
+      "category": "攻里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "大黄",
+          "dosage": "9"
+        },
+        {
+          "name": "芒硝",
+          "dosage": "9"
+        },
+        {
+          "name": "甘遂",
+          "dosage": "1"
+        }
+      ],
+      "function": "泻热逐水",
+      "indications": "水热互结之大结胸:心下硬满而痛、拒按、大便秘结、日晡潮热",
+      "contraindications": "体虚、孕妇忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "十枣汤",
+      "category": "攻里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "芫花",
+          "dosage": "1"
+        },
+        {
+          "name": "甘遂",
+          "dosage": "1"
+        },
+        {
+          "name": "大戟",
+          "dosage": "1"
+        },
+        {
+          "name": "大枣",
+          "dosage": "10枚"
+        }
+      ],
+      "function": "攻逐水饮",
+      "indications": "悬饮、水肿:咳唾胸胁引痛、心下痞硬、干呕短气、一身悉肿",
+      "contraindications": "体虚、孕妇忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "三物备急丸",
+      "category": "攻里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "大黄",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "9"
+        },
+        {
+          "name": "巴豆",
+          "dosage": "3"
+        }
+      ],
+      "function": "攻逐寒积",
+      "indications": "寒实冷积:卒然心腹胀痛、痛如锥刺、气急口噤、大便不通",
+      "contraindications": "孕妇、年老体弱忌",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "木香槟榔丸",
+      "category": "攻里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "槟榔",
+          "dosage": "9"
+        },
+        {
+          "name": "青皮",
+          "dosage": "6"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "莪术",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "9"
+        },
+        {
+          "name": "黄柏",
+          "dosage": "9"
+        },
+        {
+          "name": "大黄",
+          "dosage": "9"
+        },
+        {
+          "name": "香附",
+          "dosage": "9"
+        },
+        {
+          "name": "牵牛子",
+          "dosage": "6"
+        }
+      ],
+      "function": "行气导滞,攻积泄热",
+      "indications": "积滞内停、湿蕴生热:脘腹痞满胀痛、赤白痢疾、里急后重、大便秘结",
+      "contraindications": "体虚者忌",
+      "source": "《医方集解》引《儒门事亲》"
+    },
+    {
+      "name": "枳实导滞丸",
+      "category": "攻里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "枳实",
+          "dosage": "9"
+        },
+        {
+          "name": "大黄",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "6"
+        },
+        {
+          "name": "神曲",
+          "dosage": "9"
+        }
+      ],
+      "function": "消导化积,清热利湿",
+      "indications": "湿热食积:脘腹胀痛、下痢泄泻、大便秘结、小便短赤",
+      "contraindications": "体虚者慎",
+      "source": "《医方集解》引《内外伤辨惑论》"
+    },
+    {
+      "name": "黄龙汤",
+      "category": "攻里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "大黄",
+          "dosage": "9"
+        },
+        {
+          "name": "芒硝",
+          "dosage": "9"
+        },
+        {
+          "name": "枳实",
+          "dosage": "9"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "6"
+        }
+      ],
+      "function": "攻下热结,益气养血",
+      "indications": "阳明腑实、气血不足:自利清水、色纯青、腹痛拒按、身热口渴、神倦少气",
+      "contraindications": "纯实热结者不必用",
+      "source": "《医方集解》引《伤寒六书》"
+    },
+    {
+      "name": "防风通圣散",
+      "category": "表里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "防风",
+          "dosage": "6"
+        },
+        {
+          "name": "荆芥",
+          "dosage": "6"
+        },
+        {
+          "name": "连翘",
+          "dosage": "9"
+        },
+        {
+          "name": "麻黄",
+          "dosage": "6"
+        },
+        {
+          "name": "薄荷",
+          "dosage": "6"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "大黄",
+          "dosage": "9"
+        },
+        {
+          "name": "芒硝",
+          "dosage": "9"
+        },
+        {
+          "name": "石膏",
+          "dosage": "15"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "滑石",
+          "dosage": "15"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "疏风解表,泻热通便",
+      "indications": "风热壅盛、表里俱实:憎寒壮热、头目昏眩、目赤睛痛、口苦咽干、大便秘结、小便赤涩、疮疡肿毒",
+      "contraindications": "体虚便溏者忌",
+      "source": "《医方集解》引《宣明论方》"
+    },
+    {
+      "name": "五积散",
+      "category": "表里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "麻黄",
+          "dosage": "6"
+        },
+        {
+          "name": "白芷",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "6"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "苍术",
+          "dosage": "12"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "枳壳",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "解表温里,散寒除湿,消积化痰",
+      "indications": "外感风寒、内伤生冷:身热无汗、头痛身疼、项背拘急、胸满恶食、呕吐腹痛、月经不调",
+      "contraindications": "阴虚内热者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "三黄石膏汤",
+      "category": "表里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "石膏",
+          "dosage": "30"
+        },
+        {
+          "name": "黄连",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "黄柏",
+          "dosage": "9"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "麻黄",
+          "dosage": "6"
+        },
+        {
+          "name": "淡豆豉",
+          "dosage": "9"
+        }
+      ],
+      "function": "清热解毒,发汗解表",
+      "indications": "表证未解、里热已炽:壮热无汗、烦躁不眠、神昏谵语、鼻衄发斑",
+      "contraindications": "表虚汗多者忌",
+      "source": "《医方集解》引《伤寒六书》"
+    },
+    {
+      "name": "葛根黄芩黄连汤",
+      "category": "表里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "葛根",
+          "dosage": "15"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "解表清里",
+      "indications": "协热下利:身热下利、胸脘烦热、口干作渴、喘而汗出",
+      "contraindications": "虚寒下利者忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "疏凿饮子",
+      "category": "表里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "羌活",
+          "dosage": "6"
+        },
+        {
+          "name": "秦艽",
+          "dosage": "9"
+        },
+        {
+          "name": "商陆",
+          "dosage": "6"
+        },
+        {
+          "name": "槟榔",
+          "dosage": "9"
+        },
+        {
+          "name": "大腹皮",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓皮",
+          "dosage": "15"
+        },
+        {
+          "name": "生姜皮",
+          "dosage": "6"
+        },
+        {
+          "name": "椒目",
+          "dosage": "6"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "9"
+        },
+        {
+          "name": "木通",
+          "dosage": "6"
+        },
+        {
+          "name": "赤小豆",
+          "dosage": "15"
+        }
+      ],
+      "function": "泻下逐水,疏风发表",
+      "indications": "水湿壅盛、表里俱病:遍身水肿、喘呼气急、二便不利",
+      "contraindications": "阴水虚证者忌",
+      "source": "《医方集解》引《济生方》"
+    },
+    {
+      "name": "四逆散",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "柴胡",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "枳实",
+          "dosage": "9"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "透邪解郁,疏肝理脾",
+      "indications": "阳郁厥逆、肝脾气郁:手足不温、胁肋胀闷、脘腹疼痛、泄利下重",
+      "contraindications": "虚寒厥逆者忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "柴胡桂枝干姜汤",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "柴胡",
+          "dosage": "12"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "6"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "瓜蒌根",
+          "dosage": "12"
+        },
+        {
+          "name": "牡蛎",
+          "dosage": "15"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "和解少阳,温化水饮",
+      "indications": "少阳兼水饮:胸胁满微结、小便不利、渴而不呕、但头汗出、往来寒热",
+      "contraindications": "阴虚者慎",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "柴胡加龙骨牡蛎汤",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "柴胡",
+          "dosage": "12"
+        },
+        {
+          "name": "龙骨",
+          "dosage": "15"
+        },
+        {
+          "name": "牡蛎",
+          "dosage": "15"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "6"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "大黄",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        }
+      ],
+      "function": "和解清热,镇惊安神",
+      "indications": "伤寒误下、邪气内陷:胸满烦惊、小便不利、谵语、一身尽重、不可转侧",
+      "contraindications": "虚寒者慎",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "黄连汤",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄连",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "6"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "6"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "大枣",
+          "dosage": "4枚"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "平调寒热,和胃降逆",
+      "indications": "上热下寒:胸中有热、胃中有寒、腹中痛、欲呕吐",
+      "contraindications": "实热呕吐者忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "达原饮",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "槟榔",
+          "dosage": "9"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "草果",
+          "dosage": "3"
+        },
+        {
+          "name": "知母",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "开达膜原,辟秽化浊",
+      "indications": "温疫初起、邪伏膜原:憎寒壮热、发无定时、胸闷呕恶、头痛烦躁、舌苔白厚如积粉",
+      "contraindications": "阴虚者慎",
+      "source": "《医方集解》引《温疫论》"
+    },
+    {
+      "name": "清脾饮",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "青皮",
+          "dosage": "6"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "草果",
+          "dosage": "3"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "柴胡",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        }
+      ],
+      "function": "燥湿化痰,泄热清脾",
+      "indications": "疟疾热多寒少:口苦嗌干、心烦溺赤、胸膈痞满",
+      "contraindications": "虚寒疟者忌",
+      "source": "《医方集解》引《济生方》"
+    },
+    {
+      "name": "六和汤",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "砂仁",
+          "dosage": "6"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "杏仁",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "藿香",
+          "dosage": "9"
+        },
+        {
+          "name": "木瓜",
+          "dosage": "9"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "扁豆",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        }
+      ],
+      "function": "祛暑化湿,健脾和胃",
+      "indications": "暑湿伤脾:霍乱吐泻、倦怠嗜卧、胸膈痞满、苔白滑",
+      "contraindications": "湿热偏盛者宜加减",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "旋覆代赭汤",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "旋覆花",
+          "dosage": "9"
+        },
+        {
+          "name": "代赭石",
+          "dosage": "15"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "12"
+        },
+        {
+          "name": "大枣",
+          "dosage": "4枚"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "降逆化痰,益气和胃",
+      "indications": "胃虚痰阻气逆:心下痞硬、噫气不除、反胃呕吐、吐涎沫",
+      "contraindications": "实热呕逆者忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "橘皮竹茹汤",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "橘皮",
+          "dosage": "9"
+        },
+        {
+          "name": "竹茹",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "9"
+        },
+        {
+          "name": "大枣",
+          "dosage": "4枚"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "降逆止呃,益气清热",
+      "indications": "胃虚有热:呃逆干呕、虚烦少气、口干",
+      "contraindications": "实热呃逆者宜加减",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "丁香柿蒂汤",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "丁香",
+          "dosage": "3"
+        },
+        {
+          "name": "柿蒂",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "9"
+        }
+      ],
+      "function": "温中益气,降逆止呃",
+      "indications": "胃气虚寒:呃逆不止、胸痞脉迟",
+      "contraindications": "胃热呃逆者忌",
+      "source": "《医方集解》"
+    },
+    {
+      "name": "定喘汤",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "白果",
+          "dosage": "9"
+        },
+        {
+          "name": "麻黄",
+          "dosage": "9"
+        },
+        {
+          "name": "款冬花",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "桑白皮",
+          "dosage": "9"
+        },
+        {
+          "name": "紫苏子",
+          "dosage": "6"
+        },
+        {
+          "name": "杏仁",
+          "dosage": "6"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "宣肺降气,清热化痰",
+      "indications": "痰热内蕴之哮喘:咳喘痰多气急、痰稠色黄、微恶风寒",
+      "contraindications": "肺虚喘者忌",
+      "source": "《医方集解》引《摄生众妙方》"
+    },
+    {
+      "name": "天台乌药散",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "乌药",
+          "dosage": "9"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "小茴香",
+          "dosage": "6"
+        },
+        {
+          "name": "青皮",
+          "dosage": "6"
+        },
+        {
+          "name": "高良姜",
+          "dosage": "6"
+        },
+        {
+          "name": "槟榔",
+          "dosage": "9"
+        },
+        {
+          "name": "川楝子",
+          "dosage": "9"
+        },
+        {
+          "name": "巴豆",
+          "dosage": "0.5"
+        }
+      ],
+      "function": "行气疏肝,散寒止痛",
+      "indications": "寒凝气滞之小肠疝气:少腹引控睾丸而痛、偏坠肿胀",
+      "contraindications": "湿热疝气者忌",
+      "source": "《医方集解》引《医学发明》"
+    },
+    {
+      "name": "暖肝煎",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "枸杞子",
+          "dosage": "9"
+        },
+        {
+          "name": "小茴香",
+          "dosage": "6"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "乌药",
+          "dosage": "9"
+        },
+        {
+          "name": "沉香",
+          "dosage": "3"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        }
+      ],
+      "function": "温补肝肾,行气止痛",
+      "indications": "肝肾虚寒:睾丸冷痛、少腹疼痛、疝气、畏寒喜暖",
+      "contraindications": "湿热下注者忌",
+      "source": "《医方集解》引《景岳全书》"
+    },
+    {
+      "name": "金铃子散",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "金铃子(川楝子)",
+          "dosage": "9"
+        },
+        {
+          "name": "延胡索",
+          "dosage": "9"
+        }
+      ],
+      "function": "疏肝泄热,活血止痛",
+      "indications": "肝郁化火:胸腹胁肋疼痛、痛经、时发时止、口苦、舌红苔黄",
+      "contraindications": "寒凝气滞者忌",
+      "source": "《医方集解》引《太平圣惠方》"
+    },
+    {
+      "name": "厚朴温中汤",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "9"
+        },
+        {
+          "name": "草豆蔻",
+          "dosage": "6"
+        },
+        {
+          "name": "干姜",
+          "dosage": "6"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        }
+      ],
+      "function": "温中行气,燥湿除满",
+      "indications": "脾胃寒湿气滞:脘腹胀满、时作疼痛、不思饮食、四肢倦怠",
+      "contraindications": "胃热胀满者忌",
+      "source": "《医方集解》引《内外伤辨惑论》"
+    },
+    {
+      "name": "桃红四物汤",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "桃仁",
+          "dosage": "9"
+        },
+        {
+          "name": "红花",
+          "dosage": "6"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "12"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        }
+      ],
+      "function": "养血活血,祛瘀调经",
+      "indications": "血虚血瘀:月经不调、经行腹痛、经色紫暗夹块、面色晦暗",
+      "contraindications": "孕妇忌",
+      "source": "《医方集解》引《医垒元戎》"
+    },
+    {
+      "name": "补阳还五汤",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄芪",
+          "dosage": "60"
+        },
+        {
+          "name": "当归尾",
+          "dosage": "6"
+        },
+        {
+          "name": "赤芍",
+          "dosage": "6"
+        },
+        {
+          "name": "地龙",
+          "dosage": "6"
+        },
+        {
+          "name": "川芎",
+          "dosage": "3"
+        },
+        {
+          "name": "桃仁",
+          "dosage": "3"
+        },
+        {
+          "name": "红花",
+          "dosage": "3"
+        }
+      ],
+      "function": "补气活血通络",
+      "indications": "中风后气虚血瘀:半身不遂、口眼㖞斜、语言謇涩、口角流涎、遗尿不禁",
+      "contraindications": "阴虚阳亢、痰热者忌",
+      "source": "《医林改错》(后世名方补入)"
+    },
+    {
+      "name": "十灰散",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "大蓟",
+          "dosage": "9"
+        },
+        {
+          "name": "小蓟",
+          "dosage": "9"
+        },
+        {
+          "name": "荷叶",
+          "dosage": "9"
+        },
+        {
+          "name": "侧柏叶",
+          "dosage": "9"
+        },
+        {
+          "name": "茅根",
+          "dosage": "9"
+        },
+        {
+          "name": "茜草",
+          "dosage": "9"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "大黄",
+          "dosage": "9"
+        },
+        {
+          "name": "牡丹皮",
+          "dosage": "9"
+        },
+        {
+          "name": "棕榈皮",
+          "dosage": "9"
+        }
+      ],
+      "function": "凉血止血",
+      "indications": "血热妄行:吐血、咯血、衄血、崩漏,血色鲜红、来势急暴",
+      "contraindications": "虚寒出血者忌",
+      "source": "《医方集解》引《十药神书》"
+    },
+    {
+      "name": "小蓟饮子",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "小蓟",
+          "dosage": "15"
+        },
+        {
+          "name": "生地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "滑石",
+          "dosage": "15"
+        },
+        {
+          "name": "木通",
+          "dosage": "6"
+        },
+        {
+          "name": "蒲黄",
+          "dosage": "9"
+        },
+        {
+          "name": "藕节",
+          "dosage": "9"
+        },
+        {
+          "name": "淡竹叶",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "6"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "凉血止血,利水通淋",
+      "indications": "下焦瘀热之血淋、尿血:尿中带血、小便频数、赤涩热痛",
+      "contraindications": "虚寒尿血者忌",
+      "source": "《医方集解》引《济生方》"
+    },
+    {
+      "name": "咳血方",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "青黛",
+          "dosage": "6"
+        },
+        {
+          "name": "瓜蒌仁",
+          "dosage": "12"
+        },
+        {
+          "name": "海粉(蛤壳)",
+          "dosage": "9"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "诃子",
+          "dosage": "6"
+        }
+      ],
+      "function": "清肝宁肺,凉血止血",
+      "indications": "肝火犯肺之咳血:咳嗽痰稠带血、咯吐不爽、心烦易怒、胸胁刺痛",
+      "contraindications": "虚寒咳嗽者忌",
+      "source": "《医方集解》引《丹溪心法》"
+    },
+    {
+      "name": "复元活血汤",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "柴胡",
+          "dosage": "9"
+        },
+        {
+          "name": "瓜蒌根",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "红花",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "穿山甲",
+          "dosage": "6"
+        },
+        {
+          "name": "大黄",
+          "dosage": "9"
+        },
+        {
+          "name": "桃仁",
+          "dosage": "9"
+        }
+      ],
+      "function": "活血祛瘀,疏肝通络",
+      "indications": "跌打损伤、瘀血留于胁下:胁肋疼痛、痛不可忍",
+      "contraindications": "孕妇忌",
+      "source": "《医方集解》引《医学发明》"
+    },
+    {
+      "name": "桂枝茯苓丸",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "桂枝",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "牡丹皮",
+          "dosage": "9"
+        },
+        {
+          "name": "桃仁",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        }
+      ],
+      "function": "活血化瘀,缓消癥块",
+      "indications": "瘀阻胞宫:妇人宿有癥块、妊娠胎动不安、漏下不止、血色紫黑晦暗、腹痛拒按",
+      "contraindications": "孕妇须辨证慎用",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "生化汤",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "当归",
+          "dosage": "15"
+        },
+        {
+          "name": "川芎",
+          "dosage": "9"
+        },
+        {
+          "name": "桃仁",
+          "dosage": "6"
+        },
+        {
+          "name": "炮姜",
+          "dosage": "3"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "化瘀生新,温经止痛",
+      "indications": "产后血虚寒凝、瘀血内阻:恶露不行、少腹冷痛",
+      "contraindications": "血热瘀滞者忌",
+      "source": "《傅青主女科》(后世名方补入)"
+    },
+    {
+      "name": "少腹逐瘀汤",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "小茴香",
+          "dosage": "6"
+        },
+        {
+          "name": "干姜",
+          "dosage": "3"
+        },
+        {
+          "name": "延胡索",
+          "dosage": "9"
+        },
+        {
+          "name": "没药",
+          "dosage": "6"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "赤芍",
+          "dosage": "9"
+        },
+        {
+          "name": "蒲黄",
+          "dosage": "9"
+        },
+        {
+          "name": "五灵脂",
+          "dosage": "9"
+        }
+      ],
+      "function": "活血祛瘀,温经止痛",
+      "indications": "少腹寒凝血瘀:少腹积块疼痛、月经不调、色紫黑有块、痛经、崩漏兼少腹疼痛",
+      "contraindications": "孕妇忌、血热者忌",
+      "source": "《医林改错》(后世名方补入)"
+    },
+    {
+      "name": "大黄蛰虫丸",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "大黄",
+          "dosage": "9"
+        },
+        {
+          "name": "蛰虫(土鳖虫)",
+          "dosage": "9"
+        },
+        {
+          "name": "水蛭",
+          "dosage": "3"
+        },
+        {
+          "name": "虻虫",
+          "dosage": "3"
+        },
+        {
+          "name": "蛴螬",
+          "dosage": "3"
+        },
+        {
+          "name": "干漆",
+          "dosage": "3"
+        },
+        {
+          "name": "桃仁",
+          "dosage": "9"
+        },
+        {
+          "name": "杏仁",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "生地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "活血破瘀,通经消癥",
+      "indications": "五劳虚极、干血内结:形体羸瘦、腹满不能饮食、肌肤甲错、两目黯黑",
+      "contraindications": "孕妇忌、体虚者慎",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "膈下逐瘀汤",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "五灵脂",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "桃仁",
+          "dosage": "9"
+        },
+        {
+          "name": "牡丹皮",
+          "dosage": "6"
+        },
+        {
+          "name": "赤芍",
+          "dosage": "9"
+        },
+        {
+          "name": "乌药",
+          "dosage": "9"
+        },
+        {
+          "name": "延胡索",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "香附",
+          "dosage": "9"
+        },
+        {
+          "name": "红花",
+          "dosage": "6"
+        },
+        {
+          "name": "枳壳",
+          "dosage": "6"
+        }
+      ],
+      "function": "活血祛瘀,行气止痛",
+      "indications": "膈下瘀血:肚腹积块、痛处不移、卧则腹坠",
+      "contraindications": "孕妇忌",
+      "source": "《医林改错》(后世名方补入)"
+    },
+    {
+      "name": "小续命汤",
+      "category": "祛风之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "麻黄",
+          "dosage": "6"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "6"
+        },
+        {
+          "name": "防风",
+          "dosage": "6"
+        },
+        {
+          "name": "防己",
+          "dosage": "6"
+        },
+        {
+          "name": "杏仁",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "附子",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "祛风散寒,益气温阳",
+      "indications": "中风卒起、外有风寒:口眼㖞斜、筋脉拘急、半身不遂、言语謇涩",
+      "contraindications": "阴虚阳亢中风者忌",
+      "source": "《医方集解》引《备急千金要方》"
+    },
+    {
+      "name": "大秦艽汤",
+      "category": "祛风之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "秦艽",
+          "dosage": "9"
+        },
+        {
+          "name": "羌活",
+          "dosage": "6"
+        },
+        {
+          "name": "独活",
+          "dosage": "6"
+        },
+        {
+          "name": "防风",
+          "dosage": "6"
+        },
+        {
+          "name": "白芷",
+          "dosage": "6"
+        },
+        {
+          "name": "细辛",
+          "dosage": "3"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "石膏",
+          "dosage": "15"
+        },
+        {
+          "name": "生地黄",
+          "dosage": "12"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "12"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "祛风清热,养血活血",
+      "indications": "风邪初中经络:口眼㖞斜、舌强不语、手足不能运动、风邪散见、不拘一经者",
+      "contraindications": "阴血亏甚者宜加减",
+      "source": "《医方集解》引《素问病机气宜保命集》"
+    },
+    {
+      "name": "牵正散",
+      "category": "祛风之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "白附子",
+          "dosage": "6"
+        },
+        {
+          "name": "僵蚕",
+          "dosage": "6"
+        },
+        {
+          "name": "全蝎",
+          "dosage": "6"
+        }
+      ],
+      "function": "祛风化痰止痉",
+      "indications": "风痰阻络:口眼㖞斜、面肌抽动",
+      "contraindications": "气虚血瘀或肝风内动者忌",
+      "source": "《医方集解》引《杨氏家藏方》"
+    },
+    {
+      "name": "玉真散",
+      "category": "祛风之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "天南星",
+          "dosage": "6"
+        },
+        {
+          "name": "防风",
+          "dosage": "6"
+        },
+        {
+          "name": "白芷",
+          "dosage": "6"
+        },
+        {
+          "name": "天麻",
+          "dosage": "6"
+        },
+        {
+          "name": "羌活",
+          "dosage": "6"
+        },
+        {
+          "name": "白附子",
+          "dosage": "6"
+        }
+      ],
+      "function": "祛风化痰,定搐止痉",
+      "indications": "破伤风:牙关紧急、口撮唇紧、身体强直、角弓反张",
+      "contraindications": "孕妇忌",
+      "source": "《医方集解》引《外科正宗》"
+    },
+    {
+      "name": "地黄饮子",
+      "category": "祛风之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "巴戟天",
+          "dosage": "9"
+        },
+        {
+          "name": "山茱萸",
+          "dosage": "9"
+        },
+        {
+          "name": "石斛",
+          "dosage": "9"
+        },
+        {
+          "name": "肉苁蓉",
+          "dosage": "9"
+        },
+        {
+          "name": "附子",
+          "dosage": "6"
+        },
+        {
+          "name": "五味子",
+          "dosage": "6"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "麦冬",
+          "dosage": "9"
+        },
+        {
+          "name": "石菖蒲",
+          "dosage": "6"
+        },
+        {
+          "name": "远志",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        },
+        {
+          "name": "薄荷",
+          "dosage": "3"
+        }
+      ],
+      "function": "滋肾阴,补肾阳,开窍化痰",
+      "indications": "喑痱证:舌强不能言、足废不能用、口干不欲饮、脉沉细弱",
+      "contraindications": "肝阳上亢者忌",
+      "source": "《医方集解》引《圣济总录》"
+    },
+    {
+      "name": "蠲痹汤",
+      "category": "祛风之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "羌活",
+          "dosage": "6"
+        },
+        {
+          "name": "独活",
+          "dosage": "6"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "6"
+        },
+        {
+          "name": "秦艽",
+          "dosage": "9"
+        },
+        {
+          "name": "海风藤",
+          "dosage": "9"
+        },
+        {
+          "name": "桑枝",
+          "dosage": "15"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "乳香",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "祛风除湿,蠲痹止痛",
+      "indications": "风寒湿痹:肢体关节疼痛、游走不定、屈伸不利、麻木",
+      "contraindications": "湿热痹者忌",
+      "source": "《医方集解》引《医学心悟》"
+    },
+    {
+      "name": "当归拈痛汤",
+      "category": "祛风之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "羌活",
+          "dosage": "6"
+        },
+        {
+          "name": "防风",
+          "dosage": "6"
+        },
+        {
+          "name": "升麻",
+          "dosage": "3"
+        },
+        {
+          "name": "葛根",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "苍术",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "茵陈",
+          "dosage": "9"
+        },
+        {
+          "name": "苦参",
+          "dosage": "9"
+        },
+        {
+          "name": "知母",
+          "dosage": "9"
+        },
+        {
+          "name": "猪苓",
+          "dosage": "9"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "利湿清热,疏风止痛",
+      "indications": "湿热相搏:肢节烦疼、肩背沉重、胸膈不利、遍身疼痛、足胫肿痛",
+      "contraindications": "寒湿痹者忌",
+      "source": "《医方集解》引《兰室秘藏》"
+    },
+    {
+      "name": "小建中汤",
+      "category": "祛寒之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "桂枝",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "18"
+        },
+        {
+          "name": "生姜",
+          "dosage": "9"
+        },
+        {
+          "name": "大枣",
+          "dosage": "4枚"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "饴糖",
+          "dosage": "30"
+        }
+      ],
+      "function": "温中补虚,和里缓急",
+      "indications": "中焦虚寒:腹中拘急疼痛、喜温喜按、神疲乏力、心悸而烦、面色无华",
+      "contraindications": "阴虚火旺者忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "大建中汤",
+      "category": "祛寒之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "蜀椒",
+          "dosage": "6"
+        },
+        {
+          "name": "干姜",
+          "dosage": "12"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "饴糖",
+          "dosage": "30"
+        }
+      ],
+      "function": "温中补虚,降逆止痛",
+      "indications": "中阳衰弱、阴寒内盛:心胸中大寒痛、呕不能食、腹中寒、上冲皮起",
+      "contraindications": "实热腹痛者忌",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "参附汤",
+      "category": "祛寒之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "15"
+        },
+        {
+          "name": "附子",
+          "dosage": "15"
+        }
+      ],
+      "function": "益气回阳救脱",
+      "indications": "阳气暴脱:手足厥冷、冷汗淋漓、呼吸微弱、脉微欲绝",
+      "contraindications": "真热假寒者忌",
+      "source": "《医方集解》引《正体类要》"
+    },
+    {
+      "name": "当归四逆汤",
+      "category": "祛寒之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "当归",
+          "dosage": "12"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "细辛",
+          "dosage": "3"
+        },
+        {
+          "name": "通草",
+          "dosage": "6"
+        },
+        {
+          "name": "大枣",
+          "dosage": "8枚"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "温经散寒,养血通脉",
+      "indications": "血虚寒厥:手足厥寒、脉细欲绝、腰腿疼痛",
+      "contraindications": "热厥者忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "回阳救急汤",
+      "category": "祛寒之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "附子",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "6"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "五味子",
+          "dosage": "6"
+        },
+        {
+          "name": "麝香",
+          "dosage": "0.1"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "回阳救急,益气生脉",
+      "indications": "寒邪直中三阴:恶寒蜷卧、四肢厥冷、吐泻腹痛、神衰欲寐、脉沉微",
+      "contraindications": "真热假寒者忌",
+      "source": "《医方集解》引《伤寒六书》"
+    },
+    {
+      "name": "附子理中丸",
+      "category": "祛寒之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "附子",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "温阳祛寒,益气健脾",
+      "indications": "脾胃虚寒较甚:脘腹冷痛、呕吐泄泻、手足不温、霍乱吐利",
+      "contraindications": "阴虚内热者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "黑锡丹",
+      "category": "祛寒之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黑锡",
+          "dosage": "15"
+        },
+        {
+          "name": "硫黄",
+          "dosage": "15"
+        },
+        {
+          "name": "附子",
+          "dosage": "9"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "阳起石",
+          "dosage": "9"
+        },
+        {
+          "name": "补骨脂",
+          "dosage": "9"
+        },
+        {
+          "name": "葫芦巴",
+          "dosage": "9"
+        },
+        {
+          "name": "茴香",
+          "dosage": "6"
+        },
+        {
+          "name": "肉豆蔻",
+          "dosage": "6"
+        },
+        {
+          "name": "沉香",
+          "dosage": "3"
+        },
+        {
+          "name": "川楝子",
+          "dosage": "9"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        }
+      ],
+      "function": "温壮下元,镇纳浮阳",
+      "indications": "真阳不足、肾不纳气:上气喘促、冷汗肢厥、奔豚气逆、男子阳痿精冷",
+      "contraindications": "阴虚火旺者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "香薷饮",
+      "category": "清暑之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "香薷",
+          "dosage": "9"
+        },
+        {
+          "name": "白扁豆",
+          "dosage": "9"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        }
+      ],
+      "function": "祛暑解表,化湿和中",
+      "indications": "夏月乘凉饮冷、外感于寒、内伤于湿:恶寒发热、无汗头痛、头重身倦、胸闷泛恶、腹痛吐泻",
+      "contraindications": "暑热汗多者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "清暑益气汤",
+      "category": "清暑之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄芪",
+          "dosage": "15"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "苍术",
+          "dosage": "9"
+        },
+        {
+          "name": "青皮",
+          "dosage": "6"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "升麻",
+          "dosage": "3"
+        },
+        {
+          "name": "葛根",
+          "dosage": "9"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "9"
+        },
+        {
+          "name": "黄柏",
+          "dosage": "6"
+        },
+        {
+          "name": "当归",
+          "dosage": "6"
+        },
+        {
+          "name": "麦冬",
+          "dosage": "9"
+        },
+        {
+          "name": "五味子",
+          "dosage": "6"
+        },
+        {
+          "name": "神曲",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "清暑益气,除湿健脾",
+      "indications": "暑热耗气伤津、湿困脾土:身热头痛、口渴自汗、四肢困倦、不思饮食、大便溏泄",
+      "contraindications": "暑热无湿者宜加减",
+      "source": "《医方集解》引《脾胃论》"
+    },
+    {
+      "name": "桂苓甘露饮",
+      "category": "清暑之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "滑石",
+          "dosage": "15"
+        },
+        {
+          "name": "石膏",
+          "dosage": "15"
+        },
+        {
+          "name": "寒水石",
+          "dosage": "15"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "猪苓",
+          "dosage": "9"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "清暑解热,化气利湿",
+      "indications": "中暑受湿:发热头痛、烦渴引饮、小便不利、呕吐泄泻",
+      "contraindications": "阳虚者慎",
+      "source": "《医方集解》引《宣明论方》"
+    },
+    {
+      "name": "五皮饮",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "茯苓皮",
+          "dosage": "15"
+        },
+        {
+          "name": "大腹皮",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "9"
+        },
+        {
+          "name": "生姜皮",
+          "dosage": "9"
+        },
+        {
+          "name": "桑白皮",
+          "dosage": "9"
+        }
+      ],
+      "function": "利水消肿,理气健脾",
+      "indications": "脾虚湿盛之皮水:一身悉肿、肢体沉重、心腹胀满、小便不利、妊娠水肿",
+      "contraindications": "阴血虚者慎",
+      "source": "《医方集解》引《华氏中藏经》"
+    },
+    {
+      "name": "防己黄芪汤",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "防己",
+          "dosage": "12"
+        },
+        {
+          "name": "黄芪",
+          "dosage": "15"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "生姜",
+          "dosage": "6"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "益气祛风,健脾利水",
+      "indications": "风水或风湿:汗出恶风、身重浮肿、小便不利、关节疼痛",
+      "contraindications": "湿热盛者宜加减",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "羌活胜湿汤",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "羌活",
+          "dosage": "9"
+        },
+        {
+          "name": "独活",
+          "dosage": "9"
+        },
+        {
+          "name": "藁本",
+          "dosage": "6"
+        },
+        {
+          "name": "防风",
+          "dosage": "6"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "蔓荆子",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "祛风胜湿止痛",
+      "indications": "风湿在表:肩背痛不可回顾、头痛身重、腰脊疼痛、难以转侧",
+      "contraindications": "阴虚血少者慎",
+      "source": "《医方集解》引《内外伤辨惑论》"
+    },
+    {
+      "name": "萆薢分清饮",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "萆薢",
+          "dosage": "12"
+        },
+        {
+          "name": "益智仁",
+          "dosage": "9"
+        },
+        {
+          "name": "石菖蒲",
+          "dosage": "9"
+        },
+        {
+          "name": "乌药",
+          "dosage": "9"
+        }
+      ],
+      "function": "温肾利湿,分清化浊",
+      "indications": "下焦虚寒之膏淋白浊:小便频数、混浊不清、白如米泔、凝如膏糊",
+      "contraindications": "湿热白浊者忌",
+      "source": "《医方集解》引《丹溪心法》"
+    },
+    {
+      "name": "实脾散",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "木瓜",
+          "dosage": "9"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "草果",
+          "dosage": "6"
+        },
+        {
+          "name": "大腹子(槟榔)",
+          "dosage": "9"
+        },
+        {
+          "name": "附子",
+          "dosage": "6"
+        },
+        {
+          "name": "干姜",
+          "dosage": "6"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        }
+      ],
+      "function": "温阳健脾,行气利水",
+      "indications": "脾肾阳虚之阴水:身半以下肿甚、手足不温、口中不渴、胸腹胀满、大便溏薄",
+      "contraindications": "阳水实证者忌",
+      "source": "《医方集解》引《济生方》"
+    },
+    {
+      "name": "鸡鸣散",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "槟榔",
+          "dosage": "12"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "9"
+        },
+        {
+          "name": "木瓜",
+          "dosage": "12"
+        },
+        {
+          "name": "吴茱萸",
+          "dosage": "6"
+        },
+        {
+          "name": "紫苏叶",
+          "dosage": "9"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "生姜",
+          "dosage": "9"
+        }
+      ],
+      "function": "行气降浊,宣化寒湿",
+      "indications": "湿脚气:足胫肿重无力、麻木冷痛、恶寒发热、或挛急上冲",
+      "contraindications": "干脚气阴虚者忌",
+      "source": "《医方集解》引《类编朱氏集验医方》"
+    },
+    {
+      "name": "琼玉膏",
+      "category": "润燥之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "生地黄",
+          "dosage": "30"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "15"
+        },
+        {
+          "name": "白蜜",
+          "dosage": "30"
+        }
+      ],
+      "function": "滋阴润肺,益气补脾",
+      "indications": "肺肾阴亏、虚劳干咳:干咳少痰、咽燥咯血、肌肉消瘦、气短乏力",
+      "contraindications": "外感咳嗽者忌",
+      "source": "《医方集解》引《洪氏集验方》"
+    },
+    {
+      "name": "杏苏散",
+      "category": "润燥之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "杏仁",
+          "dosage": "9"
+        },
+        {
+          "name": "紫苏叶",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "前胡",
+          "dosage": "9"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "枳壳",
+          "dosage": "6"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "轻宣凉燥,理肺化痰",
+      "indications": "外感凉燥:头微痛、恶寒无汗、咳嗽痰稀、鼻塞嗌干",
+      "contraindications": "温燥者忌",
+      "source": "《温病条辨》(后世名方补入)"
+    },
+    {
+      "name": "桑杏汤",
+      "category": "润燥之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "桑叶",
+          "dosage": "9"
+        },
+        {
+          "name": "杏仁",
+          "dosage": "9"
+        },
+        {
+          "name": "沙参",
+          "dosage": "12"
+        },
+        {
+          "name": "浙贝母",
+          "dosage": "9"
+        },
+        {
+          "name": "淡豆豉",
+          "dosage": "9"
+        },
+        {
+          "name": "栀子皮",
+          "dosage": "6"
+        },
+        {
+          "name": "梨皮",
+          "dosage": "9"
+        }
+      ],
+      "function": "清宣温燥,润肺止咳",
+      "indications": "外感温燥:身热不甚、口渴咽干鼻燥、干咳无痰或痰少而黏",
+      "contraindications": "凉燥者忌",
+      "source": "《温病条辨》(后世名方补入)"
+    },
+    {
+      "name": "竹叶石膏汤",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "竹叶",
+          "dosage": "9"
+        },
+        {
+          "name": "石膏",
+          "dosage": "30"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "麦冬",
+          "dosage": "15"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "粳米",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "清热生津,益气和胃",
+      "indications": "伤寒温病后期余热未清:身热多汗、心胸烦闷、气逆欲呕、口干喜饮、虚烦不寐",
+      "contraindications": "实热壅盛者宜加减",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "栀子豉汤",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "淡豆豉",
+          "dosage": "9"
+        }
+      ],
+      "function": "清热除烦",
+      "indications": "热扰胸膈:身热懊憹、虚烦不眠、胸脘痞满、嘈杂似饥",
+      "contraindications": "脾虚便溏者慎",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "泻白散",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "地骨皮",
+          "dosage": "9"
+        },
+        {
+          "name": "桑白皮",
+          "dosage": "9"
+        },
+        {
+          "name": "粳米",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "清泻肺热,止咳平喘",
+      "indications": "肺热咳嗽:咳嗽气急、皮肤蒸热、日晡尤甚、舌红苔黄、脉细数",
+      "contraindications": "风寒咳嗽者忌",
+      "source": "《医方集解》引《小儿药证直诀》"
+    },
+    {
+      "name": "泻青丸",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "龙胆草",
+          "dosage": "6"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "大黄",
+          "dosage": "6"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "羌活",
+          "dosage": "6"
+        },
+        {
+          "name": "防风",
+          "dosage": "6"
+        }
+      ],
+      "function": "清肝泻火",
+      "indications": "肝火郁结:目赤肿痛、烦躁易怒、不能安卧、尿赤便秘、脉洪实",
+      "contraindications": "脾胃虚寒者忌",
+      "source": "《医方集解》引《小儿药证直诀》"
+    },
+    {
+      "name": "普济消毒饮",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "9"
+        },
+        {
+          "name": "连翘",
+          "dosage": "9"
+        },
+        {
+          "name": "牛蒡子",
+          "dosage": "9"
+        },
+        {
+          "name": "薄荷",
+          "dosage": "6"
+        },
+        {
+          "name": "僵蚕",
+          "dosage": "6"
+        },
+        {
+          "name": "马勃",
+          "dosage": "6"
+        },
+        {
+          "name": "升麻",
+          "dosage": "6"
+        },
+        {
+          "name": "柴胡",
+          "dosage": "6"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "玄参",
+          "dosage": "9"
+        },
+        {
+          "name": "板蓝根",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "清热解毒,疏风散邪",
+      "indications": "大头瘟:恶寒发热、头面红肿焮痛、目不能开、咽喉不利、舌燥口渴",
+      "contraindications": "素体阴虚者慎",
+      "source": "《医方集解》引《东垣试效方》"
+    },
+    {
+      "name": "清心莲子饮",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "麦冬",
+          "dosage": "9"
+        },
+        {
+          "name": "地骨皮",
+          "dosage": "9"
+        },
+        {
+          "name": "车前子",
+          "dosage": "9"
+        },
+        {
+          "name": "莲子肉",
+          "dosage": "12"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芪",
+          "dosage": "12"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "清心火,益气阴,止淋浊",
+      "indications": "心火偏旺、气阴两虚:心烦口渴、小便淋浊、遗精、夜寐不安",
+      "contraindications": "湿热盛者宜加减",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "当归龙荟丸",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "龙胆草",
+          "dosage": "6"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "黄柏",
+          "dosage": "9"
+        },
+        {
+          "name": "大黄",
+          "dosage": "6"
+        },
+        {
+          "name": "芦荟",
+          "dosage": "6"
+        },
+        {
+          "name": "青黛",
+          "dosage": "6"
+        },
+        {
+          "name": "木香",
+          "dosage": "3"
+        },
+        {
+          "name": "麝香",
+          "dosage": "0.1"
+        }
+      ],
+      "function": "清泻肝胆实火",
+      "indications": "肝胆实火:头晕目眩、神志不宁、谵语发狂、大便秘结、小便赤涩",
+      "contraindications": "脾胃虚寒者忌",
+      "source": "《医方集解》引《宣明论方》"
+    },
+    {
+      "name": "涤痰汤",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "胆南星",
+          "dosage": "9"
+        },
+        {
+          "name": "橘红",
+          "dosage": "6"
+        },
+        {
+          "name": "枳实",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "石菖蒲",
+          "dosage": "9"
+        },
+        {
+          "name": "竹茹",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        }
+      ],
+      "function": "涤痰开窍",
+      "indications": "中风痰迷心窍:舌强不能言、喉中痰鸣、胸膈痞闷",
+      "contraindications": "阴虚者慎",
+      "source": "《医方集解》引《济生方》"
+    },
+    {
+      "name": "导痰汤",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "天南星",
+          "dosage": "9"
+        },
+        {
+          "name": "枳实",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        }
+      ],
+      "function": "燥湿豁痰,行气开郁",
+      "indications": "痰厥及顽痰:头目眩晕、痰涎壅盛、胸膈痞塞、胁肋胀满、头痛呕逆",
+      "contraindications": "阴虚燥痰者忌",
+      "source": "《医方集解》引《济生方》"
+    },
+    {
+      "name": "滚痰丸",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "礞石",
+          "dosage": "9"
+        },
+        {
+          "name": "大黄",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "沉香",
+          "dosage": "3"
+        }
+      ],
+      "function": "泻火逐痰",
+      "indications": "实热老痰:癫狂惊悸、怔忡昏迷、咳喘痰稠、大便秘结、舌苔黄厚",
+      "contraindications": "体虚、孕妇忌",
+      "source": "《医方集解》引《丹溪心法附余》"
+    },
+    {
+      "name": "清气化痰丸",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "胆南星",
+          "dosage": "9"
+        },
+        {
+          "name": "瓜蒌仁",
+          "dosage": "12"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "杏仁",
+          "dosage": "9"
+        },
+        {
+          "name": "枳实",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        }
+      ],
+      "function": "清热化痰,理气止咳",
+      "indications": "痰热互结:咳嗽痰黄、咯之不爽、胸膈痞满、小便短赤",
+      "contraindications": "寒痰者忌",
+      "source": "《医方集解》引《医方考》"
+    },
+    {
+      "name": "金水六君煎",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        }
+      ],
+      "function": "滋养肺肾,祛湿化痰",
+      "indications": "肺肾阴虚、湿痰内盛:咳嗽呕恶、喘逆多痰、腰膝酸软",
+      "contraindications": "湿盛脾虚者宜加减",
+      "source": "《医方集解》引《景岳全书》"
+    },
+    {
+      "name": "贝母瓜蒌散",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "贝母",
+          "dosage": "9"
+        },
+        {
+          "name": "瓜蒌",
+          "dosage": "12"
+        },
+        {
+          "name": "天花粉",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "橘红",
+          "dosage": "6"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        }
+      ],
+      "function": "润肺清热,理气化痰",
+      "indications": "燥痰咳嗽:咯痰不爽、涩而难出、咽喉干燥",
+      "contraindications": "湿痰寒痰者忌",
+      "source": "《医方集解》引《医学心悟》"
+    },
+    {
+      "name": "苓甘五味姜辛汤",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "茯苓",
+          "dosage": "12"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "干姜",
+          "dosage": "9"
+        },
+        {
+          "name": "细辛",
+          "dosage": "3"
+        },
+        {
+          "name": "五味子",
+          "dosage": "6"
+        }
+      ],
+      "function": "温肺化饮",
+      "indications": "寒饮内蓄:咳嗽痰多、清稀色白、胸满喘逆",
+      "contraindications": "痰热者忌",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "指迷茯苓丸",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "茯苓",
+          "dosage": "12"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "枳壳",
+          "dosage": "9"
+        },
+        {
+          "name": "芒硝",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        }
+      ],
+      "function": "燥湿行气,软坚消痰",
+      "indications": "痰停中脘:两臂疼痛、手不得上举、或四肢浮肿",
+      "contraindications": "阴虚者慎",
+      "source": "《医方集解》引《指迷方》"
+    },
+    {
+      "name": "枳术丸",
+      "category": "消导之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "白术",
+          "dosage": "15"
+        },
+        {
+          "name": "枳实",
+          "dosage": "9"
+        }
+      ],
+      "function": "健脾消痞",
+      "indications": "脾虚气滞:脘腹痞满、不思饮食、大便不调",
+      "contraindications": "实积者宜加消导药",
+      "source": "《医方集解》引《脾胃论》"
+    },
+    {
+      "name": "健脾丸",
+      "category": "消导之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "白术",
+          "dosage": "12"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "山药",
+          "dosage": "12"
+        },
+        {
+          "name": "山楂",
+          "dosage": "12"
+        },
+        {
+          "name": "神曲",
+          "dosage": "9"
+        },
+        {
+          "name": "麦芽",
+          "dosage": "9"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "砂仁",
+          "dosage": "6"
+        },
+        {
+          "name": "肉豆蔻",
+          "dosage": "6"
+        },
+        {
+          "name": "黄连",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "健脾和胃,消食止泻",
+      "indications": "脾虚食积:食少难消、脘腹痞闷、大便溏薄、倦怠乏力",
+      "contraindications": "实热积滞者忌",
+      "source": "《医方集解》引《证治准绳》"
+    },
+    {
+      "name": "葛花解酲汤",
+      "category": "消导之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "葛花",
+          "dosage": "9"
+        },
+        {
+          "name": "砂仁",
+          "dosage": "6"
+        },
+        {
+          "name": "豆蔻",
+          "dosage": "6"
+        },
+        {
+          "name": "神曲",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "6"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "猪苓",
+          "dosage": "9"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "青皮",
+          "dosage": "6"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        }
+      ],
+      "function": "分消酒湿,温中健脾",
+      "indications": "酒积伤脾:眩晕呕吐、胸膈痞闷、食少体倦、小便不利",
+      "contraindications": "阴虚者忌",
+      "source": "《医方集解》引《兰室秘藏》"
+    },
+    {
+      "name": "枳实消痞丸",
+      "category": "消导之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "枳实",
+          "dosage": "9"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "6"
+        },
+        {
+          "name": "干姜",
+          "dosage": "3"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "麦芽",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "消痞除满,健脾和胃",
+      "indications": "脾虚气滞、寒热互结:心下痞满、不欲饮食、倦怠乏力、大便不调",
+      "contraindications": "实热胀满者宜加减",
+      "source": "《医方集解》引《兰室秘藏》"
+    },
+    {
+      "name": "真人养脏汤",
+      "category": "收涩之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "肉豆蔻",
+          "dosage": "6"
+        },
+        {
+          "name": "诃子",
+          "dosage": "9"
+        },
+        {
+          "name": "罂粟壳",
+          "dosage": "6"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "涩肠固脱,温补脾肾",
+      "indications": "脾肾虚寒之久泻久痢:滑脱不禁、腹痛喜温喜按、食少倦怠",
+      "contraindications": "湿热泻痢初起忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "桑螵蛸散",
+      "category": "收涩之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "桑螵蛸",
+          "dosage": "12"
+        },
+        {
+          "name": "远志",
+          "dosage": "6"
+        },
+        {
+          "name": "石菖蒲",
+          "dosage": "6"
+        },
+        {
+          "name": "龙骨",
+          "dosage": "15"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "茯神",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "龟板",
+          "dosage": "12"
+        }
+      ],
+      "function": "调补心肾,涩精止遗",
+      "indications": "心肾两虚:小便频数、尿如米泔、心神恍惚、健忘、遗精",
+      "contraindications": "湿热下注者忌",
+      "source": "《医方集解》引《本草衍义》"
+    },
+    {
+      "name": "缩泉丸",
+      "category": "收涩之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "乌药",
+          "dosage": "9"
+        },
+        {
+          "name": "益智仁",
+          "dosage": "9"
+        },
+        {
+          "name": "山药",
+          "dosage": "12"
+        }
+      ],
+      "function": "温肾祛寒,缩尿止遗",
+      "indications": "下元虚寒:小便频数、夜尿多、小儿遗尿",
+      "contraindications": "湿热尿频者忌",
+      "source": "《医方集解》引《妇人良方》"
+    },
+    {
+      "name": "固经丸",
+      "category": "收涩之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "龟板",
+          "dosage": "15"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "黄柏",
+          "dosage": "9"
+        },
+        {
+          "name": "香附",
+          "dosage": "9"
+        },
+        {
+          "name": "椿根皮",
+          "dosage": "9"
+        }
+      ],
+      "function": "滋阴清热,固经止血",
+      "indications": "阴虚血热之崩漏:经行不止、血色深红、或夹紫黑瘀块、心胸烦热",
+      "contraindications": "虚寒崩漏者忌",
+      "source": "《医方集解》引《丹溪心法》"
+    },
+    {
+      "name": "易黄汤",
+      "category": "收涩之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "山药",
+          "dosage": "15"
+        },
+        {
+          "name": "芡实",
+          "dosage": "15"
+        },
+        {
+          "name": "黄柏",
+          "dosage": "9"
+        },
+        {
+          "name": "车前子",
+          "dosage": "9"
+        },
+        {
+          "name": "白果",
+          "dosage": "9"
+        }
+      ],
+      "function": "固肾止带,清热祛湿",
+      "indications": "肾虚湿热之带下:带下黏稠量多、色黄如脓、其气腥秽",
+      "contraindications": "虚寒带下者忌",
+      "source": "《医方集解》引《傅青主女科》"
+    },
+    {
+      "name": "固冲汤",
+      "category": "收涩之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "白术",
+          "dosage": "15"
+        },
+        {
+          "name": "黄芪",
+          "dosage": "15"
+        },
+        {
+          "name": "龙骨",
+          "dosage": "15"
+        },
+        {
+          "name": "牡蛎",
+          "dosage": "15"
+        },
+        {
+          "name": "山茱萸",
+          "dosage": "12"
+        },
+        {
+          "name": "白芍",
+          "dosage": "12"
+        },
+        {
+          "name": "海螵蛸",
+          "dosage": "12"
+        },
+        {
+          "name": "茜草",
+          "dosage": "9"
+        },
+        {
+          "name": "棕榈炭",
+          "dosage": "6"
+        },
+        {
+          "name": "五倍子",
+          "dosage": "3"
+        }
+      ],
+      "function": "益气健脾,固冲摄血",
+      "indications": "脾气虚弱、冲脉不固:血崩或月经过多、色淡质稀、心悸气短",
+      "contraindications": "血热妄行者忌",
+      "source": "《医学衷中参西录》(后世名方补入)"
+    },
+    {
+      "name": "化虫丸",
+      "category": "杀虫之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "鹤虱",
+          "dosage": "9"
+        },
+        {
+          "name": "苦楝皮",
+          "dosage": "9"
+        },
+        {
+          "name": "槟榔",
+          "dosage": "12"
+        },
+        {
+          "name": "使君子",
+          "dosage": "9"
+        },
+        {
+          "name": "芜荑",
+          "dosage": "9"
+        },
+        {
+          "name": "雷丸",
+          "dosage": "9"
+        }
+      ],
+      "function": "驱杀肠中诸虫",
+      "indications": "肠中诸虫:腹痛时作、呕吐清水、嗜食异物",
+      "contraindications": "体虚者慎、空腹服",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "肥儿丸",
+      "category": "杀虫之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "使君子",
+          "dosage": "12"
+        },
+        {
+          "name": "槟榔",
+          "dosage": "9"
+        },
+        {
+          "name": "神曲",
+          "dosage": "12"
+        },
+        {
+          "name": "麦芽",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "6"
+        },
+        {
+          "name": "肉豆蔻",
+          "dosage": "6"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        }
+      ],
+      "function": "杀虫消积,健脾清热",
+      "indications": "小儿虫积疳疾:面黄肌瘦、肚腹胀大、发热口臭、大便稀溏",
+      "contraindications": "脾胃虚寒者慎",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "杞菊地黄丸",
+      "category": "明目之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "枸杞子",
+          "dosage": "12"
+        },
+        {
+          "name": "菊花",
+          "dosage": "9"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "24"
+        },
+        {
+          "name": "山茱萸",
+          "dosage": "12"
+        },
+        {
+          "name": "山药",
+          "dosage": "12"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "9"
+        },
+        {
+          "name": "牡丹皮",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        }
+      ],
+      "function": "滋肾养肝明目",
+      "indications": "肝肾阴虚:两目昏花、视物模糊、迎风流泪、目涩畏光",
+      "contraindications": "脾虚便溏者慎",
+      "source": "《医方集解》引《医级》"
+    },
+    {
+      "name": "石斛夜光丸",
+      "category": "明目之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "石斛",
+          "dosage": "12"
+        },
+        {
+          "name": "天冬",
+          "dosage": "9"
+        },
+        {
+          "name": "麦冬",
+          "dosage": "9"
+        },
+        {
+          "name": "生地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "枸杞子",
+          "dosage": "12"
+        },
+        {
+          "name": "菟丝子",
+          "dosage": "12"
+        },
+        {
+          "name": "牛膝",
+          "dosage": "9"
+        },
+        {
+          "name": "肉苁蓉",
+          "dosage": "9"
+        },
+        {
+          "name": "五味子",
+          "dosage": "6"
+        },
+        {
+          "name": "青葙子",
+          "dosage": "9"
+        },
+        {
+          "name": "决明子",
+          "dosage": "9"
+        },
+        {
+          "name": "羚羊角",
+          "dosage": "3"
+        },
+        {
+          "name": "犀角(水牛角代)",
+          "dosage": "9"
+        },
+        {
+          "name": "防风",
+          "dosage": "6"
+        },
+        {
+          "name": "菊花",
+          "dosage": "9"
+        },
+        {
+          "name": "蒺藜",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "枳壳",
+          "dosage": "6"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "山药",
+          "dosage": "12"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "滋补肝肾,清热明目",
+      "indications": "肝肾两亏、阴虚火旺:内障目暗、视物昏花、瞳神散大",
+      "contraindications": "脾虚湿盛者慎",
+      "source": "《医方集解》引《原机启微》"
+    },
+    {
+      "name": "磁朱丸",
+      "category": "明目之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "磁石",
+          "dosage": "15"
+        },
+        {
+          "name": "朱砂",
+          "dosage": "1.5"
+        },
+        {
+          "name": "神曲",
+          "dosage": "12"
+        }
+      ],
+      "function": "重镇安神,潜阳明目",
+      "indications": "心肾不交:心悸失眠、耳鸣耳聋、视物昏花、癫痫",
+      "contraindications": "脾胃虚弱者慎",
+      "source": "《医方集解》引《备急千金要方》"
+    },
+    {
+      "name": "五味消毒饮",
+      "category": "痈疡之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "金银花",
+          "dosage": "15"
+        },
+        {
+          "name": "野菊花",
+          "dosage": "15"
+        },
+        {
+          "name": "蒲公英",
+          "dosage": "15"
+        },
+        {
+          "name": "紫花地丁",
+          "dosage": "15"
+        },
+        {
+          "name": "紫背天葵",
+          "dosage": "9"
+        }
+      ],
+      "function": "清热解毒,消散疔疮",
+      "indications": "火毒结聚之疔疮痈疖:局部红肿热痛、疮形如粟、坚硬根深、或发热恶寒",
+      "contraindications": "阴证疮疡者忌",
+      "source": "《医宗金鉴》(后世名方补入)"
+    },
+    {
+      "name": "阳和汤",
+      "category": "痈疡之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "熟地黄",
+          "dosage": "30"
+        },
+        {
+          "name": "鹿角胶",
+          "dosage": "9"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "炮姜",
+          "dosage": "3"
+        },
+        {
+          "name": "麻黄",
+          "dosage": "3"
+        },
+        {
+          "name": "白芥子",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "温阳补血,散寒通滞",
+      "indications": "阴疽:贴骨疽、脱疽、流注、痰核、鹤膝风,患处漫肿无头、皮色不变、酸痛无热",
+      "contraindications": "阳证疮疡、阴虚有热者忌",
+      "source": "《外科证治全生集》(后世名方补入)"
+    },
+    {
+      "name": "透脓散",
+      "category": "痈疡之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄芪",
+          "dosage": "15"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "穿山甲",
+          "dosage": "6"
+        },
+        {
+          "name": "皂角刺",
+          "dosage": "9"
+        }
+      ],
+      "function": "托毒溃脓",
+      "indications": "痈疡脓成难溃:疮痈已成、不易外溃、漫肿无头、或酸胀热痛",
+      "contraindications": "脓未成者勿用",
+      "source": "《医方集解》引《外科正宗》"
+    },
+    {
+      "name": "内疏黄连汤",
+      "category": "痈疡之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄连",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "连翘",
+          "dosage": "9"
+        },
+        {
+          "name": "薄荷",
+          "dosage": "6"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "大黄",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "槟榔",
+          "dosage": "6"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "清热解毒,消肿散结",
+      "indications": "痈疽热毒内蕴:疮疡焮肿热痛、发热烦躁、呕哕便秘",
+      "contraindications": "阴证疮疡者忌",
+      "source": "《医方集解》引《外科正宗》"
+    },
+    {
+      "name": "犀黄丸",
+      "category": "痈疡之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "牛黄",
+          "dosage": "0.5"
+        },
+        {
+          "name": "麝香",
+          "dosage": "0.5"
+        },
+        {
+          "name": "乳香",
+          "dosage": "6"
+        },
+        {
+          "name": "没药",
+          "dosage": "6"
+        },
+        {
+          "name": "黄米饭",
+          "dosage": "适量"
+        }
+      ],
+      "function": "解毒消痈,化痰散结",
+      "indications": "乳岩、瘰疬、痰核、流注、肺痈、小肠痈等火郁痰凝之证",
+      "contraindications": "孕妇忌、体虚者慎",
+      "source": "《医方集解》引《外科全生集》"
+    },
+    {
+      "name": "当归芍药散",
+      "category": "经产之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "15"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "白术",
+          "dosage": "12"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "12"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "12"
+        }
+      ],
+      "function": "养血调肝,健脾利湿",
+      "indications": "妇人妊娠或经期:腹中㽲痛、头晕心悸、下肢浮肿、小便不利",
+      "contraindications": "阴虚火旺者慎",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "完带汤",
+      "category": "经产之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "白术",
+          "dosage": "15"
+        },
+        {
+          "name": "山药",
+          "dosage": "15"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "白芍",
+          "dosage": "12"
+        },
+        {
+          "name": "苍术",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "柴胡",
+          "dosage": "6"
+        },
+        {
+          "name": "荆芥穗",
+          "dosage": "3"
+        },
+        {
+          "name": "车前子",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "补脾疏肝,化湿止带",
+      "indications": "脾虚肝郁、湿浊下注:带下色白或淡黄、清稀无臭、倦怠便溏",
+      "contraindications": "湿热带下者忌",
+      "source": "《傅青主女科》(后世名方补入)"
+    },
+    {
+      "name": "清经散",
+      "category": "经产之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "牡丹皮",
+          "dosage": "9"
+        },
+        {
+          "name": "地骨皮",
+          "dosage": "12"
+        },
+        {
+          "name": "白芍",
+          "dosage": "12"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "青蒿",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "黄柏",
+          "dosage": "6"
+        }
+      ],
+      "function": "清热凉血调经",
+      "indications": "血热月经先期:经来先期量多、色深红或紫、质黏稠、心烦口渴",
+      "contraindications": "虚寒经期者忌",
+      "source": "《傅青主女科》(后世名方补入)"
+    },
+    {
+      "name": "两地汤",
+      "category": "经产之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "生地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "玄参",
+          "dosage": "15"
+        },
+        {
+          "name": "白芍",
+          "dosage": "12"
+        },
+        {
+          "name": "麦冬",
+          "dosage": "12"
+        },
+        {
+          "name": "地骨皮",
+          "dosage": "9"
+        },
+        {
+          "name": "阿胶",
+          "dosage": "9"
+        }
+      ],
+      "function": "滋阴清热调经",
+      "indications": "阴虚血热之月经先期:经来先期量少、色红质稠、颧红潮热、手足心热",
+      "contraindications": "阳虚者忌",
+      "source": "《傅青主女科》(后世名方补入)"
+    },
+    {
+      "name": "丹栀逍遥散",
+      "category": "经产之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "牡丹皮",
+          "dosage": "9"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "柴胡",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "薄荷",
+          "dosage": "3"
+        },
+        {
+          "name": "生姜",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "疏肝解郁,清热调经",
+      "indications": "肝郁化火:胸胁胀痛、烦躁易怒、潮热颧红、月经不调、乳房胀痛",
+      "contraindications": "脾虚便溏者慎",
+      "source": "《医方集解》引《内科摘要》"
+    },
+    {
+      "name": "通关散",
+      "category": "急救良方",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "猪牙皂",
+          "dosage": "3"
+        },
+        {
+          "name": "细辛",
+          "dosage": "3"
+        }
+      ],
+      "function": "通关开窍",
+      "indications": "卒中昏厥、牙关紧闭、不省人事之闭证",
+      "contraindications": "脱证忌",
+      "source": "《医方集解》引《丹溪心法附余》"
+    },
+    {
+      "name": "紫金锭",
+      "category": "急救良方",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "山慈菇",
+          "dosage": "15"
+        },
+        {
+          "name": "红大戟",
+          "dosage": "9"
+        },
+        {
+          "name": "千金子霜",
+          "dosage": "9"
+        },
+        {
+          "name": "五倍子",
+          "dosage": "15"
+        },
+        {
+          "name": "麝香",
+          "dosage": "1"
+        },
+        {
+          "name": "朱砂",
+          "dosage": "3"
+        },
+        {
+          "name": "雄黄",
+          "dosage": "3"
+        }
+      ],
+      "function": "辟秽解毒,消肿止痛",
+      "indications": "中暑时疫、脘腹胀闷疼痛、呕吐泄泻、小儿痰厥、外敷疔疮疖肿",
+      "contraindications": "孕妇忌",
+      "source": "《医方集解》引《片玉心书》"
+    },
+    {
+      "name": "六君子汤",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "益气健脾,燥湿化痰",
+      "indications": "脾胃气虚兼痰湿:食少便溏、胸脘痞闷、呕逆痰多",
+      "contraindications": "实热者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "异功散",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "益气健脾,行气化滞",
+      "indications": "脾胃气虚兼气滞:食少纳呆、胸脘痞闷、呕吐泄泻",
+      "contraindications": "实证者忌",
+      "source": "《医方集解》引《小儿药证直诀》"
+    },
+    {
+      "name": "香砂六君子汤",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "砂仁",
+          "dosage": "6"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "益气健脾,行气化痰",
+      "indications": "脾胃气虚、痰阻气滞:脘腹胀痛、嗳气食少、呕吐痞闷",
+      "contraindications": "阴虚者慎",
+      "source": "《医方集解》引《古今名医方论》"
+    },
+    {
+      "name": "大营煎",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "枸杞子",
+          "dosage": "9"
+        },
+        {
+          "name": "杜仲",
+          "dosage": "9"
+        },
+        {
+          "name": "牛膝",
+          "dosage": "9"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "养血温经,扶阳散寒",
+      "indications": "真阴精血亏损、兼有寒象:腰膝筋骨疼痛、妇人经迟量少、畏寒",
+      "contraindications": "阴虚火旺者忌",
+      "source": "《景岳全书》(后世名方补入)"
+    },
+    {
+      "name": "毓麟珠",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "12"
+        },
+        {
+          "name": "菟丝子",
+          "dosage": "12"
+        },
+        {
+          "name": "杜仲",
+          "dosage": "9"
+        },
+        {
+          "name": "鹿角霜",
+          "dosage": "9"
+        },
+        {
+          "name": "川椒",
+          "dosage": "3"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "益气养血,温肾种子",
+      "indications": "妇人气血两虚、胞宫虚寒:久不受孕、月经不调、腰酸腹痛",
+      "contraindications": "湿热者忌",
+      "source": "《景岳全书》(后世名方补入)"
+    },
+    {
+      "name": "人参固本丸",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "生地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "天冬",
+          "dosage": "9"
+        },
+        {
+          "name": "麦冬",
+          "dosage": "9"
+        }
+      ],
+      "function": "滋阴益气,固本培元",
+      "indications": "肺肾阴虚、气阴两伤:虚劳咳嗽、咯血、盗汗、大便燥结",
+      "contraindications": "脾虚便溏者慎",
+      "source": "《医方集解》引《瑞竹堂经验方》"
+    },
+    {
+      "name": "两仪膏",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "30"
+        },
+        {
+          "name": "白蜜",
+          "dosage": "适量"
+        }
+      ],
+      "function": "补气养血",
+      "indications": "气血两虚:精神不振、身体羸瘦、短气乏力",
+      "contraindications": "邪实者忌",
+      "source": "《医方集解》引《景岳全书》"
+    },
+    {
+      "name": "人参败毒散",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "羌活",
+          "dosage": "9"
+        },
+        {
+          "name": "独活",
+          "dosage": "9"
+        },
+        {
+          "name": "柴胡",
+          "dosage": "9"
+        },
+        {
+          "name": "前胡",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "枳壳",
+          "dosage": "6"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "薄荷",
+          "dosage": "3"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "益气解表,散风祛湿",
+      "indications": "气虚外感风寒湿:憎寒壮热、头项强痛、肢体酸痛、无汗、咳嗽",
+      "contraindications": "阴虚外感者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "荆防败毒散",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "荆芥",
+          "dosage": "9"
+        },
+        {
+          "name": "防风",
+          "dosage": "9"
+        },
+        {
+          "name": "羌活",
+          "dosage": "9"
+        },
+        {
+          "name": "独活",
+          "dosage": "9"
+        },
+        {
+          "name": "柴胡",
+          "dosage": "9"
+        },
+        {
+          "name": "前胡",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "枳壳",
+          "dosage": "6"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "发汗解表,散风祛湿",
+      "indications": "外感风寒湿邪:恶寒发热、头项强痛、肢体酸痛、疮疡初起兼表证",
+      "contraindications": "阴虚者慎",
+      "source": "《医方集解》引《摄生众妙方》"
+    },
+    {
+      "name": "华盖散",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "麻黄",
+          "dosage": "9"
+        },
+        {
+          "name": "杏仁",
+          "dosage": "9"
+        },
+        {
+          "name": "桑白皮",
+          "dosage": "9"
+        },
+        {
+          "name": "紫苏子",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "赤茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "宣肺解表,祛痰止咳",
+      "indications": "肺感风寒:咳嗽上气、痰气不利、鼻塞声重",
+      "contraindications": "风热咳嗽者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "金沸草散",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "旋覆花",
+          "dosage": "9"
+        },
+        {
+          "name": "麻黄",
+          "dosage": "6"
+        },
+        {
+          "name": "前胡",
+          "dosage": "9"
+        },
+        {
+          "name": "荆芥穗",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "赤芍",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "大枣",
+          "dosage": "2枚"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "发散风寒,降气化痰",
+      "indications": "伤风咳嗽:恶寒发热、咳嗽痰多、鼻塞声重",
+      "contraindications": "风热者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "济川煎",
+      "category": "攻里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "当归",
+          "dosage": "12"
+        },
+        {
+          "name": "牛膝",
+          "dosage": "9"
+        },
+        {
+          "name": "肉苁蓉",
+          "dosage": "12"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "9"
+        },
+        {
+          "name": "升麻",
+          "dosage": "3"
+        },
+        {
+          "name": "枳壳",
+          "dosage": "6"
+        }
+      ],
+      "function": "温肾益精,润肠通便",
+      "indications": "肾虚便秘:大便秘结、小便清长、腰膝酸软、头目眩晕",
+      "contraindications": "实热便秘者忌",
+      "source": "《医方集解》引《景岳全书》"
+    },
+    {
+      "name": "更衣丸",
+      "category": "攻里之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "芦荟",
+          "dosage": "9"
+        },
+        {
+          "name": "朱砂",
+          "dosage": "1.5"
+        }
+      ],
+      "function": "泻火通便",
+      "indications": "肝火便秘:大便秘结、心烦易怒、睡眠不安",
+      "contraindications": "体虚者忌",
+      "source": "《医方集解》引《先醒斋医学广笔记》"
+    },
+    {
+      "name": "蒿芩清胆汤",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "青蒿",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "竹茹",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "枳壳",
+          "dosage": "6"
+        },
+        {
+          "name": "赤茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "碧玉散",
+          "dosage": "9"
+        }
+      ],
+      "function": "清胆利湿,和胃化痰",
+      "indications": "少阳湿热:寒热如疟、口苦胸闷、吐酸苦水、呕黄涎而黏、苔腻",
+      "contraindications": "寒湿者忌",
+      "source": "《重订通俗伤寒论》(后世名方补入)"
+    },
+    {
+      "name": "奔豚汤",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "葛根",
+          "dosage": "12"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "生姜",
+          "dosage": "6"
+        },
+        {
+          "name": "李根白皮",
+          "dosage": "15"
+        }
+      ],
+      "function": "清热平冲,和胃降逆",
+      "indications": "奔豚气:气上冲胸、腹痛、往来寒热",
+      "contraindications": "虚寒者忌",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "加味乌药汤",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "乌药",
+          "dosage": "9"
+        },
+        {
+          "name": "香附",
+          "dosage": "9"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "延胡索",
+          "dosage": "9"
+        },
+        {
+          "name": "砂仁",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "行气活血,调经止痛",
+      "indications": "肝郁气滞之痛经:经前或经期腹胀痛、胀甚于痛、胸胁乳房胀痛",
+      "contraindications": "血热痛经者忌",
+      "source": "《医方集解》引《济阴纲目》"
+    },
+    {
+      "name": "橘核丸",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "橘核",
+          "dosage": "12"
+        },
+        {
+          "name": "海藻",
+          "dosage": "9"
+        },
+        {
+          "name": "昆布",
+          "dosage": "9"
+        },
+        {
+          "name": "海带",
+          "dosage": "9"
+        },
+        {
+          "name": "川楝子",
+          "dosage": "9"
+        },
+        {
+          "name": "桃仁",
+          "dosage": "9"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "木通",
+          "dosage": "6"
+        },
+        {
+          "name": "枳实",
+          "dosage": "9"
+        },
+        {
+          "name": "延胡索",
+          "dosage": "9"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        }
+      ],
+      "function": "行气止痛,软坚散结",
+      "indications": "寒湿疝气:睾丸肿胀偏坠、坚硬如石、痛引脐腹",
+      "contraindications": "湿热疝气者宜加减",
+      "source": "《医方集解》引《济生方》"
+    },
+    {
+      "name": "启膈散",
+      "category": "理气之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "沙参",
+          "dosage": "12"
+        },
+        {
+          "name": "丹参",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "川贝母",
+          "dosage": "9"
+        },
+        {
+          "name": "郁金",
+          "dosage": "9"
+        },
+        {
+          "name": "砂仁壳",
+          "dosage": "6"
+        },
+        {
+          "name": "荷叶蒂",
+          "dosage": "6"
+        },
+        {
+          "name": "杵头糠",
+          "dosage": "9"
+        }
+      ],
+      "function": "润燥解郁,化痰开膈",
+      "indications": "噎膈:咽食梗噎不顺、时发噎气、胸膈痞闷、大便艰涩",
+      "contraindications": "实热者宜加减",
+      "source": "《医学心悟》(后世名方补入)"
+    },
+    {
+      "name": "通窍活血汤",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "赤芍",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "桃仁",
+          "dosage": "9"
+        },
+        {
+          "name": "红花",
+          "dosage": "9"
+        },
+        {
+          "name": "老葱",
+          "dosage": "3根"
+        },
+        {
+          "name": "生姜",
+          "dosage": "9"
+        },
+        {
+          "name": "大枣",
+          "dosage": "7枚"
+        },
+        {
+          "name": "麝香",
+          "dosage": "0.1"
+        },
+        {
+          "name": "黄酒",
+          "dosage": "适量"
+        }
+      ],
+      "function": "活血通窍",
+      "indications": "瘀阻头面:头痛昏晕、耳聋年久、脱发、面色青紫、酒糟鼻、白癜风",
+      "contraindications": "孕妇忌",
+      "source": "《医林改错》(后世名方补入)"
+    },
+    {
+      "name": "身痛逐瘀汤",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "秦艽",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "桃仁",
+          "dosage": "9"
+        },
+        {
+          "name": "红花",
+          "dosage": "9"
+        },
+        {
+          "name": "羌活",
+          "dosage": "6"
+        },
+        {
+          "name": "没药",
+          "dosage": "6"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "五灵脂",
+          "dosage": "9"
+        },
+        {
+          "name": "香附",
+          "dosage": "9"
+        },
+        {
+          "name": "牛膝",
+          "dosage": "9"
+        },
+        {
+          "name": "地龙",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "活血行气,祛瘀通络,通痹止痛",
+      "indications": "瘀血痹阻经络:肩痛、臂痛、腰腿痛、周身疼痛、经久不愈",
+      "contraindications": "孕妇忌",
+      "source": "《医林改错》(后世名方补入)"
+    },
+    {
+      "name": "七厘散",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "血竭",
+          "dosage": "9"
+        },
+        {
+          "name": "乳香",
+          "dosage": "3"
+        },
+        {
+          "name": "没药",
+          "dosage": "3"
+        },
+        {
+          "name": "红花",
+          "dosage": "3"
+        },
+        {
+          "name": "儿茶",
+          "dosage": "6"
+        },
+        {
+          "name": "朱砂",
+          "dosage": "3"
+        },
+        {
+          "name": "麝香",
+          "dosage": "0.3"
+        },
+        {
+          "name": "冰片",
+          "dosage": "0.3"
+        }
+      ],
+      "function": "活血散瘀,止痛止血",
+      "indications": "跌打损伤、筋断骨折之瘀血肿痛、刀伤出血",
+      "contraindications": "孕妇忌",
+      "source": "《医方集解》引《良方集腋》"
+    },
+    {
+      "name": "活络效灵丹",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "当归",
+          "dosage": "15"
+        },
+        {
+          "name": "丹参",
+          "dosage": "15"
+        },
+        {
+          "name": "乳香",
+          "dosage": "15"
+        },
+        {
+          "name": "没药",
+          "dosage": "15"
+        }
+      ],
+      "function": "活血祛瘀,通络止痛",
+      "indications": "气血凝滞:心腹疼痛、腿臂疼痛、跌打瘀肿、癥瘕积聚",
+      "contraindications": "孕妇忌",
+      "source": "《医学衷中参西录》(后世名方补入)"
+    },
+    {
+      "name": "丹参饮",
+      "category": "理血之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "丹参",
+          "dosage": "30"
+        },
+        {
+          "name": "檀香",
+          "dosage": "3"
+        },
+        {
+          "name": "砂仁",
+          "dosage": "3"
+        }
+      ],
+      "function": "活血祛瘀,行气止痛",
+      "indications": "血瘀气滞之心胃诸痛:心腹刺痛、脘闷不舒",
+      "contraindications": "虚寒者宜加减",
+      "source": "《医方集解》引《时方歌括》"
+    },
+    {
+      "name": "小活络丹",
+      "category": "祛风之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "川乌",
+          "dosage": "6"
+        },
+        {
+          "name": "草乌",
+          "dosage": "6"
+        },
+        {
+          "name": "天南星",
+          "dosage": "6"
+        },
+        {
+          "name": "地龙",
+          "dosage": "6"
+        },
+        {
+          "name": "乳香",
+          "dosage": "3"
+        },
+        {
+          "name": "没药",
+          "dosage": "3"
+        }
+      ],
+      "function": "祛风除湿,化痰通络,活血止痛",
+      "indications": "风寒湿痹:肢体筋脉疼痛、麻木拘挛、关节屈伸不利、疼痛游走",
+      "contraindications": "孕妇忌、阴虚有热者忌",
+      "source": "《医方集解》引《太平惠民和剂局方》"
+    },
+    {
+      "name": "三甲复脉汤",
+      "category": "祛风之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "生牡蛎",
+          "dosage": "15"
+        },
+        {
+          "name": "生鳖甲",
+          "dosage": "12"
+        },
+        {
+          "name": "生龟板",
+          "dosage": "12"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "18"
+        },
+        {
+          "name": "干地黄",
+          "dosage": "18"
+        },
+        {
+          "name": "生白芍",
+          "dosage": "18"
+        },
+        {
+          "name": "麦冬",
+          "dosage": "15"
+        },
+        {
+          "name": "阿胶",
+          "dosage": "9"
+        },
+        {
+          "name": "麻仁",
+          "dosage": "9"
+        }
+      ],
+      "function": "滋阴复脉,潜阳熄风",
+      "indications": "温病后期、阴血亏虚:手足蠕动、心中憺憺大动、脉细促",
+      "contraindications": "邪盛者忌",
+      "source": "《温病条辨》(后世名方补入)"
+    },
+    {
+      "name": "阿胶鸡子黄汤",
+      "category": "祛风之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "阿胶",
+          "dosage": "9"
+        },
+        {
+          "name": "鸡子黄",
+          "dosage": "2枚"
+        },
+        {
+          "name": "生白芍",
+          "dosage": "12"
+        },
+        {
+          "name": "石决明",
+          "dosage": "15"
+        },
+        {
+          "name": "钩藤",
+          "dosage": "9"
+        },
+        {
+          "name": "生地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "茯神",
+          "dosage": "9"
+        },
+        {
+          "name": "络石藤",
+          "dosage": "9"
+        },
+        {
+          "name": "生牡蛎",
+          "dosage": "15"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "滋阴养血,柔肝熄风",
+      "indications": "邪热久羁、阴血不足:筋脉拘急、手足瘛疭、头目眩晕",
+      "contraindications": "邪实动风者忌",
+      "source": "《通俗伤寒论》(后世名方补入)"
+    },
+    {
+      "name": "乌头汤",
+      "category": "祛寒之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "川乌",
+          "dosage": "6"
+        },
+        {
+          "name": "麻黄",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芪",
+          "dosage": "15"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "温经散寒,除湿止痛",
+      "indications": "寒湿历节:关节剧痛、不可屈伸、畏寒喜热",
+      "contraindications": "孕妇、阴虚者忌",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "中满分消丸",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "枳实",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "6"
+        },
+        {
+          "name": "知母",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "9"
+        },
+        {
+          "name": "猪苓",
+          "dosage": "9"
+        },
+        {
+          "name": "砂仁",
+          "dosage": "6"
+        },
+        {
+          "name": "干姜",
+          "dosage": "3"
+        },
+        {
+          "name": "姜黄",
+          "dosage": "6"
+        },
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "清热利湿,行气消胀",
+      "indications": "湿热中满:脘腹胀满、二便不利、口渴、苔黄腻",
+      "contraindications": "虚寒胀满者忌",
+      "source": "《医方集解》引《兰室秘藏》"
+    },
+    {
+      "name": "泽泻汤",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "泽泻",
+          "dosage": "15"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        }
+      ],
+      "function": "利水除饮,健脾制水",
+      "indications": "水饮停于心下:头目眩晕、胸中痞满、咳逆倚息",
+      "contraindications": "阴虚者慎",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "木防己汤",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "木防己",
+          "dosage": "12"
+        },
+        {
+          "name": "石膏",
+          "dosage": "30"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "6"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        }
+      ],
+      "function": "行水化饮,补虚清热",
+      "indications": "膈间支饮:喘满、心下痞坚、面色黧黑、脉沉紧",
+      "contraindications": "阳虚者宜加减",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "薏苡附子败酱散",
+      "category": "利湿之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "薏苡仁",
+          "dosage": "30"
+        },
+        {
+          "name": "附子",
+          "dosage": "6"
+        },
+        {
+          "name": "败酱草",
+          "dosage": "15"
+        }
+      ],
+      "function": "排脓消痈,温阳散结",
+      "indications": "肠痈已成脓:身无热、肌肤甲错、腹皮急、按之濡如肿状",
+      "contraindications": "痈脓未成者宜加减",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "养阴清肺汤",
+      "category": "润燥之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "生地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "麦冬",
+          "dosage": "12"
+        },
+        {
+          "name": "玄参",
+          "dosage": "12"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "贝母",
+          "dosage": "9"
+        },
+        {
+          "name": "牡丹皮",
+          "dosage": "9"
+        },
+        {
+          "name": "薄荷",
+          "dosage": "3"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "养阴清肺,解毒利咽",
+      "indications": "白喉及肺肾阴虚:咽喉肿痛、鼻干唇燥、咳嗽痰少",
+      "contraindications": "风寒咳嗽者忌",
+      "source": "《重楼玉钥》(后世名方补入)"
+    },
+    {
+      "name": "五汁饮",
+      "category": "润燥之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "梨汁",
+          "dosage": "30"
+        },
+        {
+          "name": "荸荠汁",
+          "dosage": "30"
+        },
+        {
+          "name": "鲜芦根汁",
+          "dosage": "30"
+        },
+        {
+          "name": "麦冬汁",
+          "dosage": "15"
+        },
+        {
+          "name": "藕汁",
+          "dosage": "30"
+        }
+      ],
+      "function": "生津润燥",
+      "indications": "温病热盛伤津:口渴、吐白沫、黏滞不快",
+      "contraindications": "湿盛者忌",
+      "source": "《温病条辨》(后世名方补入)"
+    },
+    {
+      "name": "泻黄散",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "藿香",
+          "dosage": "9"
+        },
+        {
+          "name": "栀子",
+          "dosage": "6"
+        },
+        {
+          "name": "石膏",
+          "dosage": "15"
+        },
+        {
+          "name": "防风",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "清泻脾胃伏火",
+      "indications": "脾胃伏火:口疮口臭、烦渴易饥、口燥唇干、弄舌",
+      "contraindications": "脾虚者忌",
+      "source": "《医方集解》引《小儿药证直诀》"
+    },
+    {
+      "name": "清瘟败毒饮",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "石膏",
+          "dosage": "30"
+        },
+        {
+          "name": "知母",
+          "dosage": "9"
+        },
+        {
+          "name": "水牛角",
+          "dosage": "30"
+        },
+        {
+          "name": "生地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "牡丹皮",
+          "dosage": "9"
+        },
+        {
+          "name": "赤芍",
+          "dosage": "9"
+        },
+        {
+          "name": "玄参",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "栀子",
+          "dosage": "9"
+        },
+        {
+          "name": "连翘",
+          "dosage": "9"
+        },
+        {
+          "name": "竹叶",
+          "dosage": "9"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "清热解毒,凉血泻火",
+      "indications": "瘟疫热毒、气血两燔:大热渴饮、头痛如劈、神昏谵语、发斑吐衄",
+      "contraindications": "虚寒者忌",
+      "source": "《疫疹一得》(后世名方补入)"
+    },
+    {
+      "name": "化斑汤",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "石膏",
+          "dosage": "30"
+        },
+        {
+          "name": "知母",
+          "dosage": "12"
+        },
+        {
+          "name": "水牛角",
+          "dosage": "30"
+        },
+        {
+          "name": "玄参",
+          "dosage": "9"
+        },
+        {
+          "name": "粳米",
+          "dosage": "9"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "清气凉血,化斑解毒",
+      "indications": "温病气营两燔:发热、肌肤发斑、口渴、舌绛",
+      "contraindications": "虚寒者忌",
+      "source": "《温病条辨》(后世名方补入)"
+    },
+    {
+      "name": "控涎丹",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "甘遂",
+          "dosage": "1"
+        },
+        {
+          "name": "大戟",
+          "dosage": "1"
+        },
+        {
+          "name": "白芥子",
+          "dosage": "6"
+        }
+      ],
+      "function": "祛痰逐饮",
+      "indications": "痰涎伏于胸膈:忽然胸背颈项腰胯隐痛不可忍、筋骨牵引钓痛、走易不定",
+      "contraindications": "体虚者忌",
+      "source": "《医方集解》引《三因极一病证方论》"
+    },
+    {
+      "name": "白金丸",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "白矾",
+          "dosage": "9"
+        },
+        {
+          "name": "郁金",
+          "dosage": "9"
+        }
+      ],
+      "function": "豁痰安神",
+      "indications": "痰阻心窍:癫痫发狂、烦躁不安、神志不清",
+      "contraindications": "脾胃虚弱者慎",
+      "source": "《医方集解》"
+    },
+    {
+      "name": "半夏厚朴汤",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "12"
+        },
+        {
+          "name": "生姜",
+          "dosage": "9"
+        },
+        {
+          "name": "紫苏叶",
+          "dosage": "6"
+        }
+      ],
+      "function": "行气散结,降逆化痰",
+      "indications": "梅核气:咽中如有物阻、咯吐不出、吞咽不下、胸胁满闷",
+      "contraindications": "阴虚津亏者忌",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "瓜蒌薤白白酒汤",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "瓜蒌",
+          "dosage": "15"
+        },
+        {
+          "name": "薤白",
+          "dosage": "12"
+        },
+        {
+          "name": "白酒",
+          "dosage": "适量"
+        }
+      ],
+      "function": "通阳散结,行气祛痰",
+      "indications": "胸痹:胸中闷痛、喘息咳唾、短气、苔白腻",
+      "contraindications": "痰热者宜加减",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "瓜蒌薤白半夏汤",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "瓜蒌",
+          "dosage": "15"
+        },
+        {
+          "name": "薤白",
+          "dosage": "12"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "白酒",
+          "dosage": "适量"
+        }
+      ],
+      "function": "通阳散结,祛痰宽胸",
+      "indications": "胸痹痰浊较甚:胸痛彻背、不能安卧、咳唾痰多",
+      "contraindications": "阴虚者慎",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "枳实薤白桂枝汤",
+      "category": "除痰之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "枳实",
+          "dosage": "9"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "9"
+        },
+        {
+          "name": "薤白",
+          "dosage": "12"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "6"
+        },
+        {
+          "name": "瓜蒌",
+          "dosage": "15"
+        }
+      ],
+      "function": "通阳散结,祛痰下气",
+      "indications": "胸痹气结在胸:胸满而痛、气从胁下上抢心",
+      "contraindications": "气虚者宜加减",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "香砂枳术丸",
+      "category": "消导之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "白术",
+          "dosage": "15"
+        },
+        {
+          "name": "枳实",
+          "dosage": "9"
+        },
+        {
+          "name": "木香",
+          "dosage": "6"
+        },
+        {
+          "name": "砂仁",
+          "dosage": "6"
+        }
+      ],
+      "function": "健脾消痞,行气导滞",
+      "indications": "脾虚气滞:脘腹痞闷、食欲不振、大便溏软",
+      "contraindications": "实热者宜加减",
+      "source": "《医方集解》引《摄生秘剖》"
+    },
+    {
+      "name": "资生丸",
+      "category": "消导之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "6"
+        },
+        {
+          "name": "白术",
+          "dosage": "12"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "山药",
+          "dosage": "12"
+        },
+        {
+          "name": "莲子肉",
+          "dosage": "9"
+        },
+        {
+          "name": "薏苡仁",
+          "dosage": "12"
+        },
+        {
+          "name": "扁豆",
+          "dosage": "9"
+        },
+        {
+          "name": "芡实",
+          "dosage": "9"
+        },
+        {
+          "name": "砂仁",
+          "dosage": "6"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "6"
+        },
+        {
+          "name": "藿香",
+          "dosage": "6"
+        },
+        {
+          "name": "黄连",
+          "dosage": "3"
+        },
+        {
+          "name": "神曲",
+          "dosage": "9"
+        },
+        {
+          "name": "麦芽",
+          "dosage": "9"
+        },
+        {
+          "name": "山楂",
+          "dosage": "9"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "6"
+        },
+        {
+          "name": "白豆蔻",
+          "dosage": "3"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "健脾开胃,消食止泻",
+      "indications": "脾胃虚弱、食少便溏:不思饮食、脘腹痞胀、倦怠嗜卧、面黄肌瘦",
+      "contraindications": "实热积滞者忌",
+      "source": "《医方集解》引《先醒斋医学广笔记》"
+    },
+    {
+      "name": "九仙散",
+      "category": "收涩之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "款冬花",
+          "dosage": "9"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "桑白皮",
+          "dosage": "9"
+        },
+        {
+          "name": "五味子",
+          "dosage": "6"
+        },
+        {
+          "name": "阿胶",
+          "dosage": "9"
+        },
+        {
+          "name": "贝母",
+          "dosage": "9"
+        },
+        {
+          "name": "乌梅",
+          "dosage": "9"
+        },
+        {
+          "name": "罂粟壳",
+          "dosage": "6"
+        }
+      ],
+      "function": "敛肺止咳,益气养阴",
+      "indications": "久咳肺虚:咳嗽日久不已、气喘自汗、脉虚数",
+      "contraindications": "外感咳嗽初起忌",
+      "source": "《医方集解》引《卫生宝鉴》"
+    },
+    {
+      "name": "桃花汤",
+      "category": "收涩之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "赤石脂",
+          "dosage": "15"
+        },
+        {
+          "name": "干姜",
+          "dosage": "9"
+        },
+        {
+          "name": "粳米",
+          "dosage": "15"
+        }
+      ],
+      "function": "温中涩肠止痢",
+      "indications": "虚寒下痢:下痢脓血、色暗不鲜、日久不愈、腹痛喜温",
+      "contraindications": "湿热痢初起忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "水陆二仙丹",
+      "category": "收涩之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "芡实",
+          "dosage": "15"
+        },
+        {
+          "name": "金樱子",
+          "dosage": "15"
+        }
+      ],
+      "function": "补肾涩精",
+      "indications": "肾虚精关不固:遗精白浊、小便频数、腰膝酸软",
+      "contraindications": "湿热遗精者忌",
+      "source": "《医方集解》引《洪氏集验方》"
+    },
+    {
+      "name": "驻车丸",
+      "category": "收涩之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄连",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "3"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "阿胶",
+          "dosage": "9"
+        }
+      ],
+      "function": "寒热并调,养阴止痢",
+      "indications": "久痢伤阴:下痢脓血、时作时止、腹痛绵绵",
+      "contraindications": "湿热盛者宜加减",
+      "source": "《医方集解》引《备急千金要方》"
+    },
+    {
+      "name": "明目地黄丸",
+      "category": "明目之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "熟地黄",
+          "dosage": "24"
+        },
+        {
+          "name": "山茱萸",
+          "dosage": "12"
+        },
+        {
+          "name": "山药",
+          "dosage": "12"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "9"
+        },
+        {
+          "name": "牡丹皮",
+          "dosage": "9"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "枸杞子",
+          "dosage": "12"
+        },
+        {
+          "name": "菊花",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "蒺藜",
+          "dosage": "9"
+        },
+        {
+          "name": "石决明",
+          "dosage": "15"
+        }
+      ],
+      "function": "滋肾养肝明目",
+      "indications": "肝肾阴虚、目涩畏光:视物模糊、迎风流泪",
+      "contraindications": "脾虚便溏者慎",
+      "source": "《医方集解》引《万病回春》"
+    },
+    {
+      "name": "羊肝丸",
+      "category": "明目之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "羊肝",
+          "dosage": "1具"
+        },
+        {
+          "name": "决明子",
+          "dosage": "9"
+        },
+        {
+          "name": "夜明砂",
+          "dosage": "9"
+        },
+        {
+          "name": "蝉蜕",
+          "dosage": "6"
+        },
+        {
+          "name": "木贼",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        }
+      ],
+      "function": "养血明目退翳",
+      "indications": "肝血不足:目昏多泪、翳障羞明",
+      "contraindications": "脾胃虚寒者慎",
+      "source": "《医方集解》引《类苑方》"
+    },
+    {
+      "name": "大黄牡丹汤",
+      "category": "痈疡之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "大黄",
+          "dosage": "12"
+        },
+        {
+          "name": "牡丹皮",
+          "dosage": "9"
+        },
+        {
+          "name": "桃仁",
+          "dosage": "12"
+        },
+        {
+          "name": "冬瓜子",
+          "dosage": "15"
+        },
+        {
+          "name": "芒硝",
+          "dosage": "9"
+        }
+      ],
+      "function": "泻热破瘀,散结消肿",
+      "indications": "肠痈初起:右少腹疼痛拒按、按之痛甚、发热恶寒、便秘",
+      "contraindications": "脓已成者慎",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "苇茎汤",
+      "category": "痈疡之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "苇茎",
+          "dosage": "30"
+        },
+        {
+          "name": "薏苡仁",
+          "dosage": "30"
+        },
+        {
+          "name": "冬瓜子",
+          "dosage": "15"
+        },
+        {
+          "name": "桃仁",
+          "dosage": "9"
+        }
+      ],
+      "function": "清肺化痰,逐瘀排脓",
+      "indications": "肺痈:咳吐腥臭黄痰脓血、胸中隐痛、身有微热",
+      "contraindications": "肺痈后期体虚者宜加减",
+      "source": "《医方集解》引《备急千金要方》"
+    },
+    {
+      "name": "海藻玉壶汤",
+      "category": "痈疡之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "海藻",
+          "dosage": "9"
+        },
+        {
+          "name": "昆布",
+          "dosage": "9"
+        },
+        {
+          "name": "海带",
+          "dosage": "9"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "陈皮",
+          "dosage": "6"
+        },
+        {
+          "name": "青皮",
+          "dosage": "6"
+        },
+        {
+          "name": "连翘",
+          "dosage": "9"
+        },
+        {
+          "name": "贝母",
+          "dosage": "9"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "独活",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "化痰软坚,消散瘿瘤",
+      "indications": "瘿瘤初起:颈项漫肿、或肿或硬、皮色不变",
+      "contraindications": "阴虚火旺者慎",
+      "source": "《医方集解》引《外科正宗》"
+    },
+    {
+      "name": "消瘰丸",
+      "category": "痈疡之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "玄参",
+          "dosage": "15"
+        },
+        {
+          "name": "牡蛎",
+          "dosage": "15"
+        },
+        {
+          "name": "贝母",
+          "dosage": "12"
+        }
+      ],
+      "function": "清热化痰,软坚散结",
+      "indications": "瘰疬痰核:颈项结核、累累如珠、咽干舌红",
+      "contraindications": "脾虚便溏者慎",
+      "source": "《医学心悟》(后世名方补入)"
+    },
+    {
+      "name": "六神丸",
+      "category": "痈疡之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "牛黄",
+          "dosage": "0.5"
+        },
+        {
+          "name": "麝香",
+          "dosage": "0.5"
+        },
+        {
+          "name": "珍珠",
+          "dosage": "1.5"
+        },
+        {
+          "name": "冰片",
+          "dosage": "1"
+        },
+        {
+          "name": "蟾酥",
+          "dosage": "1"
+        },
+        {
+          "name": "雄黄",
+          "dosage": "1"
+        }
+      ],
+      "function": "清热解毒,消肿止痛",
+      "indications": "咽喉肿痛、烂喉丹痧、痈疡疔疮、无名肿毒",
+      "contraindications": "孕妇忌",
+      "source": "《雷允上诵芬堂方》(后世名方补入)"
+    },
+    {
+      "name": "艾附暖宫丸",
+      "category": "经产之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "艾叶",
+          "dosage": "9"
+        },
+        {
+          "name": "香附",
+          "dosage": "12"
+        },
+        {
+          "name": "吴茱萸",
+          "dosage": "3"
+        },
+        {
+          "name": "肉桂",
+          "dosage": "3"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "12"
+        },
+        {
+          "name": "黄芪",
+          "dosage": "12"
+        },
+        {
+          "name": "续断",
+          "dosage": "9"
+        }
+      ],
+      "function": "暖宫温经,养血调经",
+      "indications": "胞宫虚寒:月经不调、经行腹痛、带下清稀、久不受孕",
+      "contraindications": "血热者忌",
+      "source": "《医方集解》引《仁斋直指方论》"
+    },
+    {
+      "name": "保产无忧散",
+      "category": "经产之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芪",
+          "dosage": "12"
+        },
+        {
+          "name": "菟丝子",
+          "dosage": "9"
+        },
+        {
+          "name": "厚朴",
+          "dosage": "6"
+        },
+        {
+          "name": "艾叶",
+          "dosage": "6"
+        },
+        {
+          "name": "荆芥穗",
+          "dosage": "6"
+        },
+        {
+          "name": "枳壳",
+          "dosage": "6"
+        },
+        {
+          "name": "羌活",
+          "dosage": "3"
+        },
+        {
+          "name": "川贝母",
+          "dosage": "3"
+        },
+        {
+          "name": "生姜",
+          "dosage": "3片"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "益气养血,安胎催生",
+      "indications": "胎动不安、腰酸腹痛、胎位不正、临产催生",
+      "contraindications": "实热者慎",
+      "source": "《医方集解》引《傅青主女科》"
+    },
+    {
+      "name": "寿胎丸",
+      "category": "经产之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "菟丝子",
+          "dosage": "15"
+        },
+        {
+          "name": "桑寄生",
+          "dosage": "12"
+        },
+        {
+          "name": "续断",
+          "dosage": "12"
+        },
+        {
+          "name": "阿胶",
+          "dosage": "9"
+        }
+      ],
+      "function": "补肾安胎",
+      "indications": "肾虚滑胎:妊娠期腰酸腹坠、阴道下血、胎动不安",
+      "contraindications": "血热者宜加减",
+      "source": "《医学衷中参西录》(后世名方补入)"
+    },
+    {
+      "name": "下乳涌泉散",
+      "category": "经产之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "生地黄",
+          "dosage": "12"
+        },
+        {
+          "name": "天花粉",
+          "dosage": "12"
+        },
+        {
+          "name": "柴胡",
+          "dosage": "6"
+        },
+        {
+          "name": "青皮",
+          "dosage": "6"
+        },
+        {
+          "name": "漏芦",
+          "dosage": "9"
+        },
+        {
+          "name": "桔梗",
+          "dosage": "9"
+        },
+        {
+          "name": "通草",
+          "dosage": "6"
+        },
+        {
+          "name": "白芷",
+          "dosage": "6"
+        },
+        {
+          "name": "穿山甲",
+          "dosage": "6"
+        },
+        {
+          "name": "王不留行",
+          "dosage": "12"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "养血疏肝,通络下乳",
+      "indications": "产后乳汁涩少、乳房胀硬而痛",
+      "contraindications": "气血两虚无胀痛者忌",
+      "source": "《医方集解》引《清太医院配方》"
+    },
+    {
+      "name": "定经汤",
+      "category": "经产之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "菟丝子",
+          "dosage": "12"
+        },
+        {
+          "name": "白芍",
+          "dosage": "12"
+        },
+        {
+          "name": "当归",
+          "dosage": "9"
+        },
+        {
+          "name": "熟地黄",
+          "dosage": "15"
+        },
+        {
+          "name": "山药",
+          "dosage": "12"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "柴胡",
+          "dosage": "6"
+        },
+        {
+          "name": "荆芥穗",
+          "dosage": "3"
+        }
+      ],
+      "function": "滋肾疏肝,调经",
+      "indications": "肝肾郁结之月经先后无定期:经来断续、或前或后、量少色淡、腰酸腹胀",
+      "contraindications": "实热者忌",
+      "source": "《傅青主女科》(后世名方补入)"
+    },
+    {
+      "name": "大青龙汤",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "麻黄",
+          "dosage": "12"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "6"
+        },
+        {
+          "name": "杏仁",
+          "dosage": "9"
+        },
+        {
+          "name": "石膏",
+          "dosage": "30"
+        },
+        {
+          "name": "生姜",
+          "dosage": "9"
+        },
+        {
+          "name": "大枣",
+          "dosage": "4枚"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "发汗解表,清热除烦",
+      "indications": "外感风寒、内有郁热:恶寒发热、身疼痛、不汗出而烦躁、脉浮紧",
+      "contraindications": "表虚汗出者忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "酸枣仁汤",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "酸枣仁",
+          "dosage": "15"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "知母",
+          "dosage": "9"
+        },
+        {
+          "name": "川芎",
+          "dosage": "6"
+        },
+        {
+          "name": "甘草",
+          "dosage": "6"
+        }
+      ],
+      "function": "养血安神,清热除烦",
+      "indications": "肝血不足、虚热内扰:虚烦不眠、心悸盗汗、头目眩晕",
+      "contraindications": "实火失眠者忌",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "甘麦大枣汤",
+      "category": "补养之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "甘草",
+          "dosage": "9"
+        },
+        {
+          "name": "浮小麦",
+          "dosage": "30"
+        },
+        {
+          "name": "大枣",
+          "dosage": "10枚"
+        }
+      ],
+      "function": "养心安神,和中缓急",
+      "indications": "脏躁:精神恍惚、悲伤欲哭、不能自主、呵欠频作",
+      "contraindications": "痰火内盛者忌",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "半夏泻心汤",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "半夏",
+          "dosage": "12"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "3"
+        },
+        {
+          "name": "大枣",
+          "dosage": "4枚"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "9"
+        }
+      ],
+      "function": "寒热平调,消痞散结",
+      "indications": "寒热互结之痞证:心下痞满不痛、呕吐、肠鸣下利",
+      "contraindications": "纯实热或纯虚寒者宜加减",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "生姜泻心汤",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "生姜",
+          "dosage": "15"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "6"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "3"
+        },
+        {
+          "name": "大枣",
+          "dosage": "4枚"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "9"
+        }
+      ],
+      "function": "和胃消痞,散结除水",
+      "indications": "水热互结之痞:心下痞硬、干噫食臭、腹中雷鸣、下利",
+      "contraindications": "胃热重者宜加减",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "甘草泻心汤",
+      "category": "和解之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "炙甘草",
+          "dosage": "12"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "黄芩",
+          "dosage": "9"
+        },
+        {
+          "name": "干姜",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "3"
+        },
+        {
+          "name": "大枣",
+          "dosage": "4枚"
+        }
+      ],
+      "function": "益气和胃,消痞止利",
+      "indications": "胃气虚弱之痞:心下痞硬而满、下利日数十行、谷不化、心烦不得安",
+      "contraindications": "实热者忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "附子汤",
+      "category": "祛寒之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "附子",
+          "dosage": "15"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "12"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        }
+      ],
+      "function": "温经助阳,祛寒化湿",
+      "indications": "少阴寒湿:身体骨节疼痛、手足寒、背恶寒、口中和、脉沉",
+      "contraindications": "阴虚火旺者忌",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "桂枝加龙骨牡蛎汤",
+      "category": "收涩之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "桂枝",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "生姜",
+          "dosage": "9"
+        },
+        {
+          "name": "大枣",
+          "dosage": "4枚"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "龙骨",
+          "dosage": "15"
+        },
+        {
+          "name": "牡蛎",
+          "dosage": "15"
+        }
+      ],
+      "function": "调和阴阳,潜镇摄纳",
+      "indications": "虚劳失精:男子遗精、女子梦交、少腹弦急、目眩发落",
+      "contraindications": "实热遗精者忌",
+      "source": "《医方集解》引《金匮要略》"
+    },
+    {
+      "name": "芍药甘草汤",
+      "category": "祛寒之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "白芍",
+          "dosage": "15"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "15"
+        }
+      ],
+      "function": "酸甘化阴,缓急止痛",
+      "indications": "阴血不足、筋脉失养:腿脚挛急、腹中疼痛",
+      "contraindications": "湿盛中满者慎",
+      "source": "《医方集解》引《伤寒论》"
+    },
+    {
+      "name": "白虎加人参汤",
+      "category": "泻火之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "石膏",
+          "dosage": "30"
+        },
+        {
+          "name": "知母",
+          "dosage": "12"
+        },
+        {
+          "name": "粳米",
+          "dosage": "12"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        }
+      ],
+      "function": "清热益气生津",
+      "indications": "气分热盛、气津两伤:大热、大汗、大渴、脉洪大而芤、背微恶寒",
+      "contraindications": "表证未解者忌",
+      "source": "《医方集解》引《伤寒论》"
     }
   ]
 }
