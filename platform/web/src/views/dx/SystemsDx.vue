@@ -32,6 +32,25 @@
                 </el-form-item>
               </el-col>
             </el-row>
+            <el-row :gutter="12">
+              <el-col :xs="24" :sm="8">
+                <el-form-item label="何时加重(时间辨证)">
+                  <el-select v-model="form.time" placeholder="无明显规律" class="w100" clearable>
+                    <el-option v-for="t in timeOptions" :key="t.key" :label="t.label" :value="t.key" />
+                  </el-select>
+                </el-form-item>
+              </el-col>
+              <el-col :xs="24" :sm="8">
+                <el-form-item label="发病年份(五运六气)">
+                  <el-input-number v-model="form.sick_year" :min="1900" :max="2100" class="w100" />
+                </el-form-item>
+              </el-col>
+              <el-col :xs="24" :sm="8">
+                <el-form-item label="出生年份(运气体质,可选)">
+                  <el-input-number v-model="form.birth_year" :min="1900" :max="2100" class="w100" />
+                </el-form-item>
+              </el-col>
+            </el-row>
             <el-form-item>
               <el-button type="primary" :disabled="!complaint.trim()" @click="step = 2">下一步:十问</el-button>
             </el-form-item>
@@ -98,6 +117,33 @@
           <!-- 白话结论 -->
           <div v-if="result.plain" class="plain-box" :class="{ 'plain-danger': result.plain.danger }">
             🌿 {{ result.plain.verdict }}
+          </div>
+
+          <!-- 病机提要(开阖枢 · 升降出入) -->
+          <div v-if="result.mechanism" class="mech-box">
+            <div class="mech-head">🍃 病机提要(六经开阖枢 · 脏腑升降出入)</div>
+            <div v-if="result.mechanism.liujing" class="mech-line"><b>六经:</b>{{ result.mechanism.liujing }}</div>
+            <div v-if="result.mechanism.zangfu" class="mech-line"><b>脏腑:</b>{{ result.mechanism.zangfu }}</div>
+            <div class="mech-sum">{{ result.mechanism.summary }}</div>
+          </div>
+
+          <!-- 时间辨证 -->
+          <div v-if="result.time && result.time.hint" class="time-box">
+            ⏰ <b>时间辨证({{ result.time.label }}):</b>{{ result.time.hint }}
+          </div>
+
+          <!-- 脉证相参 · 真假鉴别 -->
+          <div v-if="result.discern && result.discern.length" class="discern-box">
+            <div class="discern-head">⚖️ 脉证相参 · 真假鉴别(舍证从脉)</div>
+            <div v-for="(d, i) in result.discern" :key="i" class="discern-item">· {{ d }}</div>
+          </div>
+
+          <!-- 五运六气 -->
+          <div v-if="result.wuyun" class="wuyun-box">
+            <div class="wuyun-head">🌌 五运六气(发病年 · 出生年禀赋)</div>
+            <div class="wuyun-year"><b>{{ result.wuyun.ganzhi }}</b>年({{ result.wuyun.year }}) · {{ result.wuyun.yun }}运{{ result.wuyun.over ? '太过' : '不及' }} · {{ result.wuyun.sitian }}司天 · {{ result.wuyun.zaiquan }}在泉</div>
+            <div class="wuyun-hint">{{ result.wuyun.hint }}</div>
+            <div v-if="result.wuyun.birth" class="wuyun-birth">👶 {{ result.wuyun.birth.hint }}</div>
           </div>
 
           <div class="sys-block">
@@ -299,6 +345,14 @@ const router = useRouter()
 const SYS_SHORT = { bagang: '八纲', liujing: '六经', weiqiyingxue: '卫气营血', zangfu: '脏腑', sanjiao: '三焦', jingluo: '经络' }
 const BAGANG_PAIRS = [['表', '里'], ['寒', '热'], ['虚', '实'], ['阴', '阳']]
 const courses = ['数日', '数周', '1-3个月', '3-6个月', '半年-1年', '1年以上', '多年']
+const timeOptions = [
+  { key: 'morning', label: '清晨加重' },
+  { key: 'forenoon', label: '上午加重' },
+  { key: 'afternoon', label: '午后加重' },
+  { key: 'evening', label: '傍晚加重' },
+  { key: 'night', label: '夜间加重' },
+  { key: 'dawn', label: '后半夜/五更' },
+]
 
 const cats = buildCategories('')
 const sectionOf = name => (cats.find(c => c.section === name) || { groups: [] }).groups
@@ -310,7 +364,7 @@ const complaint = ref('')
 const course = ref('')
 const trigger = ref('')
 const customSym = ref('')
-const form = reactive({ symptoms: [], tongue: '', pulse: '', local: '', systemic: '', detail: '' })
+const form = reactive({ symptoms: [], tongue: '', pulse: '', local: '', systemic: '', detail: '', time: '', sick_year: new Date().getFullYear(), birth_year: null })
 const loading = ref(false)
 const result = ref(null)
 const records = ref([])
@@ -370,7 +424,7 @@ async function run(opts = {}) {
   }
   loading.value = true
   try {
-    const payload = { ...form }
+    const payload = { ...form, birth_year: form.birth_year || 0 }
     // 主诉+病程+诱因并入 detail(长文本,引擎只取整句做关键词匹配,不拆词干扰)
     const parts = [`主诉:${complaint.value.trim()}`]
     if (course.value) parts.push(`病程:${course.value}`)
@@ -475,6 +529,22 @@ function fmtTime(t) {
 .complaint-box b { color: var(--xl-deep); }
 .plain-box { background: #FFFDF4; border: 1px solid #EAD9A8; border-left: 4px solid #C9A227; border-radius: 8px; padding: 10px 14px; font-size: 14px; color: #5A4E2E; line-height: 1.7; margin-bottom: 12px; font-weight: 500; }
 .plain-danger { border-color: #E8A0A0; border-left-color: #C0392B; background: #FDF0F0; color: #7A2318; }
+.mech-box { background: #F4F1FA; border: 1px solid #D9CCEE; border-left: 4px solid #8A63C9; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
+.mech-head { font-weight: 700; color: #5B3E8E; font-size: 13px; margin-bottom: 6px; }
+.mech-line { font-size: 12.5px; color: #4A3E6B; margin: 2px 0; }
+.mech-line b { color: #5B3E8E; margin-right: 4px; }
+.mech-sum { font-family: "Songti SC", serif; font-size: 13.5px; color: #3A2E5B; margin-top: 4px; line-height: 1.7; }
+.time-box { background: #F2F7F4; border: 1px solid #C9E0D2; border-left: 4px solid #4E8A68; border-radius: 8px; padding: 8px 12px; font-size: 12.5px; color: #35684C; margin-bottom: 12px; line-height: 1.7; }
+.time-box b { color: #2F5E48; }
+.discern-box { background: #FDF0F0; border: 1px solid #E8B4A8; border-left: 4px solid #C0392B; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
+.discern-head { font-weight: 700; color: #A03D2C; font-size: 13px; margin-bottom: 4px; }
+.discern-item { font-size: 12.5px; color: #7A2318; margin: 3px 0; }
+.wuyun-box { background: #EEF3FA; border: 1px solid #B9CCE8; border-left: 4px solid #3E6BA8; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
+.wuyun-head { font-weight: 700; color: #2F5A96; font-size: 13px; margin-bottom: 4px; }
+.wuyun-year { font-size: 12.5px; color: #2F5A96; margin: 2px 0; }
+.wuyun-year b { font-family: "Songti SC", serif; font-size: 14px; }
+.wuyun-hint { font-size: 12.5px; color: #3E5A85; line-height: 1.7; margin-top: 2px; }
+.wuyun-birth { font-size: 12.5px; color: #6B4E8E; margin-top: 4px; border-top: 1px dashed #B9CCE8; padding-top: 4px; }
 .rx-warn { color: #A03D2C; background: #FCEBE8; border: 1px solid #E8B4A8; border-radius: 6px; padding: 6px 10px; font-size: 12.5px; font-weight: 600; margin-bottom: 8px; }
 .presc-box { background: #fff; border: 1px solid #E8C97A; border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; }
 .presc-head { font-size: 13px; color: #5A4E2E; }

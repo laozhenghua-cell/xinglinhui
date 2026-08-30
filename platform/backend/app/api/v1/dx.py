@@ -456,6 +456,9 @@ class AnalyzeIn(BaseModel):
     detail: str = ""
     module: Optional[str] = None  # 空=不限;anorectal/surgery/pediatrics/alchemy
     use_ai: bool = False  # 默认走规则引擎辨证(选择症状);显式开启才生成 AI 报告
+    time: str = ""  # 发病/加重时辰(morning/forenoon/afternoon/evening/night/dawn/none)
+    sick_year: int = 0  # 发病年(五运六气)
+    birth_year: int = 0  # 出生年(运气体质)
 
 
 def _serialize(obj) -> dict:
@@ -545,7 +548,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         if t not in user_labels:
             user_labels.append(t)
 
-    systems_result = analyze_systems(user_labels)
+    systems_result = analyze_systems(user_labels, time_key=body.time, sick_year=body.sick_year, birth_year=body.birth_year)
 
     # 1. 证型匹配
     synd_stmt = select(KBSyndrome)
@@ -780,6 +783,10 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "modifications": systems_result.get("modifications", []),
         "menlei": systems_result.get("menlei", []),
         "prescription": systems_result.get("prescription"),
+        "mechanism": systems_result.get("mechanism"),
+        "time": systems_result.get("time"),
+        "discern": systems_result.get("discern", []),
+        "wuyun": systems_result.get("wuyun"),
         "plain": systems_result.get("plain"),
         "formula_suggestions": formula_suggestions,
     }
@@ -923,7 +930,7 @@ async def dx_eval():
     per_system: dict[str, dict] = {}
     detail = []
     for sm in samples:
-        result = analyze_systems(sm["labels"])
+        result = analyze_systems(sm["labels"], time_key=sm.get("time_key", ""), sick_year=sm.get("sick_year", 0), birth_year=sm.get("birth_year", 0))
         row = {"id": sm["id"], "desc": sm["desc"]}
         for sys_key in ("bagang", "liujing", "weiqiyingxue", "zangfu", "sanjiao", "jingluo"):
             got = result[sys_key]["summary"]
@@ -1055,6 +1062,42 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["prescription"] = {"got": got, "expected": sm["expected"]["prescription_has"]}
+        # 病机提要
+        if sm["expected"].get("mechanism_has"):
+            st = per_system.setdefault("mechanism", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = (result.get("mechanism") or {}).get("summary", "")
+            ok = sm["expected"]["mechanism_has"] in got
+            if ok:
+                st["correct"] += 1
+            row["mechanism"] = {"got": got[:60], "expected": sm["expected"]["mechanism_has"]}
+        # 时间辨证
+        if sm["expected"].get("time_hint"):
+            st = per_system.setdefault("time", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = (result.get("time") or {}).get("hint", "")
+            ok = sm["expected"]["time_hint"] in got
+            if ok:
+                st["correct"] += 1
+            row["time"] = {"got": got[:40], "expected": sm["expected"]["time_hint"]}
+        # 脉证相参鉴别
+        if sm["expected"].get("discern_has"):
+            st = per_system.setdefault("discern", {"total": 0, "correct": 0})
+            st["total"] += 1
+            joined = "|".join(result.get("discern") or [])
+            ok = sm["expected"]["discern_has"] in joined
+            if ok:
+                st["correct"] += 1
+            row["discern"] = {"got": (result.get("discern") or [])[:1], "expected": sm["expected"]["discern_has"]}
+        # 五运六气
+        if sm["expected"].get("wuyun_has"):
+            st = per_system.setdefault("wuyun", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = (result.get("wuyun") or {}).get("hint", "")
+            ok = sm["expected"]["wuyun_has"] in got
+            if ok:
+                st["correct"] += 1
+            row["wuyun"] = {"got": got[:60], "expected": sm["expected"]["wuyun_has"]}
         # 随症加减
         if sm["expected"].get("modification_has"):
             st = per_system.setdefault("modification", {"total": 0, "correct": 0})

@@ -354,13 +354,21 @@ def _danger_alerts(user_labels: list[str]) -> list[str]:
     return alerts[:3]
 
 
-def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
-    """并行输出三个体系的对照结论。"""
+def analyze_systems(user_labels: list[str], time_key: str = "", sick_year: int = 0, birth_year: int = 0) -> dict[str, Any]:
+    """多辨证体系引擎。
+    time_key: 发病/加重时辰(morning/forenoon/afternoon/evening/night/dawn/none);
+    sick_year/birth_year: 发病年/出生年(五运六气推算)。"""
     data = _load()
+    # 时间辨证:时辰 → 提示 + 证候加权词(并入标签参与计分)
+    time_info = _time_dx(time_key)
+    labels = list(user_labels)
+    for t in time_info["add"]:
+        if t not in labels:
+            labels.append(t)
     # 用户标签 token 集:原词 + 四诊切分 + bigram
     tokens = set()
     negated = set()  # 否定词(不X/无X)里的核心词,不参与正向匹配
-    for lab in user_labels:
+    for lab in labels:
         lab = str(lab or "").strip()
         if not lab:
             continue
@@ -405,6 +413,7 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
                 "treatment": rule.get("treatment", ""),
                 "formulas": rule.get("formulas", []),
                 "variants": rule.get("variants", []),
+                "mechanism": rule.get("mechanism", ""),
             })
         items.sort(key=lambda x: -x["score"])
         max_score = max((i["score"] for i in items), default=1)
@@ -473,6 +482,10 @@ def analyze_systems(user_labels: list[str]) -> dict[str, Any]:
     out["modifications"] = _modifications(user_labels, out)
     out["menlei"] = _menlei(user_labels, out)
     out["prescription"] = _prescription(user_labels, out)
+    out["time"] = time_info
+    out["discern"] = _discern(labels)
+    out["wuyun"] = _wuyun(sick_year, birth_year)
+    out["mechanism"] = _mechanism_summary(out)
     out["plain"] = _plain_summary(out)
     return out
 
@@ -661,6 +674,98 @@ def extract_symptom_terms(texts: list[str], synonyms: Optional[dict] = None) -> 
 
 _JIAJIAN_CACHE: Optional[list] = None
 _MENLEI_CACHE: Optional[list] = None
+_TIME_CACHE: Optional[list] = None
+
+GAN = "甲乙丙丁戊己庚辛壬癸"
+ZHI = "子丑寅卯辰巳午未申酉戌亥"
+WUYUN_MAP = {"甲": ("土", True), "己": ("土", False), "乙": ("金", False), "庚": ("金", True),
+             "丙": ("水", True), "辛": ("水", False), "丁": ("木", False), "壬": ("木", True),
+             "戊": ("火", True), "癸": ("火", False)}
+SITIAN_MAP = {"子": ("少阴君火", "阳明燥金"), "午": ("少阴君火", "阳明燥金"),
+              "丑": ("太阴湿土", "太阳寒水"), "未": ("太阴湿土", "太阳寒水"),
+              "寅": ("少阳相火", "厥阴风木"), "申": ("少阳相火", "厥阴风木"),
+              "卯": ("阳明燥金", "少阴君火"), "酉": ("阳明燥金", "少阴君火"),
+              "辰": ("太阳寒水", "太阴湿土"), "戌": ("太阳寒水", "太阴湿土"),
+              "巳": ("厥阴风木", "少阳相火"), "亥": ("厥阴风木", "少阳相火")}
+WUXING_QI = {"土": "湿", "金": "燥", "水": "寒", "木": "风", "火": "热"}
+
+
+def _time_dx(time_key: str) -> dict:
+    global _TIME_CACHE
+    if _TIME_CACHE is None:
+        try:
+            p = Path(__file__).resolve().parent.parent / "data" / "time_dx.json"
+            _TIME_CACHE = json.loads(p.read_text(encoding="utf-8"))["rules"]
+        except Exception:
+            _TIME_CACHE = []
+    for r in _TIME_CACHE:
+        if r.get("key") == time_key:
+            return {"key": r["key"], "label": r["label"], "hint": r.get("hint", ""), "add": r.get("add", [])}
+    return {"key": "", "label": "", "hint": "", "add": []}
+
+
+def _discern(user_labels: list[str]) -> list[str]:
+    """脉证相参/假象鉴别(舍证从脉)。"""
+    joined = "、".join(str(x) for x in user_labels)
+    out: list[str] = []
+    hot_signs = any(x in joined for x in ("面赤", "面红", "身热", "发热", "胸腹灼热"))
+    cold_limbs = any(x in joined for x in ("四肢厥冷", "手足厥冷", "肢厥"))
+    weak_pulse = any(x in joined for x in ("脉微细", "脉微", "脉沉微"))
+    if hot_signs and cold_limbs and weak_pulse:
+        out.append("真寒假热(阴盛格阳):身热面赤而肢厥脉微,当舍证从脉,急温其阳(通脉四逆辈)")
+    elif hot_signs and cold_limbs and ("脉沉数" in joined or "脉数" in joined):
+        out.append("真热假寒(热深厥深):肢厥而胸腹灼热脉数,当舍证从脉,急清其热(白虎、承气辈)")
+    if ("胸腹灼热" in joined) and cold_limbs:
+        out.append("肢厥与胸腹灼热并见,阳郁于内,不可误投温药")
+    if ("口渴喜冷饮" in joined or "喜冷饮" in joined) and cold_limbs:
+        out.append("肢厥而喜冷饮,里热无疑,慎用温补")
+    return out
+
+
+def _wuyun(sick_year: int, birth_year: int) -> Optional[dict]:
+    """五运六气推算:干支 → 岁运(太过/不及)+ 司天在泉 + 易病调护提示。"""
+    if not sick_year and not birth_year:
+        return None
+    res: dict[str, Any] = {}
+    if sick_year:
+        g = GAN[(sick_year - 4) % 10]
+        z = ZHI[(sick_year - 4) % 12]
+        yun, over = WUYUN_MAP[g]
+        sitian, zaiquan = SITIAN_MAP[z]
+        qi = WUXING_QI[yun]
+        res = {
+            "year": sick_year,
+            "ganzhi": f"{g}{z}",
+            "yun": yun,
+            "over": over,
+            "sitian": sitian,
+            "zaiquan": zaiquan,
+            "hint": (f"岁运:{yun}运{'太过' if over else '不及'},{qi}气{'偏盛' if over else '不足'};"
+                     f"{sitian}司天,{zaiquan}在泉。全年以{sitian}与{zaiquan}之气为纲,"
+                     f"辨证宜兼察{qi}气之盛衰;调护随岁气寒热燥湿而施。"),
+        }
+    if birth_year:
+        g = GAN[(birth_year - 4) % 10]
+        yun, over = WUYUN_MAP[g]
+        qi = WUXING_QI[yun]
+        res["birth"] = {
+            "year": birth_year,
+            "ganzhi": f"{g}{ZHI[(birth_year - 4) % 12]}",
+            "hint": f"出生之年{yun}运{'太过' if over else '不及'},禀赋偏{qi}({yun}型体质),临床宜兼顾其体质偏性。",
+        }
+    return res
+
+
+def _mechanism_summary(out: dict[str, Any]) -> Optional[dict]:
+    """病机提要:六经开阖枢 + 脏腑升降出入。"""
+    lj = out["liujing"]["top"]
+    zf = out["zangfu"]["top"]
+    lj_m = (lj[0].get("mechanism") if lj and lj[0].get("mechanism") else "") if lj else ""
+    zf_m = (zf[0].get("mechanism") if zf and zf[0].get("mechanism") else "") if zf else ""
+    if not lj_m and not zf_m:
+        return None
+    parts = [p for p in (lj_m, zf_m) if p]
+    return {"liujing": lj_m, "zangfu": zf_m, "summary": "。".join(parts) + "。"}
 
 
 def _load_yifang_lib() -> list:

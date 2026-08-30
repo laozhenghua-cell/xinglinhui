@@ -562,7 +562,8 @@
       ],
       "expected": {
         "zangfu": "肝气郁结",
-        "consistency": 1.0
+        "consistency": 1.0,
+        "mechanism_has": "疏泄失职"
       }
     },
     {
@@ -1156,7 +1157,8 @@
           "寒证",
           "阴证",
           "里证"
-        ]
+        ],
+        "discern_has": "真寒假热"
       }
     },
     {
@@ -2785,6 +2787,55 @@
       "expected": {
         "liujing": "阳明病",
         "menlei_has": "攻里之剂"
+      }
+    },
+    {
+      "id": "t01",
+      "desc": "午后潮热(时间辨证)",
+      "labels": [
+        "潮热",
+        "便秘"
+      ],
+      "expected": {
+        "time_hint": "午后",
+        "bagang": [
+          "热证"
+        ]
+      },
+      "time_key": "afternoon"
+    },
+    {
+      "id": "w01",
+      "desc": "五运六气(2024甲辰)",
+      "labels": [
+        "咳嗽"
+      ],
+      "expected": {
+        "wuyun_has": "土运太过"
+      },
+      "sick_year": 2024
+    },
+    {
+      "id": "w02",
+      "desc": "五运六气(2025乙巳)",
+      "labels": [
+        "咳嗽"
+      ],
+      "expected": {
+        "wuyun_has": "金运不及"
+      },
+      "sick_year": 2025
+    },
+    {
+      "id": "d01",
+      "desc": "真热假寒(热深厥深)",
+      "labels": [
+        "四肢厥冷",
+        "胸腹灼热",
+        "脉数"
+      ],
+      "expected": {
+        "discern_has": "真热假寒"
       }
     }
   ]

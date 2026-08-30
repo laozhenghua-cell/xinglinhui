@@ -103,7 +103,8 @@
         "苔黄",
         "舌红",
         "咽喉肿痛",
-        "潮热"
+        "潮热",
+        "午后潮热"
       ],
       "explain": "阳盛或阴虚——热、红、动、燥、稠",
       "treatment": "清热泻火——清法",
@@ -295,7 +296,8 @@
             "桃核承气汤"
           ]
         }
-      ]
+      ],
+      "mechanism": "太阳主开。开阖失司,表气闭郁,卫阳不展——邪客太阳,治当开表祛邪"
     },
     {
       "key": "yangming",
@@ -350,7 +352,8 @@
             "大承气汤"
           ]
         }
-      ]
+      ],
+      "mechanism": "阳明主阖。阖之太过则燥热内结,阖之不及则津液外泄——治当清、下以复其阖"
     },
     {
       "key": "shaoyang",
@@ -399,7 +402,8 @@
             "大柴胡汤"
           ]
         }
-      ]
+      ],
+      "mechanism": "少阳主枢。枢机不利,气机郁滞,寒热往来——治当和枢转气"
     },
     {
       "key": "taiyin",
@@ -437,7 +441,8 @@
             "理中汤"
           ]
         }
-      ]
+      ],
+      "mechanism": "太阴主开。开之不及,湿浊内停,运化失职——治当温运脾土以复其开"
     },
     {
       "key": "shaoyin",
@@ -495,7 +500,8 @@
             "黄连阿胶汤"
           ]
         }
-      ]
+      ],
+      "mechanism": "少阴主阖。阖之不及,虚阳外浮、真阴不藏——寒化宜回阳,热化宜育阴"
     },
     {
       "key": "jueyin",
@@ -541,7 +547,8 @@
             "当归四逆汤"
           ]
         }
-      ]
+      ],
+      "mechanism": "厥阴主枢。枢转失司,阴阳气不相顺接,寒热错杂——治当燮理阴阳、调其枢机"
     }
   ],
   "weiqiyingxue": [
@@ -673,7 +680,8 @@
             "血府逐瘀汤"
           ]
         }
-      ]
+      ],
+      "mechanism": "肝气升发不及,疏泄失职,气机郁滞;木不疏土,中焦易壅"
     },
     {
       "key": "ganhuoshangyan",
@@ -694,7 +702,8 @@
       "formulas": [
         "龙胆泻肝汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "肝气升发太过,气郁化火,火性炎上,循经上扰"
     },
     {
       "key": "ganyangshangkang",
@@ -729,7 +738,8 @@
             "天麻钩藤饮"
           ]
         }
-      ]
+      ],
+      "mechanism": "水不涵木,肝阳化风,气血并走于上"
     },
     {
       "key": "ganxuexu",
@@ -749,7 +759,8 @@
       "formulas": [
         "四物汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "肝血不足,血不养筋、不荣于目,虚风暗动"
     },
     {
       "key": "ganfengneidong",
@@ -769,7 +780,8 @@
         "羚角钩藤汤",
         "镇肝熄风汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "肝风内动,风阳上扰,筋脉失养而动摇"
     },
     {
       "key": "xinqixu",
@@ -788,7 +800,8 @@
         "养心汤",
         "保元汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "心气不足,鼓动无力,心神失养"
     },
     {
       "key": "xinxuexu",
@@ -808,7 +821,8 @@
         "归脾汤",
         "天王补心丹"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "心血亏虚,心失所养,神不守舍"
     },
     {
       "key": "xinhuokangsheng",
@@ -840,7 +854,8 @@
             "导赤散"
           ]
         }
-      ]
+      ],
+      "mechanism": "心火亢盛,火性炎上,神明被扰;心移热于小肠"
     },
     {
       "key": "xinxueyuzu",
@@ -858,7 +873,8 @@
       "formulas": [
         "血府逐瘀汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "心血瘀阻,心脉痹塞,不通则痛"
     },
     {
       "key": "piqixu",
@@ -905,7 +921,8 @@
             "归脾汤"
           ]
         }
-      ]
+      ],
+      "mechanism": "脾气不升,运化失职,气血乏源;清阳不升则飧泄"
     },
     {
       "key": "piyangxu",
@@ -924,7 +941,8 @@
         "附子理中丸",
         "理中汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "脾阳不振,中焦虚寒,运化无权"
     },
     {
       "key": "hanshikunpi",
@@ -942,7 +960,8 @@
       "formulas": [
         "平胃散"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "寒湿困脾,脾为湿困,升清失职"
     },
     {
       "key": "shireyunpi",
@@ -961,7 +980,8 @@
         "连朴饮",
         "三仁汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "湿热蕴脾,脾胃升降失司,湿遏热伏"
     },
     {
       "key": "feiqixu",
@@ -994,7 +1014,8 @@
             "玉屏风散"
           ]
         }
-      ]
+      ],
+      "mechanism": "肺失宣降,卫外不固,治节无权"
     },
     {
       "key": "feiyinxu",
@@ -1014,7 +1035,8 @@
         "沙参麦冬汤",
         "百合固金汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "肺阴亏耗,虚火灼金,宣降失润"
     },
     {
       "key": "fenghanshufei",
@@ -1033,7 +1055,8 @@
         "三拗汤",
         "止嗽散"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "风寒束肺,肺气郁闭,宣降失司"
     },
     {
       "key": "fengrefanfei",
@@ -1049,7 +1072,8 @@
         "桑菊饮",
         "银翘散"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "风热犯肺,肺失清肃,气逆于上"
     },
     {
       "key": "tanreyongfei",
@@ -1081,7 +1105,8 @@
             "清金化痰汤"
           ]
         }
-      ]
+      ],
+      "mechanism": "痰热壅肺,肺气壅遏,宣降无权"
     },
     {
       "key": "tanshizufei",
@@ -1099,7 +1124,8 @@
         "二陈汤",
         "三子养亲汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "脾为生痰之源,肺为贮痰之器;痰湿上渍,肺失宣降"
     },
     {
       "key": "shenyangxu",
@@ -1145,7 +1171,8 @@
             "金匮肾气丸"
           ]
         }
-      ]
+      ],
+      "mechanism": "肾阳式微,命门火衰,气化无权,水寒不化"
     },
     {
       "key": "shenyinxu",
@@ -1192,7 +1219,8 @@
             "左归丸"
           ]
         }
-      ]
+      ],
+      "mechanism": "真阴亏耗,水不涵木,虚火内炎"
     },
     {
       "key": "shenjingbuzu",
@@ -1213,7 +1241,8 @@
         "河车大造丸",
         "左归丸"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "肾精亏虚,髓海不足,生长发育失养"
     },
     {
       "key": "shenbunaqi",
@@ -1232,7 +1261,8 @@
         "金匮肾气丸",
         "人参蛤蚧散"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "肾不纳气,气不归元,呼吸失摄"
     },
     {
       "key": "weire",
@@ -1251,7 +1281,8 @@
         "清胃散",
         "玉女煎"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": ""
     },
     {
       "key": "weihan",
@@ -1270,7 +1301,8 @@
         "良附丸",
         "理中汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "胃中寒凝,受纳腐熟失职,气机凝滞"
     },
     {
       "key": "shizhiweiwan",
@@ -1288,7 +1320,8 @@
       "formulas": [
         "保和丸"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "食滞胃脘,胃失和降,腑气不通"
     },
     {
       "key": "weiyinxu",
@@ -1306,7 +1339,8 @@
         "益胃汤",
         "麦门冬汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "胃阴不足,胃失濡润,受纳失职"
     },
     {
       "key": "danyutansheng",
@@ -1324,7 +1358,8 @@
       "formulas": [
         "温胆汤"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "胆失疏泄,痰热内扰,胆胃不和"
     },
     {
       "key": "dachangshire",
@@ -1356,7 +1391,8 @@
             "白头翁汤"
           ]
         }
-      ]
+      ],
+      "mechanism": "湿热下注大肠,传导失司,气血壅滞"
     },
     {
       "key": "changzaojinkui",
@@ -1374,7 +1410,8 @@
         "增液汤",
         "麻子仁丸"
       ],
-      "variants": []
+      "variants": [],
+      "mechanism": "肠燥津亏,传导失润,无水行舟"
     },
     {
       "key": "pangguangshire",
@@ -1405,7 +1442,8 @@
             "小蓟饮子"
           ]
         }
-      ]
+      ],
+      "mechanism": "湿热蕴结膀胱,气化不利,水道不通"
     }
   ],
   "sanjiao": [
