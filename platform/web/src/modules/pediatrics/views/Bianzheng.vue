@@ -209,7 +209,7 @@ const advice = computed(() => {
         </div>
       </template>
 
-      <div class="no-print" style="margin: 18px 0 40px; display: flex; gap: 12px">
+      <div class="no-print" style="margin: 18px 0 40px; display: flex; gap: 12px; flex-wrap: wrap">
         <el-button type="primary" @click="printReport">打印辨证论治报告</el-button>
         <el-button @click="reset">重新辨证</el-button>
         <el-button @click="step = 0">返回修改四诊</el-button>

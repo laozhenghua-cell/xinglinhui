@@ -132,7 +132,7 @@ watch(
   color: #1c2b26;
 }
 
-.search-meta {
+.search-meta { flex-wrap: wrap;
   display: flex;
   align-items: center;
   gap: 12px;

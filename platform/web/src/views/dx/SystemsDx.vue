@@ -111,7 +111,7 @@
         <el-card shadow="never">
           <template #header>
             <b>辨证论治</b>
-            <span style="float:right">
+            <span class="head-actions">
               <el-button text size="small" @click="printReport">🖨️ 打印/导出报告</el-button>
             </span>
           </template>
@@ -566,6 +566,11 @@ function fmtTime(t) {
 <style scoped>
 .dx-page { min-height: 100vh; background: #f5f7fa; }
 .dx-body { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
+@media (max-width: 768px) {
+  .dx-body { padding: 12px 10px; }
+  .voice-row { flex-direction: column; }
+  .mic-btn { align-self: flex-end; margin-top: 0; }
+}
 .dx-input-card { margin-bottom: 16px; }
 .hint { color: #999; font-size: 12px; margin-left: 10px; }
 .w100 { width: 100%; }
@@ -604,6 +609,10 @@ function fmtTime(t) {
 .wuyun-hint { font-size: 12.5px; color: #3E5A85; line-height: 1.7; margin-top: 2px; }
 .wuyun-birth { font-size: 12.5px; color: #6B4E8E; margin-top: 4px; border-top: 1px dashed #B9CCE8; padding-top: 4px; }
 .rx-warn { color: #A03D2C; background: #FCEBE8; border: 1px solid #E8B4A8; border-radius: 6px; padding: 6px 10px; font-size: 12.5px; font-weight: 600; margin-bottom: 8px; }
+.head-actions { float: right; }
+@media (max-width: 768px) {
+  .head-actions { float: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+}
 .presc-box { background: #fff; border: 1px solid #E8C97A; border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; }
 .presc-head { font-size: 13px; color: #5A4E2E; }
 .presc-head b { color: #8A5A12; font-size: 15px; font-family: "Songti SC", serif; }

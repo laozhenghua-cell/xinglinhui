@@ -1,5 +1,5 @@
 <template>
-  <el-dialog :model-value="modelValue" title="📷 拍照识舌" width="560px" @update:model-value="v => emit('update:modelValue', v)" @open="startCamera" @closed="cleanup">
+  <el-dialog :model-value="modelValue" title="📷 拍照识舌" width="min(560px, 94vw)" @update:model-value="v => emit('update:modelValue', v)" @open="startCamera" @closed="cleanup">
     <div class="tc-body">
       <!-- 拍摄引导 -->
       <div class="tc-tips">

@@ -60,7 +60,7 @@
       <el-empty v-if="!loading && !formulas.length" description="暂无方剂数据" />
     </el-card>
 
-    <el-dialog v-model="dialogVisible" :title="current?.name" width="720px" top="5vh">
+    <el-dialog v-model="dialogVisible" :title="current?.name" width="min(720px, 94vw)" top="5vh">
       <div v-if="current" class="formula-detail">
         <el-descriptions :column="2" border size="small">
           <el-descriptions-item label="方名">{{ current.name }}</el-descriptions-item>

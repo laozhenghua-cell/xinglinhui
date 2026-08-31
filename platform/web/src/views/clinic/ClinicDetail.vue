@@ -130,7 +130,7 @@ function openPdf() {
 
 <style scoped>
 .cd-page .xl-card { margin-bottom: 14px; }
-.pat-head { display: flex; align-items: center; gap: 10px; }
+.pat-head { flex-wrap: wrap; display: flex; align-items: center; gap: 10px; }
 .pat-name { font-family: "Songti SC", serif; font-size: 20px; font-weight: 700; color: var(--xl-ink); }
 .pat-meta { color: #8A94A0; font-size: 13px; }
 .complaint { margin-top: 8px; }

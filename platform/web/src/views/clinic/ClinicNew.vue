@@ -29,11 +29,11 @@
     <div class="xl-card">
       <h3>② 四诊录入</h3>
       <FourDiagnosisPicker :model-value="fourModel" :specialty="p.specialty" @update:model-value="onFour" />
-      <div style="margin-top:12px">
-        <el-upload :show-file-list="false" :before-upload="onPhoto" accept="image/*" :disabled="photoLoading" style="display:inline-block;margin-right:12px">
+      <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+        <el-upload :show-file-list="false" :before-upload="onPhoto" accept="image/*" :disabled="photoLoading">
           <el-button :loading="photoLoading" plain>{{ photoLoading ? '辨病中…' : '📷 拍照辨病' }}</el-button>
         </el-upload>
-        <el-switch v-model="p.four.use_ai" active-text="AI 报告" style="margin-right:16px" />
+        <el-switch v-model="p.four.use_ai" active-text="AI 报告" />
         <el-button type="primary" :loading="dxLoading" @click="runDx">🤖 AI 智能辨证</el-button>
       </div>
     </div>

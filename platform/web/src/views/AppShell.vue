@@ -54,7 +54,7 @@
           <el-button size="small" type="primary" @click="router.push('/clinic/new')">
             <el-icon><Plus /></el-icon>&nbsp;新建就诊
           </el-button>
-          <el-button size="small" plain @click="router.push('/systems')">六体系辨证</el-button>
+          <el-button size="small" plain class="sys-quick" @click="router.push('/systems')">六体系辨证</el-button>
         </div>
       </header>
       <main class="shell-body">
@@ -132,6 +132,12 @@ const activeMenu = computed(() => {
   .shell-side.mobile-open { transform: translateX(0); width: 216px !important; }
   .side-mask { display: block; position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 55; }
   .shell-top { padding: 0 10px; }
+}
+@media (max-width: 480px) {
+  .ver-tag { display: none; }
+  .sys-quick { display: none; }
+  .top-title { max-width: 38vw; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .top-right .el-button { padding: 6px 8px; }
 }
 .ver-tag { font-size: 11px; color: #8A94A0; margin-right: 12px; font-family: monospace; }
 </style>

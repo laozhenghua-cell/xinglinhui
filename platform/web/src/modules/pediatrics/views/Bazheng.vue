@@ -4,6 +4,8 @@ import { syndromes } from '../data/syndromes'
 import { suduRows, chuanbian, jianbieTips } from '../data/sudu'
 
 const tab = ref('gelun')
+const isMobile = ref(window.matchMedia('(max-width: 768px)').matches)
+window.matchMedia('(max-width: 768px)').addEventListener('change', e => { isMobile.value = e.matches })
 const activeId = ref(syndromes[0].id)
 const active = computed(() => syndromes.find((s) => s.id === activeId.value)!)
 
@@ -106,8 +108,8 @@ const liu = [
             <template #default="{ row }"><b style="font-family: var(--font-kai); color: var(--vermilion); font-size: 15px">{{ row.name }}</b></template>
           </el-table-column>
           <el-table-column prop="waihou" label="主证外候" min-width="220" />
-          <el-table-column prop="shouwen" label="手纹" min-width="170" />
-          <el-table-column prop="mai" label="脉象" min-width="130" />
+          <el-table-column v-if="!isMobile" prop="shouwen" label="手纹" min-width="170" />
+          <el-table-column v-if="!isMobile" prop="mai" label="脉象" min-width="130" />
           <el-table-column prop="zhifa" label="治法" width="130" />
           <el-table-column prop="fang" label="方底" min-width="220" />
           <el-table-column prop="jianbie" label="鉴别要点" min-width="200" />

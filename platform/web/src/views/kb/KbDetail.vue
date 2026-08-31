@@ -114,7 +114,7 @@
     </el-card>
   </div>
 
-  <el-dialog v-model="noteVisible" title="记笔记" width="480px">
+  <el-dialog v-model="noteVisible" title="记笔记" width="min(480px, 94vw)">
     <el-input v-model="noteText" type="textarea" :rows="5" placeholder="写下你的学习心得…" />
     <template #footer>
       <el-button @click="noteVisible = false">取消</el-button>

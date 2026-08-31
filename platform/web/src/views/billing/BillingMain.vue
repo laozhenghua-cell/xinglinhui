@@ -20,7 +20,7 @@
 
           <el-table :data="chargeItems" v-loading="loadingItems" stripe>
             <el-table-column prop="name" label="项目名称" width="160" />
-            <el-table-column prop="category" label="分类" width="100">
+            <el-table-column v-if="!isMobile" prop="category" label="分类" width="100">
               <template #default="{ row }">
                 <el-tag size="small">{{ row.category }}</el-tag>
               </template>
@@ -30,8 +30,8 @@
                 ¥{{ Number(row.price || 0).toFixed(2) }}
               </template>
             </el-table-column>
-            <el-table-column prop="unit" label="单位" width="80" />
-            <el-table-column prop="description" label="说明" show-overflow-tooltip />
+            <el-table-column v-if="!isMobile" prop="unit" label="单位" width="80" />
+            <el-table-column v-if="!isMobile" prop="description" label="说明" show-overflow-tooltip />
             <el-table-column label="操作" width="140">
               <template #default="{ row }">
                 <el-button type="primary" link @click="showItemDialog(row)">编辑</el-button>
@@ -196,6 +196,7 @@
 
 <script setup>
 import { ref, reactive, computed, onMounted, nextTick, watch } from 'vue'
+import { useWindowSize } from '@vueuse/core'
 import * as echarts from 'echarts'
 import {
   listChargeItems, createChargeItem, updateChargeItem, deleteChargeItem,
@@ -205,6 +206,8 @@ import { listPatients } from '@/api/patients'
 import { ElMessage } from 'element-plus'
 
 const activeTab = ref('items')
+const { width } = useWindowSize()
+const isMobile = computed(() => width.value < 768)
 const loadingItems = ref(false)
 const chargeItems = ref([])
 const itemSearch = ref('')

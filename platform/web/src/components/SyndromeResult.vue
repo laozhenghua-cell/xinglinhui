@@ -366,7 +366,7 @@
                   <h5 class="procedure-name">{{ proto.name }}</h5>
                   <p v-if="proto.syndrome" class="procedure-meta"><label>适用证型：</label>{{ proto.syndrome }}</p>
                   <p v-if="proto.indication" class="procedure-meta"><label>适应证：</label>{{ proto.indication }}</p>
-                  <table class="point-table">
+                  <div class="table-scroll"><table class="point-table">
                     <thead><tr><th>穴位</th><th>归经</th><th>定位</th><th>操作</th></tr></thead>
                     <tbody>
                       <tr v-for="pt in proto.points" :key="pt.name">
@@ -376,7 +376,7 @@
                         <td>{{ pt.method }}<span v-if="pt.depth">；{{ pt.depth }}</span></td>
                       </tr>
                     </tbody>
-                  </table>
+                  </table></div>
                   <p v-if="proto.course" class="procedure-meta"><label>疗程：</label>{{ proto.course }}</p>
                   <p class="source-line">{{ proto.source }}</p>
                 </div>
@@ -1266,6 +1266,8 @@ function handleCreatePrescription() {
   color: #6B7077;
 }
 
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+@media (max-width: 768px) { .point-table { min-width: 420px; } }
 .point-table {
   width: 100%;
   border-collapse: collapse;

@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <el-dialog v-model="detailVisible" :title="selectedCase?.case_title" width="720px" top="5vh">
+    <el-dialog v-model="detailVisible" :title="selectedCase?.case_title" width="min(720px, 94vw)" top="5vh">
       <div v-if="selectedCase" class="case-detail">
         <el-descriptions :column="2" border size="small">
           <el-descriptions-item label="病种">{{ selectedCase.disease_type }}</el-descriptions-item>

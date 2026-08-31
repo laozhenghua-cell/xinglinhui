@@ -211,10 +211,7 @@ html, body, #app {
     font-size: 12.5px !important;
   }
 
-  /* 表格：内部横向滚动，不挤压版面 */
-  .page .el-table {
-    min-width: 560px;
-  }
+  /* 表格：内部横向滚动，不挤压版面(不再强制 min-width,窄表占满宽,宽表自滚动) */
   .el-table__inner-wrapper {
     overflow-x: auto;
   }

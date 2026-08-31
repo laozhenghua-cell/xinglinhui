@@ -111,8 +111,35 @@ h1, h2, h3, .xl-serif {
   .el-button { min-height: 34px; }
   .el-form--inline .el-form-item { margin-right: 8px; }
 }
+@media (max-width: 768px) {
+  /* 对话框/抽屉/消息框手机全宽(覆盖 width 内联变量) */
+  .el-dialog { --el-dialog-width: 94% !important; max-width: 94vw; }
+  .el-drawer { width: 92vw !important; }
+  .el-message-box { width: 92vw !important; max-width: 92vw; }
+  /* 分页:可换行+隐藏跳页,避免窄屏溢出 */
+  .el-pagination { flex-wrap: wrap; justify-content: center; row-gap: 6px; }
+  .el-pagination .el-pagination__jump { display: none; }
+  .el-pagination .el-pagination__total { width: 100%; text-align: center; }
+  /* 表格:紧凑+单元格长文本换行+内部横向滚动兜底 */
+  .el-table th, .el-table td { padding: 8px 6px; }
+  .el-table .cell { word-break: break-word; white-space: normal; }
+  /* 可点选标签:加大触控目标 */
+  .el-tag { min-height: 30px; line-height: 28px; }
+  /* 步骤条紧凑 */
+  .el-step__title { font-size: 12.5px; }
+  .el-step__description { font-size: 11px; padding-right: 0; }
+  /* 防止页面级横向滚动 */
+  #app { overflow-x: hidden; }
+  /* 页面标题栏内按钮组可换行 */
+  .xl-page-title > div { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+  /* 通用页面容器进一步收紧 */
+  .xl-card { padding: 14px 12px; }
+  .xl-page { padding: 10px 10px; }
+  .xl-page-title h2 { font-size: 18px; }
+}
 @media (max-width: 480px) {
   body { font-size: 12px; }
   .quick-grid, .spec-pick { grid-template-columns: 1fr !important; }
   .xl-page-title { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .el-dialog { --el-dialog-width: 96% !important; }
 }

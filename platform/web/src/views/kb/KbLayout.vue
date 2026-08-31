@@ -125,7 +125,9 @@ function doSearch() {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 24px 48px;
-  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .kb-main { padding: 12px 10px 32px; }
 }
 
 @media (max-width: 768px) {

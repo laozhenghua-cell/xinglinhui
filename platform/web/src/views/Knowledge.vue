@@ -246,7 +246,7 @@
       </div>
     </el-card>
 
-    <el-dialog v-model="formulaDialogVisible" :title="selectedFormula?.name" width="700px">
+    <el-dialog v-model="formulaDialogVisible" :title="selectedFormula?.name" width="min(700px, 94vw)">
       <div v-if="selectedFormula" class="formula-detail">
         <el-alert
           v-if="selectedFormula.learning_only"
@@ -286,7 +286,7 @@
       </div>
     </el-dialog>
 
-    <el-dialog v-model="caseDialogVisible" :title="selectedCase?.case_title" width="760px" top="5vh">
+    <el-dialog v-model="caseDialogVisible" :title="selectedCase?.case_title" width="min(760px, 94vw)" top="5vh">
       <div v-if="selectedCase" class="case-detail">
         <el-descriptions :column="2" border size="small">
           <el-descriptions-item label="编号">{{ selectedCase.case_number }}</el-descriptions-item>
@@ -576,7 +576,7 @@ onMounted(() => {
   align-items: center;
 }
 
-.title-side {
+.title-side { flex-wrap: wrap;
   display: flex;
   align-items: center;
   gap: 12px;

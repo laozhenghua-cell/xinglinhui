@@ -67,7 +67,7 @@
     <el-dialog
       v-model="detailDialogVisible"
       title="辨证记录详情"
-      width="800px"
+      width="min(800px, 94vw)"
     >
       <div v-if="currentRecord" class="record-detail">
         <el-descriptions :column="2" border>
@@ -159,7 +159,7 @@
     <el-dialog
       v-model="compareDialogVisible"
       title="复诊对比分析"
-      width="900px"
+      width="min(900px, 94vw)"
     >
       <div v-if="comparisonResult" class="comparison-result">
         <el-row :gutter="20">
@@ -475,13 +475,13 @@ defineExpose({
   padding: 12px;
 }
 
-.syndrome-info {
+.syndrome-info { flex-wrap: wrap;
   display: flex;
   align-items: center;
   margin-bottom: 8px;
 }
 
-.syndrome-name {
+.syndrome-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   font-weight: 500;
   color: #1E2227;
   font-size: 16px;

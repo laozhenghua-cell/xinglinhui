@@ -70,6 +70,6 @@ async function copyAns() {
 .ask-title { font-weight: 700; font-size: 16px; }
 .ask-body { max-width: 820px; margin: 0 auto; padding: 20px 16px; }
 .ask-samples { margin: 10px 0; color: #8a94a0; font-size: 13px; }
-.answer { white-space: pre-wrap; line-height: 1.9; font-size: 14.5px; }
+.answer { overflow-wrap: break-word; word-break: break-word; white-space: pre-wrap; line-height: 1.9; font-size: 14.5px; }
 .answer-ops { margin-top: 12px; }
 </style>

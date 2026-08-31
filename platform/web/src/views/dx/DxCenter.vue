@@ -35,7 +35,7 @@
           <template #header>
             <b>病种辨证结果</b>
             <el-tag size="small" type="success" style="margin-left:10px">专科知识库匹配 · 3532 条内容</el-tag>
-            <span style="float:right">
+            <span class="head-actions">
               <el-button text size="small" @click="printReport">🖨️ 打印/导出报告</el-button>
               <el-button text size="small" @click="router.push('/kb/search?q=' + encodeURIComponent(mainName))">总库检索「{{ mainName }}」</el-button>
             </span>
@@ -278,6 +278,10 @@ function fmtTime(t) {
 .stage-line b { color: var(--xl-ink); }
 .jj { font-size: 12.5px; color: #6B5C42; margin: 2px 0; padding-left: 10px; }
 .module-select { width: 100%; max-width: 260px; }
+.head-actions { float: right; }
+@media (max-width: 768px) {
+  .head-actions { float: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+}
 .med-disclaimer { background: #FFF7F0; border: 1px solid #F3D5BE; color: #9C5B2D; border-radius: 8px; padding: 6px 12px; font-size: 12.5px; margin-bottom: 12px; }
 @media print {
   .dx-input-card, .dx-records, .med-disclaimer { display: none !important; }

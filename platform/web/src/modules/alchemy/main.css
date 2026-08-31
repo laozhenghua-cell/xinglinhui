@@ -90,6 +90,7 @@ html, body {
 .md-body table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 0.9rem; }
 .md-body th, .md-body td { border: 1px solid #d8cba8; padding: 6px 8px; text-align: left; }
 .md-body th { background: var(--dan-paper-deep); }
+.md-body pre { overflow-x: auto; max-width: 100%; padding: 10px; background: #f0e9d8; border-radius: 6px; }
 .md-body blockquote {
   margin: 10px 0; padding: 8px 14px;
   background: #faf6ea; border-left: 4px solid var(--dan-gold);

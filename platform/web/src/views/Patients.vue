@@ -23,21 +23,21 @@
 
       <el-table :data="patients" v-loading="loading" stripe>
         <el-table-column prop="name" label="姓名" width="100" />
-        <el-table-column prop="gender" label="性别" width="70">
+        <el-table-column v-if="!isMobile" prop="gender" label="性别" width="70">
           <template #default="{ row }">
             {{ row.gender === 'male' ? '男' : row.gender === 'female' ? '女' : '未知' }}
           </template>
         </el-table-column>
-        <el-table-column prop="age" label="年龄" width="70" />
+        <el-table-column v-if="!isMobile" prop="age" label="年龄" width="70" />
         <el-table-column prop="phone" label="手机号" width="130" />
-        <el-table-column prop="doctor" label="主治医生" width="100" />
+        <el-table-column v-if="!isMobile" prop="doctor" label="主治医生" width="100" />
         <el-table-column prop="chief_complaint" label="主诉" show-overflow-tooltip />
-        <el-table-column prop="created_at" label="建档日期" width="120">
+        <el-table-column v-if="!isMobile" prop="created_at" label="建档日期" width="120">
           <template #default="{ row }">
             {{ row.created_at ? row.created_at.split('T')[0] : '' }}
           </template>
         </el-table-column>
-        <el-table-column label="操作" width="160" fixed="right">
+        <el-table-column label="操作" :width="isMobile ? 110 : 160" fixed="right">
           <template #default="{ row }">
             <el-button type="primary" link @click="$router.push(`/anorectal/patients/${row.id}`)">
               详情
@@ -70,7 +70,7 @@
     <el-dialog
       v-model="dialogVisible"
       :title="editingPatient ? '编辑患者' : '新增患者'"
-      width="500px"
+      width="min(500px, 94vw)"
     >
       <el-form
         ref="patientFormRef"
@@ -125,9 +125,13 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted } from 'vue'
+import { ref, reactive, onMounted, computed } from 'vue'
+import { useWindowSize } from '@vueuse/core'
 import { listPatients, createPatient, updatePatient, deletePatient } from '@/api/patients'
 import { ElMessage } from 'element-plus'
+
+const { width } = useWindowSize()
+const isMobile = computed(() => width.value < 768)
 
 const patients = ref([])
 const loading = ref(false)

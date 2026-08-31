@@ -24,7 +24,7 @@
         </div>
       </el-card>
 
-      <el-dialog v-model="cardVisible" :title="card?.front" width="520px">
+      <el-dialog v-model="cardVisible" :title="card?.front" width="min(520px, 94vw)">
         <div v-if="card" class="card-back">
           <div class="card-front-label">{{ TYPE_NAMES[card.type] }} · {{ MODULES[card.module] || '跨科' }}</div>
           <pre class="back-text">{{ card.back }}</pre>
@@ -85,11 +85,12 @@ async function openCard(it) {
 .lp-desc { color: #5c6b73; background: #f0f7f1; border-radius: 8px; padding: 10px 14px; }
 .item-card { margin-bottom: 10px; }
 .item-card.done { border-left: 4px solid #67c23a; }
-.item-head { display: flex; align-items: center; gap: 12px; }
+.item-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .idx { width: 26px; height: 26px; border-radius: 50%; background: #eef2f6; color: #556; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
 .item-info { flex: 1; }
 .item-note { color: #8a94a0; font-size: 12.5px; margin-top: 3px; }
 .item-ops { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+@media (max-width: 768px) { .item-ops { width: 100%; justify-content: flex-start; margin-top: 6px; } }
 .mod { margin-left: 8px; color: #a0a8b0; font-size: 12px; }
 .card-back { padding: 4px 8px; }
 .card-front-label { color: #909399; font-size: 12px; margin-bottom: 6px; }

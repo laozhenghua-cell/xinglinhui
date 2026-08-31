@@ -135,7 +135,7 @@
     <el-dialog
       v-model="formulaDialogVisible"
       title="确认方剂并保存病案"
-      width="700px"
+      width="min(700px, 94vw)"
       :close-on-click-modal="false"
     >
       <div v-if="selectedFormula">

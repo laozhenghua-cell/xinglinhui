@@ -124,7 +124,7 @@ function renderChart() {
     xAxis: {
       type: 'category',
       data: trend.value.map((d) => d.date),
-      axisLabel: { rotate: 45, fontSize: 10 }
+      axisLabel: { rotate: 45, fontSize: 12, interval: 'auto', hideOverlap: true }
     },
     yAxis: { type: 'value', minInterval: 1 },
     series: [
@@ -225,6 +225,9 @@ onBeforeUnmount(() => {
 .chart-container {
   width: 100%;
   height: 320px;
+}
+@media (max-width: 768px) {
+  .chart-container { height: 240px; }
 }
 
 .module-card {

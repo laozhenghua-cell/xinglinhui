@@ -2,7 +2,7 @@
   <el-dialog
     v-model="visible"
     title="处方打印预览"
-    width="680px"
+    width="min(680px, 94vw)"
     :close-on-click-modal="false"
     class="prescription-print-dialog"
   >
@@ -212,7 +212,7 @@ function print() {
   margin: 4px 0 0;
 }
 
-.sheet-footer {
+.sheet-footer { flex-wrap: wrap; gap: 8px;
   display: flex;
   justify-content: space-between;
   margin-top: 28px;
@@ -220,6 +220,9 @@ function print() {
 }
 .doctor-sign {
   min-width: 180px;
+}
+@media (max-width: 480px) {
+  .doctor-sign { min-width: 0; }
 }
 
 .sheet-disclaimer {

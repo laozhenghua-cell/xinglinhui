@@ -7,15 +7,15 @@
       </template>
 
       <div class="add-row">
-        <el-input v-model="nk" placeholder="口语词,如:脑壳疼" style="width: 220px" />
-        <el-input v-model="nl" placeholder="映射标签(顿号分隔),如:头痛" style="width: 380px; margin: 0 10px" @keyup.enter="doAdd" />
+        <el-input v-model="nk" placeholder="口语词,如:脑壳疼" class="add-kw" />
+        <el-input v-model="nl" placeholder="映射标签(顿号分隔),如:头痛" class="add-labels" @keyup.enter="doAdd" />
         <el-button type="primary" @click="doAdd">新增 / 更新</el-button>
       </div>
 
       <div class="filter-row">
-        <el-input v-model="q" placeholder="按关键词过滤…" clearable style="width: 260px" @keyup.enter="reload" @clear="reload" />
+        <el-input v-model="q" placeholder="按关键词过滤…" clearable class="filter-q" @keyup.enter="reload" @clear="reload" />
         <el-button @click="reload">搜索</el-button>
-        <span class="hint" style="margin-left:auto">共 {{ total }} 条</span>
+        <span class="hint total-hint">共 {{ total }} 条</span>
       </div>
 
       <el-table :data="items" v-loading="loading" stripe size="small" style="margin-top:10px">
@@ -117,5 +117,15 @@ onMounted(reload)
 .syn-page { padding: 4px; }
 .hint { color: #999; font-size: 12px; margin-left: 10px; }
 .add-row { display: flex; align-items: center; flex-wrap: wrap; }
-.filter-row { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
+.add-kw { width: 220px; }
+.add-labels { flex: 1; min-width: 200px; margin: 0 10px; }
+.filter-row { display: flex; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.filter-q { width: 260px; }
+.total-hint { margin-left: auto; }
+@media (max-width: 768px) {
+  .add-kw, .add-labels { width: 100% !important; margin: 0 0 8px 0; }
+  .add-labels { min-width: 0; }
+  .filter-q { flex: 1; width: auto !important; }
+  .total-hint { margin-left: 0; width: 100%; }
+}
 </style>

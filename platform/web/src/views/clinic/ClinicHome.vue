@@ -37,14 +37,14 @@
         <el-table-column label="性别/年龄" width="100">
           <template #default="{ row }">{{ row.gender || '—' }} / {{ row.age ?? '—' }}</template>
         </el-table-column>
-        <el-table-column label="专科" width="100">
+        <el-table-column v-if="!isMobile" label="专科" width="100">
           <template #default="{ row }"><el-tag size="small" :type="TAG[row.specialty]">{{ SPEC[row.specialty] }}</el-tag></template>
         </el-table-column>
         <el-table-column prop="chief_complaint" label="主诉" show-overflow-tooltip />
         <el-table-column label="辨证" show-overflow-tooltip>
           <template #default="{ row }">{{ dxNames(row) }}</template>
         </el-table-column>
-        <el-table-column label="时间" width="130">
+        <el-table-column v-if="!isMobile" label="时间" width="130">
           <template #default="{ row }">{{ fmtTime(row.created_at) }}</template>
         </el-table-column>
         <el-table-column label="" width="70">
@@ -59,12 +59,15 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed } from 'vue'
+import { useWindowSize } from '@vueuse/core'
 import { useRouter } from 'vue-router'
 import { Plus, Search, Download } from '@element-plus/icons-vue'
 import { clinicVisits, exportVisitsUrl } from '@/api/clinic'
 
 const router = useRouter()
+const { width } = useWindowSize()
+const isMobile = computed(() => width.value < 768)
 const SPEC = { surgery: '外科疮疡', anorectal: '肛肠痔漏', pediatrics: '儿科', alchemy: '丹药研究' }
 const TAG = { surgery: 'danger', anorectal: 'warning', pediatrics: 'success', alchemy: 'info' }
 const items = ref([])

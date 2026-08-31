@@ -20,7 +20,7 @@
 
           <el-table :data="medicines" v-loading="loadingMedicines" stripe>
             <el-table-column prop="name" label="药品名称" width="140" />
-            <el-table-column prop="category" label="分类" width="100">
+            <el-table-column v-if="!isMobile" prop="category" label="分类" width="100">
               <template #default="{ row }">
                 <el-tag size="small">{{ row.category }}</el-tag>
               </template>
@@ -32,14 +32,14 @@
                 <el-tag :type="getStockType(row)" size="small">{{ row.stock_quantity }}</el-tag>
               </template>
             </el-table-column>
-            <el-table-column prop="min_stock" label="最低库存" width="80" />
+            <el-table-column v-if="!isMobile" prop="min_stock" label="最低库存" width="80" />
             <el-table-column prop="selling_price" label="售价" width="80">
               <template #default="{ row }">
                 ¥{{ Number(row.selling_price || 0).toFixed(2) }}
               </template>
             </el-table-column>
-            <el-table-column prop="supplier" label="供应商" width="120" show-overflow-tooltip />
-            <el-table-column label="操作" width="140">
+            <el-table-column v-if="!isMobile" prop="supplier" label="供应商" width="120" show-overflow-tooltip />
+            <el-table-column label="操作" :width="isMobile ? 110 : 140">
               <template #default="{ row }">
                 <el-button type="primary" link @click="showMedicineDialog(row)">编辑</el-button>
                 <el-popconfirm title="确定删除？" @confirm="handleDeleteMedicine(row.id)">
@@ -165,7 +165,7 @@
                 <el-tag :type="getAlertType(row.alert_type)" size="small">{{ getAlertLabel(row.alert_type) }}</el-tag>
               </template>
             </el-table-column>
-            <el-table-column prop="message" label="预警说明" min-width="300" show-overflow-tooltip />
+            <el-table-column prop="message" label="预警说明" :min-width="isMobile ? undefined : 300" show-overflow-tooltip />
             <el-table-column label="状态" width="90">
               <template #default="{ row }">
                 <el-tag :type="row.is_resolved ? 'success' : 'danger'" size="small">{{ row.is_resolved ? '已处理' : '待处理' }}</el-tag>
@@ -179,7 +179,7 @@
       </el-tabs>
     </el-card>
 
-    <el-dialog v-model="medicineDialogVisible" :title="editingMedicine ? '编辑药品' : '新增药品'" width="500px">
+    <el-dialog v-model="medicineDialogVisible" :title="editingMedicine ? '编辑药品' : '新增药品'" width="min(500px, 94vw)">
       <el-form ref="medicineFormRef" :model="medicineForm" :rules="medicineRules" label-width="80px">
         <el-form-item label="药品名称" prop="name">
           <el-input v-model="medicineForm.name" placeholder="如：槐花散" />
@@ -230,7 +230,8 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, watch } from 'vue'
+import { ref, reactive, onMounted, watch, computed } from 'vue'
+import { useWindowSize } from '@vueuse/core'
 import {
   listMedicines, createMedicine, updateMedicine, deleteMedicine,
   stockIn, stockOut, getStockAlerts
