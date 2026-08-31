@@ -195,7 +195,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, onMounted, nextTick, watch } from 'vue'
+import { ref, reactive, computed, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
 import { useWindowSize } from '@vueuse/core'
 import * as echarts from 'echarts'
 import {
@@ -428,8 +428,16 @@ watch(activeTab, (val) => {
   }
 })
 
+function handleChartResize() {
+  chartInstance && chartInstance.resize()
+}
 onMounted(() => {
   loadChargeItems()
+  window.addEventListener('resize', handleChartResize)
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', handleChartResize)
+  if (chartInstance) { chartInstance.dispose(); chartInstance = null }
 })
 </script>
 
@@ -438,7 +446,7 @@ onMounted(() => {
   max-width: 1200px;
 }
 
-.tab-header {
+.tab-header { flex-wrap: wrap; gap: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;

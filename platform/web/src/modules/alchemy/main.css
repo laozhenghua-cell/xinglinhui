@@ -87,7 +87,7 @@ html, body {
 .md-body h1 { font-size: 1.4rem; }
 .md-body h2 { font-size: 1.2rem; border-bottom: 1px solid var(--dan-paper-deep); padding-bottom: 4px; }
 .md-body h3 { font-size: 1.05rem; }
-.md-body table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 0.9rem; }
+.md-body table { display: block; overflow-x: auto; border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 0.9rem; }
 .md-body th, .md-body td { border: 1px solid #d8cba8; padding: 6px 8px; text-align: left; }
 .md-body th { background: var(--dan-paper-deep); }
 .md-body pre { overflow-x: auto; max-width: 100%; padding: 10px; background: #f0e9d8; border-radius: 6px; }
@@ -170,7 +170,7 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 2px;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   color: #8a7a60;
   cursor: pointer;
   user-select: none;
@@ -194,7 +194,7 @@ html, body {
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 .sidebar .brand .t1 { font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.5; }
-.sidebar .brand .t2 { font-size: 0.72rem; color: #d8c9a8; margin-top: 4px; }
+.sidebar .brand .t2 { font-size: 0.78rem; color: #d8c9a8; margin-top: 4px; }
 .sidebar nav { padding: 10px 0; flex: 1; }
 .sidebar .s-item {
   display: flex;
@@ -245,7 +245,7 @@ html, body {
   margin-top: 32px;
   padding-top: 12px;
   border-top: 1px dashed #d8cba8;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   color: #9a8a6c;
   text-align: center;
   line-height: 1.8;

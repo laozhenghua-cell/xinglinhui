@@ -577,7 +577,7 @@ function handleCreatePrescription() {
   overflow: hidden;
 }
 
-.syndrome-header {
+.syndrome-header { flex-wrap: wrap; gap: 8px;
   background: linear-gradient(135deg, #3C5A78 0%, #2E4760 100%);
   padding: 20px 24px;
   display: flex;
@@ -1081,7 +1081,7 @@ function handleCreatePrescription() {
   padding: 16px;
 }
 
-.modification-condition {
+.modification-condition { flex-wrap: wrap;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1152,7 +1152,7 @@ function handleCreatePrescription() {
   border-color: #3C5A78;
 }
 
-.treatment-header {
+.treatment-header { flex-wrap: wrap; gap: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;

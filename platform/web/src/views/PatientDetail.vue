@@ -156,7 +156,7 @@ onMounted(() => {
   cursor: pointer;
 }
 
-.consultation-info {
+.consultation-info { flex-wrap: wrap;
   display: flex;
   gap: 8px;
   margin-bottom: 8px;

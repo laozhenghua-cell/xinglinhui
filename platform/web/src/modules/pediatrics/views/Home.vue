@@ -89,7 +89,7 @@ const modules = [
   flex-wrap: wrap;
   padding: 30px 34px;
 }
-.hero-left {
+.hero-left { min-width: 0;
   flex: 1;
   min-width: 320px;
 }

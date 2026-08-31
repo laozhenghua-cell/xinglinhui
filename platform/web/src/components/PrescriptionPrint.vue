@@ -129,7 +129,7 @@ function print() {
   line-height: 1.7;
 }
 
-.sheet-header {
+.sheet-header { flex-wrap: wrap; gap: 8px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -225,7 +225,7 @@ function print() {
   .doctor-sign { min-width: 0; }
 }
 
-.sheet-disclaimer {
+.sheet-disclaimer { font-size: 12px;
   margin-top: 18px;
   padding-top: 10px;
   border-top: 1px solid #ccc;

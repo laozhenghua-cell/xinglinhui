@@ -123,11 +123,14 @@ h1, h2, h3, .xl-serif {
   /* 表格:紧凑+单元格长文本换行+内部横向滚动兜底 */
   .el-table th, .el-table td { padding: 8px 6px; }
   .el-table .cell { word-break: break-word; white-space: normal; }
-  /* 可点选标签:加大触控目标 */
+  /* 可点选标签与圆形按钮:加大触控目标 */
   .el-tag { min-height: 30px; line-height: 28px; }
+  .el-button.is-circle { width: 32px; height: 32px; }
   /* 步骤条紧凑 */
   .el-step__title { font-size: 12.5px; }
   .el-step__description { font-size: 11px; padding-right: 0; }
+  /* 日期范围选择器移动端全宽 */
+  .el-date-editor--daterange { width: 100% !important; }
   /* 防止页面级横向滚动 */
   #app { overflow-x: hidden; }
   /* 页面标题栏内按钮组可换行 */

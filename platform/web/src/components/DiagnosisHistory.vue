@@ -451,7 +451,7 @@ defineExpose({
   background: #3C5A78;
 }
 
-.item-header {
+.item-header { flex-wrap: wrap; gap: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;

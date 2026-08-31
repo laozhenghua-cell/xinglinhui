@@ -504,7 +504,7 @@ onBeforeUnmount(() => {
   min-height: 500px;
 }
 
-.card-header {
+.card-header { flex-wrap: wrap; gap: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;

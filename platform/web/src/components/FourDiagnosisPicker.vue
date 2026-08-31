@@ -215,7 +215,7 @@ const countOf = (sec) => sec.groups.reduce((n, g) => n + g.items.filter((i) => i
 .fdx-group { margin-bottom: 10px; }
 .group-name { font-size: 13px; color: #55665F; margin: 6px 0; font-weight: 600; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.chip {
+.chip { min-height: 32px;
   padding: 3px 10px; border: 1px solid var(--xl-line); border-radius: 999px; font-size: 12.5px;
   cursor: pointer; user-select: none; color: #3A4641; background: #fff; transition: all .12s;
 }

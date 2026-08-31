@@ -228,6 +228,9 @@ const advice = computed(() => {
 .steps {
   margin: 14px 0 18px;
 }
+@media (max-width: 768px) {
+  .steps .el-step__title { font-size: 11px !important; line-height: 15px !important; }
+}
 .grp {
   margin-bottom: 14px;
   padding: 10px 12px;

@@ -150,6 +150,7 @@ const youkeCur = computed(() => youkeTabs.find((t) => t.key === youkeTab.value)!
   flex-wrap: wrap;
   margin-bottom: 14px;
 }
+@media (max-width: 768px) { .mode-bar :deep(.el-tabs) { min-width: 0; } }
 .mode-bar :deep(.el-tabs) {
   flex: 1;
   min-width: 320px;

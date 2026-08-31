@@ -420,7 +420,7 @@ onMounted(() => {
   max-width: 1200px;
 }
 
-.tab-header {
+.tab-header { flex-wrap: wrap; gap: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;

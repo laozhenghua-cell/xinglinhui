@@ -56,7 +56,7 @@ function toggle(opt) {
   flex-wrap: wrap;
   gap: 6px;
 }
-.chip {
+.chip { min-height: 32px;
   display: inline-flex;
   align-items: center;
   padding: 4px 12px;
