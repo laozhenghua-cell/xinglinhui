@@ -36,10 +36,10 @@
           <text x="131" y="305" font-size="14">风关</text>
         </g>
         <text x="90" y="352" text-anchor="middle" font-size="13" fill="#8a4a2a" font-family="Kaiti SC, STKaiti, serif">风轻 · 气重 · 命危</text>
-        <text x="90" y="372" text-anchor="middle" font-size="11.5" fill="#5a4f3e">病初起纹在风关，出至命关为病甚</text>
+        <text x="90" y="372" text-anchor="middle" font-size="14" fill="#5a4f3e">病初起纹在风关，出至命关为病甚</text>
         <!-- 虎口 -->
         <path d="M117,318 C128,322 134,330 133,338" fill="none" stroke="#8a7c5f" stroke-width="1.6" stroke-dasharray="3 3" />
-        <text x="137" y="348" font-size="11.5" fill="#5a4f3e">虎口（大肠经）</text>
+        <text x="137" y="348" font-size="14" fill="#5a4f3e">虎口（大肠经）</text>
       </g>
 
       <!-- ===== 右：左右手六部脉位 ===== -->
@@ -53,7 +53,7 @@
           <line x1="8" y1="48" x2="96" y2="48" stroke="#c9b98f" stroke-width="1" />
           <text x="52" y="21" text-anchor="middle" font-size="13" fill="#b03a2e">肺大肠 · 寸</text>
           <text x="52" y="43" text-anchor="middle" font-size="13" fill="#b03a2e">脾胃 · 关</text>
-          <text x="52" y="65" text-anchor="middle" font-size="12" fill="#b03a2e">命三焦 · 尺</text>
+          <text x="52" y="65" text-anchor="middle" font-size="15" fill="#b03a2e">命三焦 · 尺</text>
         </g>
         <!-- 左手 -->
         <g transform="translate(110,40)">
@@ -63,13 +63,13 @@
           <line x1="8" y1="48" x2="96" y2="48" stroke="#c9b98f" stroke-width="1" />
           <text x="52" y="21" text-anchor="middle" font-size="13" fill="#1e6b52">心小肠 · 寸</text>
           <text x="52" y="43" text-anchor="middle" font-size="13" fill="#1e6b52">肝胆 · 关</text>
-          <text x="52" y="65" text-anchor="middle" font-size="12" fill="#1e6b52">膀胱肾 · 尺</text>
+          <text x="52" y="65" text-anchor="middle" font-size="15" fill="#1e6b52">膀胱肾 · 尺</text>
         </g>
         <!-- 脏腑表里注 -->
         <g transform="translate(0,116)">
           <rect x="0" y="0" width="206" height="146" rx="6" fill="#fbf7ec" stroke="#d8cdb4" stroke-width="1.2" />
-          <text x="10" y="21" font-size="12.5" font-family="Kaiti SC, STKaiti, serif" fill="#2b2318" font-weight="bold">脏腑表里（病气相连）</text>
-          <g font-size="11.8" fill="#5a4f3e">
+          <text x="10" y="21" font-size="15" font-family="Kaiti SC, STKaiti, serif" fill="#2b2318" font-weight="bold">脏腑表里（病气相连）</text>
+          <g font-size="14" fill="#5a4f3e">
             <text x="10" y="42">心—小肠　肝—胆　脾—胃</text>
             <text x="10" y="62">肺—大肠　肾—膀胱</text>
             <text x="10" y="88">左寸心克右寸肺，</text>
@@ -78,7 +78,7 @@
             <text x="10" y="141">为木胜相克。</text>
           </g>
         </g>
-        <g font-size="12" fill="#5a4f3e">
+        <g font-size="15" fill="#5a4f3e">
           <text x="110" y="298" text-anchor="middle">两手纹与两手脉同参：</text>
           <text x="110" y="318" text-anchor="middle">纹浮紫 ＋ 脉浮数 → 该脏风热</text>
           <text x="110" y="338" text-anchor="middle">如右手纹浮紫、右脉浮数 → 脾经风热</text>

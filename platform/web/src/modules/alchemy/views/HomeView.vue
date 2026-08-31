@@ -21,7 +21,7 @@
     </div>
 
     <h3>三个维度</h3>
-    <div class="card" style="display:flex;gap:10px" v-for="d in dims" :key="d.title">
+    <div class="card" style="display:flex;gap:10px;flex-wrap:wrap" v-for="d in dims" :key="d.title">
       <span style="font-size:1.6rem">{{ d.icon }}</span>
       <div>
         <strong>{{ d.title }}</strong>

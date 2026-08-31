@@ -263,7 +263,8 @@ function navTo() {
   .header-note {
     display: none;
   }
-  .fold-btn {
+  @media (max-width: 768px) { .fold-btn { min-width: 36px; min-height: 36px; } }
+.fold-btn {
     padding: 6px;
   }
 }

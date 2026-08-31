@@ -16,11 +16,11 @@ const tab = ref('bafang')
     </p>
 
     <el-tabs v-model="tab" class="no-print">
-      <el-tab-pane label="八症方底（第一方～第八方）" name="bafang" />
+      <el-tab-pane label="八症方底" name="bafang" />
       <el-tab-pane label="官方常用验方" name="guanfang" />
       <el-tab-pane label="三症诸方（疟·暑·痢）" name="sanzheng" />
       <el-tab-pane label="丸散一览" name="wansan" />
-      <el-tab-pane label="外治法 · 灯火艾灸" name="waizhi" />
+      <el-tab-pane label="外治法" name="waizhi" />
     </el-tabs>
 
     <!-- 八症方底 -->

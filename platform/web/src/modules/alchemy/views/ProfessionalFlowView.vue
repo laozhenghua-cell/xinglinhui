@@ -67,7 +67,7 @@
               <span v-if="!r.kept.length" style="font-size:0.8rem;color:#9a8a6c">（此方向下的方剂均已按证/分期排除）</span>
               <template v-for="item in r.kept" :key="item.f.id">
                 <div style="width:100%;margin:2px 0">
-                  <a :href="'/kb/formulas?q=' + encodeURIComponent(item.f.name)" target="_blank" style="margin-left:8px;color:#1f6e8c;font-size:0.78rem">总库 ↗</a>
+                  <a :href="'/kb/formulas?q=' + encodeURIComponent(item.f.name)" target="_blank" style="margin-left:8px;color:#1f6e8c;font-size:0.78rem;white-space:nowrap">总库 ↗</a>
                   <span class="tag red" style="cursor:pointer" @click="$router.push('/alchemy/formula/' + item.f.id)">
                     {{ item.f.name }}（{{ item.f.category }}·{{ item.f.method }}）
                     <template v-for="c in item.chips" :key="c"><span class="tag" style="margin-left:4px;background:#f3ead2;color:#8a6a1c">{{ c }}</span></template>

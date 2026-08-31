@@ -12,7 +12,7 @@
           <span v-if="isOn(o.id)" style="color:#fff;font-weight:700">✓</span>
         </button>
       </div>
-      <div style="display:flex;justify-content:space-between;margin-top:18px">
+      <div style="display:flex;justify-content:space-between;margin-top:18px;flex-wrap:wrap;gap:8px">
         <el-button :disabled="cur === 0" @click="cur--">← 上一步</el-button>
         <span>
           <el-button v-if="canSkip" text @click="next">跳过</el-button>

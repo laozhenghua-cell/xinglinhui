@@ -194,6 +194,11 @@ defineExpose({
 })
 </script>
 
+@media (max-width: 480px) {
+  :deep(.el-form-item) { display: block; }
+  :deep(.el-form-item__label) { width: auto !important; text-align: left; }
+  :deep(.el-form-item__content) { margin-left: 0 !important; }
+}
 <style scoped>
 .safety-check-panel {
   background: #FFFFFF;

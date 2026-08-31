@@ -252,6 +252,11 @@ onMounted(() => {
 })
 </script>
 
+@media (max-width: 768px) {
+  :deep(.el-form-item) { display: block; }
+  :deep(.el-form-item__label) { width: auto !important; text-align: left; line-height: 1.5; padding-bottom: 2px; }
+  :deep(.el-form-item__content) { margin-left: 0 !important; }
+}
 <style scoped>
 .consultation-new {
   max-width: 1000px;

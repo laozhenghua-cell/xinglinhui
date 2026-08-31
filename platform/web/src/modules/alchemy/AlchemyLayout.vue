@@ -25,7 +25,7 @@
       <header class="mobile-header">
         <span @click="backToPortal" style="cursor:pointer">🏛️</span>
         <span class="title">中国炼丹术与丹药</span>
-        <span @click="backToPortal" style="cursor:pointer;font-size:0.75rem">门户</span>
+        <span @click="backToPortal" style="cursor:pointer;font-size:0.75rem;min-height:32px;display:inline-flex;align-items:center;padding:2px 6px">门户</span>
       </header>
 
       <main class="content">

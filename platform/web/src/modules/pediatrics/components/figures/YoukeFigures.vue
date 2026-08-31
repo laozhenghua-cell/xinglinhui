@@ -78,8 +78,8 @@ const current = ref(props.fig)
           <path d="M107,205 L115,211 L109,216 Z" />
           <path d="M253,205 L251,216 L245,211 Z" />
         </g>
-        <text x="180" y="420" text-anchor="middle" font-size="12.5" fill="#5a4f3e">开首推法：眉心推额上二十四数；眉心分推太阳太阴九数；</text>
-        <text x="180" y="440" text-anchor="middle" font-size="12.5" fill="#5a4f3e">天庭至承浆逐穴一点以代针；太阳太阴可发汗、可止汗。</text>
+        <text x="180" y="420" text-anchor="middle" font-size="14.5" fill="#5a4f3e">开首推法：眉心推额上二十四数；眉心分推太阳太阴九数；</text>
+        <text x="180" y="440" text-anchor="middle" font-size="14.5" fill="#5a4f3e">天庭至承浆逐穴一点以代针；太阳太阴可发汗、可止汗。</text>
       </svg>
     </div>
 
@@ -104,7 +104,7 @@ const current = ref(props.fig)
           <circle cx="118" cy="176" r="66" fill="none" stroke="#c9a227" stroke-width="1.4" stroke-dasharray="3 3" />
 
           <!-- 卦名 -->
-          <g font-size="12" fill="#4a7a5f" font-family="Kaiti SC, STKaiti, serif" font-weight="bold" text-anchor="middle">
+          <g font-size="14" fill="#4a7a5f" font-family="Kaiti SC, STKaiti, serif" font-weight="bold" text-anchor="middle">
             <text x="118" y="102">离（南）</text>
             <text x="118" y="252">坎（北）</text>
             <text x="192" y="180">震（东）</text>
@@ -141,24 +141,24 @@ const current = ref(props.fig)
 
           <!-- 小天心 / 总筋 / 天河 -->
           <circle cx="118" cy="252" r="5" fill="#b03a2e" />
-          <text x="128" y="257" font-size="12" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">小天心</text>
+          <text x="128" y="257" font-size="14" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">小天心</text>
           <line x1="118" y1="260" x2="118" y2="298" stroke="#c96a52" stroke-width="2.4" />
-          <text x="126" y="304" font-size="12" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">总筋</text>
+          <text x="126" y="304" font-size="14" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">总筋</text>
           <path d="M118,246 L118,98" stroke="#4a7a5f" stroke-width="1.6" stroke-dasharray="5 4" />
-          <text x="92" y="90" font-size="12" fill="#4a7a5f" font-family="Kaiti SC, STKaiti, serif">天河（引水上天河）</text>
+          <text x="92" y="90" font-size="14" fill="#4a7a5f" font-family="Kaiti SC, STKaiti, serif">天河（引水上天河）</text>
 
           <!-- 三关（桡侧）/ 六腑（尺侧） -->
           <path d="M224,110 L220,234" stroke="#b03a2e" stroke-width="3" stroke-linecap="round" />
           <path d="M224,110 L220,140 L216,150" fill="none" stroke="#b03a2e" stroke-width="1.8" />
-          <text x="238" y="176" font-size="12" fill="#b03a2e" font-family="Kaiti SC, STKaiti, serif" transform="rotate(90 238 176)">三关（桡侧·气分）</text>
+          <text x="238" y="176" font-size="14" fill="#b03a2e" font-family="Kaiti SC, STKaiti, serif" transform="rotate(90 238 176)">三关（桡侧·气分）</text>
           <path d="M14,110 L18,234" stroke="#1e6b52" stroke-width="3" stroke-linecap="round" />
-          <text x="-206" y="172" font-size="12" fill="#1e6b52" font-family="Kaiti SC, STKaiti, serif" transform="rotate(-90 -206 172)">六腑（尺侧·血分）</text>
+          <text x="-206" y="172" font-size="14" fill="#1e6b52" font-family="Kaiti SC, STKaiti, serif" transform="rotate(-90 -206 172)">六腑（尺侧·血分）</text>
 
           <!-- 脾土 / 肾水 -->
-          <text x="214" y="60" font-size="12.5" fill="#b03a2e" font-family="Kaiti SC, STKaiti, serif" font-weight="bold">脾土</text>
-          <text x="24" y="42" font-size="12.5" fill="#1e6b52" font-family="Kaiti SC, STKaiti, serif" font-weight="bold">肾水</text>
+          <text x="214" y="60" font-size="14.5" fill="#b03a2e" font-family="Kaiti SC, STKaiti, serif" font-weight="bold">脾土</text>
+          <text x="24" y="42" font-size="14.5" fill="#1e6b52" font-family="Kaiti SC, STKaiti, serif" font-weight="bold">肾水</text>
 
-          <g font-size="12" fill="#5a4f3e" text-anchor="middle">
+          <g font-size="14" fill="#5a4f3e" text-anchor="middle">
             <text x="118" y="332">推三关退六腑运八卦，男女俱在左手</text>
             <text x="118" y="354">大指脾面旋推为补、直推至甲为泻</text>
             <text x="118" y="376">水底捞月：掌心弧运，引水上天河</text>
@@ -188,28 +188,28 @@ const current = ref(props.fig)
             <circle cx="159" cy="54" r="3.4" /><circle cx="159" cy="70" r="3.4" />
             <circle cx="222" cy="124" r="3.4" /><circle cx="222" cy="138" r="3.4" />
           </g>
-          <text x="118" y="28" text-anchor="middle" font-size="12.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">五指节（轮揉祛风，代苍术）</text>
+          <text x="118" y="28" text-anchor="middle" font-size="14.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">五指节（轮揉祛风，代苍术）</text>
 
           <!-- 上三关 -->
           <path d="M224,110 L220,234" stroke="#b03a2e" stroke-width="3" stroke-linecap="round" />
           <path d="M220,110 L216,140 L224,150" fill="none" stroke="#b03a2e" stroke-width="1.8" />
-          <text x="238" y="176" font-size="12" fill="#b03a2e" font-family="Kaiti SC, STKaiti, serif" transform="rotate(90 238 176)">上三关（推上为补）</text>
+          <text x="238" y="176" font-size="14" fill="#b03a2e" font-family="Kaiti SC, STKaiti, serif" transform="rotate(90 238 176)">上三关（推上为补）</text>
 
           <!-- 后溪 -->
           <circle cx="16" cy="228" r="5" fill="#1e6b52" />
-          <text x="-214" y="224" font-size="12" fill="#1e6b52" font-family="Kaiti SC, STKaiti, serif" transform="rotate(-90 -214 224)">后溪</text>
+          <text x="-214" y="224" font-size="14" fill="#1e6b52" font-family="Kaiti SC, STKaiti, serif" transform="rotate(-90 -214 224)">后溪</text>
 
           <!-- 威灵 精宁 外劳宫 -->
           <circle cx="148" cy="158" r="5" fill="#b03a2e" />
-          <text x="160" y="148" font-size="12" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">威灵</text>
+          <text x="160" y="148" font-size="14" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">威灵</text>
           <circle cx="88" cy="158" r="5" fill="#b03a2e" />
-          <text x="54" y="148" font-size="12" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">精宁</text>
+          <text x="54" y="148" font-size="14" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">精宁</text>
           <circle cx="118" cy="196" r="5" fill="#c96a52" />
-          <text x="128" y="200" font-size="12" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">外劳宫</text>
+          <text x="128" y="200" font-size="14" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">外劳宫</text>
           <path d="M148,164 C142,176 130,186 118,190" fill="none" stroke="#c9b98f" stroke-width="1.2" stroke-dasharray="3 3" />
           <path d="M88,164 C94,176 106,186 118,190" fill="none" stroke="#c9b98f" stroke-width="1.2" stroke-dasharray="3 3" />
 
-          <g font-size="12" fill="#5a4f3e" text-anchor="middle">
+          <g font-size="14" fill="#5a4f3e" text-anchor="middle">
             <text x="118" y="332">精威拿紧代牛黄贝母；重揉手背同白芍川芎</text>
             <text x="118" y="354">黄蜂入洞：揉外劳将指屈，代防风羌活</text>
           </g>
@@ -225,7 +225,7 @@ const current = ref(props.fig)
           <path d="M144,0 C136,62 134,122 140,182 L152,202 L204,202 L210,182 C214,122 212,62 204,0 Z" fill="#fdf6e6" stroke="#7d6f52" stroke-width="2" />
           <!-- 膝后委中 -->
           <circle cx="176" cy="96" r="5" fill="#b03a2e" />
-          <text x="190" y="100" font-size="12.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">委中（推毕揉之）</text>
+          <text x="190" y="100" font-size="14.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">委中（推毕揉之）</text>
           <!-- 足 -->
           <path d="M140,202 L220,202 L248,238 L256,290 C256,300 248,306 240,306 L132,306 C124,306 116,300 116,290 L124,238 Z" fill="#fdf6e6" stroke="#7d6f52" stroke-width="2" />
           <!-- 趾分界 -->
@@ -234,18 +234,18 @@ const current = ref(props.fig)
           <!-- 涌泉 -->
           <ellipse cx="186" cy="268" rx="9" ry="6.5" fill="none" stroke="#b03a2e" stroke-width="2" />
           <circle cx="186" cy="268" r="3.2" fill="#b03a2e" />
-          <text x="200" y="256" font-size="12.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">涌泉（左揉代砂仁藿叶）</text>
+          <text x="200" y="256" font-size="14.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">涌泉（左揉代砂仁藿叶）</text>
           <!-- 大敦 -->
           <circle cx="254" cy="240" r="5" fill="#b03a2e" />
-          <text x="266" y="228" font-size="12.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">大敦（拿之代钩藤）</text>
+          <text x="266" y="228" font-size="14.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">大敦（拿之代钩藤）</text>
           <!-- 昆仑 -->
           <circle cx="120" cy="238" r="5" fill="#b03a2e" />
-          <text x="66" y="234" font-size="12.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">昆仑（拿紧救胎寒）</text>
+          <text x="66" y="234" font-size="14.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">昆仑（拿紧救胎寒）</text>
           <!-- 鬼眼 -->
           <circle cx="140" cy="206" r="5" fill="#b03a2e" />
-          <text x="40" y="202" font-size="12.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">鬼眼（灸治反折）</text>
+          <text x="40" y="202" font-size="14.5" fill="#2b2318" font-family="Kaiti SC, STKaiti, serif">鬼眼（灸治反折）</text>
 
-          <g font-size="12" fill="#5a4f3e" text-anchor="middle">
+          <g font-size="14" fill="#5a4f3e" text-anchor="middle">
             <text x="186" y="352">涌泉右转不揉代朴硝；一推一揉右转参术无差</text>
             <text x="186" y="374">脱肛灸龟尾；张口摇头反折灸鬼眼</text>
           </g>

@@ -116,10 +116,21 @@ h1, h2, h3, .xl-serif {
   .el-dialog { --el-dialog-width: 94% !important; max-width: 94vw; }
   .el-drawer { width: 92vw !important; }
   .el-message-box { width: 92vw !important; max-width: 92vw; }
-  /* 分页:可换行+隐藏跳页,避免窄屏溢出 */
+  /* 分页:可换行+隐藏跳页/每页条数,避免窄屏溢出 */
   .el-pagination { flex-wrap: wrap; justify-content: center; row-gap: 6px; }
-  .el-pagination .el-pagination__jump { display: none; }
+  .el-pagination .el-pagination__jump,
+  .el-pagination .el-pagination__sizes { display: none; }
   .el-pagination .el-pagination__total { width: 100%; text-align: center; }
+  /* 描述列表(2列→堆叠单列) */
+  .el-descriptions__body { overflow: hidden; }
+  .el-descriptions__table,
+  .el-descriptions__table tbody,
+  .el-descriptions__table tr,
+  .el-descriptions__table td.el-descriptions__cell { display: block !important; width: 100% !important; }
+  .el-descriptions__table td.el-descriptions__cell { border-bottom: none !important; }
+  .el-descriptions__label.el-descriptions__cell { font-weight: 700; }
+  /* 单选按钮组折行圆角修正 */
+  .el-radio-button__inner { border-radius: 6px !important; margin: 2px; border: 1px solid var(--el-border-color) !important; }
   /* 表格:紧凑+单元格长文本换行+内部横向滚动兜底 */
   .el-table th, .el-table td { padding: 8px 6px; }
   .el-table .cell { word-break: break-word; white-space: normal; }

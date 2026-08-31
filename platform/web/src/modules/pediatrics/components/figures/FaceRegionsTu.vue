@@ -20,8 +20,8 @@
         <path d="M318,254 C321,262 321,276 318,288" fill="none" stroke="#c9b98f" stroke-width="1.4" />
         <circle cx="83" cy="304" r="3.2" fill="#b03a2e" />
         <circle cx="317" cy="304" r="3.2" fill="#b03a2e" />
-        <text x="64" y="324" font-size="11" fill="#5a4f3e">耳垂尖</text>
-        <text x="330" y="324" font-size="11" fill="#5a4f3e">耳垂尖</text>
+        <text x="64" y="324" font-size="13.5" fill="#5a4f3e">耳垂尖</text>
+        <text x="330" y="324" font-size="13.5" fill="#5a4f3e">耳垂尖</text>
       </g>
 
       <!-- 面廓 -->
@@ -75,15 +75,15 @@
       <g font-family="Kaiti SC, STKaiti, serif" font-weight="bold">
         <text x="200" y="132" text-anchor="middle" font-size="15" fill="#c0392b">额 · 心（离火）</text>
         <text x="92" y="304" text-anchor="middle" font-size="14" fill="#1e6b52">左颊 · 肝</text>
-        <text x="92" y="320" text-anchor="middle" font-size="12.5" fill="#1e6b52">（震木）</text>
+        <text x="92" y="320" text-anchor="middle" font-size="15" fill="#1e6b52">（震木）</text>
         <text x="308" y="304" text-anchor="middle" font-size="14" fill="#8a7c5f">右颊 · 肺</text>
-        <text x="308" y="320" text-anchor="middle" font-size="12.5" fill="#8a7c5f">（兑金）</text>
+        <text x="308" y="320" text-anchor="middle" font-size="15" fill="#8a7c5f">（兑金）</text>
         <text x="200" y="270" text-anchor="middle" font-size="13" fill="#c9a227">鼻 · 脾（中土）</text>
         <text x="200" y="478" text-anchor="middle" font-size="14" fill="#333">颏 · 肾（坎水）</text>
       </g>
 
       <!-- 苗窍引线 -->
-      <g font-size="11.5" fill="#5a4f3e" stroke="#c9b98f" stroke-width="0.9">
+      <g font-size="14" fill="#5a4f3e" stroke="#c9b98f" stroke-width="0.9">
         <line x1="252" y1="233" x2="346" y2="210" />
         <circle cx="346" cy="210" r="2" fill="#c9b98f" stroke="none" />
         <text x="349" y="205">目为肝窍</text>
@@ -107,8 +107,8 @@
       <!-- 五色主病 -->
       <g transform="translate(0,500)">
         <rect x="36" y="0" width="328" height="52" rx="8" fill="#fbf7ec" stroke="#d8cdb4" stroke-width="1" />
-        <text x="48" y="18" font-size="12" font-family="Kaiti SC, STKaiti, serif" fill="#2b2318" font-weight="bold">五色主病</text>
-        <g font-size="11.5" fill="#5a4f3e">
+        <text x="48" y="18" font-size="14.5" font-family="Kaiti SC, STKaiti, serif" fill="#2b2318" font-weight="bold">五色主病</text>
+        <g font-size="14" fill="#5a4f3e">
           <circle cx="52" cy="36" r="6" fill="#c0392b" />
           <text x="63" y="40">红热心</text>
           <circle cx="130" cy="36" r="6" fill="#1e6b52" />

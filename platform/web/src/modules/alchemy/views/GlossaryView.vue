@@ -5,7 +5,7 @@
     <el-input v-model="kw" placeholder="搜索术语…" clearable style="margin-bottom:14px" />
     <div v-for="t in filtered" :key="t.term" class="card" style="padding:10px 14px">
       <strong style="color:var(--dan-red)">{{ t.term }}</strong>
-      <span v-if="t.page" style="float:right;font-size:0.72rem;color:#b9a87e">原书第 {{ t.page }} 页</span>
+      <span v-if="t.page" style="float:right;flex-shrink:0;font-size:0.72rem;color:#b9a87e">原书第 {{ t.page }} 页</span>
       <div style="font-size:0.9rem;margin-top:4px">{{ t.definition }}</div>
     </div>
     <div v-if="!filtered.length" class="card" style="text-align:center;color:#9a8a6c">暂无匹配术语</div>

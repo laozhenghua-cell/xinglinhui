@@ -11,7 +11,7 @@
       <div v-for="ch in part.chapters" :key="ch.id" class="card" style="cursor:pointer"
            @click="$router.push('/alchemy/chapter/' + ch.id)">
         <strong>{{ ch.no }} {{ ch.title }}</strong>
-        <span style="float:right;color:#b9a87e;font-size:0.8rem">阅读 →</span>
+        <span style="float:right;flex-shrink:0;color:#b9a87e;font-size:0.8rem">阅读 →</span>
         <div v-if="ch.bookPages && ch.bookPages.length" style="font-size:0.78rem;color:#9a8a6c;margin-top:4px">
           原书第 {{ ch.bookPages.join('、') }} 页
         </div>
