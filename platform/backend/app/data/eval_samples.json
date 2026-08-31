@@ -2837,6 +2837,91 @@
       "expected": {
         "discern_has": "真热假寒"
       }
+    },
+    {
+      "id": "c01",
+      "desc": "多问题主诉:表证+胃寒→抓主证先表后里(麻黄汤)",
+      "labels": [
+        "恶寒",
+        "发热",
+        "无汗",
+        "身痛",
+        "胃脘冷痛",
+        "喜热饮"
+      ],
+      "detail": "主诉:恶寒发热无汗身痛;另外胃脘冷痛喜热饮",
+      "expected": {
+        "chief_has": "恶寒发热无汗身痛",
+        "strategy_has": "先表后里",
+        "tongyuan": false,
+        "prescription_has": "麻黄汤",
+        "hefang_has": ""
+      }
+    },
+    {
+      "id": "c02",
+      "desc": "多问题主诉:高热神昏谵语→急则治标清营汤",
+      "labels": [
+        "高热",
+        "神昏",
+        "谵语",
+        "咳嗽"
+      ],
+      "detail": "主诉:高热神昏谵语;还有咳嗽",
+      "expected": {
+        "chief_has": "高热神昏谵语",
+        "strategy_has": "急则治标",
+        "tongyuan": false,
+        "prescription_has": "清营汤"
+      }
+    },
+    {
+      "id": "c03",
+      "desc": "多问题主诉:食滞同源→异病同治保和丸",
+      "labels": [
+        "脘腹胀痛",
+        "嗳腐吞酸",
+        "厌食"
+      ],
+      "detail": "主诉:脘腹胀痛嗳腐吞酸;另外厌食",
+      "expected": {
+        "chief_has": "脘腹胀痛嗳腐吞酸",
+        "strategy_has": "异病同治",
+        "tongyuan": true,
+        "prescription_has": "保和丸"
+      }
+    },
+    {
+      "id": "c04",
+      "desc": "多问题主诉:表虚自汗+脾虚→表里双解合方(桂枝人参汤意)",
+      "labels": [
+        "恶风",
+        "自汗",
+        "食少",
+        "便溏"
+      ],
+      "detail": "主诉:恶风自汗易感冒;另外食少便溏",
+      "expected": {
+        "chief_has": "恶风自汗",
+        "strategy_has": "表里",
+        "tongyuan": false,
+        "prescription_has": "玉屏风散"
+      }
+    },
+    {
+      "id": "c05",
+      "desc": "多问题主诉:肝火+失眠→合病并病",
+      "labels": [
+        "头痛眩晕",
+        "面红目赤",
+        "失眠多梦"
+      ],
+      "detail": "主诉:头痛眩晕面红目赤;同时失眠多梦",
+      "expected": {
+        "chief_has": "头痛眩晕面红目赤",
+        "strategy_has": "合病并病",
+        "tongyuan": false
+      }
     }
   ]
 }

@@ -133,6 +133,29 @@
             🌿 {{ result.plain.verdict }}
           </div>
 
+          <!-- 辨证论治思路(多问题主诉 · 抓主证) -->
+          <div v-if="result.chief && result.chief.split" class="chief-box">
+            <div class="chief-head">🧭 辨证论治思路(主诉多个问题 · 抓主要矛盾)</div>
+            <div class="chief-problems">
+              <div v-for="(p, i) in result.chief.problems" :key="i" class="chief-p"
+                :class="{ 'chief-main': i === result.chief.chief_index, 'chief-danger': p.danger }">
+                <b>{{ i === result.chief.chief_index ? '★ 主症' : (p.danger ? '🚨 急症' : '○ 兼症') }}</b>
+                {{ p.text }}
+                <span v-if="p.name" class="chief-pdx">→ {{ p.name }}</span>
+              </div>
+            </div>
+            <div class="chief-reason">判定:{{ result.chief.chief_reason }}</div>
+            <div class="chief-zhice">治则:<b>{{ result.chief.zhice }}</b></div>
+            <div v-if="result.chief.tongyuan" class="chief-note">🌿 诸症同源,异病同治——一方统之,兼症随主方加减</div>
+            <div v-for="(m, i) in result.chief.merge" :key="i" class="chief-merge">
+              ⚡ 合病并病:「{{ m.a }}」×「{{ m.b }}」<span class="chief-merge-text">({{ m.text }})</span>
+            </div>
+            <div v-if="result.prescription && result.prescription.hefang" class="chief-hefang">
+              🤝 合方建议:<b>{{ result.prescription.hefang.formulas }}</b>——{{ result.prescription.hefang.note }}
+              <span class="chief-hefang-src">{{ result.prescription.hefang.source }}</span>
+            </div>
+          </div>
+
           <!-- 病机提要(开阖枢 · 升降出入) -->
           <div v-if="result.mechanism" class="mech-box">
             <div class="mech-head">🍃 病机提要(六经开阖枢 · 脏腑升降出入)</div>
@@ -593,6 +616,24 @@ function fmtTime(t) {
 .plain-box { background: #FFFDF4; border: 1px solid #EAD9A8; border-left: 4px solid #C9A227; border-radius: 8px; padding: 10px 14px; font-size: 14px; color: #5A4E2E; line-height: 1.7; margin-bottom: 12px; font-weight: 500; }
 .plain-danger { border-color: #E8A0A0; border-left-color: #C0392B; background: #FDF0F0; color: #7A2318; }
 .mech-box { background: #F4F1FA; border: 1px solid #D9CCEE; border-left: 4px solid #8A63C9; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
+.chief-box { background: #FDF9EF; border: 1px solid #EAD9A8; border-left: 4px solid #C9A227; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
+.chief-head { font-weight: 700; color: #8A5A12; font-size: 13px; margin-bottom: 6px; }
+.chief-problems { display: flex; flex-direction: column; gap: 4px; }
+.chief-p { font-size: 12.5px; color: #5A4E2E; line-height: 1.6; }
+.chief-p b { margin-right: 4px; color: #8a8370; }
+.chief-main { font-weight: 700; color: #4A3B14; }
+.chief-main b { color: var(--xl-cinnabar); }
+.chief-danger b { color: var(--xl-cinnabar); }
+.chief-pdx { color: #2E7D6B; margin-left: 6px; }
+.chief-reason { font-size: 12.5px; color: #6B5C42; margin-top: 6px; }
+.chief-zhice { font-size: 13px; color: #4A3B14; margin-top: 4px; background: #FBF4E0; border-radius: 6px; padding: 4px 10px; }
+.chief-zhice b { color: #9A6B00; }
+.chief-note { font-size: 12.5px; color: #2F7A50; margin-top: 4px; }
+.chief-merge { font-size: 12.5px; color: #7A4A12; margin-top: 4px; }
+.chief-merge-text { color: #8a8370; font-size: 12px; }
+.chief-hefang { font-size: 12.5px; color: #5A4E2E; margin-top: 6px; background: #F3ECD8; border-radius: 6px; padding: 6px 10px; }
+.chief-hefang b { color: #8A5A12; font-family: "Songti SC", serif; font-size: 14px; }
+.chief-hefang-src { color: #a99a7d; margin-left: 6px; font-size: 11.5px; }
 .mech-head { font-weight: 700; color: #5B3E8E; font-size: 13px; margin-bottom: 6px; }
 .mech-line { font-size: 12.5px; color: #4A3E6B; margin: 2px 0; }
 .mech-line b { color: #5B3E8E; margin-right: 4px; }

@@ -548,7 +548,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         if t not in user_labels:
             user_labels.append(t)
 
-    systems_result = analyze_systems(user_labels, time_key=body.time, sick_year=body.sick_year, birth_year=body.birth_year)
+    systems_result = analyze_systems(user_labels, time_key=body.time, sick_year=body.sick_year, birth_year=body.birth_year, detail_text=body.detail or "")
 
     # 1. 证型匹配
     synd_stmt = select(KBSyndrome)
@@ -783,6 +783,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "modifications": systems_result.get("modifications", []),
         "menlei": systems_result.get("menlei", []),
         "prescription": systems_result.get("prescription"),
+        "chief": systems_result.get("chief"),
         "mechanism": systems_result.get("mechanism"),
         "time": systems_result.get("time"),
         "discern": systems_result.get("discern", []),
@@ -988,7 +989,7 @@ async def dx_eval():
     per_system: dict[str, dict] = {}
     detail = []
     for sm in samples:
-        result = analyze_systems(sm["labels"], time_key=sm.get("time_key", ""), sick_year=sm.get("sick_year", 0), birth_year=sm.get("birth_year", 0))
+        result = analyze_systems(sm["labels"], time_key=sm.get("time_key", ""), sick_year=sm.get("sick_year", 0), birth_year=sm.get("birth_year", 0), detail_text=sm.get("detail", ""))
         row = {"id": sm["id"], "desc": sm["desc"]}
         for sys_key in ("bagang", "liujing", "weiqiyingxue", "zangfu", "sanjiao", "jingluo"):
             got = result[sys_key]["summary"]
@@ -1166,6 +1167,41 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["modification"] = {"got": herbs, "expected": sm["expected"]["modification_has"]}
+        # 抓主证(多问题主诉:主次判定/治则/同源/合方)
+        if sm["expected"].get("chief_has"):
+            c = result.get("chief") or {}
+            st = per_system.setdefault("chief", {"total": 0, "correct": 0})
+            st["total"] += 1
+            chief_text = (c.get("problems") or [{}])[c.get("chief_index") or 0].get("text", "")
+            ok = sm["expected"]["chief_has"] in chief_text
+            if ok:
+                st["correct"] += 1
+            row["chief"] = {"got": chief_text, "expected": sm["expected"]["chief_has"]}
+        if sm["expected"].get("strategy_has"):
+            c = result.get("chief") or {}
+            st = per_system.setdefault("strategy", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = c.get("zhice", "")
+            ok = sm["expected"]["strategy_has"] in got
+            if ok:
+                st["correct"] += 1
+            row["strategy"] = {"got": got[:50], "expected": sm["expected"]["strategy_has"]}
+        if sm["expected"].get("tongyuan") is not None:
+            c = result.get("chief") or {}
+            st = per_system.setdefault("tongyuan", {"total": 0, "correct": 0})
+            st["total"] += 1
+            ok = bool(c.get("tongyuan")) == bool(sm["expected"]["tongyuan"])
+            if ok:
+                st["correct"] += 1
+            row["tongyuan"] = {"got": c.get("tongyuan"), "expected": sm["expected"]["tongyuan"]}
+        if sm["expected"].get("hefang_has"):
+            st = per_system.setdefault("hefang", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = ((result.get("prescription") or {}).get("hefang") or {}).get("formulas", "")
+            ok = sm["expected"]["hefang_has"] in got
+            if ok:
+                st["correct"] += 1
+            row["hefang"] = {"got": got, "expected": sm["expected"]["hefang_has"]}
         detail.append(row)
     # 舌象归一化评测(VL 特征 → 引擎词表标签,纯规则层;图像识别准确率另以医师标注集评估)
     tongue_cases = [
