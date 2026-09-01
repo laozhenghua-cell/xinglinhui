@@ -2871,7 +2871,7 @@
       "expected": {
         "chief_has": "高热神昏谵语",
         "strategy_has": "急则治标",
-        "tongyuan": false,
+        "tongyuan": true,
         "prescription_has": "清营汤"
       }
     },
@@ -2921,6 +2921,112 @@
         "chief_has": "头痛眩晕面红目赤",
         "strategy_has": "合病并病",
         "tongyuan": false
+      }
+    },
+    {
+      "id": "h01",
+      "desc": "营分证(身热夜甚斑疹隐隐→清营汤)",
+      "labels": [
+        "身热夜甚",
+        "斑疹隐隐",
+        "心烦"
+      ],
+      "detail": "主诉:身热夜甚斑疹隐隐;另外心烦",
+      "expected": {
+        "weiqiyingxue": "营分证",
+        "prescription_has": "清营汤",
+        "chief_has": "身热夜甚"
+      }
+    },
+    {
+      "id": "h02",
+      "desc": "太阳蓄水(小便不利水入即吐→五苓散)",
+      "labels": [
+        "小便不利",
+        "口渴",
+        "水入即吐"
+      ],
+      "detail": "主诉:小便不利口渴;另外水入即吐",
+      "expected": {
+        "liujing": "太阳病",
+        "variant_has": "五苓散",
+        "prescription_has": "五苓散"
+      }
+    },
+    {
+      "id": "h03",
+      "desc": "太阳蓄血(少腹硬满如狂→桃核承气汤)",
+      "labels": [
+        "少腹硬满",
+        "如狂",
+        "小便自利"
+      ],
+      "detail": "主诉:少腹硬满如狂小便自利",
+      "expected": {
+        "liujing": "太阳病",
+        "variant_has": "桃核承气汤",
+        "prescription_has": "桃核承气汤"
+      }
+    },
+    {
+      "id": "h04",
+      "desc": "血虚寒厥(手足厥寒脉细欲绝→当归四逆汤)",
+      "labels": [
+        "手足厥寒",
+        "脉细欲绝"
+      ],
+      "detail": "主诉:手足厥寒;另外脉细欲绝",
+      "expected": {
+        "liujing": "厥阴病",
+        "variant_has": "当归四逆汤",
+        "prescription_has": "当归四逆汤"
+      }
+    },
+    {
+      "id": "h05",
+      "desc": "亡阳(大汗肢厥下利清谷→四逆汤,急则治标)",
+      "labels": [
+        "大汗淋漓",
+        "四肢厥冷",
+        "下利清谷",
+        "脉微细"
+      ],
+      "detail": "主诉:大汗淋漓四肢厥冷;另外下利清谷",
+      "expected": {
+        "prescription_has": "四逆汤",
+        "chief_has": "大汗淋漓",
+        "strategy_has": "急则治标"
+      }
+    },
+    {
+      "id": "h06",
+      "desc": "真寒假热(舍证从脉→四逆辈)",
+      "labels": [
+        "身热",
+        "面赤",
+        "四肢厥冷",
+        "脉微细"
+      ],
+      "detail": "主诉:身热面赤;另外四肢厥冷脉微细",
+      "expected": {
+        "discern_has": "真寒假热",
+        "prescription_has": "四逆汤",
+        "strategy_has": "舍证从脉"
+      }
+    },
+    {
+      "id": "h07",
+      "desc": "真热假寒(热深厥深→白虎辈)",
+      "labels": [
+        "四肢厥冷",
+        "胸腹灼热",
+        "脉数"
+      ],
+      "detail": "主诉:四肢厥冷;另外胸腹灼热脉数",
+      "expected": {
+        "discern_has": "真热假寒",
+        "prescription_has": "白虎汤",
+        "strategy_has": "舍证从脉"
       }
     }
   ]

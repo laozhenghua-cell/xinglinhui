@@ -404,6 +404,20 @@ def analyze_systems(user_labels: list[str], time_key: str = "", sick_year: int =
         items = []
         for rule in data[system]:
             score, hits = _score_indicators(rule["indicators"], list(tokens))
+            if system == "liujing":
+                # 分型证据并入经证得分(蓄水证之"小便不利"等即太阳经证据);
+                # 只并入经纲未列的证据词,避免"畏寒"等纲内词被双重计分
+                base_inds = set(rule["indicators"])
+                v_inds: list[str] = []
+                for v in rule.get("variants", []):
+                    for i in v.get("indicators", []):
+                        if i not in base_inds and i not in v_inds:
+                            v_inds.append(i)
+                vscore, vhits = _score_indicators(v_inds, list(tokens))
+                score += vscore
+                for h in vhits:
+                    if h not in hits:
+                        hits.append(h)
             items.append({
                 "key": rule["key"],
                 "name": rule["name"],
@@ -483,11 +497,11 @@ def analyze_systems(user_labels: list[str], time_key: str = "", sick_year: int =
     out["ask"] = _ask_questions(user_labels, followup)
     out["modifications"] = _modifications(user_labels, out)
     out["menlei"] = _menlei(user_labels, out)
+    out["discern"] = _discern(labels)  # 须在拟方之前:真假鉴别用于开方纠偏
     chief = _chief_analysis(detail_text, out)
     out["chief"] = chief
     out["prescription"] = _prescription(user_labels, out, chief)
     out["time"] = time_info
-    out["discern"] = _discern(labels)
     out["wuyun"] = _wuyun(sick_year, birth_year)
     out["mechanism"] = _mechanism_summary(out)
     out["plain"] = _plain_summary(out)
@@ -640,7 +654,7 @@ def extract_symptom_terms(texts: list[str], synonyms: Optional[dict] = None) -> 
             if term not in out:
                 for m in _re.finditer(_re.escape(term), t):
                     prev = t[m.start() - 1] if m.start() > 0 else ""
-                    if prev in _NEG:
+                    if prev and prev in _NEG:
                         continue
                     out.append(term)
                     break
@@ -775,7 +789,7 @@ def _mechanism_summary(out: dict[str, Any]) -> Optional[dict]:
 # ============ 抓主证 · 辨证论治思路(多问题主诉) ============
 
 _PROBLEM_SEPS = re.compile(r"[。!?！？]|还有|另外|同时|并且|而且|以及|加上|伴随|另外就是")
-_DANGER_TERMS = ("高热", "神昏", "谵语", "抽搐", "昏迷", "剧痛", "大出血", "咯血", "便血不止",
+_DANGER_TERMS = ("高热", "神昏", "抽搐", "昏迷", "剧痛", "大出血", "咯血", "便血不止",
                  "呼吸困难", "喘促欲脱", "大汗淋漓", "冷汗淋漓", "昏仆", "气脱", "亡阳")
 _CHRONIC_TERMS = ("多年", "反复发作", "老毛病", "1年以上", "半年-1年", "多年老", "慢性")
 
@@ -788,11 +802,14 @@ HEFANG_PAIRS = [
     {"pair": ("二陈汤", "平胃散"), "note": "燥湿化痰兼行气和胃", "source": "合方惯例"},
     {"pair": ("六味地黄丸", "交泰丸"), "note": "心肾不交,滋阴降火兼交通心肾", "source": "合方惯例"},
     {"pair": ("理中汤", "四神丸"), "note": "脾肾阳虚泄泻,温中兼温肾涩肠", "source": "合方惯例"},
+    {"pair": ("附子理中丸", "四神丸"), "note": "脾肾阳虚五更泄泻,温补脾肾兼涩肠止泻", "source": "合方惯例"},
     {"pair": ("银翘散", "桑菊饮"), "note": "风热袭表咳嗽,辛凉解表兼宣肺止咳", "source": "合方惯例"},
     {"pair": ("逍遥散", "四物汤"), "note": "肝郁血虚,疏肝解郁兼养血调经", "source": "合方惯例"},
     {"pair": ("生脉散", "沙参麦冬汤"), "note": "气阴两伤,益气生津兼润肺养胃", "source": "合方惯例"},
     {"pair": ("归脾汤", "酸枣仁汤"), "note": "心脾两虚不寐,健脾养心兼养血安神", "source": "合方惯例"},
     {"pair": ("桂枝汤", "理中汤"), "note": "太阳太阴并病,表里双解,参桂枝人参汤之意", "source": "《伤寒论》桂枝人参汤"},
+    {"pair": ("柴胡疏肝散", "四君子汤"), "note": "肝郁脾虚,疏肝解郁兼健脾益气,参逍遥散之意", "source": "逍遥散见《太平惠民和剂局方》"},
+    {"pair": ("导赤散", "六味地黄丸"), "note": "心火亢盛兼肾阴不足,清心利水兼滋肾养阴(泻南补北)", "source": "合方惯例"},
 ]
 
 
@@ -867,12 +884,17 @@ def _chief_analysis(detail_text: str, out: dict[str, Any]) -> dict[str, Any]:
         lj_top = lj["top"][0] if lj["top"] else None
         score = 0
         name = ""
+        cands = []
         if zf["summary"] != "信息不足" and zf_top:
-            score = zf_top["score"]
-            name = zf["summary"]
-        if lj["summary"] != "信息不足" and lj_top and (lj_top["score"] > score or not name):
-            score = lj_top["score"]
-            name = lj["summary"]
+            cands.append((zf_top["score"], zf["summary"]))
+        if lj["summary"] != "信息不足" and lj_top:
+            cands.append((lj_top["score"], lj["summary"]))
+        if sub["weiqiyingxue"]["summary"] != "信息不足" and sub["weiqiyingxue"]["top"]:
+            cands.append((sub["weiqiyingxue"]["top"][0]["score"], sub["weiqiyingxue"]["summary"]))
+        if sub["sanjiao"]["summary"] != "信息不足" and sub["sanjiao"]["top"]:
+            cands.append((sub["sanjiao"]["top"][0]["score"], sub["sanjiao"]["summary"]))
+        if cands:
+            score, name = max(cands, key=lambda x: x[0])
         infos.append({
             "text": p[:60],
             "terms": terms[:12],
@@ -880,6 +902,7 @@ def _chief_analysis(detail_text: str, out: dict[str, Any]) -> dict[str, Any]:
             "liujing": lj["summary"],
             "name": name,
             "score": score,
+            "lj_score": lj_top["score"] if lj_top and lj["summary"] != "信息不足" else 0,
             "danger": any(d in p for d in _DANGER_TERMS),
         })
     # 主次判定
@@ -913,6 +936,8 @@ def _chief_analysis(detail_text: str, out: dict[str, Any]) -> dict[str, Any]:
     for o in others:
         if o["name"] == "信息不足" or o["name"] == chief["name"]:
             continue
+        if o["score"] < 3:
+            continue  # 弱结论(仅一二词)不构成"第二证",视为主证的兼症
         o_keys = set()
         if o["zangfu"] != "信息不足":
             o_keys.add("zf:" + o["zangfu"])
@@ -925,7 +950,7 @@ def _chief_analysis(detail_text: str, out: dict[str, Any]) -> dict[str, Any]:
                       "b": o["name"] or o["zangfu"] or o["liujing"],
                       "text": o["text"]})
     # 治则治法
-    zhice = _zhice(infos, out, course_seg, tongyuan, len(merge) > 0)
+    zhice = _zhice(infos, out, course_seg, tongyuan, len(merge) > 0, chief_index)
     # 思路文字
     note_parts = [f"主诉含 {len(infos)} 个问题,以「{chief['text'][:30]}」为主症({chief_reason})"]
     if tongyuan:
@@ -938,8 +963,13 @@ def _chief_analysis(detail_text: str, out: dict[str, Any]) -> dict[str, Any]:
             "zhice": zhice, "note": note}
 
 
-def _zhice(infos: list[dict], out: dict[str, Any], course_seg: str, tongyuan: bool, has_merge: bool) -> str:
+def _zhice(infos: list[dict], out: dict[str, Any], course_seg: str, tongyuan: bool, has_merge: bool, chief_idx: int = 0) -> str:
     """治则治法:标本缓急、表里先后、攻补兼施。"""
+    _disc = "|".join(out.get("discern") or [])
+    if "真热假寒" in _disc:
+        return "脉证相参:舍证从脉,热深厥深,急清其热(白虎、承气辈)"
+    if "真寒假热" in _disc:
+        return "脉证相参:舍证从脉,阴盛格阳,急温其阳(通脉四逆辈)"
     if any(x["danger"] for x in infos):
         return "急则治标:先解危候,急症缓解后再图其本"
     comps = out["bagang"]["components"]
@@ -947,15 +977,22 @@ def _zhice(infos: list[dict], out: dict[str, Any], course_seg: str, tongyuan: bo
         return "表里同病:先表后里(表解乃可攻里);表里俱急者表里双解"
     if "虚证" in comps and "实证" in comps:
         return "虚实夹杂:攻补兼施,扶正祛邪,观其缓急而定主次"
+    # 虚实夹杂启发式:主证属虚(阴虚/阳虚/气虚/血虚/精亏),他证属邪实(热/湿/痰/瘀/滞/火/食)
+    chief_name = infos[chief_idx]["name"] or ""
+    others = [x for i, x in enumerate(infos) if i != chief_idx]
+    _xu = ("虚", "亏", "不足")
+    _shi = ("热", "湿", "痰", "瘀", "滞", "火", "食", "结")
+    if any(k in chief_name for k in _xu) and any(any(k in (x["name"] or "") for k in _shi) for x in others):
+        return "虚实夹杂:攻补兼施,扶正祛邪,观其缓急而定主次"
+    if any(c in course_seg for c in _CHRONIC_TERMS) and len(infos) > 1:
+        return "新病痼疾并存:先治新病,兼护宿疾"
     if tongyuan:
         return "异病同治:诸症同源,一方统之,兼症随证加减"
     if has_merge:
-        has_biao = any(x["liujing"] == "太阳病" for x in infos)
+        has_biao = any(x["liujing"] == "太阳病" and x["lj_score"] >= 2 for x in infos)
         has_li = any(x["zangfu"] != "信息不足" or x["liujing"] in ("阳明病", "太阴病", "少阴病", "厥阴病") for x in infos)
         if has_biao and has_li:
             return "表里同病:先表后里,表解乃可攻里;表里俱急者表里双解"
-        if any(c in course_seg for c in _CHRONIC_TERMS):
-            return "新病痼疾并存:先治新病,兼护宿疾,合方并进"
         return "合病并病:主证为主,兼证为辅,两方合用或分先后而治"
     return "先主后次:主证得解,兼症自除;兼症突出者随主方加减"
 
@@ -1121,6 +1158,15 @@ def _prescription(user_labels: list[str], out: dict[str, Any], chief: Optional[d
         zf = chief_sub["zangfu"]["top"]
         zf_summary = chief_sub["zangfu"]["summary"]
         wq = chief_sub["weiqiyingxue"]
+        # 分型证据可能横跨多个问题(如蓄水:小便不利+水入即吐),同经时用全问题证据辨分型
+        all_terms: list[str] = []
+        for p in chief["problems"]:
+            all_terms.extend(p["terms"])
+        sub_all = analyze_systems(all_terms)
+        lj_all = sub_all["liujing"]
+        if (lj_all["top"] and lj_all["top"][0].get("variant") is not None
+                and (not lj or lj[0].get("key") == lj_all["top"][0].get("key"))):
+            lj = lj_all["top"]
     primary = None
     lj_variant = None
     if lj and lj[0].get("variant"):
@@ -1132,6 +1178,12 @@ def _prescription(user_labels: list[str], out: dict[str, Any], chief: Optional[d
     wq_top = wq.get("top") or []
     wq_first = (wq_top[0].get("formulas") or [None])[0] if wq_top and wq["summary"] != "信息不足" else None
     wq_score = wq_top[0]["score"] if wq_top else 0
+    # 真假鉴别纠偏:真热假寒误投温剂、真寒假热误投凉剂,皆临床大忌
+    _WARM = {"四逆汤", "通脉四逆汤", "理中汤", "附子理中丸", "桂枝汤", "麻黄汤", "当归四逆汤",
+             "真武汤", "金匮肾气丸", "四神丸", "吴茱萸汤"}
+    _COOL = {"白虎汤", "大承气汤", "小承气汤", "调胃承气汤", "清营汤", "犀角地黄汤",
+             "黄连解毒汤", "龙胆泻肝汤", "导赤散"}
+    _discern_txt = "|".join(out.get("discern") or [])
     if lj_variant:
         primary = lj_variant
     elif zf_first and zf_score >= 4:
@@ -1144,6 +1196,10 @@ def _prescription(user_labels: list[str], out: dict[str, Any], chief: Optional[d
         primary = zf_first
     if not primary:
         return None
+    if "真热假寒" in _discern_txt and primary in _WARM:
+        primary = "白虎汤"
+    elif "真寒假热" in _discern_txt and primary in _COOL:
+        primary = "四逆汤"
     if chief_sub is not None:
         ci = chief["chief_index"]
         others = [analyze_systems(chief["problems"][i]["terms"])
