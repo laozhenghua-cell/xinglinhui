@@ -784,6 +784,7 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "menlei": systems_result.get("menlei", []),
         "prescription": systems_result.get("prescription"),
         "chief": systems_result.get("chief"),
+        "fangzheng": systems_result.get("fangzheng", []),
         "mechanism": systems_result.get("mechanism"),
         "time": systems_result.get("time"),
         "discern": systems_result.get("discern", []),
@@ -1202,6 +1203,15 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["hefang"] = {"got": got, "expected": sm["expected"]["hefang_has"]}
+        # 方证层(经典方证直接对应)
+        if sm["expected"].get("fangzheng_has"):
+            st = per_system.setdefault("fangzheng", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = "|".join(f.get("formula", "") for f in (result.get("fangzheng") or []))
+            ok = sm["expected"]["fangzheng_has"] in got
+            if ok:
+                st["correct"] += 1
+            row["fangzheng"] = {"got": got[:60], "expected": sm["expected"]["fangzheng_has"]}
         detail.append(row)
     # 舌象归一化评测(VL 特征 → 引擎词表标签,纯规则层;图像识别准确率另以医师标注集评估)
     tongue_cases = [

@@ -498,6 +498,7 @@ def analyze_systems(user_labels: list[str], time_key: str = "", sick_year: int =
     out["modifications"] = _modifications(user_labels, out)
     out["menlei"] = _menlei(user_labels, out)
     out["discern"] = _discern(labels)  # 须在拟方之前:真假鉴别用于开方纠偏
+    out["fangzheng"] = _fangzheng(user_labels)
     chief = _chief_analysis(detail_text, out)
     out["chief"] = chief
     out["prescription"] = _prescription(user_labels, out, chief)
@@ -997,6 +998,42 @@ def _zhice(infos: list[dict], out: dict[str, Any], course_seg: str, tongyuan: bo
     return "先主后次:主证得解,兼症自除;兼症突出者随主方加减"
 
 
+_FANGZHENG_CACHE: Optional[list] = None
+
+
+def _load_fangzheng() -> list:
+    global _FANGZHENG_CACHE
+    if _FANGZHENG_CACHE is None:
+        try:
+            p = Path(__file__).resolve().parent.parent / "data" / "fangzheng.json"
+            _FANGZHENG_CACHE = json.loads(p.read_text(encoding="utf-8"))["rules"]
+        except Exception:
+            _FANGZHENG_CACHE = []
+    return _FANGZHENG_CACHE
+
+
+def _fangzheng(user_labels: list[str]) -> list[dict]:
+    """方证辨证:主症必见+或然症→经典方(附原文出处与鉴别要点)。"""
+    joined = "、".join(str(x) for x in user_labels)
+    out: list[dict] = []
+    for r in _load_fangzheng():
+        must_hits = [m for m in r.get("must", []) if m in joined]
+        if len(must_hits) < r.get("min_must", 1):
+            continue
+        if any(e in joined for e in r.get("exclude", [])):
+            continue
+        may_hits = [m for m in r.get("may", []) if m in joined]
+        score = len(must_hits) * 3 + len(may_hits)
+        if score < 3:
+            continue
+        out.append({"key": r["key"], "name": r["name"], "formula": r["formula"],
+                    "score": score, "must_hits": must_hits, "may_hits": may_hits,
+                    "original": r.get("original", ""), "treatment": r.get("treatment", ""),
+                    "jianbie": r.get("jianbie", "")})
+    out.sort(key=lambda x: -x["score"])
+    return out[:5]
+
+
 def _hefang_for(chief_sub: dict[str, Any], other_subs: list[dict[str, Any]], primary: Optional[str] = None) -> Optional[dict]:
     """合方建议:主方与兼证代表方若在经典合方对中,给出合方提示(优先以实际主方配对)。"""
     def top_formulas(sub: dict) -> set[str]:
@@ -1183,17 +1220,29 @@ def _prescription(user_labels: list[str], out: dict[str, Any], chief: Optional[d
              "真武汤", "金匮肾气丸", "四神丸", "吴茱萸汤"}
     _COOL = {"白虎汤", "大承气汤", "小承气汤", "调胃承气汤", "清营汤", "犀角地黄汤",
              "黄连解毒汤", "龙胆泻肝汤", "导赤散"}
+    # 方证定方:方证强命中(≥6分)且明显胜出时,以经典方证之方为主方(证型层负责释病机)
+    fz = out.get("fangzheng") or []
+    if fz and fz[0]["score"] >= 6 and (len(fz) < 2 or fz[0]["score"] > fz[1]["score"]):
+        fz_primary = fz[0]["formula"]
+        if any(f["name"] == fz_primary for f in _load_yifang_lib()):
+            primary = fz_primary
+            fz_set = True
+        else:
+            fz_set = False
+    else:
+        fz_set = False
+    if not fz_set:
+        if lj_variant:
+            primary = lj_variant
+        elif zf_first and zf_score >= 4:
+            primary = zf_first
+        elif wq_first and wq_score >= 3:
+            primary = wq_first
+        elif lj_first:
+            primary = lj_first
+        elif zf_first:
+            primary = zf_first
     _discern_txt = "|".join(out.get("discern") or [])
-    if lj_variant:
-        primary = lj_variant
-    elif zf_first and zf_score >= 4:
-        primary = zf_first
-    elif wq_first and wq_score >= 3:
-        primary = wq_first
-    elif lj_first:
-        primary = lj_first
-    elif zf_first:
-        primary = zf_first
     if not primary:
         return None
     if "真热假寒" in _discern_txt and primary in _WARM:

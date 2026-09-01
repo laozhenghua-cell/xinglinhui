@@ -160,6 +160,12 @@ for sm in samples:
         ok = bool(c.get("tongyuan")) == bool(sm["expected"]["tongyuan"])
         if ok: st[0] += 1
         else: fails.append((sm["id"], "tongyuan", c.get("tongyuan"), sm["expected"]["tongyuan"]))
+    if sm["expected"].get("fangzheng_has"):
+        st = per.setdefault("fangzheng", [0, 0]); st[1] += 1
+        got = "|".join(f.get("formula", "") for f in (result.get("fangzheng") or []))
+        ok = sm["expected"]["fangzheng_has"] in got
+        if ok: st[0] += 1
+        else: fails.append((sm["id"], "fangzheng", got, sm["expected"]["fangzheng_has"]))
     if sm["expected"].get("hefang_has"):
         st = per.setdefault("hefang", [0, 0]); st[1] += 1
         got = ((result.get("prescription") or {}).get("hefang") or {}).get("formulas", "")

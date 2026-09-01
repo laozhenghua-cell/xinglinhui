@@ -28356,6 +28356,157 @@
           "note": "加生地、黄连、丹参、银花、竹叶心,透热转气力强"
         }
       ]
+    },
+    {
+      "name": "桂枝加葛根汤",
+      "category": "发表之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "葛根",
+          "dosage": "12"
+        },
+        {
+          "name": "桂枝",
+          "dosage": "9"
+        },
+        {
+          "name": "芍药",
+          "dosage": "9"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "6"
+        },
+        {
+          "name": "生姜",
+          "dosage": "9"
+        },
+        {
+          "name": "大枣",
+          "dosage": "6"
+        }
+      ],
+      "function": "解肌祛风,升津舒经",
+      "indications": "太阳中风兼经输不利:项背强几几、汗出恶风、发热",
+      "contraindications": "表实无汗者忌",
+      "source": "《伤寒论》14条",
+      "analysis": [
+        {
+          "name": "葛根",
+          "role": "君",
+          "note": "升津舒经,解肌"
+        },
+        {
+          "name": "桂枝",
+          "role": "臣",
+          "note": "解肌祛风,调和营卫"
+        },
+        {
+          "name": "芍药",
+          "role": "佐",
+          "note": "益阴敛营"
+        },
+        {
+          "name": "生姜大枣",
+          "role": "佐使",
+          "note": "调和脾胃,资营卫之源"
+        }
+      ]
+    },
+    {
+      "name": "升阳益胃汤",
+      "category": "补益之剂",
+      "aliases": [],
+      "composition": [
+        {
+          "name": "黄芪",
+          "dosage": "30"
+        },
+        {
+          "name": "半夏",
+          "dosage": "9"
+        },
+        {
+          "name": "人参",
+          "dosage": "9"
+        },
+        {
+          "name": "炙甘草",
+          "dosage": "9"
+        },
+        {
+          "name": "独活",
+          "dosage": "9"
+        },
+        {
+          "name": "防风",
+          "dosage": "9"
+        },
+        {
+          "name": "白芍",
+          "dosage": "9"
+        },
+        {
+          "name": "羌活",
+          "dosage": "9"
+        },
+        {
+          "name": "橘皮",
+          "dosage": "6"
+        },
+        {
+          "name": "茯苓",
+          "dosage": "9"
+        },
+        {
+          "name": "柴胡",
+          "dosage": "6"
+        },
+        {
+          "name": "泽泻",
+          "dosage": "9"
+        },
+        {
+          "name": "白术",
+          "dosage": "9"
+        },
+        {
+          "name": "黄连",
+          "dosage": "1.5"
+        }
+      ],
+      "function": "益气升阳,清热除湿",
+      "indications": "脾胃虚弱,湿热滞留中焦:怠惰嗜卧、四肢不收、口苦舌干、饮食无味、大便不调",
+      "contraindications": "阴虚火旺者慎",
+      "source": "《脾胃论》卷上",
+      "analysis": [
+        {
+          "name": "黄芪",
+          "role": "君",
+          "note": "补中益气升阳"
+        },
+        {
+          "name": "人参白术炙甘草",
+          "role": "臣",
+          "note": "益气健脾"
+        },
+        {
+          "name": "羌活独活防风柴胡",
+          "role": "佐",
+          "note": "升阳胜湿"
+        },
+        {
+          "name": "黄连泽泻",
+          "role": "佐",
+          "note": "清热利湿"
+        },
+        {
+          "name": "橘皮茯苓半夏",
+          "role": "佐使",
+          "note": "和胃化湿"
+        }
+      ]
     }
   ]
 }

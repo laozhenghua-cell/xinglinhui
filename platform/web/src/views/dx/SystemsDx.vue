@@ -121,6 +121,20 @@
             <div v-for="d in result.danger" :key="d" class="danger-item">🚨 {{ d }}</div>
           </div>
 
+          <!-- 方证层(经典方证直接对应 · 见症即方) -->
+          <div v-if="result.fangzheng && result.fangzheng.length" class="fz-box">
+            <div class="fz-head">📜 方证(经典方证直接对应 · 见症即方)</div>
+            <div v-for="(f, i) in result.fangzheng" :key="f.key" class="fz-item" :class="{ 'fz-top': i === 0 }">
+              <div class="fz-line1">
+                <b>{{ f.name }}</b> → {{ f.formula }}({{ f.score }} 分)
+                <el-tag v-if="i === 0 && result.prescription && result.prescription.name === f.formula" size="small" type="warning">据此定方</el-tag>
+              </div>
+              <div class="fz-hits">主症:{{ f.must_hits.join('、') }}<template v-if="f.may_hits.length">;兼症:{{ f.may_hits.join('、') }}</template></div>
+              <div v-if="f.original" class="fz-orig">📖 {{ f.original }}</div>
+              <div v-if="f.jianbie" class="fz-jb">⚖️ {{ f.jianbie }}</div>
+            </div>
+          </div>
+
           <!-- 主诉归纳 -->
           <div class="complaint-box">
             <b>主诉:</b>{{ complaintText }}
@@ -610,6 +624,15 @@ function fmtTime(t) {
 .empty { color: #999; padding: 12px 0; }
 .dx-records { margin-top: 16px; }
 .danger-strip { background: #FDEEEE; border: 1px solid #E8A0A0; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; }
+.fz-box { background: #F6F3EA; border: 1px solid #D9CEB2; border-left: 4px solid #8A6D3B; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
+.fz-head { font-weight: 700; color: #6B5228; font-size: 13px; margin-bottom: 6px; }
+.fz-item { padding: 6px 0; border-top: 1px dashed #E0D6BE; }
+.fz-item:first-of-type { border-top: none; }
+.fz-top .fz-line1 b { color: #8A5A12; font-family: "Songti SC", serif; font-size: 15px; }
+.fz-line1 { font-size: 13px; color: #4A3B14; }
+.fz-hits { font-size: 12px; color: #8a8370; margin-top: 2px; }
+.fz-orig { font-size: 12px; color: #6B5C42; margin-top: 3px; line-height: 1.7; }
+.fz-jb { font-size: 12px; color: #A03D2C; margin-top: 3px; }
 .danger-item { color: #B42318; font-size: 13px; font-weight: 700; margin: 3px 0; }
 .complaint-box { background: #F2F7F4; border: 1px solid #D5E8DC; border-radius: 8px; padding: 8px 12px; font-size: 13px; color: #35684C; margin-bottom: 12px; }
 .complaint-box b { color: var(--xl-deep); }

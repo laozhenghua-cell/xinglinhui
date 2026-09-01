@@ -3028,6 +3028,76 @@
         "prescription_has": "白虎汤",
         "strategy_has": "舍证从脉"
       }
+    },
+    {
+      "id": "fz01",
+      "desc": "栀子豉汤证(虚烦懊憹)",
+      "labels": [
+        "虚烦",
+        "不得眠",
+        "心中懊憹"
+      ],
+      "expected": {
+        "fangzheng_has": "栀子豉汤",
+        "prescription_has": "栀子豉汤"
+      }
+    },
+    {
+      "id": "fz02",
+      "desc": "大青龙汤证(表寒里热烦躁)",
+      "labels": [
+        "恶寒",
+        "发热",
+        "无汗",
+        "烦躁",
+        "身痛"
+      ],
+      "expected": {
+        "fangzheng_has": "大青龙汤",
+        "prescription_has": "大青龙汤"
+      }
+    },
+    {
+      "id": "fz03",
+      "desc": "小青龙汤证(外寒内饮)",
+      "labels": [
+        "咳嗽",
+        "痰稀白",
+        "气喘",
+        "恶寒"
+      ],
+      "expected": {
+        "fangzheng_has": "小青龙汤",
+        "prescription_has": "小青龙汤"
+      }
+    },
+    {
+      "id": "fz04",
+      "desc": "炙甘草汤证(脉结代心动悸)",
+      "labels": [
+        "心悸",
+        "脉结代",
+        "神疲乏力",
+        "气短"
+      ],
+      "expected": {
+        "fangzheng_has": "炙甘草汤",
+        "prescription_has": "炙甘草汤"
+      }
+    },
+    {
+      "id": "fz05",
+      "desc": "酸枣仁汤证(虚烦不寐)",
+      "labels": [
+        "失眠",
+        "虚烦",
+        "心悸",
+        "头晕"
+      ],
+      "expected": {
+        "fangzheng_has": "酸枣仁汤",
+        "prescription_has": "酸枣仁汤"
+      }
     }
   ]
 }
