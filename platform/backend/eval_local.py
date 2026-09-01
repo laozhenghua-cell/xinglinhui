@@ -160,6 +160,24 @@ for sm in samples:
         ok = bool(c.get("tongyuan")) == bool(sm["expected"]["tongyuan"])
         if ok: st[0] += 1
         else: fails.append((sm["id"], "tongyuan", c.get("tongyuan"), sm["expected"]["tongyuan"]))
+    if sm["expected"].get("contradiction_has"):
+        st = per.setdefault("contradiction", [0, 0]); st[1] += 1
+        got = "|".join(result.get("contradictions") or [])
+        ok = sm["expected"]["contradiction_has"] in got
+        if ok: st[0] += 1
+        else: fails.append((sm["id"], "contradiction", got, sm["expected"]["contradiction_has"]))
+    if sm["expected"].get("relation_has"):
+        st = per.setdefault("relation", [0, 0]); st[1] += 1
+        got = "|".join(x.get("text", "") for x in (result.get("relations") or []))
+        ok = sm["expected"]["relation_has"] in got
+        if ok: st[0] += 1
+        else: fails.append((sm["id"], "relation", got, sm["expected"]["relation_has"]))
+    if sm["expected"].get("anchor_has"):
+        st = per.setdefault("anchor", [0, 0]); st[1] += 1
+        got = "|".join(result.get("anchors") or [])
+        ok = sm["expected"]["anchor_has"] in got
+        if ok: st[0] += 1
+        else: fails.append((sm["id"], "anchor", got, sm["expected"]["anchor_has"]))
     if sm["expected"].get("fangzheng_has"):
         st = per.setdefault("fangzheng", [0, 0]); st[1] += 1
         got = "|".join(f.get("formula", "") for f in (result.get("fangzheng") or []))

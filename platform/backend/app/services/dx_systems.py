@@ -267,23 +267,104 @@ def _dynamic(out: dict[str, Any]) -> dict[str, Any]:
     return dyn
 
 
-def _score_indicators(indicators: list[str], tokens: list[str]) -> tuple[int, list[str]]:
-    """指标词命中计分:完整词 2 分,bigram 命中 1 分(去重;共用前缀词排除)。"""
+def _score_indicators(indicators: list[str], tokens: list[str], weights: Optional[dict] = None) -> tuple[int, list[str]]:
+    """指标词命中计分:完整词 2 分,bigram 命中 1 分(去重;共用前缀词排除);支持证据权重(主症/舌脉加权)。"""
+    wmap = weights or {}
     score = 0
     hits: list[str] = []
     for ind in indicators:
         if ind in tokens:
-            score += 2
+            score += 2 * wmap.get(ind, 1.0)
             hits.append(ind)
             continue
         for g in _bigrams(ind):
             if g in STOP_BIGRAMS:
                 continue
             if g in tokens and ind not in hits:
-                score += 1
+                score += 1 * wmap.get(g, 1.0)
                 hits.append(ind)
                 break
-    return score, hits
+    return round(score, 2), hits
+
+
+# 互斥证候对(同见则提示矛盾,请核实)
+_CONTRA_PAIRS: list[tuple[tuple[str, ...], tuple[str, ...], str]] = [
+    (("汗出", "自汗", "盗汗", "大汗出"), ("无汗",), "汗出与无汗并见,相互矛盾,请核实"),
+    (("口渴", "大渴", "口渴喜冷饮"), ("口不渴",), "口渴与口不渴并见,相互矛盾,请核实"),
+    (("便秘", "大便干结"), ("便溏", "大便稀溏", "泄泻"), "大便干结与稀溏并见,相互矛盾,请核实"),
+    (("脉数", "脉浮数", "脉洪数", "脉细数"), ("脉迟", "脉沉迟", "脉迟缓"), "脉数与脉迟并见,相互矛盾,请核实"),
+]
+
+
+def _contradictions(user_labels: list[str]) -> list[str]:
+    joined = "、".join(str(x) for x in user_labels)
+    out = []
+    for a_set, b_set, msg in _CONTRA_PAIRS:
+        if any(x in joined for x in a_set) and any(x in joined for x in b_set):
+            out.append(msg)
+    return out
+
+
+_SYND_REL_CACHE: Optional[list] = None
+
+
+def _load_synd_relations() -> list:
+    global _SYND_REL_CACHE
+    if _SYND_REL_CACHE is None:
+        try:
+            p = Path(__file__).resolve().parent.parent / "data" / "synd_relations.json"
+            _SYND_REL_CACHE = json.loads(p.read_text(encoding="utf-8"))["relations"]
+        except Exception:
+            _SYND_REL_CACHE = []
+    return _SYND_REL_CACHE
+
+
+def _relations(out: dict[str, Any]) -> list[dict]:
+    """证型关系图:当前结论在经典传变/转化路径上的位置(传变预警)。"""
+    present: set[str] = set()
+    for sys in ("liujing", "zangfu", "weiqiyingxue", "sanjiao"):
+        v = out[sys]["summary"]
+        if v and v != "信息不足":
+            present.add(v)
+    res: list[dict] = []
+    for r in _load_synd_relations():
+        if r["from"] in present:
+            res.append({**r, "direction": "forward",
+                        "text": f"{r['from']}→{r['to']}({r['type']}):{r['note']}"})
+        elif r["to"] in present and r["from"] not in present:
+            res.append({**r, "direction": "backward",
+                        "text": f"证由{r['from']}{r['type']}而来,当前{r['to']}——{r['note']}"})
+    return res[:5]
+
+
+def _pulse_tongue_note(out: dict[str, Any]) -> list[str]:
+    """舌脉决定性提示:结论主要凭舌脉而立,而紧随其后的候选(前3内)由症状支撑时,提示脉证相参。"""
+    notes: list[str] = []
+    for sys in ("zangfu", "liujing"):
+        top = out[sys]["top"]
+        if len(top) < 2:
+            continue
+        t1 = top[0]
+        if t1["score"] <= 0:
+            continue
+        if not all(h[:1] in "舌苔脉" for h in t1["hits"]):
+            continue
+        for t2 in top[1:3]:
+            if any(h[:1] not in "舌苔脉" for h in t2["hits"]) and t1["score"] - t2["score"] <= 2:
+                notes.append(f"{sys}:「{t1['name']}」主要凭舌脉而立,与症状指向「{t2['name']}」有出入,当脉证相参,舍症从脉")
+                break
+    return notes
+
+
+# "但见一症便是"锚点:单症即可倾向某经(经典提纲;计分 +2)
+ONE_SYMPTOM_ANCHORS: list[tuple[str, str, str]] = [
+    ("往来寒热", "shaoyang", "但见往来寒热,便属少阳(《伤寒论》263条提纲)"),
+    ("但欲寐", "shaoyin", "但欲寐为少阴提纲(《伤寒论》281条)"),
+    ("头项强痛", "taiyang", "头项强痛为太阳提纲(《伤寒论》1条)"),
+    ("胸胁苦满", "shaoyang", "胸胁苦满为少阳主症(《伤寒论》96条)"),
+    ("饥而不欲食", "jueyin", "饥而不欲食为厥阴提纲症(《伤寒论》326条)"),
+    ("气上撞心", "jueyin", "气上撞心为厥阴提纲症(《伤寒论》326条)"),
+]
 
 
 DANGER_RULES = [
@@ -367,23 +448,44 @@ def analyze_systems(user_labels: list[str], time_key: str = "", sick_year: int =
     for t in time_info["add"]:
         if t not in labels:
             labels.append(t)
-    # 用户标签 token 集:原词 + 四诊切分 + bigram
+    # 指标词全表(判定否定标签本身是否是指标词,如"无汗"仍是表实证据)
+    ind_vocab: set[str] = set()
+    for _sn in ("bagang", "liujing", "weiqiyingxue", "zangfu", "sanjiao", "jingluo"):
+        for _r in data[_sn]:
+            ind_vocab.update(_r["indicators"])
+            for _v in _r.get("variants", []):
+                ind_vocab.update(_v.get("indicators", []))
+    # 主诉主症词(加权 ×2 的证据)
+    chief_terms: set[str] = set()
+    if detail_text:
+        _probs, _cs = _split_problems(detail_text)
+        if _probs:
+            chief_terms = set(_problem_terms(_probs[0]))
+    # 用户标签 token 集:原词 + 四诊切分 + bigram;权重:主症×2、舌脉×1.5、其余×1
     tokens = set()
-    negated = set()  # 否定词(不X/无X)里的核心词,不参与正向匹配
+    weights: dict[str, float] = {}
+    negated: set[str] = set()  # 否定词核心(不恶寒→恶寒),用于反向减分
     for lab in labels:
         lab = str(lab or "").strip()
         if not lab:
             continue
         if lab.startswith(("不", "无", "未")):
             negated.add(lab[1:])
+            if lab in ind_vocab:
+                tokens.add(lab)  # "无汗"等本身是指标词,照常计分
+                weights[lab] = max(weights.get(lab, 0), 1.0)
             continue
         tokens.add(lab)
+        w = 2.0 if lab in chief_terms else (1.5 if lab[:1] in "舌苔脉" else 1.0)
+        weights[lab] = max(weights.get(lab, 0), w)
         if lab in BOWEL_NEUTRAL:
             continue  # 整体术语不拆 bigram,防"自利"等误命中
         if len(lab) > 8:
             continue  # 长文本(如主诉一句话)只取完整词,不拆 bigram,防噪音
-        tokens.update(_bigrams(lab, cap=8))
-    # 剔除否定核心词及其 bigram
+        for g in _bigrams(lab, cap=8):
+            tokens.add(g)
+            weights[g] = max(weights.get(g, 0), w)
+    # 剔除否定核心词及其 bigram(如"不恶寒"剔除"恶寒";"无汗"之"汗"非整词,不受影响)
     for n in negated:
         tokens.discard(n)
         for g in _bigrams(n):
@@ -403,8 +505,19 @@ def analyze_systems(user_labels: list[str], time_key: str = "", sick_year: int =
     for system in ("bagang", "liujing", "weiqiyingxue", "zangfu", "sanjiao", "jingluo"):
         items = []
         for rule in data[system]:
-            score, hits = _score_indicators(rule["indicators"], list(tokens))
+            score, hits = _score_indicators(rule["indicators"], list(tokens), weights)
+            # 否定证据反向减分:"无汗"减"汗出"类、"不渴"减"口渴"类(老中医排除法)
+            if negated:
+                pen = 0
+                for nc in negated:
+                    if any(nc in i for i in rule["indicators"] if len(i) <= 6 and not i.startswith(("不", "无", "未"))):
+                        pen += 2
+                score = max(0, score - pen)
             if system == "liujing":
+                # "但见一症便是"锚点加分(经典提纲)
+                for term, key, _note in ONE_SYMPTOM_ANCHORS:
+                    if rule["key"] == key and term in tokens:
+                        score += 2
                 # 分型证据并入经证得分(蓄水证之"小便不利"等即太阳经证据);
                 # 只并入经纲未列的证据词,避免"畏寒"等纲内词被双重计分
                 base_inds = set(rule["indicators"])
@@ -413,7 +526,7 @@ def analyze_systems(user_labels: list[str], time_key: str = "", sick_year: int =
                     for i in v.get("indicators", []):
                         if i not in base_inds and i not in v_inds:
                             v_inds.append(i)
-                vscore, vhits = _score_indicators(v_inds, list(tokens))
+                vscore, vhits = _score_indicators(v_inds, list(tokens), weights)
                 score += vscore
                 for h in vhits:
                     if h not in hits:
@@ -494,11 +607,15 @@ def analyze_systems(user_labels: list[str], time_key: str = "", sick_year: int =
     out["danger"] = _danger_alerts(user_labels)
     followup = _followup(out)
     out["followup"] = followup
-    out["ask"] = _ask_questions(user_labels, followup)
+    out["ask"] = _ask_questions(user_labels, followup, out)
     out["modifications"] = _modifications(user_labels, out)
     out["menlei"] = _menlei(user_labels, out)
     out["discern"] = _discern(labels)  # 须在拟方之前:真假鉴别用于开方纠偏
     out["fangzheng"] = _fangzheng(user_labels)
+    out["contradictions"] = _contradictions(labels)
+    out["relations"] = _relations(out)
+    out["pulse_tongue_note"] = _pulse_tongue_note(out)
+    out["anchors"] = [note for term, key, note in ONE_SYMPTOM_ANCHORS if term in tokens and any(t["key"] == key for t in out["liujing"]["top"])]
     chief = _chief_analysis(detail_text, out)
     out["chief"] = chief
     out["prescription"] = _prescription(user_labels, out, chief)
@@ -1232,12 +1349,19 @@ def _prescription(user_labels: list[str], out: dict[str, Any], chief: Optional[d
     else:
         fz_set = False
     if not fz_set:
-        if lj_variant:
+        lj_anchor = bool(out.get("anchors"))
+        if lj_anchor and lj_variant:
+            primary = lj_variant
+        elif lj_anchor and lj_first:
+            primary = lj_first
+        elif lj_variant:
             primary = lj_variant
         elif zf_first and zf_score >= 4:
             primary = zf_first
         elif wq_first and wq_score >= 3:
             primary = wq_first
+        elif zf_first and zf_score >= 3 and (not lj_first or (lj[0]["score"] if lj else 0) < 6):
+            primary = zf_first  # 脏腑中等结论(≥3分)优先于六经弱证据(防"舌红少苔"类弱信号误引温剂)
         elif lj_first:
             primary = lj_first
         elif zf_first:
@@ -1373,8 +1497,23 @@ def _followup(out: dict[str, Any]) -> Optional[dict]:
     return None
 
 
-def _ask_questions(user_labels: list[str], followup: Optional[dict]) -> list[dict]:
-    """症状→鉴别问句反向引导:按患者已述症状触发关键问句(如'肚子疼'→反问喜按拒按)。"""
+_DTREE_CACHE: Optional[list] = None
+
+
+def _load_dtree() -> list:
+    global _DTREE_CACHE
+    if _DTREE_CACHE is None:
+        try:
+            p = Path(__file__).resolve().parent.parent / "data" / "differential_tree.json"
+            _DTREE_CACHE = json.loads(p.read_text(encoding="utf-8"))["pairs"]
+        except Exception:
+            _DTREE_CACHE = []
+    return _DTREE_CACHE
+
+
+def _ask_questions(user_labels: list[str], followup: Optional[dict], out: Optional[dict] = None) -> list[dict]:
+    """症状→鉴别问句反向引导:按患者已述症状触发关键问句(如'肚子疼'→反问喜按拒按);
+    另按 top1/top2 证型对从鉴别问诊树主动反问。"""
     joined = "、".join(str(x) for x in user_labels)
     followup_ids = {q.get("id") for q in (followup or {}).get("questions", [])}
     scored = []
@@ -1392,4 +1531,15 @@ def _ask_questions(user_labels: list[str], followup: Optional[dict]) -> list[dic
             continue
         scored.append((n, q))
     scored.sort(key=lambda x: -x[0])
-    return [q for _, q in scored[:3]]
+    res = [q for _, q in scored[:3]]
+    # 证型对→鉴别问句(主动鉴别问诊树):六体系 top1/top2 恰为某鉴别对时反问
+    if out is not None:
+        zf = out["zangfu"]["top"]
+        if len(zf) >= 2:
+            names = {zf[0]["name"], zf[1]["name"]}
+            for i, p in enumerate(_load_dtree()):
+                if set(p["pair"]) == names:
+                    q = {"id": f"pair-{i}", "q": p["q"], "options": p["options"], "source": "鉴别问诊树"}
+                    if q["id"] not in [x.get("id") for x in res]:
+                        res.append(q)
+    return res[:4]

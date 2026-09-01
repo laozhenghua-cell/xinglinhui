@@ -121,6 +121,26 @@
             <div v-for="d in result.danger" :key="d" class="danger-item">🚨 {{ d }}</div>
           </div>
 
+          <!-- 证候矛盾提示(互斥校验) -->
+          <div v-if="result.contradictions && result.contradictions.length" class="contra-box">
+            <div class="contra-head">⚠️ 证候矛盾(请核实)</div>
+            <div v-for="(c, i) in result.contradictions" :key="i" class="contra-item">· {{ c }}</div>
+          </div>
+
+          <!-- 脉证相参提示(舍症从脉) -->
+          <div v-if="result.pulse_tongue_note && result.pulse_tongue_note.length" class="ptn-box">
+            <div v-for="(n, i) in result.pulse_tongue_note" :key="i" class="ptn-item">⚖️ {{ n }}</div>
+          </div>
+
+          <!-- 证候传变(证型关系图) -->
+          <div v-if="(result.relations && result.relations.length) || (result.anchors && result.anchors.length)" class="rel-box">
+            <div class="rel-head">🔗 证候传变与提纲(病机链)</div>
+            <div v-for="(r, i) in result.relations" :key="i" class="rel-item">
+              {{ r.text }}<span class="rel-src">〔{{ r.source }}〕</span>
+            </div>
+            <div v-for="(a, i) in result.anchors" :key="'a' + i" class="rel-anchor">📌 {{ a }}</div>
+          </div>
+
           <!-- 方证层(经典方证直接对应 · 见症即方) -->
           <div v-if="result.fangzheng && result.fangzheng.length" class="fz-box">
             <div class="fz-head">📜 方证(经典方证直接对应 · 见症即方)</div>
@@ -624,6 +644,16 @@ function fmtTime(t) {
 .empty { color: #999; padding: 12px 0; }
 .dx-records { margin-top: 16px; }
 .danger-strip { background: #FDEEEE; border: 1px solid #E8A0A0; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; }
+.contra-box { background: #FDF6F0; border: 1px solid #E8C9A8; border-left: 4px solid #C08A2E; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; }
+.contra-head { font-weight: 700; color: #A05A2C; font-size: 12.5px; margin-bottom: 2px; }
+.contra-item { font-size: 12.5px; color: #7A4A12; }
+.ptn-box { background: #F4F1FA; border: 1px solid #D9CCEE; border-left: 4px solid #8A63C9; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; }
+.ptn-item { font-size: 12.5px; color: #4A3E6B; }
+.rel-box { background: #F0F6FB; border: 1px solid #B9CCE8; border-left: 4px solid #3E6BA8; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; }
+.rel-head { font-weight: 700; color: #2F5A96; font-size: 12.5px; margin-bottom: 2px; }
+.rel-item { font-size: 12.5px; color: #3E5A85; line-height: 1.7; }
+.rel-src { color: #8a9bb8; font-size: 11.5px; margin-left: 4px; }
+.rel-anchor { font-size: 12.5px; color: #2F5A96; margin-top: 2px; }
 .fz-box { background: #F6F3EA; border: 1px solid #D9CEB2; border-left: 4px solid #8A6D3B; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
 .fz-head { font-weight: 700; color: #6B5228; font-size: 13px; margin-bottom: 6px; }
 .fz-item { padding: 6px 0; border-top: 1px dashed #E0D6BE; }

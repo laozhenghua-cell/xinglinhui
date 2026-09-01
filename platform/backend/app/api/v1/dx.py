@@ -785,6 +785,10 @@ async def dx_analyze(body: AnalyzeIn, request: Request, db: AsyncSession = Depen
         "prescription": systems_result.get("prescription"),
         "chief": systems_result.get("chief"),
         "fangzheng": systems_result.get("fangzheng", []),
+        "contradictions": systems_result.get("contradictions", []),
+        "relations": systems_result.get("relations", []),
+        "pulse_tongue_note": systems_result.get("pulse_tongue_note", []),
+        "anchors": systems_result.get("anchors", []),
         "mechanism": systems_result.get("mechanism"),
         "time": systems_result.get("time"),
         "discern": systems_result.get("discern", []),
@@ -1203,6 +1207,31 @@ async def dx_eval():
             if ok:
                 st["correct"] += 1
             row["hefang"] = {"got": got, "expected": sm["expected"]["hefang_has"]}
+        # P2 推理:互斥校验/证型关系/但见一症便是
+        if sm["expected"].get("contradiction_has"):
+            st = per_system.setdefault("contradiction", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = "|".join(result.get("contradictions") or [])
+            ok = sm["expected"]["contradiction_has"] in got
+            if ok:
+                st["correct"] += 1
+            row["contradiction"] = {"got": got[:50], "expected": sm["expected"]["contradiction_has"]}
+        if sm["expected"].get("relation_has"):
+            st = per_system.setdefault("relation", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = "|".join(x.get("text", "") for x in (result.get("relations") or []))
+            ok = sm["expected"]["relation_has"] in got
+            if ok:
+                st["correct"] += 1
+            row["relation"] = {"got": got[:60], "expected": sm["expected"]["relation_has"]}
+        if sm["expected"].get("anchor_has"):
+            st = per_system.setdefault("anchor", {"total": 0, "correct": 0})
+            st["total"] += 1
+            got = "|".join(result.get("anchors") or [])
+            ok = sm["expected"]["anchor_has"] in got
+            if ok:
+                st["correct"] += 1
+            row["anchor"] = {"got": got[:60], "expected": sm["expected"]["anchor_has"]}
         # 方证层(经典方证直接对应)
         if sm["expected"].get("fangzheng_has"):
             st = per_system.setdefault("fangzheng", {"total": 0, "correct": 0})

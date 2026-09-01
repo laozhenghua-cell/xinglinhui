@@ -10,7 +10,7 @@ from app.services.dx_systems import analyze_systems
 CASES = [
     # ===== A 表里同病 =====
     {"id": "A1", "name": "太阳伤寒+太阴虚寒(先表后里)",
-     "detail": "主诉:恶寒发热无汗身痛;另外腹满时痛喜温喜按",
+     "detail": "主诉:恶寒发热无汗身痛;另外腹满腹痛喜按",
      "labels": ["恶寒", "发热", "无汗", "身痛", "腹满", "腹痛喜按"],
      "chief_contains": "恶寒发热", "formula": "麻黄汤", "zhice": "先表后里"},
     {"id": "A2", "name": "太阳中风+脾虚(桂枝理中合方)",
@@ -18,8 +18,8 @@ CASES = [
      "labels": ["恶风", "自汗", "食少", "便溏"],
      "chief_contains": "恶风自汗", "formula": "玉屏风散", "zhice": "表里"},
     {"id": "A3", "name": "表寒里热(大青龙汤证,教材重证)",
-     "detail": "主诉:恶寒发热无汗;另外烦躁口渴",
-     "labels": ["恶寒", "发热", "无汗", "烦躁", "口渴"],
+     "detail": "主诉:恶寒发热无汗;另外烦躁大渴面赤",
+     "labels": ["恶寒", "发热", "无汗", "烦躁", "大渴", "面赤"],
      "chief_contains": "恶寒发热", "formula": "大青龙汤", "zhice": "表里", "note": "表寒里热,大青龙汤证(方证层直达)"},
     {"id": "A4", "name": "风热表证+肺热咳嗽(银翘桑菊)",
      "detail": "主诉:发热咽痛咳嗽;另外痰黄",
@@ -181,6 +181,22 @@ CASES = [
     {"id": "FZ20", "name": "桑杏汤证(温燥咳嗽)", "detail": "主诉:干咳咽干口渴痰少而黏", "labels": ["干咳", "咽干", "口渴", "痰少而黏"], "chief_contains": "", "formula": "桑杏汤", "zhice": ""},
     {"id": "FZ21", "name": "增液汤证(津亏便秘)", "detail": "主诉:便秘口干舌红少津", "labels": ["便秘", "口干", "舌红少津", "大便干结"], "chief_contains": "", "formula": "增液汤", "zhice": ""},
     {"id": "FZ22", "name": "止嗽散证(风邪恋肺咳嗽)", "detail": "主诉:咳嗽咽痒痰少恶风", "labels": ["咳嗽", "咽痒", "痰少", "恶风"], "chief_contains": "", "formula": "止嗽散", "zhice": ""},
+    # ===== AP P2 推理升级对抗样本 =====
+    {"id": "AP1", "name": "但见一症便是(往来寒热→少阳)", "detail": "主诉:往来寒热口苦", "labels": ["往来寒热", "口苦"],
+     "chief_contains": "", "formula": "小柴胡汤", "zhice": "", "anchor_has": "但见往来寒热"},
+    {"id": "AP2", "name": "无汗排除表虚(太阳伤寒)", "detail": "主诉:恶寒发热无汗身痛", "labels": ["恶寒", "发热", "无汗", "身痛"],
+     "chief_contains": "", "formula": "麻黄汤", "zhice": ""},
+    {"id": "AP3", "name": "互斥校验(汗出与无汗矛盾)", "detail": "主诉:汗出;另外无汗", "labels": ["汗出", "无汗"],
+     "chief_contains": "", "formula": "", "zhice": "", "contradiction_has": "汗出与无汗"},
+    {"id": "AP4", "name": "卫分→气分传变预警", "detail": "主诉:发热微恶风寒咳嗽咽痛", "labels": ["发热", "微恶风寒", "咳嗽", "咽痛", "脉浮数"],
+     "chief_contains": "", "formula": "桑菊饮", "zhice": "", "relation_has": "卫分证→气分证"},
+    {"id": "AP5", "name": "肝郁化火链预警", "detail": "主诉:胁肋胀痛善太息情志抑郁", "labels": ["胁肋胀痛", "善太息", "情志抑郁"],
+     "chief_contains": "", "formula": "柴胡疏肝散", "zhice": "", "relation_has": "肝气郁结→肝火上炎"},
+    {"id": "AP6", "name": "鉴别问诊树(肝阳上亢×肾精不足)", "detail": "主诉:眩晕头目胀痛面红目赤;另外腰膝酸软耳鸣",
+     "labels": ["眩晕", "头目胀痛", "面红目赤", "腰膝酸软", "耳鸣"],
+     "chief_contains": "眩晕", "formula": "天麻钩藤饮", "zhice": "", "ask_pair": "眩晕头胀时"},
+    {"id": "AP7", "name": "脉证相参(证从舌脉)", "detail": "", "labels": ["舌红少苔", "脉细数", "五心烦热"],
+     "chief_contains": "", "formula": "", "zhice": "", "ptnote_has": "舍症从脉"},
     {"id": "H9", "name": "虚烦不得眠(栀子豉汤)",
      "detail": "主诉:虚烦不得眠;另外心中懊憹",
      "labels": ["虚烦", "不得眠", "心中懊憹"],
@@ -213,6 +229,20 @@ def main():
         if c.get("hefang"):
             n_ok += int(ok_hefang)
             n_total += 1
+        contra_got = "|".join(r.get("contradictions") or [])
+        ok_contra = (not c.get("contradiction_has")) or (c["contradiction_has"] in contra_got)
+        rel_got = "|".join(x.get("text", "") for x in (r.get("relations") or []))
+        ok_rel = (not c.get("relation_has")) or (c["relation_has"] in rel_got)
+        anchor_got = "|".join(r.get("anchors") or [])
+        ok_anchor = (not c.get("anchor_has")) or (c["anchor_has"] in anchor_got)
+        ask_got = "|".join(q.get("q", "") for q in (r.get("ask") or []))
+        ok_askpair = (not c.get("ask_pair")) or (c["ask_pair"] in ask_got)
+        ptnote_got = "|".join(r.get("pulse_tongue_note") or [])
+        ok_ptnote = (not c.get("ptnote_has")) or (c["ptnote_has"] in ptnote_got)
+        for k, okk in (("contradiction_has", ok_contra), ("relation_has", ok_rel), ("anchor_has", ok_anchor), ("ask_pair", ok_askpair), ("ptnote_has", ok_ptnote)):
+            if c.get(k):
+                n_total += 1
+                n_ok += int(okk)
         if c.get("gap"):
             verdict, n_gap = "GAP(引擎无此方证规则)", n_gap + 1
         elif n_total and n_ok == n_total:
@@ -232,6 +262,16 @@ def main():
             line += f" | 治则✗(期望含「{c['zhice']}」,得「{zhice[:40]}」)"
         if not ok_hefang:
             line += f" | 合方✗(期望含「{c['hefang']}」,得「{hefang_got}」)"
+        if not ok_contra:
+            line += f" | 矛盾✗(期望「{c['contradiction_has']}」,得「{contra_got[:30]}」)"
+        if not ok_rel:
+            line += f" | 传变✗(期望「{c['relation_has']}」,得「{rel_got[:30]}」)"
+        if not ok_anchor:
+            line += f" | 锚点✗(期望「{c['anchor_has']}」,得「{anchor_got[:30]}」)"
+        if not ok_askpair:
+            line += f" | 鉴别问✗(期望「{c['ask_pair']}」,得「{ask_got[:30]}」)"
+        if not ok_ptnote:
+            line += f" | 脉证相参✗(期望「{c['ptnote_has']}」,得「{ptnote_got[:30]}」)"
         print(line)
         if verdict != "PASS":
             fails.append((c["id"], c["name"], pf, zhice))

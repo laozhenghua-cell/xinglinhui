@@ -3098,6 +3098,46 @@
         "fangzheng_has": "酸枣仁汤",
         "prescription_has": "酸枣仁汤"
       }
+    },
+    {
+      "id": "p01",
+      "desc": "但见一症便是(往来寒热→少阳)",
+      "labels": [
+        "往来寒热",
+        "口苦"
+      ],
+      "expected": {
+        "liujing": "少阳病",
+        "anchor_has": "但见往来寒热",
+        "prescription_has": "小柴胡汤"
+      }
+    },
+    {
+      "id": "p02",
+      "desc": "互斥校验(汗出与无汗矛盾)",
+      "labels": [
+        "汗出",
+        "无汗"
+      ],
+      "expected": {
+        "contradiction_has": "汗出与无汗"
+      }
+    },
+    {
+      "id": "p03",
+      "desc": "卫分→气分传变预警",
+      "labels": [
+        "发热",
+        "微恶风寒",
+        "咳嗽",
+        "咽痛",
+        "脉浮数"
+      ],
+      "detail": "主诉:发热微恶风寒咳嗽咽痛",
+      "expected": {
+        "weiqiyingxue": "卫分证",
+        "relation_has": "卫分证→气分证"
+      }
     }
   ]
 }
