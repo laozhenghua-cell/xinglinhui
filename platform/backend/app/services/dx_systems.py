@@ -1121,11 +1121,17 @@ _FANGZHENG_CACHE: Optional[list] = None
 def _load_fangzheng() -> list:
     global _FANGZHENG_CACHE
     if _FANGZHENG_CACHE is None:
-        try:
-            p = Path(__file__).resolve().parent.parent / "data" / "fangzheng.json"
-            _FANGZHENG_CACHE = json.loads(p.read_text(encoding="utf-8"))["rules"]
-        except Exception:
-            _FANGZHENG_CACHE = []
+        out: list = []
+        for fn, book in (("fangzheng.json", "经典方证库"), ("jinkin_zabing.json", "《医宗金鉴·杂病心法要诀》")):
+            try:
+                p = Path(__file__).resolve().parent.parent / "data" / fn
+                for r in json.loads(p.read_text(encoding="utf-8"))["rules"]:
+                    r = dict(r)
+                    r["book"] = book
+                    out.append(r)
+            except Exception:
+                pass
+        _FANGZHENG_CACHE = out
     return _FANGZHENG_CACHE
 
 
@@ -1146,9 +1152,22 @@ def _fangzheng(user_labels: list[str]) -> list[dict]:
         out.append({"key": r["key"], "name": r["name"], "formula": r["formula"],
                     "score": score, "must_hits": must_hits, "may_hits": may_hits,
                     "original": r.get("original", ""), "treatment": r.get("treatment", ""),
-                    "jianbie": r.get("jianbie", "")})
+                    "jianbie": r.get("jianbie", ""), "book": r.get("book", "")})
     out.sort(key=lambda x: -x["score"])
-    return out[:5]
+    # 同方多证并见(如经典方证+金鉴分证同指一方)时合并为一条,分数取高者
+    dedup: dict[str, dict] = {}
+    for e in out:
+        k = e["formula"]
+        if k not in dedup:
+            dedup[k] = e
+        else:
+            if e["score"] > dedup[k]["score"]:
+                dedup[k] = e
+            dedup[k]["must_hits"] = list(dict.fromkeys(dedup[k]["must_hits"] + e["must_hits"]))
+            dedup[k]["may_hits"] = list(dict.fromkeys(dedup[k]["may_hits"] + e["may_hits"]))
+    merged = list(dedup.values())
+    merged.sort(key=lambda x: -x["score"])
+    return merged[:5]
 
 
 def _hefang_for(chief_sub: dict[str, Any], other_subs: list[dict[str, Any]], primary: Optional[str] = None) -> Optional[dict]:

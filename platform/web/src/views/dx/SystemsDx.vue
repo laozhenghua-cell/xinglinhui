@@ -148,6 +148,7 @@
               <div class="fz-line1">
                 <b>{{ f.name }}</b> → {{ f.formula }}({{ f.score }} 分)
                 <el-tag v-if="i === 0 && result.prescription && result.prescription.name === f.formula" size="small" type="warning">据此定方</el-tag>
+                <span v-if="f.book" class="fz-book">{{ f.book }}</span>
               </div>
               <div class="fz-hits">主症:{{ f.must_hits.join('、') }}<template v-if="f.may_hits.length">;兼症:{{ f.may_hits.join('、') }}</template></div>
               <div v-if="f.original" class="fz-orig">📖 {{ f.original }}</div>
@@ -660,6 +661,7 @@ function fmtTime(t) {
 .fz-item:first-of-type { border-top: none; }
 .fz-top .fz-line1 b { color: #8A5A12; font-family: "Songti SC", serif; font-size: 15px; }
 .fz-line1 { font-size: 13px; color: #4A3B14; }
+.fz-book { color: #a99a7d; font-size: 11.5px; margin-left: 8px; }
 .fz-hits { font-size: 12px; color: #8a8370; margin-top: 2px; }
 .fz-orig { font-size: 12px; color: #6B5C42; margin-top: 3px; line-height: 1.7; }
 .fz-jb { font-size: 12px; color: #A03D2C; margin-top: 3px; }
